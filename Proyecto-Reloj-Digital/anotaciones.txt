@@ -1,0 +1,17 @@
+Reloj digital
+
+Dia, Fecha y Hora
+
+0 Domingo
+1 Lunes
+2 Martes
+3 Miercoles
+4 Jueves
+5 Viernes
+6 Sabado
+
+Flechas:
+
+Derecha e Izquierda me muevo entre variables
+Arriba y Abajo modifico las variables
+Medio = Enter, me permite modificar la variable
