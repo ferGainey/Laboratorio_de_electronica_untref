@@ -15,3 +15,9 @@ Flechas:
 Derecha e Izquierda me muevo entre variables
 Arriba y Abajo modifico las variables
 Medio = Enter, me permite modificar la variable
+
+Fila 1
+7 lugares para el nombre del día
+1 espacio
+8 para la fecha (formato 08/09/17)
+
