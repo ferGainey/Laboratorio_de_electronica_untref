@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC18 LITE Macro Assembler V1.43 build -156212558 
-                                                                                               Thu Sep 14 23:08:27 2017
+                                                                                               Thu Sep 14 23:48:37 2017
 
 Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250354
      1                           	processor	18F26J50
@@ -3456,7 +3456,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V1.43 build -156212558 
-Symbol Table                                                                                   Thu Sep 14 23:08:27 2017
+Symbol Table                                                                                   Thu Sep 14 23:48:37 2017
 
                         _a 0025                          _b 0023                          _c 0021  
                         _i 0029                          _j 0027                          _k 001F  
