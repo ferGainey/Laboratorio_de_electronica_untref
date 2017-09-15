@@ -14,9 +14,85 @@ rtccTime RtccTime; // Inicializa la estructura de tiempo
 rtccTime RtccTimeVal;
 rtccDate RtccDate; //Inicializa la estructura de Fecha
 
-//Funcion Setup
+//[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+/// Funcion Caratula
+/// Display presentation day hour
+/// variable lecture diasem, anio, dia, hora, etc
+//[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 
-void Setup(void) {
+void caratula(void) {
+    lcd_comand(0b00001100); //Enciende display sin cursor y sin blink  
+    //lcd_gotoxy(1,1);        
+    //lcd_putrs("UNIMIC");
+    //lcd_putrs(diasem);
+    sprintf(buffer2, "%02u/%02u/%02u", dia, mes, anio);
+    lcd_gotoxy(9, 1);
+    lcd_putrs(buffer2);
+    sprintf(buffer2, "%02u:%02u:%02u", hora, minuto, segundo);
+    lcd_gotoxy(1, 2);
+    lcd_putrs(buffer2);
+    /**
+    b = b++;
+    if (b < 7) {
+        lcd_gotoxy(1, 1);
+        lcd_putrs("UNIMIC");
+    }
+    if (b > 6) {
+        if (b == 11) {
+            b = 0;
+        }
+        lcd_gotoxy(1, 1);
+        lcd_putrs("      ");
+    }
+     */
+}
+
+void setDiaSemana(void) {
+    if (diasem == 0) {
+        lcd_gotoxy(1, 1);
+        lcd_putrs("Domingo");
+        __delay_ms(50);
+    } else if (diasem == 1) {
+        lcd_gotoxy(1, 1);
+        lcd_putrs("Lunes  ");
+        __delay_ms(50);
+    } else if (diasem == 2) {
+        lcd_gotoxy(1, 1);
+        lcd_putrs("Martes ");
+        __delay_ms(50);
+    } else if (diasem == 3) {
+        lcd_gotoxy(1, 1);
+        lcd_putrs("Miercol");
+        __delay_ms(50);
+    } else if (diasem == 4) {
+        lcd_gotoxy(1, 1);
+        lcd_putrs("Jueves ");
+        __delay_ms(50);
+    } else if (diasem == 5) {
+        lcd_gotoxy(1, 1);
+        lcd_putrs("Viernes");
+        __delay_ms(50);
+    } else if (diasem == 6) {
+        lcd_gotoxy(1, 1);
+        lcd_putrs("Sabado ");
+        __delay_ms(50);
+    }
+}
+
+void setDiaMesAnio(void) {
+    sprintf(buffer2, "%02u/%02u/%02u", dia, mes, anio);
+    lcd_gotoxy(9, 1);
+    lcd_putrs(buffer2);
+}
+
+void setHoraMinutoSegundo(void) {
+    sprintf(buffer2, "%02u:%02u:%02u", hora, minuto, segundo);
+    lcd_gotoxy(1, 2);
+    lcd_putrs(buffer2);
+}
+
+//Funcion Setup
+void setup(void) {
     OSCTUNEbits.INTSRC = 1; //setea el oscilador de 32768 para el RTC
     OSCTUNEbits.PLLEN = 0; //desactiva PLL
     OSCCONbits.IRCF0 = 1; //selecciona el clock en 8MHz
@@ -39,13 +115,15 @@ void Setup(void) {
     lcd_init();
     lcd_comand(0b00001100); //Display=on / Cursor=off / Blink=off
 
+    setDiaSemana();
+    setDiaMesAnio();
+    setHoraMinutoSegundo();
 }
 
 // Funcion main, funcion principal del programa
 
 int main(void) {
-    Setup();
-
+    setup();
     /*
      * Estado del boton centro
      * 0. Habilitado
@@ -67,6 +145,9 @@ int main(void) {
 
     while (1) {
 
+        Read_RTC();
+
+
         if (switch_Center == 0 && boton_centro_estado == 0) {
             boton_centro_estado = 1;
             lcd_gotoxy(14, 2);
@@ -84,10 +165,8 @@ int main(void) {
         if (boton_centro_estado == 1) {
 
             if (switch_Right == 0) {
-                if (boton_seleccionar == 2) {
+                if (boton_seleccionar == 6) {
                     boton_seleccionar = 0;
-                    lcd_gotoxy(15, 2);
-                    lcd_putrs("0");
                 } else {
                     boton_seleccionar++;
                 }
@@ -95,7 +174,7 @@ int main(void) {
 
             if (switch_Left == 0) {
                 if (boton_seleccionar == 0) {
-                    boton_seleccionar = 2;
+                    boton_seleccionar = 6;
                 } else {
                     boton_seleccionar--;
                 }
@@ -123,36 +202,6 @@ int main(void) {
                         Write_RTC();
                     }
                 }
-
-                if (diasem == 0) {
-                    lcd_gotoxy(1, 1);
-                    lcd_putrs("Domingo");
-                    __delay_ms(50);
-                } else if (diasem == 1) {
-                    lcd_gotoxy(1, 1);
-                    lcd_putrs("Lunes  ");
-                    __delay_ms(50);
-                } else if (diasem == 2) {
-                    lcd_gotoxy(1, 1);
-                    lcd_putrs("Martes ");
-                    __delay_ms(50);
-                } else if (diasem == 3) {
-                    lcd_gotoxy(1, 1);
-                    lcd_putrs("Miercol");
-                    __delay_ms(50);
-                } else if (diasem == 4) {
-                    lcd_gotoxy(1, 1);
-                    lcd_putrs("Jueves ");
-                    __delay_ms(50);
-                } else if (diasem == 5) {
-                    lcd_gotoxy(1, 1);
-                    lcd_putrs("Viernes");
-                    __delay_ms(50);
-                } else if (diasem == 6) {
-                    lcd_gotoxy(1, 1);
-                    lcd_putrs("Sabado ");
-                    __delay_ms(50);
-                }
             }
 
             //Modificar dia
@@ -177,16 +226,7 @@ int main(void) {
                         Write_RTC();
                     }
                 }
-                //Escribe en la posicion col 9 fila 1: dia/mes/anio
-                //Verificar con proteus que el string se imprime correctamente
-                lcd_gotoxy(9, 1);
-                //Buscar una manera de concatenar char e int
-                lcd_putrs(dia);
-                lcd_putrs("/");
-                lcd_putrs(mes);
-                lcd_putrs("/");
-                lcd_putrs(anio);
-                //lcd_putrs(dia+"/"+mes+"/"+anio);
+
                 __delay_ms(50);
             }
 
@@ -212,14 +252,7 @@ int main(void) {
                         Write_RTC();
                     }
                 }
-                //Escribe en la posicion col 9 fila 1: dia/mes/anio
-                lcd_gotoxy(9, 1);
-                lcd_putrs(dia);
-                lcd_putrs("/");
-                lcd_putrs(mes);
-                lcd_putrs("/");
-                lcd_putrs(anio);
-                //lcd_putrs(dia+"/"+mes+"/"+anio);
+
                 __delay_ms(50);
             }
 
@@ -245,14 +278,7 @@ int main(void) {
                         Write_RTC();
                     }
                 }
-                //Escribe en la posicion col 9 fila 1: dia/mes/anio
-                lcd_gotoxy(9, 1);
-                lcd_putrs(dia);
-                lcd_putrs("/");
-                lcd_putrs(mes);
-                lcd_putrs("/");
-                lcd_putrs(anio);
-                //lcd_putrs(dia+"/"+mes+"/"+anio);
+
                 __delay_ms(50);
             }
 
@@ -278,14 +304,7 @@ int main(void) {
                         Write_RTC();
                     }
                 }
-                //Escribe en la posicion col 1 fila 2: hora:minuto:segundo
-                lcd_gotoxy(1, 2);
-                lcd_putrs(hora);
-                lcd_putrs(":");
-                lcd_putrs(minuto);
-                lcd_putrs(":");
-                lcd_putrs(segundo);
-                //lcd_putrs(hora+":"+minuto+":"+segundo);
+
                 __delay_ms(50);
             }
 
@@ -297,7 +316,7 @@ int main(void) {
                         minuto = 0;
                         Write_RTC();
                     } else {
-                        hora++;
+                        minuto++;
                         Write_RTC();
                     }
                 }
@@ -311,14 +330,7 @@ int main(void) {
                         Write_RTC();
                     }
                 }
-                //Escribe en la posicion col 1 fila 2: hora:minuto:segundo
-                lcd_gotoxy(1, 2);
-                lcd_putrs(hora);
-                lcd_putrs(":");
-                lcd_putrs(minuto);
-                lcd_putrs(":");
-                lcd_putrs(segundo);
-                //lcd_putrs(hora+":"+minuto+":"+segundo);
+
                 __delay_ms(50);
             }
 
@@ -344,18 +356,18 @@ int main(void) {
                         Write_RTC();
                     }
                 }
-                //Escribe en la posicion col 1 fila 2: hora:minuto:segundo
-                lcd_gotoxy(1, 2);
-                lcd_putrs(hora);
-                lcd_putrs(":");
-                lcd_putrs(minuto);
-                lcd_putrs(":");
-                lcd_putrs(segundo);
-                //lcd_putrs(hora+":"+minuto+":"+segundo);
+
                 __delay_ms(50);
             }
 
+            sprintf(buffer2, "%02u", boton_seleccionar);
+            lcd_gotoxy(15, 2);
+            lcd_putrs(buffer2);
         }
+
+        setDiaSemana();
+        setDiaMesAnio();
+        setHoraMinutoSegundo();
 
         __delay_ms(98); // 100ms retardo maximo para esta funcion
 
