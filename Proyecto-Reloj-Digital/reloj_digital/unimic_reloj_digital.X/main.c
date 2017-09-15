@@ -41,18 +41,29 @@ void Setup(void) {
 
 }
 
-void write_in_lcd(char* key) {
-    sprintf(buffer2, "%01u", key);
-    lcd_putrs(buffer2);
-}
-
 // Funcion main, funcion principal del programa
 
 int main(void) {
     Setup();
-    
+
+    /*
+     * Estado del boton centro
+     * 0. Habilitado
+     * 1. Deshabilitado
+     */
     int boton_centro_estado = 0;
-    int boton_seleccionar = 0;//el boton seleccionar no tiene 3 estados (nombre del dia, fecha, hora) como ahora, sino que hay que agregarle numero de dia, numero de mes, numero de año; hora, minuto, segundo
+
+    /**
+     * Boton Seleccionar
+     * 0. Dia de semana
+     * 1. Dia
+     * 2. Mes
+     * 3. Año
+     * 4. Hora
+     * 5. Minuto
+     * 6. Segundo
+     */
+    int boton_seleccionar = 0;
 
     while (1) {
 
@@ -90,7 +101,9 @@ int main(void) {
                 }
             }
 
+            // Modificar Dia semana
             if (boton_seleccionar == 0) {
+
                 if (switch_Up == 0) {
                     if (diasem == 6) {
                         diasem = 0;
@@ -110,37 +123,238 @@ int main(void) {
                         Write_RTC();
                     }
                 }
-            }
-        }
 
-        if (diasem == 0) {
-            lcd_gotoxy(1, 1);
-            lcd_putrs("Domingo");
-            __delay_ms(50);
-        } else if (diasem == 1) {
-            lcd_gotoxy(1, 1);
-            lcd_putrs("Lunes  ");
-            __delay_ms(50);
-        } else if (diasem == 2) {
-            lcd_gotoxy(1, 1);
-            lcd_putrs("Martes ");
-            __delay_ms(50);
-        } else if (diasem == 3) {
-            lcd_gotoxy(1, 1);
-            lcd_putrs("Miercol");
-            __delay_ms(50);
-        } else if (diasem == 4) {
-            lcd_gotoxy(1, 1);
-            lcd_putrs("Jueves ");
-            __delay_ms(50);
-        } else if (diasem == 5) {
-            lcd_gotoxy(1, 1);
-            lcd_putrs("Viernes");
-            __delay_ms(50);
-        } else if (diasem == 6) {
-            lcd_gotoxy(1, 1);
-            lcd_putrs("Sabado ");
-            __delay_ms(50);
+                if (diasem == 0) {
+                    lcd_gotoxy(1, 1);
+                    lcd_putrs("Domingo");
+                    __delay_ms(50);
+                } else if (diasem == 1) {
+                    lcd_gotoxy(1, 1);
+                    lcd_putrs("Lunes  ");
+                    __delay_ms(50);
+                } else if (diasem == 2) {
+                    lcd_gotoxy(1, 1);
+                    lcd_putrs("Martes ");
+                    __delay_ms(50);
+                } else if (diasem == 3) {
+                    lcd_gotoxy(1, 1);
+                    lcd_putrs("Miercol");
+                    __delay_ms(50);
+                } else if (diasem == 4) {
+                    lcd_gotoxy(1, 1);
+                    lcd_putrs("Jueves ");
+                    __delay_ms(50);
+                } else if (diasem == 5) {
+                    lcd_gotoxy(1, 1);
+                    lcd_putrs("Viernes");
+                    __delay_ms(50);
+                } else if (diasem == 6) {
+                    lcd_gotoxy(1, 1);
+                    lcd_putrs("Sabado ");
+                    __delay_ms(50);
+                }
+            }
+
+            //Modificar dia
+            if (boton_seleccionar == 1) {
+
+                if (switch_Up == 0) {
+                    if (dia == 30) {
+                        dia = 0;
+                        Write_RTC();
+                    } else {
+                        dia++;
+                        Write_RTC();
+                    }
+                }
+
+                if (switch_Down == 0) {
+                    if (dia == 0) {
+                        dia = 30;
+                        Write_RTC();
+                    } else {
+                        dia--;
+                        Write_RTC();
+                    }
+                }
+                //Escribe en la posicion col 9 fila 1: dia/mes/anio
+                //Verificar con proteus que el string se imprime correctamente
+                lcd_gotoxy(9, 1);
+                //Buscar una manera de concatenar char e int
+                lcd_putrs(dia);
+                lcd_putrs("/");
+                lcd_putrs(mes);
+                lcd_putrs("/");
+                lcd_putrs(anio);
+                //lcd_putrs(dia+"/"+mes+"/"+anio);
+                __delay_ms(50);
+            }
+
+            //Modificar mes
+            if (boton_seleccionar == 2) {
+
+                if (switch_Up == 0) {
+                    if (mes == 12) {
+                        mes = 1;
+                        Write_RTC();
+                    } else {
+                        mes++;
+                        Write_RTC();
+                    }
+                }
+
+                if (switch_Down == 0) {
+                    if (mes == 1) {
+                        mes = 12;
+                        Write_RTC();
+                    } else {
+                        mes--;
+                        Write_RTC();
+                    }
+                }
+                //Escribe en la posicion col 9 fila 1: dia/mes/anio
+                lcd_gotoxy(9, 1);
+                lcd_putrs(dia);
+                lcd_putrs("/");
+                lcd_putrs(mes);
+                lcd_putrs("/");
+                lcd_putrs(anio);
+                //lcd_putrs(dia+"/"+mes+"/"+anio);
+                __delay_ms(50);
+            }
+
+            //Modificar anio
+            if (boton_seleccionar == 3) {
+
+                if (switch_Up == 0) {
+                    if (anio == 99) {
+                        anio = 0;
+                        Write_RTC();
+                    } else {
+                        anio++;
+                        Write_RTC();
+                    }
+                }
+
+                if (switch_Down == 0) {
+                    if (anio == 0) {
+                        anio = 99;
+                        Write_RTC();
+                    } else {
+                        anio--;
+                        Write_RTC();
+                    }
+                }
+                //Escribe en la posicion col 9 fila 1: dia/mes/anio
+                lcd_gotoxy(9, 1);
+                lcd_putrs(dia);
+                lcd_putrs("/");
+                lcd_putrs(mes);
+                lcd_putrs("/");
+                lcd_putrs(anio);
+                //lcd_putrs(dia+"/"+mes+"/"+anio);
+                __delay_ms(50);
+            }
+
+            //Modificar hora
+            if (boton_seleccionar == 4) {
+
+                if (switch_Up == 0) {
+                    if (hora == 59) {
+                        hora = 0;
+                        Write_RTC();
+                    } else {
+                        hora++;
+                        Write_RTC();
+                    }
+                }
+
+                if (switch_Down == 0) {
+                    if (hora == 0) {
+                        hora = 59;
+                        Write_RTC();
+                    } else {
+                        hora--;
+                        Write_RTC();
+                    }
+                }
+                //Escribe en la posicion col 1 fila 2: hora:minuto:segundo
+                lcd_gotoxy(1, 2);
+                lcd_putrs(hora);
+                lcd_putrs(":");
+                lcd_putrs(minuto);
+                lcd_putrs(":");
+                lcd_putrs(segundo);
+                //lcd_putrs(hora+":"+minuto+":"+segundo);
+                __delay_ms(50);
+            }
+
+            //Modificar minuto
+            if (boton_seleccionar == 5) {
+
+                if (switch_Up == 0) {
+                    if (minuto == 59) {
+                        minuto = 0;
+                        Write_RTC();
+                    } else {
+                        hora++;
+                        Write_RTC();
+                    }
+                }
+
+                if (switch_Down == 0) {
+                    if (minuto == 0) {
+                        minuto = 59;
+                        Write_RTC();
+                    } else {
+                        minuto--;
+                        Write_RTC();
+                    }
+                }
+                //Escribe en la posicion col 1 fila 2: hora:minuto:segundo
+                lcd_gotoxy(1, 2);
+                lcd_putrs(hora);
+                lcd_putrs(":");
+                lcd_putrs(minuto);
+                lcd_putrs(":");
+                lcd_putrs(segundo);
+                //lcd_putrs(hora+":"+minuto+":"+segundo);
+                __delay_ms(50);
+            }
+
+            //Modificar segundo
+            if (boton_seleccionar == 6) {
+
+                if (switch_Up == 0) {
+                    if (segundo == 59) {
+                        segundo = 0;
+                        Write_RTC();
+                    } else {
+                        segundo++;
+                        Write_RTC();
+                    }
+                }
+
+                if (switch_Down == 0) {
+                    if (segundo == 0) {
+                        segundo = 59;
+                        Write_RTC();
+                    } else {
+                        segundo--;
+                        Write_RTC();
+                    }
+                }
+                //Escribe en la posicion col 1 fila 2: hora:minuto:segundo
+                lcd_gotoxy(1, 2);
+                lcd_putrs(hora);
+                lcd_putrs(":");
+                lcd_putrs(minuto);
+                lcd_putrs(":");
+                lcd_putrs(segundo);
+                //lcd_putrs(hora+":"+minuto+":"+segundo);
+                __delay_ms(50);
+            }
+
         }
 
         __delay_ms(98); // 100ms retardo maximo para esta funcion

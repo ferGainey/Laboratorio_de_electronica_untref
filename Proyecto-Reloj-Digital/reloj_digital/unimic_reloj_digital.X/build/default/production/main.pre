@@ -9246,17 +9246,15 @@ lcd_comand(0b00001100);
 
 }
 
-void write_in_lcd(char* key) {
-sprintf(buffer2, "%01u", key);
-lcd_putrs(buffer2);
-}
-
 
 
 int main(void) {
 Setup();
 
+# 54
 int boton_centro_estado = 0;
+
+# 66
 int boton_seleccionar = 0;
 
 while (1) {
@@ -9295,7 +9293,9 @@ boton_seleccionar--;
 }
 }
 
+
 if (boton_seleccionar == 0) {
+
 if (PORTAbits.RA3 == 0) {
 if (diasem == 6) {
 diasem = 0;
@@ -9313,8 +9313,6 @@ Write_RTC();
 } else {
 diasem--;
 Write_RTC();
-}
-}
 }
 }
 
@@ -9346,6 +9344,209 @@ _delay((unsigned long)((50)*(8000000/4000.0)));
 lcd_gotoxy(1, 1);
 lcd_putrs("Sabado ");
 _delay((unsigned long)((50)*(8000000/4000.0)));
+}
+}
+
+
+if (boton_seleccionar == 1) {
+
+if (PORTAbits.RA3 == 0) {
+if (dia == 30) {
+dia = 0;
+Write_RTC();
+} else {
+dia++;
+Write_RTC();
+}
+}
+
+if (PORTAbits.RA6 == 0) {
+if (dia == 0) {
+dia = 30;
+Write_RTC();
+} else {
+dia--;
+Write_RTC();
+}
+}
+
+
+lcd_gotoxy(9, 1);
+
+lcd_putrs(dia);
+lcd_putrs("/");
+lcd_putrs(mes);
+lcd_putrs("/");
+lcd_putrs(anio);
+
+_delay((unsigned long)((50)*(8000000/4000.0)));
+}
+
+
+if (boton_seleccionar == 2) {
+
+if (PORTAbits.RA3 == 0) {
+if (mes == 12) {
+mes = 1;
+Write_RTC();
+} else {
+mes++;
+Write_RTC();
+}
+}
+
+if (PORTAbits.RA6 == 0) {
+if (mes == 1) {
+mes = 12;
+Write_RTC();
+} else {
+mes--;
+Write_RTC();
+}
+}
+
+lcd_gotoxy(9, 1);
+lcd_putrs(dia);
+lcd_putrs("/");
+lcd_putrs(mes);
+lcd_putrs("/");
+lcd_putrs(anio);
+
+_delay((unsigned long)((50)*(8000000/4000.0)));
+}
+
+
+if (boton_seleccionar == 3) {
+
+if (PORTAbits.RA3 == 0) {
+if (anio == 99) {
+anio = 0;
+Write_RTC();
+} else {
+anio++;
+Write_RTC();
+}
+}
+
+if (PORTAbits.RA6 == 0) {
+if (anio == 0) {
+anio = 99;
+Write_RTC();
+} else {
+anio--;
+Write_RTC();
+}
+}
+
+lcd_gotoxy(9, 1);
+lcd_putrs(dia);
+lcd_putrs("/");
+lcd_putrs(mes);
+lcd_putrs("/");
+lcd_putrs(anio);
+
+_delay((unsigned long)((50)*(8000000/4000.0)));
+}
+
+
+if (boton_seleccionar == 4) {
+
+if (PORTAbits.RA3 == 0) {
+if (hora == 59) {
+hora = 0;
+Write_RTC();
+} else {
+hora++;
+Write_RTC();
+}
+}
+
+if (PORTAbits.RA6 == 0) {
+if (hora == 0) {
+hora = 59;
+Write_RTC();
+} else {
+hora--;
+Write_RTC();
+}
+}
+
+lcd_gotoxy(1, 2);
+lcd_putrs(hora);
+lcd_putrs(":");
+lcd_putrs(minuto);
+lcd_putrs(":");
+lcd_putrs(segundo);
+
+_delay((unsigned long)((50)*(8000000/4000.0)));
+}
+
+
+if (boton_seleccionar == 5) {
+
+if (PORTAbits.RA3 == 0) {
+if (minuto == 59) {
+minuto = 0;
+Write_RTC();
+} else {
+hora++;
+Write_RTC();
+}
+}
+
+if (PORTAbits.RA6 == 0) {
+if (minuto == 0) {
+minuto = 59;
+Write_RTC();
+} else {
+minuto--;
+Write_RTC();
+}
+}
+
+lcd_gotoxy(1, 2);
+lcd_putrs(hora);
+lcd_putrs(":");
+lcd_putrs(minuto);
+lcd_putrs(":");
+lcd_putrs(segundo);
+
+_delay((unsigned long)((50)*(8000000/4000.0)));
+}
+
+
+if (boton_seleccionar == 6) {
+
+if (PORTAbits.RA3 == 0) {
+if (segundo == 59) {
+segundo = 0;
+Write_RTC();
+} else {
+segundo++;
+Write_RTC();
+}
+}
+
+if (PORTAbits.RA6 == 0) {
+if (segundo == 0) {
+segundo = 59;
+Write_RTC();
+} else {
+segundo--;
+Write_RTC();
+}
+}
+
+lcd_gotoxy(1, 2);
+lcd_putrs(hora);
+lcd_putrs(":");
+lcd_putrs(minuto);
+lcd_putrs(":");
+lcd_putrs(segundo);
+
+_delay((unsigned long)((50)*(8000000/4000.0)));
+}
+
 }
 
 _delay((unsigned long)((98)*(8000000/4000.0)));
