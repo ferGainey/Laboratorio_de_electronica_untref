@@ -9078,7 +9078,7 @@ void lcd_puts(char *ptr);
 void lcd_putrs(const char *ptr);
 
 # 16 "../../headers\unmc_rtcc_01.h"
-rtccTimeDate RtccTimeDate ,RtccAlrmTimeDate, Rtcc_read_TimeDate ;
+rtccTimeDate RtccTimeDate, RtccAlrmTimeDate, Rtcc_read_TimeDate;
 
 char segundo_u;
 char segundo_d;
@@ -9093,20 +9093,20 @@ char mes_d;
 char dia_semana;
 char anio_u;
 char anio_d;
-bit flag=0;
-int i=0;
-int j=0;
-int a=0;
-int b=0;
-int c=0;
-int k=0;
-int anio=15;
-int mes=9;
-int diasem=3;
-int dia=8;
-int hora=18;
-int minuto=30;
-int segundo=0;
+bit flag = 0;
+int i = 0;
+int j = 0;
+int a = 0;
+int b = 0;
+int c = 0;
+int k = 0;
+int anio = 15;
+int mes = 9;
+int diasem = 3;
+int dia = 8;
+int hora = 18;
+int minuto = 30;
+int segundo = 0;
 
 # 50
 rtccTime RtccTime;
@@ -9115,76 +9115,73 @@ rtccDate RtccDate;
 
 unsigned char buffer2[20];
 
-void DelayFor18TCY(void)
-{
+void DelayFor18TCY(void) {
 Delay10TCYx(10);
 
 }
 
-void DelayPORXLCD(void)
-{
+void DelayPORXLCD(void) {
 Delay1KTCYx(20);
 
 }
 
-# 74
-void Write_RTC(void)
-{
+# 72
+void Write_RTC(void) {
 RtccWrOn();
 
-PIE3bits.RTCCIE=1;
-segundo_d=segundo/10;
-segundo_u=segundo-segundo_d*10;
-RtccTime.f.sec =segundo_d*16+segundo_u;
-minuto_d=minuto/10;
-minuto_u=minuto-minuto_d*10;
-RtccTime.f.min =minuto_d*16+minuto_u;
-hora_d=hora/10;
-hora_u=hora-hora_d*10;
-RtccTime.f.hour=hora_d*16+hora_u;
-anio_d=anio/10;
-anio_u=anio-anio_d*10;
-RtccDate.f.year=anio_d*16+anio_u;
-mes_d=mes/10;
-mes_u=mes-mes_d*10;
-RtccDate.f.mon=mes_d*16+mes_u;
-fecha_d=dia/10;
-fecha_u=dia-fecha_d*10;
-RtccDate.f.mday=fecha_d*16+fecha_u;
-dia_semana=diasem;
-RtccDate.f.wday =diasem;
-RtccWriteTime(&RtccTime,1);
-RtccWriteDate(&RtccDate,1);
+PIE3bits.RTCCIE = 1;
+segundo_d = segundo / 10;
+segundo_u = segundo - segundo_d * 10;
+RtccTime.f.sec = segundo_d * 16 + segundo_u;
+minuto_d = minuto / 10;
+minuto_u = minuto - minuto_d * 10;
+RtccTime.f.min = minuto_d * 16 + minuto_u;
+hora_d = hora / 10;
+hora_u = hora - hora_d * 10;
+RtccTime.f.hour = hora_d * 16 + hora_u;
+anio_d = anio / 10;
+anio_u = anio - anio_d * 10;
+RtccDate.f.year = anio_d * 16 + anio_u;
+mes_d = mes / 10;
+mes_u = mes - mes_d * 10;
+RtccDate.f.mon = mes_d * 16 + mes_u;
+fecha_d = dia / 10;
+fecha_u = dia - fecha_d * 10;
+RtccDate.f.mday = fecha_d * 16 + fecha_u;
+dia_semana = diasem;
+RtccDate.f.wday = diasem;
+RtccWriteTime(&RtccTime, 1);
+RtccWriteDate(&RtccDate, 1);
 (RTCCFGbits.RTCEN=1);
 }
 
-# 111
+# 108
 void Read_RTC(void)
 
 {
 RtccReadTime(&RtccTime);
-segundo_u=(RtccTime.f.sec & 0x0F);
-segundo_d=((RtccTime.f.sec & 0xF0)>>4);
-minuto_u=(RtccTime.f.min & 0x0F);
-minuto_d=((RtccTime.f.min & 0xF0)>>4);
-hora_u=(RtccTime.f.hour & 0x0F);
-hora_d=((RtccTime.f.hour & 0xF0)>>4);
+segundo_u = (RtccTime.f.sec & 0x0F);
+segundo_d = ((RtccTime.f.sec & 0xF0) >> 4);
+minuto_u = (RtccTime.f.min & 0x0F);
+minuto_d = ((RtccTime.f.min & 0xF0) >> 4);
+hora_u = (RtccTime.f.hour & 0x0F);
+hora_d = ((RtccTime.f.hour & 0xF0) >> 4);
 RtccReadDate(&RtccDate);
-fecha_u=(RtccDate.f.mday & 0x0F);
-fecha_d=((RtccDate.f.mday & 0xF0)>>4);
-mes_u=(RtccDate.f.mon & 0x0F);
-mes_d=((RtccDate.f.mon & 0xF0)>>4);
-dia_semana=RtccDate.f.wday;
-anio_u=(RtccDate.f.year & 0x0F);
-anio_d=((RtccDate.f.year & 0xF0)>>4);
+fecha_u = (RtccDate.f.mday & 0x0F);
+fecha_d = ((RtccDate.f.mday & 0xF0) >> 4);
+mes_u = (RtccDate.f.mon & 0x0F);
+mes_d = ((RtccDate.f.mon & 0xF0) >> 4);
+dia_semana = RtccDate.f.wday;
+anio_u = (RtccDate.f.year & 0x0F);
+anio_d = ((RtccDate.f.year & 0xF0) >> 4);
 
-segundo=segundo_d*10+segundo_u;
-minuto=minuto_d*10+minuto_u;
-hora=hora_d*10+hora_u;
-dia=fecha_d*10+fecha_u;
-diasem=dia_semana;
-mes=mes_d*10+mes_u;
-anio=anio_d*10+anio_u;
+segundo = segundo_d * 10 + segundo_u;
+minuto = minuto_d * 10 + minuto_u;
+hora = hora_d * 10 + hora_u;
+dia = fecha_d * 10 + fecha_u;
+diasem = dia_semana;
+mes = mes_d * 10 + mes_u;
+anio = anio_d * 10 + anio_u;
 }
 
 
@@ -9218,23 +9215,9 @@ rtccTimeDate RtccTimeDate, RtccAlrmTimeDate, Rtcc_read_TimeDate;
 rtccTime RtccTime;
 rtccTime RtccTimeVal;
 rtccDate RtccDate;
+char* array_seleccionar[] = {"Ndia", " Dia", " Mes", "Anio", "Hora", " Min", " Seg"};
 
-# 23
-void caratula(void) {
-lcd_comand(0b00001100);
-
-
-
-sprintf(buffer2, "%02u/%02u/%02u", dia, mes, anio);
-lcd_gotoxy(9, 1);
-lcd_putrs(buffer2);
-sprintf(buffer2, "%02u:%02u:%02u", hora, minuto, segundo);
-lcd_gotoxy(1, 2);
-lcd_putrs(buffer2);
-
-# 48
-}
-
+# 35
 void setDiaSemana(void) {
 if (diasem == 0) {
 lcd_gotoxy(1, 1);
@@ -9268,12 +9251,29 @@ _delay((unsigned long)((50)*(8000000/4000.0)));
 }
 
 void setDiaMesAnio(void) {
+if (dia > 31) {
+dia = 1;
+Write_RTC();
+}
+
+if (mes > 12) {
+mes = 1;
+Write_RTC();
+}
+
 sprintf(buffer2, "%02u/%02u/%02u", dia, mes, anio);
 lcd_gotoxy(9, 1);
 lcd_putrs(buffer2);
 }
 
 void setHoraMinutoSegundo(void) {
+if (hora >= 24) {
+hora = 0;
+minuto = 0;
+segundo = 0;
+Write_RTC();
+}
+
 sprintf(buffer2, "%02u:%02u:%02u", hora, minuto, segundo);
 lcd_gotoxy(1, 2);
 lcd_putrs(buffer2);
@@ -9293,8 +9293,8 @@ TRISB = 0;
 TRISC = 0b00000111;
 INTCON2bits.RBPU = 1;
 ANCON0 = 0b11111111;
-ANCON1 = 0b11111111;
-ADCON0 = 0b11111111;
+ANCON1 = 0b10010111;
+ADCON0 = 0b00111111;
 ADCON1 = 0b11111111;
 
 
@@ -9306,6 +9306,7 @@ lcd_comand(0b00001100);
 setDiaSemana();
 setDiaMesAnio();
 setHoraMinutoSegundo();
+Write_RTC();
 }
 
 
@@ -9313,28 +9314,27 @@ setHoraMinutoSegundo();
 int main(void) {
 setup();
 
-# 132
+# 135
 int boton_centro_estado = 0;
 
-# 144
+# 147
 int boton_seleccionar = 0;
 
 while (1) {
 
 Read_RTC();
 
-
 if (PORTAbits.RA5 == 0 && boton_centro_estado == 0) {
 boton_centro_estado = 1;
-lcd_gotoxy(14, 2);
-lcd_putrs("1");
+lcd_gotoxy(10, 2);
+lcd_putrs("Edt");
 _delay((unsigned long)((98)*(8000000/4000.0)));
 }
 
 if (PORTAbits.RA5 == 0 && boton_centro_estado == 1) {
 boton_centro_estado = 0;
-lcd_gotoxy(14, 2);
-lcd_putrs("0");
+lcd_gotoxy(10, 2);
+lcd_putrs("        ");
 _delay((unsigned long)((98)*(8000000/4000.0)));
 }
 
@@ -9346,6 +9346,7 @@ boton_seleccionar = 0;
 } else {
 boton_seleccionar++;
 }
+while (PORTAbits.RA2 == 0);
 }
 
 if (PORTAbits.RA7 == 0) {
@@ -9354,6 +9355,7 @@ boton_seleccionar = 6;
 } else {
 boton_seleccionar--;
 }
+while (PORTAbits.RA7 == 0);
 }
 
 
@@ -9367,6 +9369,7 @@ Write_RTC();
 diasem++;
 Write_RTC();
 }
+while (PORTAbits.RA3 == 0);
 }
 
 if (PORTAbits.RA6 == 0) {
@@ -9377,6 +9380,7 @@ Write_RTC();
 diasem--;
 Write_RTC();
 }
+while (PORTAbits.RA6 == 0);
 }
 }
 
@@ -9391,6 +9395,7 @@ Write_RTC();
 dia++;
 Write_RTC();
 }
+while (PORTAbits.RA3 == 0);
 }
 
 if (PORTAbits.RA6 == 0) {
@@ -9401,6 +9406,7 @@ Write_RTC();
 dia--;
 Write_RTC();
 }
+while (PORTAbits.RA6 == 0);
 }
 
 _delay((unsigned long)((50)*(8000000/4000.0)));
@@ -9417,6 +9423,7 @@ Write_RTC();
 mes++;
 Write_RTC();
 }
+while (PORTAbits.RA3 == 0);
 }
 
 if (PORTAbits.RA6 == 0) {
@@ -9427,6 +9434,7 @@ Write_RTC();
 mes--;
 Write_RTC();
 }
+while (PORTAbits.RA6 == 0);
 }
 
 _delay((unsigned long)((50)*(8000000/4000.0)));
@@ -9443,6 +9451,7 @@ Write_RTC();
 anio++;
 Write_RTC();
 }
+while (PORTAbits.RA3 == 0);
 }
 
 if (PORTAbits.RA6 == 0) {
@@ -9453,6 +9462,7 @@ Write_RTC();
 anio--;
 Write_RTC();
 }
+while (PORTAbits.RA6 == 0);
 }
 
 _delay((unsigned long)((50)*(8000000/4000.0)));
@@ -9469,6 +9479,7 @@ Write_RTC();
 hora++;
 Write_RTC();
 }
+while (PORTAbits.RA3 == 0);
 }
 
 if (PORTAbits.RA6 == 0) {
@@ -9479,6 +9490,7 @@ Write_RTC();
 hora--;
 Write_RTC();
 }
+while (PORTAbits.RA6 == 0);
 }
 
 _delay((unsigned long)((50)*(8000000/4000.0)));
@@ -9495,6 +9507,7 @@ Write_RTC();
 minuto++;
 Write_RTC();
 }
+while (PORTAbits.RA3 == 0);
 }
 
 if (PORTAbits.RA6 == 0) {
@@ -9505,6 +9518,7 @@ Write_RTC();
 minuto--;
 Write_RTC();
 }
+while (PORTAbits.RA6 == 0);
 }
 
 _delay((unsigned long)((50)*(8000000/4000.0)));
@@ -9521,6 +9535,7 @@ Write_RTC();
 segundo++;
 Write_RTC();
 }
+while (PORTAbits.RA3 == 0);
 }
 
 if (PORTAbits.RA6 == 0) {
@@ -9531,13 +9546,14 @@ Write_RTC();
 segundo--;
 Write_RTC();
 }
+while (PORTAbits.RA6 == 0);
 }
 
 _delay((unsigned long)((50)*(8000000/4000.0)));
 }
 
-sprintf(buffer2, "%02u", boton_seleccionar);
-lcd_gotoxy(15, 2);
+sprintf(buffer2, "%s", array_seleccionar[boton_seleccionar]);
+lcd_gotoxy(13, 2);
 lcd_putrs(buffer2);
 }
 

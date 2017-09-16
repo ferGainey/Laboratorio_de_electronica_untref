@@ -13,39 +13,24 @@ rtccTimeDate RtccTimeDate, RtccAlrmTimeDate, Rtcc_read_TimeDate;
 rtccTime RtccTime; // Inicializa la estructura de tiempo
 rtccTime RtccTimeVal;
 rtccDate RtccDate; //Inicializa la estructura de Fecha
+char* array_seleccionar[] = {"Ndia", " Dia", " Mes", "Anio", "Hora", " Min", " Seg"};
 
 //[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 /// Funcion Caratula
 /// Display presentation day hour
 /// variable lecture diasem, anio, dia, hora, etc
 //[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
-
+/* Eliminar
 void caratula(void) {
     lcd_comand(0b00001100); //Enciende display sin cursor y sin blink  
-    //lcd_gotoxy(1,1);        
-    //lcd_putrs("UNIMIC");
-    //lcd_putrs(diasem);
     sprintf(buffer2, "%02u/%02u/%02u", dia, mes, anio);
     lcd_gotoxy(9, 1);
     lcd_putrs(buffer2);
     sprintf(buffer2, "%02u:%02u:%02u", hora, minuto, segundo);
     lcd_gotoxy(1, 2);
     lcd_putrs(buffer2);
-    /**
-    b = b++;
-    if (b < 7) {
-        lcd_gotoxy(1, 1);
-        lcd_putrs("UNIMIC");
-    }
-    if (b > 6) {
-        if (b == 11) {
-            b = 0;
-        }
-        lcd_gotoxy(1, 1);
-        lcd_putrs("      ");
-    }
-     */
 }
+*/
 
 void setDiaSemana(void) {
     if (diasem == 0) {
@@ -80,12 +65,29 @@ void setDiaSemana(void) {
 }
 
 void setDiaMesAnio(void) {
+    if (dia > 31) {
+        dia = 1;
+        Write_RTC();
+    }
+
+    if (mes > 12) {
+        mes = 1;
+        Write_RTC();
+    }
+
     sprintf(buffer2, "%02u/%02u/%02u", dia, mes, anio);
     lcd_gotoxy(9, 1);
     lcd_putrs(buffer2);
 }
 
 void setHoraMinutoSegundo(void) {
+    if (hora >= 24) {
+        hora = 0;
+        minuto = 0;
+        segundo = 0;
+        Write_RTC();
+    }
+
     sprintf(buffer2, "%02u:%02u:%02u", hora, minuto, segundo);
     lcd_gotoxy(1, 2);
     lcd_putrs(buffer2);
@@ -105,8 +107,8 @@ void setup(void) {
     TRISC = 0b00000111;
     INTCON2bits.RBPU = 1;
     ANCON0 = 0b11111111; // Config AN7 to AN0 Digital Ports
-    ANCON1 = 0b11111111; // Config AN11 Analog Port
-    ADCON0 = 0b11111111; // Control AN11 Analog Port
+    ANCON1 = 0b10010111; // Config AN11 Analog Port
+    ADCON0 = 0b00111111; // Control AN11 Analog Port
     ADCON1 = 0b11111111; // Config Analog Port
     //RTCCFGbits.RTCEN=1; No se utilizan
     //RTCCFGbits.RTCWREN=1; No se utilizan
@@ -118,6 +120,7 @@ void setup(void) {
     setDiaSemana();
     setDiaMesAnio();
     setHoraMinutoSegundo();
+    Write_RTC();
 }
 
 // Funcion main, funcion principal del programa
@@ -147,18 +150,17 @@ int main(void) {
 
         Read_RTC();
 
-
         if (switch_Center == 0 && boton_centro_estado == 0) {
             boton_centro_estado = 1;
-            lcd_gotoxy(14, 2);
-            lcd_putrs("1");
+            lcd_gotoxy(10, 2);
+            lcd_putrs("Edt");
             __delay_ms(98);
         }
 
         if (switch_Center == 0 && boton_centro_estado == 1) {
             boton_centro_estado = 0;
-            lcd_gotoxy(14, 2);
-            lcd_putrs("0");
+            lcd_gotoxy(10, 2);
+            lcd_putrs("        ");
             __delay_ms(98);
         }
 
@@ -170,6 +172,7 @@ int main(void) {
                 } else {
                     boton_seleccionar++;
                 }
+                while (switch_Right == 0);
             }
 
             if (switch_Left == 0) {
@@ -178,6 +181,7 @@ int main(void) {
                 } else {
                     boton_seleccionar--;
                 }
+                while (switch_Left == 0);
             }
 
             // Modificar Dia semana
@@ -191,6 +195,7 @@ int main(void) {
                         diasem++;
                         Write_RTC();
                     }
+                    while (switch_Up == 0);
                 }
 
                 if (switch_Down == 0) {
@@ -201,6 +206,7 @@ int main(void) {
                         diasem--;
                         Write_RTC();
                     }
+                    while (switch_Down == 0);
                 }
             }
 
@@ -215,6 +221,7 @@ int main(void) {
                         dia++;
                         Write_RTC();
                     }
+                    while (switch_Up == 0);
                 }
 
                 if (switch_Down == 0) {
@@ -225,6 +232,7 @@ int main(void) {
                         dia--;
                         Write_RTC();
                     }
+                    while (switch_Down == 0);
                 }
 
                 __delay_ms(50);
@@ -241,6 +249,7 @@ int main(void) {
                         mes++;
                         Write_RTC();
                     }
+                    while (switch_Up == 0);
                 }
 
                 if (switch_Down == 0) {
@@ -251,6 +260,7 @@ int main(void) {
                         mes--;
                         Write_RTC();
                     }
+                    while (switch_Down == 0);
                 }
 
                 __delay_ms(50);
@@ -267,6 +277,7 @@ int main(void) {
                         anio++;
                         Write_RTC();
                     }
+                    while (switch_Up == 0);
                 }
 
                 if (switch_Down == 0) {
@@ -277,6 +288,7 @@ int main(void) {
                         anio--;
                         Write_RTC();
                     }
+                    while (switch_Down == 0);
                 }
 
                 __delay_ms(50);
@@ -293,6 +305,7 @@ int main(void) {
                         hora++;
                         Write_RTC();
                     }
+                    while (switch_Up == 0);
                 }
 
                 if (switch_Down == 0) {
@@ -303,6 +316,7 @@ int main(void) {
                         hora--;
                         Write_RTC();
                     }
+                    while (switch_Down == 0);
                 }
 
                 __delay_ms(50);
@@ -319,6 +333,7 @@ int main(void) {
                         minuto++;
                         Write_RTC();
                     }
+                    while (switch_Up == 0);
                 }
 
                 if (switch_Down == 0) {
@@ -329,6 +344,7 @@ int main(void) {
                         minuto--;
                         Write_RTC();
                     }
+                    while (switch_Down == 0);
                 }
 
                 __delay_ms(50);
@@ -345,6 +361,7 @@ int main(void) {
                         segundo++;
                         Write_RTC();
                     }
+                    while (switch_Up == 0);
                 }
 
                 if (switch_Down == 0) {
@@ -355,13 +372,14 @@ int main(void) {
                         segundo--;
                         Write_RTC();
                     }
+                    while (switch_Down == 0);
                 }
 
                 __delay_ms(50);
             }
 
-            sprintf(buffer2, "%02u", boton_seleccionar);
-            lcd_gotoxy(15, 2);
+            sprintf(buffer2, "%s", array_seleccionar[boton_seleccionar]);
+            lcd_gotoxy(13, 2);
             lcd_putrs(buffer2);
         }
 
