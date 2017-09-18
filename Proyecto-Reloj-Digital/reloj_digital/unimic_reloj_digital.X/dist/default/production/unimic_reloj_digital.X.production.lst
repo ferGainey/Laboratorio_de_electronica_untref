@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC18 LITE Macro Assembler V1.43 build -156212558 
-                                                                                               Fri Sep 15 21:07:33 2017
+                                                                                               Mon Sep 18 20:10:28 2017
 
 Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250354
      1                           	processor	18F26J50
@@ -1180,17 +1180,17 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1161  0010D4  B680               	btfsc	3968,3,c	;volatile
   1162  0010D6  D012               	goto	u2550
   1163                           
-  1164                           ;main.c: 217: if (dia == 30) {
-  1165  0010D8  0E1E               	movlw	30
+  1164                           ;main.c: 217: if (dia == 31) {
+  1165  0010D8  0E1F               	movlw	31
   1166  0010DA  1854               	xorwf	_dia,w,c
   1167  0010DC  1055               	iorwf	_dia+1,w,c
   1168  0010DE  A4D8               	btfss	status,2,c
   1169  0010E0  D007               	goto	l200
   1170                           
-  1171                           ;main.c: 218: dia = 0;
+  1171                           ;main.c: 218: dia = 1;
   1172  0010E2  0E00               	movlw	0
   1173  0010E4  6E55               	movwf	_dia+1,c
-  1174  0010E6  0E00               	movlw	0
+  1174  0010E6  0E01               	movlw	1
   1175  0010E8  6E54               	movwf	_dia,c
   1176                           
   1177                           ;main.c: 219: Write_RTC();
@@ -1219,16 +1219,16 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
   1200  0010FC  BC80               	btfsc	3968,6,c	;volatile
   1201  0010FE  D012               	goto	u2580
   1202                           
-  1203                           ;main.c: 228: if (dia == 0) {
-  1204  001100  5054               	movf	_dia,w,c
+  1203                           ;main.c: 228: if (dia == 1) {
+  1204  001100  0454               	decf	_dia,w,c
   1205  001102  1055               	iorwf	_dia+1,w,c
   1206  001104  A4D8               	btfss	status,2,c
   1207  001106  D007               	goto	l206
   1208                           
-  1209                           ;main.c: 229: dia = 30;
+  1209                           ;main.c: 229: dia = 31;
   1210  001108  0E00               	movlw	0
   1211  00110A  6E55               	movwf	_dia+1,c
-  1212  00110C  0E1E               	movlw	30
+  1212  00110C  0E1F               	movlw	31
   1213  00110E  6E54               	movwf	_dia,c
   1214                           
   1215                           ;main.c: 230: Write_RTC();
@@ -6526,7 +6526,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V1.43 build -156212558 
-Symbol Table                                                                                   Fri Sep 15 21:07:33 2017
+Symbol Table                                                                                   Mon Sep 18 20:10:28 2017
 
                             _a 0035                              _b 0033                              _c 0031  
                             _i 0039                              _j 0037                              _k 002F  

@@ -214,8 +214,8 @@ int main(void) {
             if (boton_seleccionar == 1) {
 
                 if (switch_Up == 0) {
-                    if (dia == 30) {
-                        dia = 0;
+                    if (dia == 31) {
+                        dia = 1;
                         Write_RTC();
                     } else {
                         dia++;
@@ -225,8 +225,8 @@ int main(void) {
                 }
 
                 if (switch_Down == 0) {
-                    if (dia == 0) {
-                        dia = 30;
+                    if (dia == 1) {
+                        dia = 31;
                         Write_RTC();
                     } else {
                         dia--;

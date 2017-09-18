@@ -11,6 +11,9 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
+$C:\Users\Fernando\AppData\Local\Temp\s1e94.obj
+init CODE 0 0 0 4 1
+config CONFIG 0 FFF8 FFF8 8 1
 $dist/default/production\unimic_reloj_digital.X.production.obj
 cinit CODE 0 1F8E 1F8E 64 1
 text0 CODE 0 FA0 FA0 3FC 1
@@ -49,9 +52,6 @@ idataBANK0 CODE 0 2234 2234 E 1
 dataBANK0 BANK0 1 90 90 E 1
 dataCOMRAM COMRAM 1 50 50 C 1
 bssCOMRAM COMRAM 1 2D 2D 23 1
-$C:\Users\Fernando\AppData\Local\Temp\s1arc.obj
-init CODE 0 0 0 4 1
-config CONFIG 0 FFF8 FFF8 8 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -761,55 +761,55 @@ FFE text0 CODE >161:C:\Users\Fernando\Documents\Universidad\Laboratorio de elect
 1386 text0 CODE >388:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Reloj-Digital\reloj_digital\unimic_reloj_digital.X\main.c
 138A text0 CODE >390:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Reloj-Digital\reloj_digital\unimic_reloj_digital.X\main.c
 139A text0 CODE >149:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Reloj-Digital\reloj_digital\unimic_reloj_digital.X\main.c
-1F8E cinit CODE >1516:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1F8E cinit CODE >1518:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1F8E cinit CODE >1521:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1F8E cinit CODE >1678:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1F90 cinit CODE >1679:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1F92 cinit CODE >1680:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1F94 cinit CODE >1681:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1F96 cinit CODE >1682:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1F98 cinit CODE >1683:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1F9A cinit CODE >1684:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1F9E cinit CODE >1685:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FA2 cinit CODE >1686:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FA2 cinit CODE >1687:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FA4 cinit CODE >1688:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FA8 cinit CODE >1689:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FAA cinit CODE >1690:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FAC cinit CODE >1691:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FAE cinit CODE >1695:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FB0 cinit CODE >1696:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FB2 cinit CODE >1697:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FB4 cinit CODE >1698:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FB6 cinit CODE >1699:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FB8 cinit CODE >1700:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FBA cinit CODE >1701:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FBE cinit CODE >1702:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FC2 cinit CODE >1703:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FC2 cinit CODE >1704:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FC4 cinit CODE >1705:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FC8 cinit CODE >1706:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FCA cinit CODE >1707:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FCC cinit CODE >1708:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FCE cinit CODE >1712:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FD2 cinit CODE >1713:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FD4 cinit CODE >1714:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FD4 cinit CODE >1715:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FD6 cinit CODE >1716:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FD8 cinit CODE >1717:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FDA cinit CODE >1720:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FDC cinit CODE >1723:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FE0 cinit CODE >1724:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FE2 cinit CODE >1725:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FE2 cinit CODE >1726:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FE4 cinit CODE >1727:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FE6 cinit CODE >1728:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FE8 cinit CODE >1734:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FE8 cinit CODE >1737:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FEA cinit CODE >1738:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FEC cinit CODE >1739:C:\Users\Fernando\AppData\Local\Temp\s1arc.
-1FEE cinit CODE >1740:C:\Users\Fernando\AppData\Local\Temp\s1arc.
+1F8E cinit CODE >1516:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1F8E cinit CODE >1518:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1F8E cinit CODE >1521:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1F8E cinit CODE >1678:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1F90 cinit CODE >1679:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1F92 cinit CODE >1680:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1F94 cinit CODE >1681:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1F96 cinit CODE >1682:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1F98 cinit CODE >1683:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1F9A cinit CODE >1684:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1F9E cinit CODE >1685:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FA2 cinit CODE >1686:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FA2 cinit CODE >1687:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FA4 cinit CODE >1688:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FA8 cinit CODE >1689:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FAA cinit CODE >1690:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FAC cinit CODE >1691:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FAE cinit CODE >1695:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FB0 cinit CODE >1696:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FB2 cinit CODE >1697:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FB4 cinit CODE >1698:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FB6 cinit CODE >1699:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FB8 cinit CODE >1700:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FBA cinit CODE >1701:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FBE cinit CODE >1702:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FC2 cinit CODE >1703:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FC2 cinit CODE >1704:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FC4 cinit CODE >1705:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FC8 cinit CODE >1706:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FCA cinit CODE >1707:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FCC cinit CODE >1708:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FCE cinit CODE >1712:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FD2 cinit CODE >1713:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FD4 cinit CODE >1714:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FD4 cinit CODE >1715:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FD6 cinit CODE >1716:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FD8 cinit CODE >1717:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FDA cinit CODE >1720:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FDC cinit CODE >1723:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FE0 cinit CODE >1724:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FE2 cinit CODE >1725:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FE2 cinit CODE >1726:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FE4 cinit CODE >1727:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FE6 cinit CODE >1728:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FE8 cinit CODE >1734:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FE8 cinit CODE >1737:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FEA cinit CODE >1738:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FEC cinit CODE >1739:C:\Users\Fernando\AppData\Local\Temp\s1e94.
+1FEE cinit CODE >1740:C:\Users\Fernando\AppData\Local\Temp\s1e94.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -841,18 +841,18 @@ __CFG_T1DIG$ON 0 0 ABS 0 - dist/default/production\unimic_reloj_digital.X.produc
 __CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\unimic_reloj_digital.X.production.obj
 __HidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production\unimic_reloj_digital.X.production.obj
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\unimic_reloj_digital.X.production.obj
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\Fernando\AppData\Local\Temp\s1arc.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\Fernando\AppData\Local\Temp\s1e94.obj
 RtccWriteTime@tempHourWDay A 0 COMRAM 1 cstackCOMRAM dist/default/production\unimic_reloj_digital.X.production.obj
 _T1CONbits FCD 0 ABS 0 - dist/default/production\unimic_reloj_digital.X.production.obj
 _Delay1KTCYx 2214 0 CODE 0 text19 dist/default/production\unimic_reloj_digital.X.production.obj
 __CFG_WPCFG$OFF 0 0 ABS 0 - dist/default/production\unimic_reloj_digital.X.production.obj
 __Lsmallconst F00 0 SMALLCONST 0 smallconst dist/default/production\unimic_reloj_digital.X.production.obj
-___sp 0 0 STACK 2 stack C:\Users\Fernando\AppData\Local\Temp\s1arc.obj
+___sp 0 0 STACK 2 stack C:\Users\Fernando\AppData\Local\Temp\s1e94.obj
 _anio 5A 0 COMRAM 1 dataCOMRAM dist/default/production\unimic_reloj_digital.X.production.obj
 _flag 2E0 -284 COMRAM 1 bitbssCOMRAM dist/default/production\unimic_reloj_digital.X.production.obj
 _hora 52 0 COMRAM 1 dataCOMRAM dist/default/production\unimic_reloj_digital.X.production.obj
 _main FA0 0 CODE 0 text0 dist/default/production\unimic_reloj_digital.X.production.obj
-start 0 0 CODE 0 init C:\Users\Fernando\AppData\Local\Temp\s1arc.obj
+start 0 0 CODE 0 init C:\Users\Fernando\AppData\Local\Temp\s1e94.obj
 RtccWriteDate@tempDayMonth A 0 COMRAM 1 cstackCOMRAM dist/default/production\unimic_reloj_digital.X.production.obj
 __size_of___awdiv 0 0 ABS 0 - dist/default/production\unimic_reloj_digital.X.production.obj
 __size_of_main 0 0 ABS 0 - dist/default/production\unimic_reloj_digital.X.production.obj
@@ -875,11 +875,11 @@ __end_of_lcd_gotoxy 21E4 0 CODE 0 text12 dist/default/production\unimic_reloj_di
 __HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\unimic_reloj_digital.X.production.obj
 __end_of_lcd_putrs 2096 0 CODE 0 text10 dist/default/production\unimic_reloj_digital.X.production.obj
 _Read_RTC 1B5E 0 CODE 0 text24 dist/default/production\unimic_reloj_digital.X.production.obj
-__accesstop 60 0 ABS 0 - C:\Users\Fernando\AppData\Local\Temp\s1arc.obj
-intlevel0 0 0 CODE 0 text C:\Users\Fernando\AppData\Local\Temp\s1arc.obj
-intlevel1 0 0 CODE 0 text C:\Users\Fernando\AppData\Local\Temp\s1arc.obj
-intlevel2 0 0 CODE 0 text C:\Users\Fernando\AppData\Local\Temp\s1arc.obj
-intlevel3 0 0 CODE 0 text C:\Users\Fernando\AppData\Local\Temp\s1arc.obj
+__accesstop 60 0 ABS 0 - C:\Users\Fernando\AppData\Local\Temp\s1e94.obj
+intlevel0 0 0 CODE 0 text C:\Users\Fernando\AppData\Local\Temp\s1e94.obj
+intlevel1 0 0 CODE 0 text C:\Users\Fernando\AppData\Local\Temp\s1e94.obj
+intlevel2 0 0 CODE 0 text C:\Users\Fernando\AppData\Local\Temp\s1e94.obj
+intlevel3 0 0 CODE 0 text C:\Users\Fernando\AppData\Local\Temp\s1e94.obj
 __size_of_lcd_putrs 0 0 ABS 0 - dist/default/production\unimic_reloj_digital.X.production.obj
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\unimic_reloj_digital.X.production.obj
 lcd_comand@d 5 0 COMRAM 1 cstackCOMRAM dist/default/production\unimic_reloj_digital.X.production.obj
@@ -905,8 +905,8 @@ _ANCON1 F49 0 ABS 0 - dist/default/production\unimic_reloj_digital.X.production.
 _array_seleccionar 90 0 BANK0 1 dataBANK0 dist/default/production\unimic_reloj_digital.X.production.obj
 ___awdiv@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production\unimic_reloj_digital.X.production.obj
 Delay100TCYx@unit 1 0 COMRAM 1 cstackCOMRAM dist/default/production\unimic_reloj_digital.X.production.obj
-___inthi_sp 0 0 STACK 2 stack C:\Users\Fernando\AppData\Local\Temp\s1arc.obj
-___intlo_sp 0 0 STACK 2 stack C:\Users\Fernando\AppData\Local\Temp\s1arc.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\Fernando\AppData\Local\Temp\s1e94.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\Fernando\AppData\Local\Temp\s1e94.obj
 __LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\unimic_reloj_digital.X.production.obj
 __size_of_setDiaSemana 0 0 ABS 0 - dist/default/production\unimic_reloj_digital.X.production.obj
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\unimic_reloj_digital.X.production.obj
@@ -996,7 +996,7 @@ __Hbank13 0 0 ABS 0 bank13 dist/default/production\unimic_reloj_digital.X.produc
 __Hbank14 0 0 ABS 0 bank14 dist/default/production\unimic_reloj_digital.X.production.obj
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\unimic_reloj_digital.X.production.obj
 __Hbigram 0 0 ABS 0 bigram dist/default/production\unimic_reloj_digital.X.production.obj
-__smallconst F00 0 SMALLCONST 0 smallconst C:\Users\Fernando\AppData\Local\Temp\s1arc.obj
+__smallconst F00 0 SMALLCONST 0 smallconst C:\Users\Fernando\AppData\Local\Temp\s1e94.obj
 __end_of_sprintf 1698 0 CODE 0 text5 dist/default/production\unimic_reloj_digital.X.production.obj
 __size_of_lcd_init 0 0 ABS 0 - dist/default/production\unimic_reloj_digital.X.production.obj
 __size_of_lcd_putc 0 0 ABS 0 - dist/default/production\unimic_reloj_digital.X.production.obj
@@ -1168,8 +1168,8 @@ _RtccTime 4C 0 COMRAM 1 bssCOMRAM dist/default/production\unimic_reloj_digital.X
 _RtccWrOn 2202 0 CODE 0 text17 dist/default/production\unimic_reloj_digital.X.production.obj
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\unimic_reloj_digital.X.production.obj
 _RtccAlrmTimeDate 68 0 BANK0 1 bssBANK0 dist/default/production\unimic_reloj_digital.X.production.obj
-stackhi EBF 0 ABS 0 - C:\Users\Fernando\AppData\Local\Temp\s1arc.obj
-stacklo 9E 0 ABS 0 - C:\Users\Fernando\AppData\Local\Temp\s1arc.obj
+stackhi EBF 0 ABS 0 - C:\Users\Fernando\AppData\Local\Temp\s1e94.obj
+stacklo 9E 0 ABS 0 - C:\Users\Fernando\AppData\Local\Temp\s1e94.obj
 _lcd_send_nibble 1E3A 0 CODE 0 text22 dist/default/production\unimic_reloj_digital.X.production.obj
 __Lintcode 0 0 CODE 0 intcode dist/default/production\unimic_reloj_digital.X.production.obj
 _segundo 2D 0 COMRAM 1 bssCOMRAM dist/default/production\unimic_reloj_digital.X.production.obj
@@ -1240,7 +1240,7 @@ __Ltext23 0 0 ABS 0 text23 dist/default/production\unimic_reloj_digital.X.produc
 __Ltext24 0 0 ABS 0 text24 dist/default/production\unimic_reloj_digital.X.production.obj
 __Ltext25 0 0 ABS 0 text25 dist/default/production\unimic_reloj_digital.X.production.obj
 __Ltext26 0 0 ABS 0 text26 dist/default/production\unimic_reloj_digital.X.production.obj
-__ramtop F00 0 RAM 0 ramtop C:\Users\Fernando\AppData\Local\Temp\s1arc.obj
+__ramtop F00 0 RAM 0 ramtop C:\Users\Fernando\AppData\Local\Temp\s1e94.obj
 _sprintf 139C 0 CODE 0 text5 dist/default/production\unimic_reloj_digital.X.production.obj
 __size_of_lcd_send_byte 0 0 ABS 0 - dist/default/production\unimic_reloj_digital.X.production.obj
 __Lpowerup 0 0 CODE 0 powerup dist/default/production\unimic_reloj_digital.X.production.obj
