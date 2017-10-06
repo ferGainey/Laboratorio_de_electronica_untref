@@ -13,13 +13,17 @@ rtccTimeDate RtccTimeDate, RtccAlrmTimeDate, Rtcc_read_TimeDate;
 rtccTime RtccTime; // Inicializa la estructura de tiempo
 rtccTime RtccTimeVal;
 rtccDate RtccDate; //Inicializa la estructura de Fecha
-char* array_seleccionar[] = {"Ndia", " Dia", " Mes", "Anio", "Hora", " Min", " Seg"};
+char* array_seleccionar[] = {"Ndia", " Dia", " Mes", "Anio", "Hora", " Min", " Seg", "Cafe"};
+char* array_boton_seleccionar_tipo_cafe[] = {"Cortado", "Solo   ", "C/Leche"};
+char* array_boton_seleccionar_tamanio_cafe[] = {"Chico   ", "Mediano ", "Grande  "};
+char* array_boton_seleccionar_accion_cafe[] = {"Pedir   ", "Terminar"};
 
 //[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 /// Funcion Caratula
 /// Display presentation day hour
 /// variable lecture diasem, anio, dia, hora, etc
 //[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+
 /* Eliminar
 void caratula(void) {
     lcd_comand(0b00001100); //Enciende display sin cursor y sin blink  
@@ -30,7 +34,7 @@ void caratula(void) {
     lcd_gotoxy(1, 2);
     lcd_putrs(buffer2);
 }
-*/
+ */
 
 void setDiaSemana(void) {
     if (diasem == 0) {
@@ -93,7 +97,14 @@ void setHoraMinutoSegundo(void) {
     lcd_putrs(buffer2);
 }
 
+void setRelojDigital(void) {
+    setDiaSemana();
+    setDiaMesAnio();
+    setHoraMinutoSegundo();
+}
+
 //Funcion Setup
+
 void setup(void) {
     OSCTUNEbits.INTSRC = 1; //setea el oscilador de 32768 para el RTC
     OSCTUNEbits.PLLEN = 0; //desactiva PLL
@@ -117,9 +128,7 @@ void setup(void) {
     lcd_init();
     lcd_comand(0b00001100); //Display=on / Cursor=off / Blink=off
 
-    setDiaSemana();
-    setDiaMesAnio();
-    setHoraMinutoSegundo();
+    setRelojDigital();
     Write_RTC();
 }
 
@@ -167,7 +176,7 @@ int main(void) {
         if (boton_centro_estado == 1) {
 
             if (switch_Right == 0) {
-                if (boton_seleccionar == 6) {
+                if (boton_seleccionar == 7) {
                     boton_seleccionar = 0;
                 } else {
                     boton_seleccionar++;
@@ -177,12 +186,16 @@ int main(void) {
 
             if (switch_Left == 0) {
                 if (boton_seleccionar == 0) {
-                    boton_seleccionar = 6;
+                    boton_seleccionar = 7;
                 } else {
                     boton_seleccionar--;
                 }
                 while (switch_Left == 0);
             }
+            //imprime lo que estamos editando
+            sprintf(buffer2, "%s", array_seleccionar[boton_seleccionar]);
+            lcd_gotoxy(13, 2);
+            lcd_putrs(buffer2);
 
             // Modificar Dia semana
             if (boton_seleccionar == 0) {
@@ -378,15 +391,133 @@ int main(void) {
                 __delay_ms(50);
             }
 
-            sprintf(buffer2, "%s", array_seleccionar[boton_seleccionar]);
-            lcd_gotoxy(13, 2);
-            lcd_putrs(buffer2);
+            if (boton_seleccionar == 7) {
+                
+                boton_seleccionar = 0;
+                int boton_seleccionar_cafe = 0;
+                int tipo = 0; //0=cortado, 1=solo, 2=c/leche
+                int tamanio = 0; //0=chico, 1=mediano, 2=grande
+                int accion = 0; //0=pedir, 1=terminar
+                
+                while (1) {
+                    
+                    if (switch_Right == 0) {
+                        if (boton_seleccionar_cafe == 2) {
+                            boton_seleccionar_cafe = 0;
+                        } else {
+                            boton_seleccionar_cafe++;
+                        }
+                        while (switch_Right == 0);
+                    }
+
+                    if (switch_Left == 0) {
+                        if (boton_seleccionar_cafe == 0) {
+                            boton_seleccionar_cafe = 2;
+                        } else {
+                            boton_seleccionar_cafe--;
+                        }
+                        while (switch_Left == 0);
+                    }
+                    
+                    if (boton_seleccionar_cafe == 0) {
+
+                        if (switch_Up == 0) {
+                            if (tipo == 2) {
+                                tipo = 0;
+                            } else {
+                                tipo++;
+                                //ToDo = escribir en pantalla
+                            }
+                            while (switch_Up == 0);
+                        }
+
+
+                        if (switch_Down == 0) {
+                            if (tipo == 0) {
+                                tipo = 2;
+                                //ToDo = escribir en pantalla
+                            } else {
+                                tipo--;
+                                //ToDo = escribir en pantalla
+                            }
+                            while (switch_Down == 0);
+                        }
+                    }
+                    
+                    if (boton_seleccionar_cafe == 1) {
+
+                        if (switch_Up == 0) {
+                            if (tamanio == 2) {
+                                tamanio = 0;
+                            } else {
+                                tamanio++;
+                            }
+                            while (switch_Up == 0);
+                        }
+
+                        if (switch_Down == 0) {
+                            if (tamanio == 0) {
+                                tamanio = 2;
+                            } else {
+                                tamanio--;
+                            }
+                            while (switch_Down == 0);
+                        }
+                    }
+                    
+                    if (boton_seleccionar_cafe == 2) {
+                        if (switch_Up == 0) {
+                            if (accion == 1) {
+                                accion = 0;
+                            } else {
+                                accion++;
+                            }
+                            while (switch_Up == 0);
+                        }
+
+                        if (switch_Down == 0) {
+                            if (accion == 0) {
+                                accion = 1;
+                            } else {
+                                accion--;
+                            }
+                            while (switch_Down == 0);
+                        }
+                        
+                        if (switch_Center == 0) {
+                            if (accion == 0) {
+                                // Guardar variables globales para los tipos/tamaños de cafe
+                                break;
+                            }
+                            
+                            if (accion == 1) {
+                                break;
+                            }
+                            
+                            while (switch_Center == 1);
+                        }
+                    }
+
+                    //aca abajo imprimimos lo del cafe
+                    sprintf(buffer3, "%s", array_boton_seleccionar_tipo_cafe[tipo]);
+                    lcd_gotoxy(1, 1);
+                    lcd_putrs(buffer3);
+
+                    sprintf(buffer4, "%s", array_boton_seleccionar_tamanio_cafe[tamanio]);
+                    lcd_gotoxy(9, 1);
+                    lcd_putrs(buffer4);
+
+                    sprintf(buffer5, "%s", array_boton_seleccionar_accion_cafe[accion]);
+                    lcd_gotoxy(1, 2);
+                    lcd_putrs(buffer5);
+
+                }
+            }
+
+
         }
 
-        setDiaSemana();
-        setDiaMesAnio();
-        setHoraMinutoSegundo();
-
+        setRelojDigital();
         __delay_ms(98); // 100ms retardo maximo para esta funcion
 
     }

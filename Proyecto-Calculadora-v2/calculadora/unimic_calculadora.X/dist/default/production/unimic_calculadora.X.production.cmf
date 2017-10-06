@@ -58,7 +58,7 @@ smallconst SMALLCONST 0 F00 F00 54 1
 idataBANK0 CODE 0 29E0 29E0 E 1
 dataBANK0 BANK0 1 E7 E7 E 1
 bssCOMRAM COMRAM 1 5D 5D 2 1
-$C:\Users\Fernando\AppData\Local\Temp\s20v8.obj
+$C:\Users\Fernando\AppData\Local\Temp\s7d4.obj
 init CODE 0 0 0 4 1
 config CONFIG 0 FFF8 FFF8 8 1
 # %UNUSED Section
@@ -110,81 +110,81 @@ $dist/default/production\unimic_calculadora.X.production.obj
 29D2 text36 CODE >10:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic18\d100tcyx.c
 29D2 text36 CODE >11:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic18\d100tcyx.c
 29DA text36 CODE >12:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic18\d100tcyx.c
-25D8 text35 CODE >25:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-25DA text35 CODE >27:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-25F2 text35 CODE >28:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-260C text35 CODE >29:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-2628 text35 CODE >30:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-2642 text35 CODE >32:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-2644 text35 CODE >33:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-2646 text35 CODE >34:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-264A text35 CODE >35:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-264C text35 CODE >36:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-28CE text34 CODE >86:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-28D0 text34 CODE >88:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-28D2 text34 CODE >93:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-28D8 text34 CODE >96:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-28DA text34 CODE >97:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-28DC text34 CODE >98:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-28DE text34 CODE >99:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-28E0 text34 CODE >101:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-28E6 text34 CODE >102:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-28EA text34 CODE >103:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-28EA text34 CODE >104:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-28EC text34 CODE >106:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-28EE text34 CODE >113:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-28F6 text34 CODE >114:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-28FE text34 CODE >115:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-29EE text33 CODE >189:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-29F0 text33 CODE >190:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-29FA text33 CODE >191:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+25D8 text35 CODE >25:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+25DA text35 CODE >27:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+25F2 text35 CODE >28:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+260C text35 CODE >29:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+2628 text35 CODE >30:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+2642 text35 CODE >32:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+2644 text35 CODE >33:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+2646 text35 CODE >34:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+264A text35 CODE >35:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+264C text35 CODE >36:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+28CE text34 CODE >86:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+28D0 text34 CODE >88:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+28D2 text34 CODE >93:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+28D8 text34 CODE >96:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+28DA text34 CODE >97:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+28DC text34 CODE >98:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+28DE text34 CODE >99:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+28E0 text34 CODE >101:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+28E6 text34 CODE >102:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+28EA text34 CODE >103:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+28EA text34 CODE >104:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+28EC text34 CODE >106:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+28EE text34 CODE >113:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+28F6 text34 CODE >114:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+28FE text34 CODE >115:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+29EE text33 CODE >189:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+29F0 text33 CODE >190:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+29FA text33 CODE >191:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
 29C0 text32 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic18\d1ktcyx.c
 29C2 text32 CODE >10:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic18\d1ktcyx.c
 29C2 text32 CODE >11:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic18\d1ktcyx.c
 29CA text32 CODE >12:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic18\d1ktcyx.c
-2562 text31 CODE >119:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-2562 text31 CODE >122:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-2564 text31 CODE >123:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-2566 text31 CODE >128:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-2568 text31 CODE >129:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-256A text31 CODE >134:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-256C text31 CODE >135:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-256E text31 CODE >136:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-2570 text31 CODE >137:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-2572 text31 CODE >139:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-2578 text31 CODE >140:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-257E text31 CODE >141:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-2584 text31 CODE >143:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-2590 text31 CODE >144:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-2596 text31 CODE >145:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-259C text31 CODE >143:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-25A0 text31 CODE >148:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-25A6 text31 CODE >150:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-25B2 text31 CODE >151:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-25CE text31 CODE >153:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-25D4 text31 CODE >150:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-281A text30 CODE >22:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-281A text30 CODE >23:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-281C text30 CODE >24:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-281E text30 CODE >25:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-2820 text30 CODE >26:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-2822 text30 CODE >27:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-2824 text30 CODE >28:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-2826 text30 CODE >29:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-2828 text30 CODE >30:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-282C text30 CODE >31:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-2830 text30 CODE >32:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-2834 text30 CODE >33:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-2836 text30 CODE >34:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-283A text30 CODE >35:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-2840 text30 CODE >36:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-2844 text30 CODE >37:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-2848 text30 CODE >40:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-284A text30 CODE >42:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-284E text30 CODE >43:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-2854 text30 CODE >44:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-2856 text30 CODE >45:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-2858 text30 CODE >46:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
+2562 text31 CODE >119:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+2562 text31 CODE >122:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+2564 text31 CODE >123:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+2566 text31 CODE >128:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+2568 text31 CODE >129:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+256A text31 CODE >134:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+256C text31 CODE >135:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+256E text31 CODE >136:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+2570 text31 CODE >137:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+2572 text31 CODE >139:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+2578 text31 CODE >140:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+257E text31 CODE >141:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+2584 text31 CODE >143:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+2590 text31 CODE >144:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+2596 text31 CODE >145:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+259C text31 CODE >143:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+25A0 text31 CODE >148:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+25A6 text31 CODE >150:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+25B2 text31 CODE >151:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+25CE text31 CODE >153:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+25D4 text31 CODE >150:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+281A text30 CODE >22:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+281A text30 CODE >23:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+281C text30 CODE >24:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+281E text30 CODE >25:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+2820 text30 CODE >26:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+2822 text30 CODE >27:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+2824 text30 CODE >28:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+2826 text30 CODE >29:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+2828 text30 CODE >30:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+282C text30 CODE >31:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+2830 text30 CODE >32:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+2834 text30 CODE >33:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+2836 text30 CODE >34:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+283A text30 CODE >35:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+2840 text30 CODE >36:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+2844 text30 CODE >37:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+2848 text30 CODE >40:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+284A text30 CODE >42:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+284E text30 CODE >43:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+2854 text30 CODE >44:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+2856 text30 CODE >45:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+2858 text30 CODE >46:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
 2466 text29 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\awdiv.c
 2466 text29 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\awdiv.c
 246A text29 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\awdiv.c
@@ -213,34 +213,34 @@ $dist/default/production\unimic_calculadora.X.production.obj
 24D2 text29 CODE >39:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\awdiv.c
 24D8 text29 CODE >40:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\awdiv.c
 24E0 text29 CODE >41:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\awdiv.c
-299E text28 CODE >158:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-29A0 text28 CODE >161:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-29A6 text28 CODE >162:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-29AA text28 CODE >163:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-29AA text28 CODE >164:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-29AE text28 CODE >166:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-29B2 text28 CODE >167:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-29BE text28 CODE >168:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-274E text27 CODE >172:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-2750 text27 CODE >173:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-2752 text27 CODE >174:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-2752 text27 CODE >175:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-275C text27 CODE >176:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-275E text27 CODE >177:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-275E text27 CODE >178:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-2768 text27 CODE >179:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-276A text27 CODE >180:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-276A text27 CODE >181:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-2774 text27 CODE >182:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-2776 text27 CODE >183:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-2776 text27 CODE >184:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-2780 text27 CODE >186:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-2782 text27 CODE >173:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-26FC text26 CODE >221:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-26FC text26 CODE >223:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-26FE text26 CODE >224:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-2726 text26 CODE >223:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-2726 text26 CODE >225:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+299E text28 CODE >158:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+29A0 text28 CODE >161:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+29A6 text28 CODE >162:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+29AA text28 CODE >163:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+29AA text28 CODE >164:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+29AE text28 CODE >166:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+29B2 text28 CODE >167:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+29BE text28 CODE >168:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+274E text27 CODE >172:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+2750 text27 CODE >173:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+2752 text27 CODE >174:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+2752 text27 CODE >175:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+275C text27 CODE >176:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+275E text27 CODE >177:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+275E text27 CODE >178:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+2768 text27 CODE >179:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+276A text27 CODE >180:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+276A text27 CODE >181:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+2774 text27 CODE >182:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+2776 text27 CODE >183:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+2776 text27 CODE >184:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+2780 text27 CODE >186:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+2782 text27 CODE >173:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+26FC text26 CODE >221:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+26FC text26 CODE >223:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+26FE text26 CODE >224:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+2726 text26 CODE >223:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+2726 text26 CODE >225:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
 26AA text25 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
 26AA text25 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
 26B2 text25 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
@@ -299,33 +299,33 @@ $dist/default/production\unimic_calculadora.X.production.obj
 1AF2 text23 CODE >1525:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
 1AFA text23 CODE >536:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
 1B12 text23 CODE >1538:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-292A text22 CODE >48:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-292A text22 CODE >49:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-2946 text22 CODE >50:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-2952 text22 CODE >51:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1C3E text21 CODE >53:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1C3E text21 CODE >55:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1C4A text21 CODE >56:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1C5A text21 CODE >57:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1C74 text21 CODE >58:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1C78 text21 CODE >59:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1C86 text21 CODE >60:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1C90 text21 CODE >61:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1CAE text21 CODE >60:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1CC8 text21 CODE >64:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1CC8 text21 CODE >65:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1CDE text21 CODE >66:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1CFC text21 CODE >67:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1D02 text21 CODE >68:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1D0C text21 CODE >69:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1D16 text21 CODE >70:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1D34 text21 CODE >69:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1D52 text21 CODE >74:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-2900 text20 CODE >214:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-2900 text20 CODE >216:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-2902 text20 CODE >217:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-2916 text20 CODE >216:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
-2916 text20 CODE >218:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+292A text22 CODE >48:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+292A text22 CODE >49:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+2946 text22 CODE >50:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+2952 text22 CODE >51:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1C3E text21 CODE >53:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1C3E text21 CODE >55:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1C4A text21 CODE >56:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1C5A text21 CODE >57:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1C74 text21 CODE >58:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1C78 text21 CODE >59:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1C86 text21 CODE >60:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1C90 text21 CODE >61:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1CAE text21 CODE >60:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1CC8 text21 CODE >64:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1CC8 text21 CODE >65:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1CDE text21 CODE >66:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1CFC text21 CODE >67:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1D02 text21 CODE >68:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1D0C text21 CODE >69:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1D16 text21 CODE >70:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1D34 text21 CODE >69:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1D52 text21 CODE >74:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+2900 text20 CODE >214:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+2900 text20 CODE >216:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+2902 text20 CODE >217:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+2916 text20 CODE >216:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+2916 text20 CODE >218:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
 2298 text19 CODE >62:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\float.c
 2298 text19 CODE >64:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\float.c
 22A8 text19 CODE >65:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\float.c
@@ -640,161 +640,161 @@ $dist/default/production\unimic_calculadora.X.production.obj
 19D4 text1 CODE >29:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\pow.c
 19F2 text1 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\pow.c
 19FE text1 CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\pow.c
-F54 text0 CODE >78:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-F54 text0 CODE >79:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-F58 text0 CODE >81:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-F58 text0 CODE >84:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-F5A text0 CODE >85:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-F5C text0 CODE >86:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-F5E text0 CODE >87:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-F60 text0 CODE >89:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-F64 text0 CODE >90:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-F70 text0 CODE >91:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-F74 text0 CODE >95:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-F78 text0 CODE >96:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-F84 text0 CODE >97:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-F88 text0 CODE >101:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-F8C text0 CODE >102:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-F98 text0 CODE >103:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-F9C text0 CODE >107:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-FA0 text0 CODE >108:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-FAA text0 CODE >109:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-FB6 text0 CODE >110:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-FC0 text0 CODE >111:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-FCC text0 CODE >112:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-FD0 text0 CODE >118:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-FD2 text0 CODE >119:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-FD4 text0 CODE >120:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-FD6 text0 CODE >121:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-FD8 text0 CODE >123:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-FDC text0 CODE >124:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-FE8 text0 CODE >125:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-FEC text0 CODE >129:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-FF0 text0 CODE >130:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-FFC text0 CODE >131:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1000 text0 CODE >135:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1004 text0 CODE >136:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1010 text0 CODE >137:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1014 text0 CODE >141:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1018 text0 CODE >142:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1022 text0 CODE >143:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-102E text0 CODE >144:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1038 text0 CODE >145:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1044 text0 CODE >146:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1048 text0 CODE >152:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-104A text0 CODE >153:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-104C text0 CODE >154:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-104E text0 CODE >155:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1050 text0 CODE >157:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1054 text0 CODE >158:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1060 text0 CODE >159:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1064 text0 CODE >163:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1068 text0 CODE >164:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1074 text0 CODE >165:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1078 text0 CODE >169:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-107C text0 CODE >170:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1088 text0 CODE >171:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-108C text0 CODE >175:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1090 text0 CODE >176:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-109A text0 CODE >177:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-10A6 text0 CODE >178:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-10B0 text0 CODE >179:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-10BC text0 CODE >180:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-10C0 text0 CODE >185:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-10C2 text0 CODE >186:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-10C4 text0 CODE >187:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-10C6 text0 CODE >188:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-10C8 text0 CODE >190:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-10CC text0 CODE >192:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-10D0 text0 CODE >193:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-10D4 text0 CODE >194:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-10DE text0 CODE >195:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-10EA text0 CODE >196:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-10F4 text0 CODE >197:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-10FC text0 CODE >198:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1100 text0 CODE >202:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1104 text0 CODE >203:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1110 text0 CODE >204:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1114 text0 CODE >208:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1118 text0 CODE >209:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1122 text0 CODE >210:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1138 text0 CODE >211:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-11E2 text0 CODE >210:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-11EC text0 CODE >213:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-11F6 text0 CODE >214:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1210 text0 CODE >215:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-12BE text0 CODE >214:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-12C8 text0 CODE >217:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-12D2 text0 CODE >218:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-12E4 text0 CODE >219:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-12EE text0 CODE >220:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1316 text0 CODE >221:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1322 text0 CODE >222:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1322 text0 CODE >223:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1334 text0 CODE >224:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-133E text0 CODE >225:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1366 text0 CODE >226:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1372 text0 CODE >227:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1372 text0 CODE >228:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1384 text0 CODE >229:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-138E text0 CODE >230:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-13B6 text0 CODE >231:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-13C2 text0 CODE >232:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-13C2 text0 CODE >233:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-13D4 text0 CODE >234:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-13DE text0 CODE >235:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-13FA text0 CODE >236:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-141E text0 CODE >237:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-142A text0 CODE >238:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1434 text0 CODE >239:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1440 text0 CODE >240:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1442 text0 CODE >241:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1442 text0 CODE >242:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1472 text0 CODE >243:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-147E text0 CODE >244:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-147E text0 CODE >248:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-147E text0 CODE >249:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1482 text0 CODE >252:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1486 text0 CODE >255:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-1490 text0 CODE >256:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-149C text0 CODE >257:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-14A6 text0 CODE >258:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-14B2 text0 CODE >259:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-14B6 text0 CODE >263:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-14CE text0 CODE >264:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-14E4 text0 CODE >265:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-14F4 text0 CODE >81:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
-285A cinit CODE >1423:C:\Users\Fernando\AppData\Local\Temp\s20v8.
-285A cinit CODE >1425:C:\Users\Fernando\AppData\Local\Temp\s20v8.
-285A cinit CODE >1428:C:\Users\Fernando\AppData\Local\Temp\s20v8.
-285A cinit CODE >1601:C:\Users\Fernando\AppData\Local\Temp\s20v8.
-285C cinit CODE >1602:C:\Users\Fernando\AppData\Local\Temp\s20v8.
-285E cinit CODE >1603:C:\Users\Fernando\AppData\Local\Temp\s20v8.
-2860 cinit CODE >1604:C:\Users\Fernando\AppData\Local\Temp\s20v8.
-2862 cinit CODE >1605:C:\Users\Fernando\AppData\Local\Temp\s20v8.
-2864 cinit CODE >1606:C:\Users\Fernando\AppData\Local\Temp\s20v8.
-2866 cinit CODE >1607:C:\Users\Fernando\AppData\Local\Temp\s20v8.
-286A cinit CODE >1608:C:\Users\Fernando\AppData\Local\Temp\s20v8.
-286E cinit CODE >1609:C:\Users\Fernando\AppData\Local\Temp\s20v8.
-286E cinit CODE >1610:C:\Users\Fernando\AppData\Local\Temp\s20v8.
-2870 cinit CODE >1611:C:\Users\Fernando\AppData\Local\Temp\s20v8.
-2874 cinit CODE >1612:C:\Users\Fernando\AppData\Local\Temp\s20v8.
-2876 cinit CODE >1613:C:\Users\Fernando\AppData\Local\Temp\s20v8.
-2878 cinit CODE >1614:C:\Users\Fernando\AppData\Local\Temp\s20v8.
-287A cinit CODE >1618:C:\Users\Fernando\AppData\Local\Temp\s20v8.
-287E cinit CODE >1619:C:\Users\Fernando\AppData\Local\Temp\s20v8.
-2880 cinit CODE >1620:C:\Users\Fernando\AppData\Local\Temp\s20v8.
-2880 cinit CODE >1621:C:\Users\Fernando\AppData\Local\Temp\s20v8.
-2882 cinit CODE >1622:C:\Users\Fernando\AppData\Local\Temp\s20v8.
-2884 cinit CODE >1623:C:\Users\Fernando\AppData\Local\Temp\s20v8.
-2886 cinit CODE >1626:C:\Users\Fernando\AppData\Local\Temp\s20v8.
-2888 cinit CODE >1629:C:\Users\Fernando\AppData\Local\Temp\s20v8.
-288A cinit CODE >1630:C:\Users\Fernando\AppData\Local\Temp\s20v8.
-288C cinit CODE >1636:C:\Users\Fernando\AppData\Local\Temp\s20v8.
-288C cinit CODE >1639:C:\Users\Fernando\AppData\Local\Temp\s20v8.
-288E cinit CODE >1640:C:\Users\Fernando\AppData\Local\Temp\s20v8.
-2890 cinit CODE >1641:C:\Users\Fernando\AppData\Local\Temp\s20v8.
-2892 cinit CODE >1642:C:\Users\Fernando\AppData\Local\Temp\s20v8.
+F54 text0 CODE >78:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+F54 text0 CODE >79:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+F58 text0 CODE >81:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+F58 text0 CODE >84:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+F5A text0 CODE >85:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+F5C text0 CODE >86:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+F5E text0 CODE >87:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+F60 text0 CODE >89:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+F64 text0 CODE >90:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+F70 text0 CODE >91:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+F74 text0 CODE >95:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+F78 text0 CODE >96:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+F84 text0 CODE >97:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+F88 text0 CODE >101:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+F8C text0 CODE >102:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+F98 text0 CODE >103:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+F9C text0 CODE >107:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+FA0 text0 CODE >108:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+FAA text0 CODE >109:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+FB6 text0 CODE >110:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+FC0 text0 CODE >111:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+FCC text0 CODE >112:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+FD0 text0 CODE >118:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+FD2 text0 CODE >119:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+FD4 text0 CODE >120:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+FD6 text0 CODE >121:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+FD8 text0 CODE >123:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+FDC text0 CODE >124:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+FE8 text0 CODE >125:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+FEC text0 CODE >129:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+FF0 text0 CODE >130:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+FFC text0 CODE >131:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1000 text0 CODE >135:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1004 text0 CODE >136:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1010 text0 CODE >137:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1014 text0 CODE >141:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1018 text0 CODE >142:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1022 text0 CODE >143:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+102E text0 CODE >144:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1038 text0 CODE >145:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1044 text0 CODE >146:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1048 text0 CODE >152:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+104A text0 CODE >153:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+104C text0 CODE >154:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+104E text0 CODE >155:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1050 text0 CODE >157:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1054 text0 CODE >158:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1060 text0 CODE >159:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1064 text0 CODE >163:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1068 text0 CODE >164:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1074 text0 CODE >165:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1078 text0 CODE >169:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+107C text0 CODE >170:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1088 text0 CODE >171:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+108C text0 CODE >175:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1090 text0 CODE >176:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+109A text0 CODE >177:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+10A6 text0 CODE >178:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+10B0 text0 CODE >179:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+10BC text0 CODE >180:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+10C0 text0 CODE >185:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+10C2 text0 CODE >186:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+10C4 text0 CODE >187:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+10C6 text0 CODE >188:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+10C8 text0 CODE >190:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+10CC text0 CODE >192:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+10D0 text0 CODE >193:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+10D4 text0 CODE >194:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+10DE text0 CODE >195:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+10EA text0 CODE >196:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+10F4 text0 CODE >197:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+10FC text0 CODE >198:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1100 text0 CODE >202:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1104 text0 CODE >203:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1110 text0 CODE >204:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1114 text0 CODE >208:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1118 text0 CODE >209:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1122 text0 CODE >210:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1138 text0 CODE >211:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+11E2 text0 CODE >210:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+11EC text0 CODE >213:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+11F6 text0 CODE >214:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1210 text0 CODE >215:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+12BE text0 CODE >214:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+12C8 text0 CODE >217:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+12D2 text0 CODE >218:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+12E4 text0 CODE >219:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+12EE text0 CODE >220:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1316 text0 CODE >221:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1322 text0 CODE >222:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1322 text0 CODE >223:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1334 text0 CODE >224:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+133E text0 CODE >225:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1366 text0 CODE >226:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1372 text0 CODE >227:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1372 text0 CODE >228:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1384 text0 CODE >229:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+138E text0 CODE >230:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+13B6 text0 CODE >231:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+13C2 text0 CODE >232:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+13C2 text0 CODE >233:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+13D4 text0 CODE >234:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+13DE text0 CODE >235:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+13FA text0 CODE >236:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+141E text0 CODE >237:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+142A text0 CODE >238:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1434 text0 CODE >239:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1440 text0 CODE >240:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1442 text0 CODE >241:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1442 text0 CODE >242:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1472 text0 CODE >243:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+147E text0 CODE >244:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+147E text0 CODE >248:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+147E text0 CODE >249:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1482 text0 CODE >252:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1486 text0 CODE >255:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+1490 text0 CODE >256:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+149C text0 CODE >257:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+14A6 text0 CODE >258:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+14B2 text0 CODE >259:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+14B6 text0 CODE >263:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+14CE text0 CODE >264:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+14E4 text0 CODE >265:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+14F4 text0 CODE >81:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
+285A cinit CODE >1423:C:\Users\Fernando\AppData\Local\Temp\s7d4.
+285A cinit CODE >1425:C:\Users\Fernando\AppData\Local\Temp\s7d4.
+285A cinit CODE >1428:C:\Users\Fernando\AppData\Local\Temp\s7d4.
+285A cinit CODE >1601:C:\Users\Fernando\AppData\Local\Temp\s7d4.
+285C cinit CODE >1602:C:\Users\Fernando\AppData\Local\Temp\s7d4.
+285E cinit CODE >1603:C:\Users\Fernando\AppData\Local\Temp\s7d4.
+2860 cinit CODE >1604:C:\Users\Fernando\AppData\Local\Temp\s7d4.
+2862 cinit CODE >1605:C:\Users\Fernando\AppData\Local\Temp\s7d4.
+2864 cinit CODE >1606:C:\Users\Fernando\AppData\Local\Temp\s7d4.
+2866 cinit CODE >1607:C:\Users\Fernando\AppData\Local\Temp\s7d4.
+286A cinit CODE >1608:C:\Users\Fernando\AppData\Local\Temp\s7d4.
+286E cinit CODE >1609:C:\Users\Fernando\AppData\Local\Temp\s7d4.
+286E cinit CODE >1610:C:\Users\Fernando\AppData\Local\Temp\s7d4.
+2870 cinit CODE >1611:C:\Users\Fernando\AppData\Local\Temp\s7d4.
+2874 cinit CODE >1612:C:\Users\Fernando\AppData\Local\Temp\s7d4.
+2876 cinit CODE >1613:C:\Users\Fernando\AppData\Local\Temp\s7d4.
+2878 cinit CODE >1614:C:\Users\Fernando\AppData\Local\Temp\s7d4.
+287A cinit CODE >1618:C:\Users\Fernando\AppData\Local\Temp\s7d4.
+287E cinit CODE >1619:C:\Users\Fernando\AppData\Local\Temp\s7d4.
+2880 cinit CODE >1620:C:\Users\Fernando\AppData\Local\Temp\s7d4.
+2880 cinit CODE >1621:C:\Users\Fernando\AppData\Local\Temp\s7d4.
+2882 cinit CODE >1622:C:\Users\Fernando\AppData\Local\Temp\s7d4.
+2884 cinit CODE >1623:C:\Users\Fernando\AppData\Local\Temp\s7d4.
+2886 cinit CODE >1626:C:\Users\Fernando\AppData\Local\Temp\s7d4.
+2888 cinit CODE >1629:C:\Users\Fernando\AppData\Local\Temp\s7d4.
+288A cinit CODE >1630:C:\Users\Fernando\AppData\Local\Temp\s7d4.
+288C cinit CODE >1636:C:\Users\Fernando\AppData\Local\Temp\s7d4.
+288C cinit CODE >1639:C:\Users\Fernando\AppData\Local\Temp\s7d4.
+288E cinit CODE >1640:C:\Users\Fernando\AppData\Local\Temp\s7d4.
+2890 cinit CODE >1641:C:\Users\Fernando\AppData\Local\Temp\s7d4.
+2892 cinit CODE >1642:C:\Users\Fernando\AppData\Local\Temp\s7d4.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -829,7 +829,7 @@ __HidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production\unimic_calculadora.X.
 frexp@eptr 4 0 COMRAM 1 cstackCOMRAM dist/default/production\unimic_calculadora.X.production.obj
 ___ftdiv@exp 16 0 COMRAM 1 cstackCOMRAM dist/default/production\unimic_calculadora.X.production.obj
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\unimic_calculadora.X.production.obj
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\Fernando\AppData\Local\Temp\s20v8.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\Fernando\AppData\Local\Temp\s7d4.obj
 ___awtoft@sign C 0 COMRAM 1 cstackCOMRAM dist/default/production\unimic_calculadora.X.production.obj
 _T1CONbits FCD 0 ABS 0 - dist/default/production\unimic_calculadora.X.production.obj
 _Delay1KTCYx 29C0 0 CODE 0 text32 dist/default/production\unimic_calculadora.X.production.obj
@@ -840,7 +840,7 @@ __CFG_WPCFG$OFF 0 0 ABS 0 - dist/default/production\unimic_calculadora.X.product
 escribir_numero@i_795 21 0 COMRAM 1 cstackCOMRAM dist/default/production\unimic_calculadora.X.production.obj
 main@i DF 0 BANK0 1 cstackBANK0 dist/default/production\unimic_calculadora.X.production.obj
 __Lsmallconst F00 0 SMALLCONST 0 smallconst dist/default/production\unimic_calculadora.X.production.obj
-___sp 0 0 STACK 2 stack C:\Users\Fernando\AppData\Local\Temp\s20v8.obj
+___sp 0 0 STACK 2 stack C:\Users\Fernando\AppData\Local\Temp\s7d4.obj
 _anio F3 0 BANK0 1 dataBANK0 dist/default/production\unimic_calculadora.X.production.obj
 _flag 2F8 -299 COMRAM 1 bitbssCOMRAM dist/default/production\unimic_calculadora.X.production.obj
 _hora EB 0 BANK0 1 dataBANK0 dist/default/production\unimic_calculadora.X.production.obj
@@ -851,7 +851,7 @@ ___ftadd@f1 22 0 COMRAM 1 cstackCOMRAM dist/default/production\unimic_calculador
 ___ftadd@f2 25 0 COMRAM 1 cstackCOMRAM dist/default/production\unimic_calculadora.X.production.obj
 pow@x 4A 0 COMRAM 1 cstackCOMRAM dist/default/production\unimic_calculadora.X.production.obj
 pow@y 4D 0 COMRAM 1 cstackCOMRAM dist/default/production\unimic_calculadora.X.production.obj
-start 0 0 CODE 0 init C:\Users\Fernando\AppData\Local\Temp\s20v8.obj
+start 0 0 CODE 0 init C:\Users\Fernando\AppData\Local\Temp\s7d4.obj
 __size_of___awdiv 0 0 ABS 0 - dist/default/production\unimic_calculadora.X.production.obj
 __size_of___ftadd 0 0 ABS 0 - dist/default/production\unimic_calculadora.X.production.obj
 __size_of___ftdiv 0 0 ABS 0 - dist/default/production\unimic_calculadora.X.production.obj
@@ -878,11 +878,11 @@ ___ftge@ff1 1 0 COMRAM 1 cstackCOMRAM dist/default/production\unimic_calculadora
 ___ftge@ff2 4 0 COMRAM 1 cstackCOMRAM dist/default/production\unimic_calculadora.X.production.obj
 __end_of_lcd_gotoxy 29C0 0 CODE 0 text28 dist/default/production\unimic_calculadora.X.production.obj
 __end_of_lcd_putrs 274E 0 CODE 0 text26 dist/default/production\unimic_calculadora.X.production.obj
-__accesstop 60 0 ABS 0 - C:\Users\Fernando\AppData\Local\Temp\s20v8.obj
-intlevel0 0 0 CODE 0 text C:\Users\Fernando\AppData\Local\Temp\s20v8.obj
-intlevel1 0 0 CODE 0 text C:\Users\Fernando\AppData\Local\Temp\s20v8.obj
-intlevel2 0 0 CODE 0 text C:\Users\Fernando\AppData\Local\Temp\s20v8.obj
-intlevel3 0 0 CODE 0 text C:\Users\Fernando\AppData\Local\Temp\s20v8.obj
+__accesstop 60 0 ABS 0 - C:\Users\Fernando\AppData\Local\Temp\s7d4.obj
+intlevel0 0 0 CODE 0 text C:\Users\Fernando\AppData\Local\Temp\s7d4.obj
+intlevel1 0 0 CODE 0 text C:\Users\Fernando\AppData\Local\Temp\s7d4.obj
+intlevel2 0 0 CODE 0 text C:\Users\Fernando\AppData\Local\Temp\s7d4.obj
+intlevel3 0 0 CODE 0 text C:\Users\Fernando\AppData\Local\Temp\s7d4.obj
 __size_of_lcd_putrs 0 0 ABS 0 - dist/default/production\unimic_calculadora.X.production.obj
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\unimic_calculadora.X.production.obj
 __end_oflog@coeff F48 0 SMALLCONST 0 smallconst dist/default/production\unimic_calculadora.X.production.obj
@@ -907,8 +907,8 @@ _Delay100TCYx 29D0 0 CODE 0 text36 dist/default/production\unimic_calculadora.X.
 _ANCON0 F48 0 ABS 0 - dist/default/production\unimic_calculadora.X.production.obj
 ___awdiv@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production\unimic_calculadora.X.production.obj
 Delay100TCYx@unit 1 0 COMRAM 1 cstackCOMRAM dist/default/production\unimic_calculadora.X.production.obj
-___inthi_sp 0 0 STACK 2 stack C:\Users\Fernando\AppData\Local\Temp\s20v8.obj
-___intlo_sp 0 0 STACK 2 stack C:\Users\Fernando\AppData\Local\Temp\s20v8.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\Fernando\AppData\Local\Temp\s7d4.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\Fernando\AppData\Local\Temp\s7d4.obj
 __size_of___altoft 0 0 ABS 0 - dist/default/production\unimic_calculadora.X.production.obj
 __size_of___awtoft 0 0 ABS 0 - dist/default/production\unimic_calculadora.X.production.obj
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\unimic_calculadora.X.production.obj
@@ -1025,7 +1025,7 @@ __Hbank13 0 0 ABS 0 bank13 dist/default/production\unimic_calculadora.X.producti
 __Hbank14 0 0 ABS 0 bank14 dist/default/production\unimic_calculadora.X.production.obj
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\unimic_calculadora.X.production.obj
 __Hbigram 0 0 ABS 0 bigram dist/default/production\unimic_calculadora.X.production.obj
-__smallconst F00 0 SMALLCONST 0 smallconst C:\Users\Fernando\AppData\Local\Temp\s20v8.obj
+__smallconst F00 0 SMALLCONST 0 smallconst C:\Users\Fernando\AppData\Local\Temp\s7d4.obj
 __end_of_sprintf 1B20 0 CODE 0 text23 dist/default/production\unimic_calculadora.X.production.obj
 ___lltoft 264E 0 CODE 0 text18 dist/default/production\unimic_calculadora.X.production.obj
 __size_of_lcd_init 0 0 ABS 0 - dist/default/production\unimic_calculadora.X.production.obj
@@ -1240,8 +1240,8 @@ __Lfardata 0 0 FARRAM 0 fardata dist/default/production\unimic_calculadora.X.pro
 main@num_der E5 0 BANK0 1 cstackBANK0 dist/default/production\unimic_calculadora.X.production.obj
 main@num_izq E3 0 BANK0 1 cstackBANK0 dist/default/production\unimic_calculadora.X.production.obj
 _RtccAlrmTimeDate 80 0 BANK0 1 bssBANK0 dist/default/production\unimic_calculadora.X.production.obj
-stackhi EBF 0 ABS 0 - C:\Users\Fernando\AppData\Local\Temp\s20v8.obj
-stacklo F5 0 ABS 0 - C:\Users\Fernando\AppData\Local\Temp\s20v8.obj
+stackhi EBF 0 ABS 0 - C:\Users\Fernando\AppData\Local\Temp\s7d4.obj
+stacklo F5 0 ABS 0 - C:\Users\Fernando\AppData\Local\Temp\s7d4.obj
 _lcd_send_nibble 25D8 0 CODE 0 text35 dist/default/production\unimic_calculadora.X.production.obj
 __Lintcode 0 0 CODE 0 intcode dist/default/production\unimic_calculadora.X.production.obj
 main@resultado_division DB 0 BANK0 1 cstackBANK0 dist/default/production\unimic_calculadora.X.production.obj
@@ -1334,7 +1334,7 @@ __Ltext33 0 0 ABS 0 text33 dist/default/production\unimic_calculadora.X.producti
 __Ltext34 0 0 ABS 0 text34 dist/default/production\unimic_calculadora.X.production.obj
 __Ltext35 0 0 ABS 0 text35 dist/default/production\unimic_calculadora.X.production.obj
 __Ltext36 0 0 ABS 0 text36 dist/default/production\unimic_calculadora.X.production.obj
-__ramtop F00 0 RAM 0 ramtop C:\Users\Fernando\AppData\Local\Temp\s20v8.obj
+__ramtop F00 0 RAM 0 ramtop C:\Users\Fernando\AppData\Local\Temp\s7d4.obj
 _sprintf 1A00 0 CODE 0 text23 dist/default/production\unimic_calculadora.X.production.obj
 __size_of_lcd_send_byte 0 0 ABS 0 - dist/default/production\unimic_calculadora.X.production.obj
 __Lpowerup 0 0 CODE 0 powerup dist/default/production\unimic_calculadora.X.production.obj

@@ -1,0 +1,9 @@
+Domingo 1 -> SÍ
+Sabado 7 -> NO puedo dar clases
+Domingo 8 -> SI
+Sabado 14 -> NO
+Domingo 15 -> SI
+Lunes 16 -> NO
+Sabado 21 -> SI
+Domingo 22 -> SI (es el cumple de eugenia igual)
+

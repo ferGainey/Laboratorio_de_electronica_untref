@@ -9113,7 +9113,11 @@ rtccTime RtccTime;
 rtccTime RtccTimeVal;
 rtccDate RtccDate;
 
+unsigned char buffer1[20];
 unsigned char buffer2[20];
+unsigned char buffer3[20];
+unsigned char buffer4[20];
+unsigned char buffer5[20];
 
 void DelayFor18TCY(void) {
 Delay10TCYx(10);
@@ -9125,7 +9129,7 @@ Delay1KTCYx(20);
 
 }
 
-# 72
+# 76
 void Write_RTC(void) {
 RtccWrOn();
 
@@ -9155,7 +9159,7 @@ RtccWriteDate(&RtccDate, 1);
 (RTCCFGbits.RTCEN=1);
 }
 
-# 108
+# 112
 void Read_RTC(void)
 
 {
@@ -9215,9 +9219,12 @@ rtccTimeDate RtccTimeDate, RtccAlrmTimeDate, Rtcc_read_TimeDate;
 rtccTime RtccTime;
 rtccTime RtccTimeVal;
 rtccDate RtccDate;
-char* array_seleccionar[] = {"Ndia", " Dia", " Mes", "Anio", "Hora", " Min", " Seg"};
+char* array_seleccionar[] = {"Ndia", " Dia", " Mes", "Anio", "Hora", " Min", " Seg", "Cafe"};
+char* array_boton_seleccionar_tipo_cafe[] = {"Cortado", "Solo   ", "C/Leche"};
+char* array_boton_seleccionar_tamanio_cafe[] = {"Chico   ", "Mediano ", "Grande  "};
+char* array_boton_seleccionar_accion_cafe[] = {"Pedir   ", "Terminar"};
 
-# 35
+# 39
 void setDiaSemana(void) {
 if (diasem == 0) {
 lcd_gotoxy(1, 1);
@@ -9279,6 +9286,13 @@ lcd_gotoxy(1, 2);
 lcd_putrs(buffer2);
 }
 
+void setRelojDigital(void) {
+setDiaSemana();
+setDiaMesAnio();
+setHoraMinutoSegundo();
+}
+
+
 
 void setup(void) {
 OSCTUNEbits.INTSRC = 1;
@@ -9303,9 +9317,7 @@ T1CONbits.T1OSCEN = 1;
 lcd_init();
 lcd_comand(0b00001100);
 
-setDiaSemana();
-setDiaMesAnio();
-setHoraMinutoSegundo();
+setRelojDigital();
 Write_RTC();
 }
 
@@ -9314,10 +9326,10 @@ Write_RTC();
 int main(void) {
 setup();
 
-# 135
+# 144
 int boton_centro_estado = 0;
 
-# 147
+# 156
 int boton_seleccionar = 0;
 
 while (1) {
@@ -9341,7 +9353,7 @@ _delay((unsigned long)((98)*(8000000/4000.0)));
 if (boton_centro_estado == 1) {
 
 if (PORTAbits.RA2 == 0) {
-if (boton_seleccionar == 6) {
+if (boton_seleccionar == 7) {
 boton_seleccionar = 0;
 } else {
 boton_seleccionar++;
@@ -9351,12 +9363,16 @@ while (PORTAbits.RA2 == 0);
 
 if (PORTAbits.RA7 == 0) {
 if (boton_seleccionar == 0) {
-boton_seleccionar = 6;
+boton_seleccionar = 7;
 } else {
 boton_seleccionar--;
 }
 while (PORTAbits.RA7 == 0);
 }
+
+sprintf(buffer2, "%s", array_seleccionar[boton_seleccionar]);
+lcd_gotoxy(13, 2);
+lcd_putrs(buffer2);
 
 
 if (boton_seleccionar == 0) {
@@ -9552,15 +9568,133 @@ while (PORTAbits.RA6 == 0);
 _delay((unsigned long)((50)*(8000000/4000.0)));
 }
 
-sprintf(buffer2, "%s", array_seleccionar[boton_seleccionar]);
-lcd_gotoxy(13, 2);
-lcd_putrs(buffer2);
+if (boton_seleccionar == 7) {
+
+boton_seleccionar = 0;
+int boton_seleccionar_cafe = 0;
+int tipo = 0;
+int tamanio = 0;
+int accion = 0;
+
+while (1) {
+
+if (PORTAbits.RA2 == 0) {
+if (boton_seleccionar_cafe == 2) {
+boton_seleccionar_cafe = 0;
+} else {
+boton_seleccionar_cafe++;
+}
+while (PORTAbits.RA2 == 0);
 }
 
-setDiaSemana();
-setDiaMesAnio();
-setHoraMinutoSegundo();
+if (PORTAbits.RA7 == 0) {
+if (boton_seleccionar_cafe == 0) {
+boton_seleccionar_cafe = 2;
+} else {
+boton_seleccionar_cafe--;
+}
+while (PORTAbits.RA7 == 0);
+}
 
+if (boton_seleccionar_cafe == 0) {
+
+if (PORTAbits.RA3 == 0) {
+if (tipo == 2) {
+tipo = 0;
+} else {
+tipo++;
+
+}
+while (PORTAbits.RA3 == 0);
+}
+
+
+if (PORTAbits.RA6 == 0) {
+if (tipo == 0) {
+tipo = 2;
+
+} else {
+tipo--;
+
+}
+while (PORTAbits.RA6 == 0);
+}
+}
+
+if (boton_seleccionar_cafe == 1) {
+
+if (PORTAbits.RA3 == 0) {
+if (tamanio == 2) {
+tamanio = 0;
+} else {
+tamanio++;
+}
+while (PORTAbits.RA3 == 0);
+}
+
+if (PORTAbits.RA6 == 0) {
+if (tamanio == 0) {
+tamanio = 2;
+} else {
+tamanio--;
+}
+while (PORTAbits.RA6 == 0);
+}
+}
+
+if (boton_seleccionar_cafe == 2) {
+if (PORTAbits.RA3 == 0) {
+if (accion == 1) {
+accion = 0;
+} else {
+accion++;
+}
+while (PORTAbits.RA3 == 0);
+}
+
+if (PORTAbits.RA6 == 0) {
+if (accion == 0) {
+accion = 1;
+} else {
+accion--;
+}
+while (PORTAbits.RA6 == 0);
+}
+
+if (PORTAbits.RA5 == 0) {
+if (accion == 0) {
+
+break;
+}
+
+if (accion == 1) {
+break;
+}
+
+while (PORTAbits.RA5 == 1);
+}
+}
+
+
+sprintf(buffer3, "%s", array_boton_seleccionar_tipo_cafe[tipo]);
+lcd_gotoxy(1, 1);
+lcd_putrs(buffer3);
+
+sprintf(buffer4, "%s", array_boton_seleccionar_tamanio_cafe[tamanio]);
+lcd_gotoxy(9, 1);
+lcd_putrs(buffer4);
+
+sprintf(buffer5, "%s", array_boton_seleccionar_accion_cafe[accion]);
+lcd_gotoxy(1, 2);
+lcd_putrs(buffer5);
+
+}
+}
+
+
+}
+
+setRelojDigital();
 _delay((unsigned long)((98)*(8000000/4000.0)));
 
 }

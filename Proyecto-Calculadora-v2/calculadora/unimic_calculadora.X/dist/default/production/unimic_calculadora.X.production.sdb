@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 18F26J50 ]
 [d frameptr 4065 ]
-"99 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/headers\unmc_rtcc_01.h
+"99 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/headers\unmc_rtcc_01.h
 [e E6550 _BOOL `uc
 FALSE 0
 TRUE 1
@@ -86,7 +86,7 @@ RTCCPTR_MASK_HRSWEEK 1
 RTCCPTR_MASK_DAYMON 2
 RTCCPTR_MASK_YEAR 3
 ]
-"25 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+"25 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
 [v _lcd_send_nibble lcd_send_nibble `(v  1 e 1 0 ]
 "86
 [v _lcd_send_byte lcd_send_byte `(v  1 e 1 0 ]
@@ -174,7 +174,7 @@ RTCCPTR_MASK_YEAR 3
 [v _RtccWriteTime RtccWriteTime `(E6550  1 e 1 0 ]
 "21 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic18\plib\rtcc\RtccWrOn.c
 [v _RtccWrOn RtccWrOn `(v  1 e 1 0 ]
-"22 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
+"22 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
 [v _Setup Setup `(v  1 e 1 0 ]
 "48
 [v _write_in_lcd write_in_lcd `(v  1 e 1 0 ]
@@ -182,7 +182,7 @@ RTCCPTR_MASK_YEAR 3
 [v _escribir_numero escribir_numero `(v  1 e 1 0 ]
 "78
 [v _main main `(i  1 e 2 0 ]
-"18 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/headers\unmc_rtcc_01.h
+"18 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/headers\unmc_rtcc_01.h
 [v _segundo_u segundo_u `uc  1 e 1 0 ]
 "19
 [v _segundo_d segundo_d `uc  1 e 1 0 ]
@@ -232,7 +232,7 @@ RTCCPTR_MASK_YEAR 3
 [v _RtccDate RtccDate `S50  1 e 4 0 ]
 "54
 [v _buffer2 buffer2 `[20]uc  1 e 20 0 ]
-"16 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+"16 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
 [v _LCD_INIT_STRING LCD_INIT_STRING `C[4]uc  1 e 4 0 ]
 [s S129 . 1 `uc 1 RTCPTR0 1 0 :1:0 
 `uc 1 RTCPTR1 1 0 :1:1 
@@ -554,7 +554,7 @@ RTCCPTR_MASK_YEAR 3
 [v _dpowers dpowers `C[5]ui  1 s 10 dpowers ]
 "3 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\errno.c
 [v _errno errno `i  1 e 2 0 ]
-"11 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
+"11 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
 [v _flag_sentido_escritura flag_sentido_escritura `i  1 e 2 0 ]
 "12
 [v _contador_numeros_ingresados_izq contador_numeros_ingresados_izq `i  1 e 2 0 ]
@@ -777,13 +777,13 @@ RTCCPTR_MASK_YEAR 3
 [v ___ftpack@sign sign `uc  1 p 1 4 ]
 "86
 } 0
-"214 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+"214 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
 [v _lcd_puts lcd_puts `(v  1 e 1 0 ]
 {
 [v lcd_puts@ptr ptr `*.25uc  1 p 2 8 ]
 "219
 } 0
-"53 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
+"53 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
 [v _escribir_numero escribir_numero `(v  1 e 1 0 ]
 {
 "69
@@ -840,7 +840,7 @@ RTCCPTR_MASK_YEAR 3
 [v ___lwdiv@divisor divisor `ui  1 p 2 2 ]
 "31
 } 0
-"221 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+"221 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
 [v _lcd_putrs lcd_putrs `(v  1 e 1 0 ]
 {
 [v lcd_putrs@ptr ptr `*.35Cuc  1 p 2 8 ]
@@ -880,12 +880,12 @@ RTCCPTR_MASK_YEAR 3
 [v ___awdiv@divisor divisor `i  1 p 2 2 ]
 "42
 } 0
-"22 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora\calculadora\unimic_calculadora.X\main.c
+"22 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2\calculadora\unimic_calculadora.X\main.c
 [v _Setup Setup `(v  1 e 1 0 ]
 {
 "46
 } 0
-"119 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+"119 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
 [v _lcd_init lcd_init `(v  1 e 1 0 ]
 {
 "120
@@ -900,7 +900,7 @@ RTCCPTR_MASK_YEAR 3
 [v Delay1KTCYx@unit unit `uc  1 a 1 0 ]
 "13
 } 0
-"189 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Proyecto-Calculadora/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+"189 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Calculadora-v2/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
 [v _lcd_comand lcd_comand `(v  1 e 1 0 ]
 {
 [v lcd_comand@d d `uc  1 a 1 wreg ]

@@ -1,0 +1,12 @@
+tipo de cafe = solo, cortado, con leche
+tamaño de cafe = chico, mediano grande
+
+primero elige el tipo despues el tamaño e imprimir el reporte cuando se pida.
+
+menu pedir cafe
+
+fila 1 -> seleccion cafe: tipo + tamaño
+fila 2 -> pedir terminar
+
+pedir: agrega el cafe a los contadores (lo que esta en la fila 1)
+terminar: vuelve al reloj
