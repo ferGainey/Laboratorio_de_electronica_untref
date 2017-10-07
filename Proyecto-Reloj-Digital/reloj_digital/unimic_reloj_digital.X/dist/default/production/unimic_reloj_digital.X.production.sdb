@@ -152,17 +152,17 @@ RTCCPTR_MASK_YEAR 3
 [v _RtccWriteTime RtccWriteTime `(E6550  1 e 1 0 ]
 "21 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic18\plib\rtcc\RtccWrOn.c
 [v _RtccWrOn RtccWrOn `(v  1 e 1 0 ]
-"39 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Reloj-Digital\reloj_digital\unimic_reloj_digital.X\main.c
+"40 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Reloj-Digital\reloj_digital\unimic_reloj_digital.X\main.c
 [v _setDiaSemana setDiaSemana `(v  1 e 1 0 ]
-"71
+"72
 [v _setDiaMesAnio setDiaMesAnio `(v  1 e 1 0 ]
-"87
+"88
 [v _setHoraMinutoSegundo setHoraMinutoSegundo `(v  1 e 1 0 ]
-"100
+"101
 [v _setRelojDigital setRelojDigital `(v  1 e 1 0 ]
-"108
+"109
 [v _setup setup `(v  1 e 1 0 ]
-"137
+"138
 [v _main main `(i  1 e 2 0 ]
 "18 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Reloj-Digital/headers\unmc_rtcc_01.h
 [v _segundo_u segundo_u `uc  1 e 1 0 ]
@@ -295,7 +295,7 @@ RTCCPTR_MASK_YEAR 3
 ]
 [u S408 . 1 `S356 1 . 1 0 `S365 1 . 1 0 `S374 1 . 1 0 `S377 1 . 1 0 `S386 1 . 1 0 `S392 1 . 1 0 `S398 1 . 1 0 `S402 1 . 1 0 ]
 [v _PORTAbits PORTAbits `VES408  1 e 1 @3968 ]
-[s S682 . 1 `uc 1 LATB0 1 0 :1:0 
+[s S688 . 1 `uc 1 LATB0 1 0 :1:0 
 `uc 1 LATB1 1 0 :1:1 
 `uc 1 LATB2 1 0 :1:2 
 `uc 1 LATB3 1 0 :1:3 
@@ -305,7 +305,7 @@ RTCCPTR_MASK_YEAR 3
 `uc 1 LATB7 1 0 :1:7 
 ]
 "6094
-[s S691 . 1 `uc 1 LB0 1 0 :1:0 
+[s S697 . 1 `uc 1 LB0 1 0 :1:0 
 `uc 1 LB1 1 0 :1:1 
 `uc 1 LB2 1 0 :1:2 
 `uc 1 LB3 1 0 :1:3 
@@ -314,13 +314,13 @@ RTCCPTR_MASK_YEAR 3
 `uc 1 LB6 1 0 :1:6 
 `uc 1 LB7 1 0 :1:7 
 ]
-[u S700 . 1 `S682 1 . 1 0 `S691 1 . 1 0 ]
-[v _LATBbits LATBbits `VES700  1 e 1 @3978 ]
+[u S706 . 1 `S688 1 . 1 0 `S697 1 . 1 0 ]
+[v _LATBbits LATBbits `VES706  1 e 1 @3978 ]
 "6467
 [v _TRISA TRISA `VEuc  1 e 1 @3986 ]
 "6524
 [v _TRISB TRISB `VEuc  1 e 1 @3987 ]
-[s S731 . 1 `uc 1 TRISB0 1 0 :1:0 
+[s S737 . 1 `uc 1 TRISB0 1 0 :1:0 
 `uc 1 TRISB1 1 0 :1:1 
 `uc 1 TRISB2 1 0 :1:2 
 `uc 1 TRISB3 1 0 :1:3 
@@ -330,25 +330,25 @@ RTCCPTR_MASK_YEAR 3
 `uc 1 TRISB7 1 0 :1:7 
 ]
 "6541
-[u S740 . 1 `S731 1 . 1 0 ]
-[v _TRISBbits TRISBbits `VES740  1 e 1 @3987 ]
+[u S746 . 1 `S737 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES746  1 e 1 @3987 ]
 "6586
 [v _TRISC TRISC `VEuc  1 e 1 @3988 ]
-[s S1198 . 1 `uc 1 ALRMPTR 1 0 :2:0 
+[s S1204 . 1 `uc 1 ALRMPTR 1 0 :2:0 
 `uc 1 AMASK 1 0 :4:2 
 `uc 1 CHIME 1 0 :1:6 
 `uc 1 ALRMEN 1 0 :1:7 
 ]
 "6740
-[s S1203 . 1 `uc 1 ALRMPTR0 1 0 :1:0 
+[s S1209 . 1 `uc 1 ALRMPTR0 1 0 :1:0 
 `uc 1 ALRMPTR1 1 0 :1:1 
 `uc 1 AMASK0 1 0 :1:2 
 `uc 1 AMASK1 1 0 :1:3 
 `uc 1 AMASK2 1 0 :1:4 
 `uc 1 AMASK3 1 0 :1:5 
 ]
-[u S1210 . 1 `S1198 1 . 1 0 `S1203 1 . 1 0 ]
-[v _ALRMCFGbits ALRMCFGbits `VES1210  1 e 1 @3985 ]
+[u S1216 . 1 `S1204 1 . 1 0 `S1209 1 . 1 0 ]
+[v _ALRMCFGbits ALRMCFGbits `VES1216  1 e 1 @3985 ]
 [s S183 . 1 `uc 1 TUN 1 0 :6:0 
 `uc 1 PLLEN 1 0 :1:6 
 `uc 1 INTSRC 1 0 :1:7 
@@ -463,7 +463,7 @@ RTCCPTR_MASK_YEAR 3
 ]
 [u S260 . 1 `S242 1 . 1 0 `S245 1 . 1 0 `S254 1 . 1 0 ]
 [v _INTCON2bits INTCON2bits `VES260  1 e 1 @4081 ]
-[s S1005 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S1011 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -473,7 +473,7 @@ RTCCPTR_MASK_YEAR 3
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
 "14949
-[s S1014 . 1 `uc 1 . 1 0 :1:0 
+[s S1020 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 INT0F 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -482,12 +482,12 @@ RTCCPTR_MASK_YEAR 3
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-[s S1023 . 1 `uc 1 . 1 0 :6:0 
+[s S1029 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
-[u S1040 . 1 `S1005 1 . 1 0 `S1014 1 . 1 0 `S1023 1 . 1 0 `S1014 1 . 1 0 `S1023 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES1040  1 e 1 @4082 ]
+[u S1046 . 1 `S1011 1 . 1 0 `S1020 1 . 1 0 `S1029 1 . 1 0 `S1020 1 . 1 0 `S1029 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES1046  1 e 1 @4082 ]
 "354 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
 [v _dpowers dpowers `C[5]ui  1 s 10 dpowers ]
 "16 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Reloj-Digital\reloj_digital\unimic_reloj_digital.X\main.c
@@ -497,48 +497,52 @@ RTCCPTR_MASK_YEAR 3
 "18
 [v _array_boton_seleccionar_tamanio_cafe array_boton_seleccionar_tamanio_cafe `[3]*.25uc  1 e 6 0 ]
 "19
-[v _array_boton_seleccionar_accion_cafe array_boton_seleccionar_accion_cafe `[2]*.25uc  1 e 4 0 ]
-"137
+[v _array_boton_seleccionar_accion_cafe array_boton_seleccionar_accion_cafe `[3]*.25uc  1 e 6 0 ]
+"20
+[v _reporte_cafe reporte_cafe `[3][3]*.2i  1 e 18 0 ]
+"138
 [v _main main `(i  1 e 2 0 ]
 {
-"400
-[v main@accion accion `i  1 a 2 48 ]
-"397
-[v main@boton_seleccionar_cafe boton_seleccionar_cafe `i  1 a 2 46 ]
-"399
-[v main@tamanio tamanio `i  1 a 2 44 ]
-"398
-[v main@tipo tipo `i  1 a 2 42 ]
-"156
-[v main@boton_seleccionar boton_seleccionar `i  1 a 2 50 ]
-"144
-[v main@boton_centro_estado boton_centro_estado `i  1 a 2 40 ]
-"525
+"508
+[v main@a a `i  1 a 2 41 ]
+"414
+[v main@accion accion `i  1 a 2 51 ]
+"411
+[v main@boton_seleccionar_cafe boton_seleccionar_cafe `i  1 a 2 49 ]
+"413
+[v main@tamanio tamanio `i  1 a 2 47 ]
+"412
+[v main@tipo tipo `i  1 a 2 45 ]
+"157
+[v main@boton_seleccionar boton_seleccionar `i  1 a 2 53 ]
+"145
+[v main@boton_centro_estado boton_centro_estado `i  1 a 2 43 ]
+"548
 } 0
-"108
+"109
 [v _setup setup `(v  1 e 1 0 ]
 {
-"133
+"134
 } 0
-"100
+"101
 [v _setRelojDigital setRelojDigital `(v  1 e 1 0 ]
 {
-"104
+"105
 } 0
-"87
+"88
 [v _setHoraMinutoSegundo setHoraMinutoSegundo `(v  1 e 1 0 ]
 {
-"98
+"99
 } 0
-"39
+"40
 [v _setDiaSemana setDiaSemana `(v  1 e 1 0 ]
 {
-"69
+"70
 } 0
-"71
+"72
 [v _setDiaMesAnio setDiaMesAnio `(v  1 e 1 0 ]
 {
-"85
+"86
 } 0
 "492 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
@@ -653,9 +657,9 @@ RTCCPTR_MASK_YEAR 3
 "34 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic18\plib\rtcc\RtccWriteTime.c
 [v _RtccWriteTime RtccWriteTime `(E6550  1 e 1 0 ]
 {
-[s S1118 . 2 `uc 1 LB 1 0 `uc 1 HB 1 1 ]
+[s S1124 . 2 `uc 1 LB 1 0 `uc 1 HB 1 1 ]
 "36
-[s S1121 . 2 `uc 1 b0 1 0 :1:0 
+[s S1127 . 2 `uc 1 b0 1 0 :1:0 
 `uc 1 b1 1 0 :1:1 
 `uc 1 b2 1 0 :1:2 
 `uc 1 b3 1 0 :1:3 
@@ -672,10 +676,10 @@ RTCCPTR_MASK_YEAR 3
 `uc 1 b14 1 1 :1:6 
 `uc 1 b15 1 1 :1:7 
 ]
-[u S1138 . 2 `us 1 Val 2 0 `[2]uc 1 v 2 0 `S1118 1 byte 2 0 `S1121 1 bits 2 0 ]
-[v RtccWriteTime@tempHourWDay tempHourWDay `S1138  1 a 2 9 ]
+[u S1144 . 2 `us 1 Val 2 0 `[2]uc 1 v 2 0 `S1124 1 byte 2 0 `S1127 1 bits 2 0 ]
+[v RtccWriteTime@tempHourWDay tempHourWDay `S1144  1 a 2 9 ]
 "37
-[v RtccWriteTime@tempMinSec tempMinSec `S1138  1 a 2 7 ]
+[v RtccWriteTime@tempMinSec tempMinSec `S1144  1 a 2 7 ]
 "40
 [v RtccWriteTime@wasWrEn wasWrEn `E7121  1 a 1 6 ]
 "42
@@ -692,9 +696,9 @@ RTCCPTR_MASK_YEAR 3
 "35 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic18\plib\rtcc\RtccWriteDate.c
 [v _RtccWriteDate RtccWriteDate `(E6550  1 e 1 0 ]
 {
-[s S1118 . 2 `uc 1 LB 1 0 `uc 1 HB 1 1 ]
+[s S1124 . 2 `uc 1 LB 1 0 `uc 1 HB 1 1 ]
 "37
-[s S1121 . 2 `uc 1 b0 1 0 :1:0 
+[s S1127 . 2 `uc 1 b0 1 0 :1:0 
 `uc 1 b1 1 0 :1:1 
 `uc 1 b2 1 0 :1:2 
 `uc 1 b3 1 0 :1:3 
@@ -711,12 +715,12 @@ RTCCPTR_MASK_YEAR 3
 `uc 1 b14 1 1 :1:6 
 `uc 1 b15 1 1 :1:7 
 ]
-[u S1138 . 2 `us 1 Val 2 0 `[2]uc 1 v 2 0 `S1118 1 byte 2 0 `S1121 1 bits 2 0 ]
-[v RtccWriteDate@tempHourWDay tempHourWDay `S1138  1 a 2 11 ]
+[u S1144 . 2 `us 1 Val 2 0 `[2]uc 1 v 2 0 `S1124 1 byte 2 0 `S1127 1 bits 2 0 ]
+[v RtccWriteDate@tempHourWDay tempHourWDay `S1144  1 a 2 11 ]
 "38
-[v RtccWriteDate@tempDayMonth tempDayMonth `S1138  1 a 2 9 ]
+[v RtccWriteDate@tempDayMonth tempDayMonth `S1144  1 a 2 9 ]
 "39
-[v RtccWriteDate@tempYear tempYear `S1138  1 a 2 6 ]
+[v RtccWriteDate@tempYear tempYear `S1144  1 a 2 6 ]
 "41
 [v RtccWriteDate@wasWrEn wasWrEn `E7121  1 a 1 8 ]
 "43

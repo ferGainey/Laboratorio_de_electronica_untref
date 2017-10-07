@@ -14,9 +14,10 @@ rtccTime RtccTime; // Inicializa la estructura de tiempo
 rtccTime RtccTimeVal;
 rtccDate RtccDate; //Inicializa la estructura de Fecha
 char* array_seleccionar[] = {"Ndia", " Dia", " Mes", "Anio", "Hora", " Min", " Seg", "Cafe"};
-char* array_boton_seleccionar_tipo_cafe[] = {"Cortado", "Solo   ", "C/Leche"};
+char* array_boton_seleccionar_tipo_cafe[] = {"Solo   ", "Cortado", "C/Leche"};
 char* array_boton_seleccionar_tamanio_cafe[] = {"Chico   ", "Mediano ", "Grande  "};
-char* array_boton_seleccionar_accion_cafe[] = {"Pedir   ", "Terminar"};
+char* array_boton_seleccionar_accion_cafe[] = {"Pedir   ", "Reporte ", "Terminar"};
+int* reporte_cafe[3][3] = {{0,0,0},{0,0,0},{0,0,0}};
 
 //[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 /// Funcion Caratula
@@ -154,7 +155,19 @@ int main(void) {
      * 6. Segundo
      */
     int boton_seleccionar = 0;
-
+    
+    //inicializo reporte_cafe (revisar como hacerlo bien)
+    /**
+    reporte_cafe[0][0] = 0; //solo - chico
+    reporte_cafe[0][1] = 0; //solo - mediano
+    reporte_cafe[0][2] = 0; //solo - grande
+    reporte_cafe[1][0] = 0; //cortado - chico
+    reporte_cafe[1][1] = 0; //cortado - mediano
+    reporte_cafe[1][2] = 0; //cortado - grande
+    reporte_cafe[2][0] = 0; //c/ leche - chico
+    reporte_cafe[2][1] = 0; //c/ leche - mediano
+    reporte_cafe[2][2] = 0; //c/ leche - grande
+     * */
     while (1) {
 
         Read_RTC();
@@ -390,7 +403,8 @@ int main(void) {
 
                 __delay_ms(50);
             }
-
+            
+            //parte del cafe
             if (boton_seleccionar == 7) {
                 
                 boton_seleccionar = 0;
@@ -486,11 +500,20 @@ int main(void) {
                         
                         if (switch_Center == 0) {
                             if (accion == 0) {
-                                // Guardar variables globales para los tipos/tamaños de cafe
-                                break;
+                                // Guarda variables globales para los tipos/tamaños de cafe
+                                reporte_cafe[tipo][tamanio] ++;
+                               
                             }
                             
                             if (accion == 1) {
+                                int a = 0;
+                                sprintf(buffer2, "%01u", reporte_cafe[0][0]);
+                                lcd_gotoxy(13, 2);
+                                lcd_putrs(buffer2);                                
+                                //break;
+                            }
+                            
+                            if (accion == 2) {
                                 break;
                             }
                             

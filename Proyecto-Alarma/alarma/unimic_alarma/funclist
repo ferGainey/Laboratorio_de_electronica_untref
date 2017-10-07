@@ -1,0 +1,22 @@
+_lcd_comand: CODE, 6714 0 18
+_lcd_putc: CODE, 5900 0 112
+__stringdata: SMALLCONST, 3854 0 15
+_lcd_putrs: CODE, 6212 0 84
+_lcd_send_byte: CODE, 6438 0 62
+_Delay1KTCYx: CODE, 6732 0 16
+_dpowers: SMALLCONST, 3840 0 10
+_main: CODE, 3870 0 996
+_LCD_INIT_STRING: SMALLCONST, 3850 0 4
+_Setup: CODE, 6296 0 74
+__initialization: CODE, 6370 0 58
+___lwdiv: CODE, 6012 0 108
+_lcd_gotoxy: CODE, 6562 0 54
+_lcd_send_nibble: CODE, 5776 0 124
+_isdigit: CODE, 6666 0 48
+_sprintf: CODE, 4866 0 702
+_write_in_lcd: CODE, 6616 0 50
+_Delay100TCYx: CODE, 6748 0 16
+___lwmod: CODE, 6120 0 92
+___wmul: CODE, 6500 0 62
+_lcd_init: CODE, 5568 0 208
+Total: 2913

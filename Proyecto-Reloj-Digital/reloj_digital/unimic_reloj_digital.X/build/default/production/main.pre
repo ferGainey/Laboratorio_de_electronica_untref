@@ -9220,11 +9220,12 @@ rtccTime RtccTime;
 rtccTime RtccTimeVal;
 rtccDate RtccDate;
 char* array_seleccionar[] = {"Ndia", " Dia", " Mes", "Anio", "Hora", " Min", " Seg", "Cafe"};
-char* array_boton_seleccionar_tipo_cafe[] = {"Cortado", "Solo   ", "C/Leche"};
+char* array_boton_seleccionar_tipo_cafe[] = {"Solo   ", "Cortado", "C/Leche"};
 char* array_boton_seleccionar_tamanio_cafe[] = {"Chico   ", "Mediano ", "Grande  "};
-char* array_boton_seleccionar_accion_cafe[] = {"Pedir   ", "Terminar"};
+char* array_boton_seleccionar_accion_cafe[] = {"Pedir   ", "Reporte ", "Terminar"};
+int* reporte_cafe[3][3] = {{0,0,0},{0,0,0},{0,0,0}};
 
-# 39
+# 40
 void setDiaSemana(void) {
 if (diasem == 0) {
 lcd_gotoxy(1, 1);
@@ -9326,12 +9327,13 @@ Write_RTC();
 int main(void) {
 setup();
 
-# 144
+# 145
 int boton_centro_estado = 0;
 
-# 156
+# 157
 int boton_seleccionar = 0;
 
+# 171
 while (1) {
 
 Read_RTC();
@@ -9568,6 +9570,7 @@ while (PORTAbits.RA6 == 0);
 _delay((unsigned long)((50)*(8000000/4000.0)));
 }
 
+
 if (boton_seleccionar == 7) {
 
 boton_seleccionar = 0;
@@ -9664,10 +9667,19 @@ while (PORTAbits.RA6 == 0);
 if (PORTAbits.RA5 == 0) {
 if (accion == 0) {
 
-break;
+reporte_cafe[tipo][tamanio] ++;
+
 }
 
 if (accion == 1) {
+int a = 0;
+sprintf(buffer2, "%01u", reporte_cafe[0][0]);
+lcd_gotoxy(13, 2);
+lcd_putrs(buffer2);
+
+}
+
+if (accion == 2) {
 break;
 }
 
