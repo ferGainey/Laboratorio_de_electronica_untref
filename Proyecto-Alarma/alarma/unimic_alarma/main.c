@@ -19,7 +19,41 @@ int array_contrasenia_ingresada[4];
 int array_contrasenia[] = {1, 2, 3, 4};
 int numeros_ingresados = 0;
 
+/**
+ * Boton Seleccionar
+ * 0. Dia
+ * 1. Mes
+ * 2. Año
+ * 3. Hora
+ * 4. Minuto
+ * 5. Segundo
+ */
+int boton_seleccionar = 0;
+int boton_centro_estado = 0;
+
 int txt_insert_pass = 0;
+
+//Pongo las firmas de los metodos
+void setDiaMesAnio(void);
+void setHoraMinutoSegundo(void);
+void set_reloj_digital(void);
+void titila_texto_insert_password(void);
+void guarda_numero_ingresado(int* num);
+void ingreso_numero(void);
+void mostrar_presionar_a(void);
+int verificar_contrasenia();
+void editar_fecha_reloj_digital(void);
+void editar_hora_reloj_digital(void);
+void resetear_pantalla_ingresar_contrasenia(void);
+void ir_a_pantalla_ingresar_contrasenia(void);
+void cambiar_opcion(void);
+void seleccionar_opcion(void);
+void ir_a_pantalla_editar_contrasenia(void);
+void ir_a_pantalla_edicion(void);
+void ir_a_pantalla_inicial(void);
+void si_apreta_numero_va_a_pantalla_contrasenia(void);
+void activar_alarma(void);
+void setup(void);
 
 void setDiaMesAnio(void) {
     if (dia > 31) {
@@ -50,7 +84,7 @@ void setHoraMinutoSegundo(void) {
     lcd_putrs(buffer2);
 }
 
-void setRelojDigital(void) {
+void set_reloj_digital(void) {
     setDiaMesAnio();
     setHoraMinutoSegundo();
 }
@@ -75,18 +109,15 @@ void titila_texto_insert_password(void) {
     }
 }
 
-void ingreso_numero(int* num) {
+void guarda_numero_ingresado(int* num) {
     array_contrasenia_ingresada[numeros_ingresados] = num;
     lcd_gotoxy(numeros_ingresados + 1, 2);
     sprintf(buffer2, "%01u", num);
     lcd_putrs(buffer2);
     numeros_ingresados++;
-    while (column1 == 1) {
-        __delay_ms(40);
-    }
 }
 
-void guarda_numero_ingresado(void) {
+void ingreso_numero(void) {
     row1 = 1;
     row2 = 0;
     row3 = 0;
@@ -94,15 +125,24 @@ void guarda_numero_ingresado(void) {
     {
         if (column1 == 1 && row1 == 1) {
             key = 1;
-            ingreso_numero(key);
+            guarda_numero_ingresado(key);
+            while (column1 == 1 && row1 == 1) {
+                __delay_ms(40);
+            }
         }
         if (column2 == 1 && row1 == 1) {
             key = 2;
-            ingreso_numero(key);
+            guarda_numero_ingresado(key);
+            while (column2 == 1 && row1 == 1) {
+                __delay_ms(40);
+            }
         }
         if (column3 == 1 && row1 == 1) {
             key = 3;
-            ingreso_numero(key);
+            guarda_numero_ingresado(key);
+            while (column3 == 1 && row1 == 1) {
+                __delay_ms(40);
+            }
         }
     }
     row1 = 0;
@@ -112,15 +152,24 @@ void guarda_numero_ingresado(void) {
     {
         if (column1 == 1 && row2 == 1) {
             key = 4;
-            ingreso_numero(key);
+            guarda_numero_ingresado(key);
+            while (column1 == 1 && row2 == 1) {
+                __delay_ms(40);
+            }
         }
         if (column2 == 1 && row2 == 1) {
             key = 5;
-            ingreso_numero(key);
+            guarda_numero_ingresado(key);
+            while (column2 == 1 && row2 == 1) {
+                __delay_ms(40);
+            }
         }
         if (column3 == 1 && row2 == 1) {
             key = 6;
-            ingreso_numero(key);
+            guarda_numero_ingresado(key);
+            while (column3 == 1 && row2 == 1) {
+                __delay_ms(40);
+            }
         }
     }
     row1 = 0;
@@ -130,15 +179,24 @@ void guarda_numero_ingresado(void) {
     {
         if (column1 == 1 && row3 == 1) {
             key = 7;
-            ingreso_numero(key);
+            guarda_numero_ingresado(key);
+            while (column1 == 1 && row3 == 1) {
+                __delay_ms(40);
+            }
         }
         if (column2 == 1 && row3 == 1) {
             key = 8;
-            ingreso_numero(key);
+            guarda_numero_ingresado(key);
+            while (column2 == 1 && row3 == 1) {
+                __delay_ms(40);
+            }
         }
         if (column3 == 1 && row3 == 1) {
             key = 9;
-            ingreso_numero(key);
+            guarda_numero_ingresado(key);
+            while (column3 == 1 && row3 == 1) {
+                __delay_ms(40);
+            }
         }
     }
     row1 = 0;
@@ -148,13 +206,128 @@ void guarda_numero_ingresado(void) {
 
     if (column2 == 1 && row4 == 1) {
         key = 0;
-        ingreso_numero(key);
+        guarda_numero_ingresado(key);
+        while (column2 == 1 && row4 == 1) {
+            __delay_ms(40);
+        }
     }
-
 }
 
-void pantalla_contrasenia(void) {
+void mostrar_presionar_a(void) {
+    lcd_gotoxy(7, 2);
+    lcd_putrs("Press A");
+}
 
+void resetear_pantalla_ingresar_contrasenia(void) {
+    lcd_gotoxy(1, 2);
+    lcd_putrs("              ");
+
+    for (int i = 0; i < 0; i++) {
+        array_contrasenia_ingresada[i] = 0;
+    }
+
+    numeros_ingresados = 0;
+}
+
+void cambiar_opcion(void) {
+    row1 = 0;
+    row2 = 0;
+    row3 = 1;
+    row4 = 0;
+    if (column4 == 1 && row3 == 1) {
+        if (boton_seleccionar == 3) {
+            boton_seleccionar = 0;
+        } else {
+            boton_seleccionar++;
+        }
+        while (column4 == 1 && row3 == 1) {
+            __delay_ms(40);
+        }
+    }
+
+    row1 = 0;
+    row2 = 0;
+    row3 = 0;
+    row4 = 1;
+    if (column4 == 1 && row4 == 1) {
+        if (boton_seleccionar == 0) {
+            boton_seleccionar = 3;
+        } else {
+            boton_seleccionar--;
+        }
+        while (column4 == 1 && row4 == 1) {
+            __delay_ms(40);
+        }
+    }
+
+    sprintf(buffer2, "%01u", boton_seleccionar);
+    lcd_gotoxy(8, 1);
+    lcd_putrs(buffer2);
+}
+
+void activar_alarma(void) {
+    numeros_ingresados = 0;
+    lcd_gotoxy(1, 1);
+    lcd_putrs("Alarm activated ");
+    lcd_gotoxy(1, 2);
+    lcd_putrs("                ");
+    
+    while(1) {
+        //se tiene que quedar escuchando los sensores y el ingreso de numero
+        break;
+    }
+    
+    //Si se activa un sensor, pasa esto
+    if(1!=1){
+        //lo saque de los del profe
+        lcd_comand(0b00000010);
+        LED_2_Toggle;
+        LED_3_Toggle
+        __delay_ms(98);
+    }
+    
+    
+}
+
+void seleccionar_opcion(void) {
+    row1 = 1;
+    row2 = 0;
+    row3 = 0;
+    row4 = 0;
+    if (column4 == 1 && row1 == 1) {
+        if (boton_seleccionar == 0) {
+            activar_alarma();
+        }
+        if (boton_seleccionar == 1) {
+            ir_a_pantalla_editar_contrasenia();
+        }
+        if (boton_seleccionar == 2) {
+            //editar_fecha_reloj_digital();
+        }
+        if (boton_seleccionar == 3) {
+            //editar_hora_reloj_digital();
+        }
+    }
+}
+
+void ir_a_pantalla_edicion(void) {
+    while (1) {
+        lcd_gotoxy(1, 1);
+        lcd_putrs("Active ");
+        lcd_gotoxy(1, 2);
+        lcd_putrs("Edt Pass");
+
+        Read_RTC();
+
+        set_reloj_digital();
+        cambiar_opcion();
+        seleccionar_opcion();
+    }
+}
+
+void ir_a_pantalla_ingresar_contrasenia(void) {
+
+    numeros_ingresados = 0;
     lcd_gotoxy(1, 1);
     lcd_putrs("Insert Password ");
     lcd_gotoxy(1, 2);
@@ -162,19 +335,16 @@ void pantalla_contrasenia(void) {
 
     while (1) {
         if (numeros_ingresados < 4) {
-            guarda_numero_ingresado();
-            row1 = 0;
-            row2 = 0;
-            row3 = 0;
-            row4 = 1;
-
-            if (column1 == 1 && row4 == 1) {
-                setRelojDigital();
-                break;
+            ingreso_numero();
+        } else {
+            mostrar_presionar_a();
+            if (verificar_contrasenia() == 1) {
+                ir_a_pantalla_edicion();
+            } else {
+                resetear_pantalla_ingresar_contrasenia();
             }
         }
     }
-
 }
 
 void si_apreta_numero_va_a_pantalla_contrasenia(void) {
@@ -187,7 +357,7 @@ void si_apreta_numero_va_a_pantalla_contrasenia(void) {
                 (column2 == 1 && row1 == 1) ||
                 (column3 == 1 && row1 == 1)) {
 
-            pantalla_contrasenia();
+            ir_a_pantalla_ingresar_contrasenia();
         }
     }
     row1 = 0;
@@ -199,7 +369,7 @@ void si_apreta_numero_va_a_pantalla_contrasenia(void) {
                 (column2 == 1 && row2 == 1) ||
                 (column3 == 1 && row2 == 1)) {
 
-            pantalla_contrasenia();
+            ir_a_pantalla_ingresar_contrasenia();
         }
     }
     row1 = 0;
@@ -211,7 +381,7 @@ void si_apreta_numero_va_a_pantalla_contrasenia(void) {
                 (column2 == 1 && row3 == 1) ||
                 (column3 == 1 && row3 == 1)) {
 
-            pantalla_contrasenia();
+            ir_a_pantalla_ingresar_contrasenia();
         }
     }
     row1 = 0;
@@ -223,8 +393,153 @@ void si_apreta_numero_va_a_pantalla_contrasenia(void) {
                 (column2 == 1 && row4 == 1) ||
                 (column3 == 1 && row4 == 1)) {
 
-            pantalla_contrasenia();
+            ir_a_pantalla_ingresar_contrasenia();
         }
+    }
+}
+
+void ir_a_pantalla_inicial() {
+    set_reloj_digital();
+    titila_texto_insert_password();
+    si_apreta_numero_va_a_pantalla_contrasenia();
+}
+
+void ir_a_pantalla_editar_contrasenia(void) {
+    numeros_ingresados = 0;
+    lcd_gotoxy(1, 1);
+    lcd_putrs("Insert new Password ");
+    lcd_gotoxy(1, 2);
+    lcd_putrs("                ");
+    while (1) {
+        if (numeros_ingresados < 4) {
+            ingreso_numero();
+        } else {
+            for (int i = 0; i < 4; i++) {
+                array_contrasenia[i] = array_contrasenia_ingresada[i];
+            }
+            break;
+        }
+    }
+}
+
+int verificar_contrasenia() {
+    int equals = 0;
+    for (int i = 0; i < 4; i++) {
+        if (array_contrasenia[i] == array_contrasenia_ingresada[i]) {
+            equals = 1;
+        } else {
+            equals = 0;
+        }
+    }
+    return equals;
+}
+
+void editar_fecha_reloj_digital(void) {
+    int posicion = 0;
+    int numeros_para_fecha[2];
+
+    //Modificar dia, se puede limpiar la posicion
+    if (posicion == 0) {
+        //numeros_ingresados = 0;
+        //while(numeros_ingresados < 3){
+        //  numeros_para_fecha[numeros_ingresados] = lo que ingrese
+        //  numeros_ingresados++;
+        //  if(numeros_ingresados == 2){
+        //    int dia_ingresado = hacer conversion decimal
+        //    if(0 < dia_ingresado <= 31){dia=dia_ingresado; numeros_ingresados++}
+        //    else{numeros_ingresados = 0}
+        //} 
+        //Write_RTC();
+        posicion++;
+        __delay_ms(50);
+    }
+
+    //Modificar mes
+    if (posicion == 1) {
+        //numeros_ingresados = 0;
+        //while(numeros_ingresados < 3){
+        //  numeros_para_fecha[numeros_ingresados] = lo que ingrese
+        //  numeros_ingresados++;
+        //  if(numeros_ingresados == 2){
+        //    int mes_ingresado = hacer conversion decimal
+        //    if(0 < dia_ingresado <= 12){mes=mes_ingresado; numeros_ingresados++}
+        //    else{numeros_ingresados = 0}
+        //} 
+        //Write_RTC();
+        posicion++;
+        __delay_ms(50);
+    }
+
+    //Modificar anio
+    if (posicion == 2) {
+        //numeros_ingresados = 0;
+        //while(numeros_ingresados < 3){
+        //  numeros_para_fecha[numeros_ingresados] = lo que ingrese
+        //  numeros_ingresados++;
+        //  if(numeros_ingresados == 2){
+        //    int anio_ingresado = hacer conversion decimal
+        //    if(0 <= dia_ingresado <= 99){anio=anio_ingresado; numeros_ingresados++}
+        //    else{numeros_ingresados = 0}
+        //} 
+        //Write_RTC();
+        posicion++;
+        __delay_ms(50);
+    }
+}
+
+void editar_hora_reloj_digital(void) {
+    int posicion = 0;
+    int numeros_para_horario[2];
+    //imprime lo que estamos editando (revisar)
+    sprintf(buffer2, "%s", array_seleccionar[boton_seleccionar]);
+    lcd_gotoxy(13, 2);
+    lcd_putrs(buffer2);
+    //Modificar hora
+    if (posicion == 0) {
+        //numeros_ingresados = 0;
+        //while(numeros_ingresados < 3){
+        //  numeros_para_horario[numeros_ingresados] = lo que ingrese
+        //  numeros_ingresados++;
+        //  if(numeros_ingresados == 2){
+        //    int hora_ingresada = hacer conversion decimal
+        //    if(0 <= hora_ingresada <= 23){hora=hora_ingresada; numeros_ingresados++}
+        //    else{numeros_ingresados = 0}
+        //} 
+        //Write_RTC();
+        posicion++;
+        __delay_ms(50);
+    }
+
+    //Modificar minuto
+    if (posicion == 1) {
+        //numeros_ingresados = 0;
+        //while(numeros_ingresados < 3){
+        //  numeros_para_horario[numeros_ingresados] = lo que ingrese
+        //  numeros_ingresados++;
+        //  if(numeros_ingresados == 2){
+        //    int minuto_ingresado = hacer conversion decimal
+        //    if(0 <= minuto_ingresado <= 23){minuto=minuto_ingresado; numeros_ingresados++}
+        //    else{numeros_ingresados = 0}
+        //} 
+        //Write_RTC();
+        posicion++;
+        __delay_ms(50);
+    }
+
+    //Modificar segundo
+    if (posicion == 2) {
+        //numeros_ingresados = 0;
+        //while(numeros_ingresados < 3){
+        //  numeros_para_horario[numeros_ingresados] = lo que ingrese
+        //  numeros_ingresados++;
+        //  if(numeros_ingresados == 2){
+        //    int segundo_ingresado = hacer conversion decimal
+        //    if(0 <= segundo_ingresado <= 23){segundo=segundo_ingresado; numeros_ingresados++}
+        //    else{numeros_ingresados = 0}
+        //} 
+        //Write_RTC();
+        posicion++;
+        __delay_ms(50);
     }
 }
 
@@ -257,398 +572,20 @@ void setup(void) {
     LED_2_Off;
     LED_3_Off;
 
-    setRelojDigital();
+    set_reloj_digital();
     Write_RTC();
 }
 
 int main(void) {
     setup();
 
-    /**
-     * Boton Seleccionar
-     * 0. Dia
-     * 1. Mes
-     * 2. Año
-     * 3. Hora
-     * 4. Minuto
-     * 5. Segundo
-     */
-    int boton_seleccionar = 0;
-    int boton_centro_estado = 0;
-
     while (1) {
-        //lo saque de los del profe
-        lcd_comand(0b00000010);
-        LED_2_Toggle;
-        LED_3_Toggle
-        __delay_ms(98);
-
+        
         Read_RTC();
 
-        //esto de aca abajo se usaria solo si quiero editar
-        //cambiar los botones switch y eso con lo respectivo de la alarma
-
-        titila_texto_insert_password();
-        si_apreta_numero_va_a_pantalla_contrasenia();
-
-        if (boton_centro_estado == 1) {
-
-            if (switch_Right == 0) {
-                if (boton_seleccionar == 7) {
-                    boton_seleccionar = 0;
-                } else {
-                    boton_seleccionar++;
-                }
-                while (switch_Right == 0);
-            }
-
-            if (switch_Left == 0) {
-                if (boton_seleccionar == 0) {
-                    boton_seleccionar = 7;
-                } else {
-                    boton_seleccionar--;
-                }
-                while (switch_Left == 0);
-            }
-            //imprime lo que estamos editando
-            sprintf(buffer2, "%s", array_seleccionar[boton_seleccionar]);
-            lcd_gotoxy(13, 2);
-            lcd_putrs(buffer2);
-
-            // Modificar Dia semana
-            if (boton_seleccionar == 0) {
-
-                if (switch_Up == 0) {
-                    if (diasem == 6) {
-                        diasem = 0;
-                        Write_RTC();
-                    } else {
-                        diasem++;
-                        Write_RTC();
-                    }
-                    while (switch_Up == 0);
-                }
-
-                if (switch_Down == 0) {
-                    if (diasem == 0) {
-                        diasem = 6;
-                        Write_RTC();
-                    } else {
-                        diasem--;
-                        Write_RTC();
-                    }
-                    while (switch_Down == 0);
-                }
-            }
-
-            //Modificar dia
-            if (boton_seleccionar == 1) {
-
-                if (switch_Up == 0) {
-                    if (dia == 31) {
-                        dia = 1;
-                        Write_RTC();
-                    } else {
-                        dia++;
-                        Write_RTC();
-                    }
-                    while (switch_Up == 0);
-                }
-
-                if (switch_Down == 0) {
-                    if (dia == 1) {
-                        dia = 31;
-                        Write_RTC();
-                    } else {
-                        dia--;
-                        Write_RTC();
-                    }
-                    while (switch_Down == 0);
-                }
-
-                __delay_ms(50);
-            }
-
-            //Modificar mes
-            if (boton_seleccionar == 2) {
-
-                if (switch_Up == 0) {
-                    if (mes == 12) {
-                        mes = 1;
-                        Write_RTC();
-                    } else {
-                        mes++;
-                        Write_RTC();
-                    }
-                    while (switch_Up == 0);
-                }
-
-                if (switch_Down == 0) {
-                    if (mes == 1) {
-                        mes = 12;
-                        Write_RTC();
-                    } else {
-                        mes--;
-                        Write_RTC();
-                    }
-                    while (switch_Down == 0);
-                }
-
-                __delay_ms(50);
-            }
-
-            //Modificar anio
-            if (boton_seleccionar == 3) {
-
-                if (switch_Up == 0) {
-                    if (anio == 99) {
-                        anio = 0;
-                        Write_RTC();
-                    } else {
-                        anio++;
-                        Write_RTC();
-                    }
-                    while (switch_Up == 0);
-                }
-
-                if (switch_Down == 0) {
-                    if (anio == 0) {
-                        anio = 99;
-                        Write_RTC();
-                    } else {
-                        anio--;
-                        Write_RTC();
-                    }
-                    while (switch_Down == 0);
-                }
-
-                __delay_ms(50);
-            }
-
-            //Modificar hora
-            if (boton_seleccionar == 4) {
-
-                if (switch_Up == 0) {
-                    if (hora == 59) {
-                        hora = 0;
-                        Write_RTC();
-                    } else {
-                        hora++;
-                        Write_RTC();
-                    }
-                    while (switch_Up == 0);
-                }
-
-                if (switch_Down == 0) {
-                    if (hora == 0) {
-                        hora = 59;
-                        Write_RTC();
-                    } else {
-                        hora--;
-                        Write_RTC();
-                    }
-                    while (switch_Down == 0);
-                }
-
-                __delay_ms(50);
-            }
-
-            //Modificar minuto
-            if (boton_seleccionar == 5) {
-
-                if (switch_Up == 0) {
-                    if (minuto == 59) {
-                        minuto = 0;
-                        Write_RTC();
-                    } else {
-                        minuto++;
-                        Write_RTC();
-                    }
-                    while (switch_Up == 0);
-                }
-
-                if (switch_Down == 0) {
-                    if (minuto == 0) {
-                        minuto = 59;
-                        Write_RTC();
-                    } else {
-                        minuto--;
-                        Write_RTC();
-                    }
-                    while (switch_Down == 0);
-                }
-
-                __delay_ms(50);
-            }
-
-            //Modificar segundo
-            if (boton_seleccionar == 6) {
-
-                if (switch_Up == 0) {
-                    if (segundo == 59) {
-                        segundo = 0;
-                        Write_RTC();
-                    } else {
-                        segundo++;
-                        Write_RTC();
-                    }
-                    while (switch_Up == 0);
-                }
-
-                if (switch_Down == 0) {
-                    if (segundo == 0) {
-                        segundo = 59;
-                        Write_RTC();
-                    } else {
-                        segundo--;
-                        Write_RTC();
-                    }
-                    while (switch_Down == 0);
-                }
-
-                __delay_ms(50);
-            }
-
-            //parte del cafe
-            /**
-            if (boton_seleccionar == 7) {
-                
-                boton_seleccionar = 0;
-                int boton_seleccionar_cafe = 0;
-                int tipo = 0; //0=cortado, 1=solo, 2=c/leche
-                int tamanio = 0; //0=chico, 1=mediano, 2=grande
-                int accion = 0; //0=pedir, 1=terminar
-                
-                while (1) {
-                    
-                    if (switch_Right == 0) {
-                        if (boton_seleccionar_cafe == 2) {
-                            boton_seleccionar_cafe = 0;
-                        } else {
-                            boton_seleccionar_cafe++;
-                        }
-                        while (switch_Right == 0);
-                    }
-
-                    if (switch_Left == 0) {
-                        if (boton_seleccionar_cafe == 0) {
-                            boton_seleccionar_cafe = 2;
-                        } else {
-                            boton_seleccionar_cafe--;
-                        }
-                        while (switch_Left == 0);
-                    }
-                    
-                    if (boton_seleccionar_cafe == 0) {
-
-                        if (switch_Up == 0) {
-                            if (tipo == 2) {
-                                tipo = 0;
-                            } else {
-                                tipo++;
-                                //ToDo = escribir en pantalla
-                            }
-                            while (switch_Up == 0);
-                        }
-
-
-                        if (switch_Down == 0) {
-                            if (tipo == 0) {
-                                tipo = 2;
-                                //ToDo = escribir en pantalla
-                            } else {
-                                tipo--;
-                                //ToDo = escribir en pantalla
-                            }
-                            while (switch_Down == 0);
-                        }
-                    }
-                    
-                    if (boton_seleccionar_cafe == 1) {
-
-                        if (switch_Up == 0) {
-                            if (tamanio == 2) {
-                                tamanio = 0;
-                            } else {
-                                tamanio++;
-                            }
-                            while (switch_Up == 0);
-                        }
-
-                        if (switch_Down == 0) {
-                            if (tamanio == 0) {
-                                tamanio = 2;
-                            } else {
-                                tamanio--;
-                            }
-                            while (switch_Down == 0);
-                        }
-                    }
-                    
-                    if (boton_seleccionar_cafe == 2) {
-                        if (switch_Up == 0) {
-                            if (accion == 1) {
-                                accion = 0;
-                            } else {
-                                accion++;
-                            }
-                            while (switch_Up == 0);
-                        }
-
-                        if (switch_Down == 0) {
-                            if (accion == 0) {
-                                accion = 1;
-                            } else {
-                                accion--;
-                            }
-                            while (switch_Down == 0);
-                        }
-                        
-                        if (switch_Center == 0) {
-                            if (accion == 0) {
-                                // Guarda variables globales para los tipos/tamaños de cafe
-                                reporte_cafe[tipo][tamanio] ++;
-                               
-                            }
-                            
-                            if (accion == 1) {
-                                int a = 0;
-                                sprintf(buffer2, "%01u", reporte_cafe[0][0]);
-                                lcd_gotoxy(13, 2);
-                                lcd_putrs(buffer2);                                
-                                //break;
-                            }
-                            
-                            if (accion == 2) {
-                                break;
-                            }
-                            
-                            while (switch_Center == 1);
-                        }
-                    }
-
-                    //aca abajo imprimimos lo del cafe
-                    sprintf(buffer3, "%s", array_boton_seleccionar_tipo_cafe[tipo]);
-                    lcd_gotoxy(1, 1);
-                    lcd_putrs(buffer3);
-
-                    sprintf(buffer4, "%s", array_boton_seleccionar_tamanio_cafe[tamanio]);
-                    lcd_gotoxy(9, 1);
-                    lcd_putrs(buffer4);
-
-                    sprintf(buffer5, "%s", array_boton_seleccionar_accion_cafe[accion]);
-                    lcd_gotoxy(1, 2);
-                    lcd_putrs(buffer5);
-
-                }
-             
-            }
-             */
-        }
-
-        setRelojDigital();
-        __delay_ms(98); // 100ms retardo maximo para esta funcion
-
+        ir_a_pantalla_inicial();
     }
+
+    __delay_ms(98); // 100ms retardo maximo para esta funcion
     return 0;
 }

@@ -9226,7 +9226,33 @@ int array_contrasenia_ingresada[4];
 int array_contrasenia[] = {1, 2, 3, 4};
 int numeros_ingresados = 0;
 
+# 31
+int boton_seleccionar = 0;
+int boton_centro_estado = 0;
+
 int txt_insert_pass = 0;
+
+
+void setDiaMesAnio(void);
+void setHoraMinutoSegundo(void);
+void set_reloj_digital(void);
+void titila_texto_insert_password(void);
+void guarda_numero_ingresado(int* num);
+void ingreso_numero(void);
+void mostrar_presionar_a(void);
+int verificar_contrasenia();
+void editar_fecha_reloj_digital(void);
+void editar_hora_reloj_digital(void);
+void resetear_pantalla_ingresar_contrasenia(void);
+void ir_a_pantalla_ingresar_contrasenia(void);
+void cambiar_opcion(void);
+void seleccionar_opcion(void);
+void ir_a_pantalla_editar_contrasenia(void);
+void ir_a_pantalla_edicion(void);
+void ir_a_pantalla_inicial(void);
+void si_apreta_numero_va_a_pantalla_contrasenia(void);
+void activar_alarma(void);
+void setup(void);
 
 void setDiaMesAnio(void) {
 if (dia > 31) {
@@ -9257,7 +9283,7 @@ lcd_gotoxy(9, 2);
 lcd_putrs(buffer2);
 }
 
-void setRelojDigital(void) {
+void set_reloj_digital(void) {
 setDiaMesAnio();
 setHoraMinutoSegundo();
 }
@@ -9282,18 +9308,15 @@ _delay((unsigned long)((60)*(8000000/4000.0)));
 }
 }
 
-void ingreso_numero(int* num) {
+void guarda_numero_ingresado(int* num) {
 array_contrasenia_ingresada[numeros_ingresados] = num;
 lcd_gotoxy(numeros_ingresados + 1, 2);
 sprintf(buffer2, "%01u", num);
 lcd_putrs(buffer2);
 numeros_ingresados++;
-while (PORTAbits.RA5 == 1) {
-_delay((unsigned long)((40)*(8000000/4000.0)));
-}
 }
 
-void guarda_numero_ingresado(void) {
+void ingreso_numero(void) {
 LATAbits.LATA0 = 1;
 LATAbits.LATA1 = 0;
 LATAbits.LATA2 = 0;
@@ -9301,15 +9324,24 @@ LATAbits.LATA3 = 0;
 {
 if (PORTAbits.RA5 == 1 && LATAbits.LATA0 == 1) {
 key = 1;
-ingreso_numero(key);
+guarda_numero_ingresado(key);
+while (PORTAbits.RA5 == 1 && LATAbits.LATA0 == 1) {
+_delay((unsigned long)((40)*(8000000/4000.0)));
+}
 }
 if (PORTAbits.RA7 == 1 && LATAbits.LATA0 == 1) {
 key = 2;
-ingreso_numero(key);
+guarda_numero_ingresado(key);
+while (PORTAbits.RA7 == 1 && LATAbits.LATA0 == 1) {
+_delay((unsigned long)((40)*(8000000/4000.0)));
+}
 }
 if (PORTAbits.RA6 == 1 && LATAbits.LATA0 == 1) {
 key = 3;
-ingreso_numero(key);
+guarda_numero_ingresado(key);
+while (PORTAbits.RA6 == 1 && LATAbits.LATA0 == 1) {
+_delay((unsigned long)((40)*(8000000/4000.0)));
+}
 }
 }
 LATAbits.LATA0 = 0;
@@ -9319,15 +9351,24 @@ LATAbits.LATA3 = 0;
 {
 if (PORTAbits.RA5 == 1 && LATAbits.LATA1 == 1) {
 key = 4;
-ingreso_numero(key);
+guarda_numero_ingresado(key);
+while (PORTAbits.RA5 == 1 && LATAbits.LATA1 == 1) {
+_delay((unsigned long)((40)*(8000000/4000.0)));
+}
 }
 if (PORTAbits.RA7 == 1 && LATAbits.LATA1 == 1) {
 key = 5;
-ingreso_numero(key);
+guarda_numero_ingresado(key);
+while (PORTAbits.RA7 == 1 && LATAbits.LATA1 == 1) {
+_delay((unsigned long)((40)*(8000000/4000.0)));
+}
 }
 if (PORTAbits.RA6 == 1 && LATAbits.LATA1 == 1) {
 key = 6;
-ingreso_numero(key);
+guarda_numero_ingresado(key);
+while (PORTAbits.RA6 == 1 && LATAbits.LATA1 == 1) {
+_delay((unsigned long)((40)*(8000000/4000.0)));
+}
 }
 }
 LATAbits.LATA0 = 0;
@@ -9337,15 +9378,24 @@ LATAbits.LATA3 = 0;
 {
 if (PORTAbits.RA5 == 1 && LATAbits.LATA2 == 1) {
 key = 7;
-ingreso_numero(key);
+guarda_numero_ingresado(key);
+while (PORTAbits.RA5 == 1 && LATAbits.LATA2 == 1) {
+_delay((unsigned long)((40)*(8000000/4000.0)));
+}
 }
 if (PORTAbits.RA7 == 1 && LATAbits.LATA2 == 1) {
 key = 8;
-ingreso_numero(key);
+guarda_numero_ingresado(key);
+while (PORTAbits.RA7 == 1 && LATAbits.LATA2 == 1) {
+_delay((unsigned long)((40)*(8000000/4000.0)));
+}
 }
 if (PORTAbits.RA6 == 1 && LATAbits.LATA2 == 1) {
 key = 9;
-ingreso_numero(key);
+guarda_numero_ingresado(key);
+while (PORTAbits.RA6 == 1 && LATAbits.LATA2 == 1) {
+_delay((unsigned long)((40)*(8000000/4000.0)));
+}
 }
 }
 LATAbits.LATA0 = 0;
@@ -9355,13 +9405,128 @@ LATAbits.LATA3 = 1;
 
 if (PORTAbits.RA7 == 1 && LATAbits.LATA3 == 1) {
 key = 0;
-ingreso_numero(key);
+guarda_numero_ingresado(key);
+while (PORTAbits.RA7 == 1 && LATAbits.LATA3 == 1) {
+_delay((unsigned long)((40)*(8000000/4000.0)));
+}
+}
 }
 
+void mostrar_presionar_a(void) {
+lcd_gotoxy(7, 2);
+lcd_putrs("Press A");
 }
 
-void pantalla_contrasenia(void) {
+void resetear_pantalla_ingresar_contrasenia(void) {
+lcd_gotoxy(1, 2);
+lcd_putrs("              ");
 
+for (int i = 0; i < 0; i++) {
+array_contrasenia_ingresada[i] = 0;
+}
+
+numeros_ingresados = 0;
+}
+
+void cambiar_opcion(void) {
+LATAbits.LATA0 = 0;
+LATAbits.LATA1 = 0;
+LATAbits.LATA2 = 1;
+LATAbits.LATA3 = 0;
+if (PORTCbits.RC2 == 1 && LATAbits.LATA2 == 1) {
+if (boton_seleccionar == 3) {
+boton_seleccionar = 0;
+} else {
+boton_seleccionar++;
+}
+while (PORTCbits.RC2 == 1 && LATAbits.LATA2 == 1) {
+_delay((unsigned long)((40)*(8000000/4000.0)));
+}
+}
+
+LATAbits.LATA0 = 0;
+LATAbits.LATA1 = 0;
+LATAbits.LATA2 = 0;
+LATAbits.LATA3 = 1;
+if (PORTCbits.RC2 == 1 && LATAbits.LATA3 == 1) {
+if (boton_seleccionar == 0) {
+boton_seleccionar = 3;
+} else {
+boton_seleccionar--;
+}
+while (PORTCbits.RC2 == 1 && LATAbits.LATA3 == 1) {
+_delay((unsigned long)((40)*(8000000/4000.0)));
+}
+}
+
+sprintf(buffer2, "%01u", boton_seleccionar);
+lcd_gotoxy(8, 1);
+lcd_putrs(buffer2);
+}
+
+void activar_alarma(void) {
+numeros_ingresados = 0;
+lcd_gotoxy(1, 1);
+lcd_putrs("Alarm activated ");
+lcd_gotoxy(1, 2);
+lcd_putrs("                ");
+
+while(1) {
+
+break;
+}
+
+
+if(1!=1){
+
+lcd_comand(0b00000010);
+LATBbits.LATB1 = !LATBbits.LATB1;;
+LATBbits.LATB0 = !LATBbits.LATB0;
+_delay((unsigned long)((98)*(8000000/4000.0)));
+}
+
+
+}
+
+void seleccionar_opcion(void) {
+LATAbits.LATA0 = 1;
+LATAbits.LATA1 = 0;
+LATAbits.LATA2 = 0;
+LATAbits.LATA3 = 0;
+if (PORTCbits.RC2 == 1 && LATAbits.LATA0 == 1) {
+if (boton_seleccionar == 0) {
+activar_alarma();
+}
+if (boton_seleccionar == 1) {
+ir_a_pantalla_editar_contrasenia();
+}
+if (boton_seleccionar == 2) {
+
+}
+if (boton_seleccionar == 3) {
+
+}
+}
+}
+
+void ir_a_pantalla_edicion(void) {
+while (1) {
+lcd_gotoxy(1, 1);
+lcd_putrs("Active ");
+lcd_gotoxy(1, 2);
+lcd_putrs("Edt Pass");
+
+Read_RTC();
+
+set_reloj_digital();
+cambiar_opcion();
+seleccionar_opcion();
+}
+}
+
+void ir_a_pantalla_ingresar_contrasenia(void) {
+
+numeros_ingresados = 0;
 lcd_gotoxy(1, 1);
 lcd_putrs("Insert Password ");
 lcd_gotoxy(1, 2);
@@ -9369,19 +9534,16 @@ lcd_putrs("                ");
 
 while (1) {
 if (numeros_ingresados < 4) {
-guarda_numero_ingresado();
-LATAbits.LATA0 = 0;
-LATAbits.LATA1 = 0;
-LATAbits.LATA2 = 0;
-LATAbits.LATA3 = 1;
-
-if (PORTAbits.RA5 == 1 && LATAbits.LATA3 == 1) {
-setRelojDigital();
-break;
+ingreso_numero();
+} else {
+mostrar_presionar_a();
+if (verificar_contrasenia() == 1) {
+ir_a_pantalla_edicion();
+} else {
+resetear_pantalla_ingresar_contrasenia();
 }
 }
 }
-
 }
 
 void si_apreta_numero_va_a_pantalla_contrasenia(void) {
@@ -9394,7 +9556,7 @@ if ((PORTAbits.RA5 == 1 && LATAbits.LATA0 == 1) ||
 (PORTAbits.RA7 == 1 && LATAbits.LATA0 == 1) ||
 (PORTAbits.RA6 == 1 && LATAbits.LATA0 == 1)) {
 
-pantalla_contrasenia();
+ir_a_pantalla_ingresar_contrasenia();
 }
 }
 LATAbits.LATA0 = 0;
@@ -9406,7 +9568,7 @@ if ((PORTAbits.RA5 == 1 && LATAbits.LATA1 == 1) ||
 (PORTAbits.RA7 == 1 && LATAbits.LATA1 == 1) ||
 (PORTAbits.RA6 == 1 && LATAbits.LATA1 == 1)) {
 
-pantalla_contrasenia();
+ir_a_pantalla_ingresar_contrasenia();
 }
 }
 LATAbits.LATA0 = 0;
@@ -9418,7 +9580,7 @@ if ((PORTAbits.RA5 == 1 && LATAbits.LATA2 == 1) ||
 (PORTAbits.RA7 == 1 && LATAbits.LATA2 == 1) ||
 (PORTAbits.RA6 == 1 && LATAbits.LATA2 == 1)) {
 
-pantalla_contrasenia();
+ir_a_pantalla_ingresar_contrasenia();
 }
 }
 LATAbits.LATA0 = 0;
@@ -9430,8 +9592,105 @@ if ((PORTAbits.RA5 == 1 && LATAbits.LATA3 == 1) ||
 (PORTAbits.RA7 == 1 && LATAbits.LATA3 == 1) ||
 (PORTAbits.RA6 == 1 && LATAbits.LATA3 == 1)) {
 
-pantalla_contrasenia();
+ir_a_pantalla_ingresar_contrasenia();
 }
+}
+}
+
+void ir_a_pantalla_inicial() {
+set_reloj_digital();
+titila_texto_insert_password();
+si_apreta_numero_va_a_pantalla_contrasenia();
+}
+
+void ir_a_pantalla_editar_contrasenia(void) {
+numeros_ingresados = 0;
+lcd_gotoxy(1, 1);
+lcd_putrs("Insert new Password ");
+lcd_gotoxy(1, 2);
+lcd_putrs("                ");
+while (1) {
+if (numeros_ingresados < 4) {
+ingreso_numero();
+} else {
+for (int i = 0; i < 4; i++) {
+array_contrasenia[i] = array_contrasenia_ingresada[i];
+}
+break;
+}
+}
+}
+
+int verificar_contrasenia() {
+int equals = 0;
+for (int i = 0; i < 4; i++) {
+if (array_contrasenia[i] == array_contrasenia_ingresada[i]) {
+equals = 1;
+} else {
+equals = 0;
+}
+}
+return equals;
+}
+
+void editar_fecha_reloj_digital(void) {
+int posicion = 0;
+int numeros_para_fecha[2];
+
+
+if (posicion == 0) {
+
+# 453
+posicion++;
+_delay((unsigned long)((50)*(8000000/4000.0)));
+}
+
+
+if (posicion == 1) {
+
+# 469
+posicion++;
+_delay((unsigned long)((50)*(8000000/4000.0)));
+}
+
+
+if (posicion == 2) {
+
+# 485
+posicion++;
+_delay((unsigned long)((50)*(8000000/4000.0)));
+}
+}
+
+void editar_hora_reloj_digital(void) {
+int posicion = 0;
+int numeros_para_horario[2];
+
+sprintf(buffer2, "%s", array_seleccionar[boton_seleccionar]);
+lcd_gotoxy(13, 2);
+lcd_putrs(buffer2);
+
+if (posicion == 0) {
+
+# 509
+posicion++;
+_delay((unsigned long)((50)*(8000000/4000.0)));
+}
+
+
+if (posicion == 1) {
+
+# 525
+posicion++;
+_delay((unsigned long)((50)*(8000000/4000.0)));
+}
+
+
+if (posicion == 2) {
+
+# 541
+posicion++;
+_delay((unsigned long)((50)*(8000000/4000.0)));
 }
 }
 
@@ -9464,256 +9723,20 @@ LATBbits.LATB2 = 0;;
 LATBbits.LATB1 = 0;;
 LATBbits.LATB0 = 0;;
 
-setRelojDigital();
+set_reloj_digital();
 Write_RTC();
 }
 
 int main(void) {
 setup();
 
-# 276
-int boton_seleccionar = 0;
-int boton_centro_estado = 0;
-
 while (1) {
-
-lcd_comand(0b00000010);
-LATBbits.LATB1 = !LATBbits.LATB1;;
-LATBbits.LATB0 = !LATBbits.LATB0;
-_delay((unsigned long)((98)*(8000000/4000.0)));
 
 Read_RTC();
 
-
-
-
-titila_texto_insert_password();
-si_apreta_numero_va_a_pantalla_contrasenia();
-
-if (boton_centro_estado == 1) {
-
-if (PORTAbits.RA2 == 0) {
-if (boton_seleccionar == 7) {
-boton_seleccionar = 0;
-} else {
-boton_seleccionar++;
-}
-while (PORTAbits.RA2 == 0);
+ir_a_pantalla_inicial();
 }
 
-if (PORTAbits.RA7 == 0) {
-if (boton_seleccionar == 0) {
-boton_seleccionar = 7;
-} else {
-boton_seleccionar--;
-}
-while (PORTAbits.RA7 == 0);
-}
-
-sprintf(buffer2, "%s", array_seleccionar[boton_seleccionar]);
-lcd_gotoxy(13, 2);
-lcd_putrs(buffer2);
-
-
-if (boton_seleccionar == 0) {
-
-if (PORTAbits.RA3 == 0) {
-if (diasem == 6) {
-diasem = 0;
-Write_RTC();
-} else {
-diasem++;
-Write_RTC();
-}
-while (PORTAbits.RA3 == 0);
-}
-
-if (PORTAbits.RA6 == 0) {
-if (diasem == 0) {
-diasem = 6;
-Write_RTC();
-} else {
-diasem--;
-Write_RTC();
-}
-while (PORTAbits.RA6 == 0);
-}
-}
-
-
-if (boton_seleccionar == 1) {
-
-if (PORTAbits.RA3 == 0) {
-if (dia == 31) {
-dia = 1;
-Write_RTC();
-} else {
-dia++;
-Write_RTC();
-}
-while (PORTAbits.RA3 == 0);
-}
-
-if (PORTAbits.RA6 == 0) {
-if (dia == 1) {
-dia = 31;
-Write_RTC();
-} else {
-dia--;
-Write_RTC();
-}
-while (PORTAbits.RA6 == 0);
-}
-
-_delay((unsigned long)((50)*(8000000/4000.0)));
-}
-
-
-if (boton_seleccionar == 2) {
-
-if (PORTAbits.RA3 == 0) {
-if (mes == 12) {
-mes = 1;
-Write_RTC();
-} else {
-mes++;
-Write_RTC();
-}
-while (PORTAbits.RA3 == 0);
-}
-
-if (PORTAbits.RA6 == 0) {
-if (mes == 1) {
-mes = 12;
-Write_RTC();
-} else {
-mes--;
-Write_RTC();
-}
-while (PORTAbits.RA6 == 0);
-}
-
-_delay((unsigned long)((50)*(8000000/4000.0)));
-}
-
-
-if (boton_seleccionar == 3) {
-
-if (PORTAbits.RA3 == 0) {
-if (anio == 99) {
-anio = 0;
-Write_RTC();
-} else {
-anio++;
-Write_RTC();
-}
-while (PORTAbits.RA3 == 0);
-}
-
-if (PORTAbits.RA6 == 0) {
-if (anio == 0) {
-anio = 99;
-Write_RTC();
-} else {
-anio--;
-Write_RTC();
-}
-while (PORTAbits.RA6 == 0);
-}
-
-_delay((unsigned long)((50)*(8000000/4000.0)));
-}
-
-
-if (boton_seleccionar == 4) {
-
-if (PORTAbits.RA3 == 0) {
-if (hora == 59) {
-hora = 0;
-Write_RTC();
-} else {
-hora++;
-Write_RTC();
-}
-while (PORTAbits.RA3 == 0);
-}
-
-if (PORTAbits.RA6 == 0) {
-if (hora == 0) {
-hora = 59;
-Write_RTC();
-} else {
-hora--;
-Write_RTC();
-}
-while (PORTAbits.RA6 == 0);
-}
-
-_delay((unsigned long)((50)*(8000000/4000.0)));
-}
-
-
-if (boton_seleccionar == 5) {
-
-if (PORTAbits.RA3 == 0) {
-if (minuto == 59) {
-minuto = 0;
-Write_RTC();
-} else {
-minuto++;
-Write_RTC();
-}
-while (PORTAbits.RA3 == 0);
-}
-
-if (PORTAbits.RA6 == 0) {
-if (minuto == 0) {
-minuto = 59;
-Write_RTC();
-} else {
-minuto--;
-Write_RTC();
-}
-while (PORTAbits.RA6 == 0);
-}
-
-_delay((unsigned long)((50)*(8000000/4000.0)));
-}
-
-
-if (boton_seleccionar == 6) {
-
-if (PORTAbits.RA3 == 0) {
-if (segundo == 59) {
-segundo = 0;
-Write_RTC();
-} else {
-segundo++;
-Write_RTC();
-}
-while (PORTAbits.RA3 == 0);
-}
-
-if (PORTAbits.RA6 == 0) {
-if (segundo == 0) {
-segundo = 59;
-Write_RTC();
-} else {
-segundo--;
-Write_RTC();
-}
-while (PORTAbits.RA6 == 0);
-}
-
-_delay((unsigned long)((50)*(8000000/4000.0)));
-}
-
-# 647
-}
-
-setRelojDigital();
 _delay((unsigned long)((98)*(8000000/4000.0)));
-
-}
 return 0;
 }
