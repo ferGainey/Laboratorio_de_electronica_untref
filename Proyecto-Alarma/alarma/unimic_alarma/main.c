@@ -6,6 +6,7 @@
 #include <unmc_config_01.h>
 #include <unmc_inout_02.h>
 #include <unmc_inout_03.h>
+#include <math.h>
 
 #include<plib/rtcc.h>
 
@@ -18,6 +19,8 @@ char* array_seleccionar[] = {" Dia", " Mes", "Anio", "Hora", " Min", " Seg"};
 int array_contrasenia_ingresada[4];
 int array_contrasenia[] = {1, 2, 3, 4};
 int numeros_ingresados = 0;
+int motivo_ingreso_de_numeros = 0; //0=contrasenia, 1=edicion hora o fecha. Por defecto va a ser 0
+int numeros_para_fecha[2];
 
 /**
  * Boton Seleccionar
@@ -29,7 +32,7 @@ int numeros_ingresados = 0;
  * 5. Segundo
  */
 int boton_seleccionar = 0;
-int boton_centro_estado = 0;
+//int boton_centro_estado = 0;
 
 int txt_insert_pass = 0;
 
@@ -42,6 +45,7 @@ void guarda_numero_ingresado(int* num);
 void ingreso_numero(void);
 void mostrar_presionar_a(void);
 int verificar_contrasenia();
+int covertir_valores_de_array_a_escala_decimal();
 void editar_fecha_reloj_digital(void);
 void editar_hora_reloj_digital(void);
 void resetear_pantalla_ingresar_contrasenia(void);
@@ -110,11 +114,16 @@ void titila_texto_insert_password(void) {
 }
 
 void guarda_numero_ingresado(int* num) {
-    array_contrasenia_ingresada[numeros_ingresados] = num;
-    lcd_gotoxy(numeros_ingresados + 1, 2);
-    sprintf(buffer2, "%01u", num);
-    lcd_putrs(buffer2);
-    numeros_ingresados++;
+    if (motivo_ingreso_de_numeros == 0) {
+        array_contrasenia_ingresada[numeros_ingresados] = num;
+        lcd_gotoxy(numeros_ingresados + 1, 2);
+        sprintf(buffer2, "%01u", num);
+        lcd_putrs(buffer2);
+        numeros_ingresados++;
+    } else {
+        numeros_para_fecha[numeros_ingresados] = num;
+        numeros_ingresados++;
+    }
 }
 
 void ingreso_numero(void) {
@@ -271,22 +280,22 @@ void activar_alarma(void) {
     lcd_putrs("Alarm activated ");
     lcd_gotoxy(1, 2);
     lcd_putrs("                ");
-    
-    while(1) {
+
+    while (1) {
         //se tiene que quedar escuchando los sensores y el ingreso de numero
         break;
     }
-    
+
     //Si se activa un sensor, pasa esto
-    if(1!=1){
+    if (1 != 1) {
         //lo saque de los del profe
         lcd_comand(0b00000010);
         LED_2_Toggle;
         LED_3_Toggle
         __delay_ms(98);
     }
-    
-    
+
+
 }
 
 void seleccionar_opcion(void) {
@@ -302,10 +311,10 @@ void seleccionar_opcion(void) {
             ir_a_pantalla_editar_contrasenia();
         }
         if (boton_seleccionar == 2) {
-            //editar_fecha_reloj_digital();
+            editar_fecha_reloj_digital();
         }
         if (boton_seleccionar == 3) {
-            //editar_hora_reloj_digital();
+            editar_hora_reloj_digital();
         }
     }
 }
@@ -434,113 +443,169 @@ int verificar_contrasenia() {
     return equals;
 }
 
+int covertir_valores_de_array_a_escala_decimal() {
+    int numero = 0;
+    for (int i = 2 - 1; i >= 0; i--) {
+        numero = numero + numeros_para_fecha[i] * (int) pow(10, (2 - 1) - i);
+    };
+    sprintf(buffer2, "%02u", numero);
+    lcd_gotoxy(8, 2);
+    lcd_putrs(buffer2);
+    return numero;
+}
+
 void editar_fecha_reloj_digital(void) {
     int posicion = 0;
-    int numeros_para_fecha[2];
+    //int numeros_para_fecha[2]; //lo saque para afuera así reutilizo codigo de ingreso de numeros
+    motivo_ingreso_de_numeros = 1;
 
     //Modificar dia, se puede limpiar la posicion
     if (posicion == 0) {
-        //numeros_ingresados = 0;
-        //while(numeros_ingresados < 3){
-        //  numeros_para_fecha[numeros_ingresados] = lo que ingrese
-        //  numeros_ingresados++;
-        //  if(numeros_ingresados == 2){
-        //    int dia_ingresado = hacer conversion decimal
-        //    if(0 < dia_ingresado <= 31){dia=dia_ingresado; numeros_ingresados++}
-        //    else{numeros_ingresados = 0}
-        //} 
+        numeros_ingresados = 0;
+        int dia_ingresado = 0;
+        while (numeros_ingresados < 3) {
+            //numeros_para_fecha[numeros_ingresados] = 1; //puse 1 por defecto, despues hay que tomar lo que ingrese
+            ingreso_numero();
+            //numeros_ingresados++;
+            if (numeros_ingresados == 2) {
+                dia_ingresado = covertir_valores_de_array_a_escala_decimal(); 
+                if ((0 < dia_ingresado) && (dia_ingresado <= 31)) {
+                    dia = dia_ingresado;
+                    numeros_ingresados++;
+                } else {
+                    numeros_ingresados = 0;
+                }
+            }
+        }
         //Write_RTC();
+        setDiaMesAnio();
         posicion++;
         __delay_ms(50);
     }
 
     //Modificar mes
     if (posicion == 1) {
-        //numeros_ingresados = 0;
-        //while(numeros_ingresados < 3){
-        //  numeros_para_fecha[numeros_ingresados] = lo que ingrese
-        //  numeros_ingresados++;
-        //  if(numeros_ingresados == 2){
-        //    int mes_ingresado = hacer conversion decimal
-        //    if(0 < dia_ingresado <= 12){mes=mes_ingresado; numeros_ingresados++}
-        //    else{numeros_ingresados = 0}
-        //} 
+        numeros_ingresados = 0;
+        int mes_ingresado = 0;
+        while (numeros_ingresados < 3) {
+            ingreso_numero();
+            if (numeros_ingresados == 2) {
+                mes_ingresado = covertir_valores_de_array_a_escala_decimal(); 
+                if ((0 < mes_ingresado) && (mes_ingresado <= 12)) {
+                    mes = mes_ingresado;
+                    numeros_ingresados++;
+                } else {
+                    numeros_ingresados = 0;
+                }
+            }
+        }
         //Write_RTC();
+        setDiaMesAnio();
         posicion++;
         __delay_ms(50);
     }
 
     //Modificar anio
     if (posicion == 2) {
-        //numeros_ingresados = 0;
-        //while(numeros_ingresados < 3){
-        //  numeros_para_fecha[numeros_ingresados] = lo que ingrese
-        //  numeros_ingresados++;
-        //  if(numeros_ingresados == 2){
-        //    int anio_ingresado = hacer conversion decimal
-        //    if(0 <= dia_ingresado <= 99){anio=anio_ingresado; numeros_ingresados++}
-        //    else{numeros_ingresados = 0}
-        //} 
+        numeros_ingresados = 0;
+        int anio_ingresado = 0;
+        while (numeros_ingresados < 3) {
+            ingreso_numero();
+            if (numeros_ingresados == 2) {
+                anio_ingresado = covertir_valores_de_array_a_escala_decimal();
+                if ((0 <= anio_ingresado) && (anio_ingresado <= 99)) {
+                    anio = anio_ingresado;
+                    numeros_ingresados++;
+                } else {
+                    numeros_ingresados = 0;
+                }
+            }
+        }
         //Write_RTC();
+        setDiaMesAnio();
         posicion++;
         __delay_ms(50);
     }
+    Write_RTC();
+    motivo_ingreso_de_numeros = 0; //vuelve al motivo por defecto que es el de la contrasenia
+    numeros_ingresados = 0;
 }
 
 void editar_hora_reloj_digital(void) {
     int posicion = 0;
-    int numeros_para_horario[2];
-    //imprime lo que estamos editando (revisar)
-    sprintf(buffer2, "%s", array_seleccionar[boton_seleccionar]);
-    lcd_gotoxy(13, 2);
-    lcd_putrs(buffer2);
+    motivo_ingreso_de_numeros = 1;
+    
     //Modificar hora
     if (posicion == 0) {
-        //numeros_ingresados = 0;
-        //while(numeros_ingresados < 3){
-        //  numeros_para_horario[numeros_ingresados] = lo que ingrese
-        //  numeros_ingresados++;
-        //  if(numeros_ingresados == 2){
-        //    int hora_ingresada = hacer conversion decimal
-        //    if(0 <= hora_ingresada <= 23){hora=hora_ingresada; numeros_ingresados++}
-        //    else{numeros_ingresados = 0}
-        //} 
+        numeros_ingresados = 0;
+        int hora_ingresada = 0;
+        while(numeros_ingresados < 3){
+            ingreso_numero();
+          if(numeros_ingresados == 2){
+            hora_ingresada = covertir_valores_de_array_a_escala_decimal();
+            if((0 <= hora_ingresada) && (hora_ingresada <= 23)){
+                hora=hora_ingresada;
+                numeros_ingresados++;
+            }
+            else{
+                numeros_ingresados = 0;
+            }
+          }
+        } 
         //Write_RTC();
+        setHoraMinutoSegundo();
         posicion++;
         __delay_ms(50);
     }
 
     //Modificar minuto
     if (posicion == 1) {
-        //numeros_ingresados = 0;
-        //while(numeros_ingresados < 3){
-        //  numeros_para_horario[numeros_ingresados] = lo que ingrese
-        //  numeros_ingresados++;
-        //  if(numeros_ingresados == 2){
-        //    int minuto_ingresado = hacer conversion decimal
-        //    if(0 <= minuto_ingresado <= 23){minuto=minuto_ingresado; numeros_ingresados++}
-        //    else{numeros_ingresados = 0}
-        //} 
+        numeros_ingresados = 0;
+        int minuto_ingresado = 0;
+        while(numeros_ingresados < 3){
+            ingreso_numero();
+          if(numeros_ingresados == 2){
+            minuto_ingresado = covertir_valores_de_array_a_escala_decimal();
+            if((0 <= minuto_ingresado) && (minuto_ingresado <= 59)){
+                minuto = minuto_ingresado;
+                numeros_ingresados++;
+            }
+            else{
+                numeros_ingresados = 0;
+            }
+          }
+        } 
         //Write_RTC();
+        setHoraMinutoSegundo();
         posicion++;
         __delay_ms(50);
     }
 
     //Modificar segundo
     if (posicion == 2) {
-        //numeros_ingresados = 0;
-        //while(numeros_ingresados < 3){
-        //  numeros_para_horario[numeros_ingresados] = lo que ingrese
-        //  numeros_ingresados++;
-        //  if(numeros_ingresados == 2){
-        //    int segundo_ingresado = hacer conversion decimal
-        //    if(0 <= segundo_ingresado <= 23){segundo=segundo_ingresado; numeros_ingresados++}
-        //    else{numeros_ingresados = 0}
-        //} 
+        numeros_ingresados = 0;
+        int segundo_ingresado = 0;
+        while(numeros_ingresados < 3){
+            ingreso_numero();
+          if(numeros_ingresados == 2){
+            segundo_ingresado = covertir_valores_de_array_a_escala_decimal();
+            if((0 <= segundo_ingresado) && (segundo_ingresado <= 59)){
+                segundo=segundo_ingresado;
+                numeros_ingresados++;
+            }
+            else{
+                numeros_ingresados = 0;
+            }
+          }
+        } 
         //Write_RTC();
+        setHoraMinutoSegundo();
         posicion++;
         __delay_ms(50);
     }
+    Write_RTC();
+    motivo_ingreso_de_numeros = 0; //vuelve al motivo por defecto que es el de la contrasenia
+    numeros_ingresados = 0;
 }
 
 void setup(void) {
@@ -580,7 +645,7 @@ int main(void) {
     setup();
 
     while (1) {
-        
+
         Read_RTC();
 
         ir_a_pantalla_inicial();

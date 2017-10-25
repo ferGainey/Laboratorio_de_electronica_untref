@@ -1,7 +1,7 @@
 
 Memory Summary:
-    Program space        used  15CEh (  5582) of  FFF8h bytes   (  8.5%)
-    Data space           used    B3h (   179) of   EC0h bytes   (  4.7%)
+    Program space        used  2A50h ( 10832) of  FFF8h bytes   ( 16.5%)
+    Data space           used    FDh (   253) of   EC0h bytes   (  6.7%)
     Configuration bits   used     4h (     4) of     4h words   (100.0%)
-    Data stack space     used     0h (     0) of   E0Ch bytes   (  0.0%)
+    Data stack space     used     0h (     0) of   DC2h bytes   (  0.0%)
 
