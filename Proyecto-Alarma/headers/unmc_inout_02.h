@@ -49,3 +49,7 @@ char key;         //variable key
 #define column4         PORTCbits.RC2
 
 /********************************************************************/
+
+#define sensor_1           PORTCbits.RC5
+#define sensor_2           PORTCbits.RC6
+#define sensor_3           PORTCbits.RC7

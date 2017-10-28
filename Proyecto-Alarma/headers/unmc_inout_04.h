@@ -32,6 +32,9 @@
 #define LED_2_Toggle        LED_2 = !LED_2;
 #define LED_3_Toggle        LED_3 = !LED_3;
 
+#define sensor_1           PORTCbits.RC5
+#define sensor_2           PORTCbits.RC6
+#define sensor_3           PORTCbits.RC7
 
 /* Atributos */
 

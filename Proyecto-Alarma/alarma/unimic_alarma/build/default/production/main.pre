@@ -9255,8 +9255,9 @@ int array_contrasenia[] = {1, 2, 3, 4};
 int numeros_ingresados = 0;
 int motivo_ingreso_de_numeros = 0;
 int numeros_para_fecha[2];
+int alarma_activada = 0;
 
-# 34
+# 35
 int boton_seleccionar = 0;
 
 
@@ -9507,10 +9508,27 @@ lcd_putrs("Alarm activated ");
 lcd_gotoxy(1, 2);
 lcd_putrs("                ");
 
-while (1) {
+alarma_activada = 1;
+while (alarma_activada) {
 
+if (numeros_ingresados < 4) {
+ingreso_numero();
+} else {
+if (verificar_contrasenia()) {
+alarma_activada = 0;
+LATBbits.LATB0 = 0;;
 break;
+} else {
+numeros_ingresados = 0;
 }
+}
+
+if (PORTCbits.RC5 || PORTCbits.RC6 || PORTCbits.RC7) {
+LATBbits.LATB0 = !LATBbits.LATB0;;
+}
+
+}
+
 
 
 if (1 != 1) {
@@ -9557,6 +9575,19 @@ Read_RTC();
 set_reloj_digital();
 cambiar_opcion();
 seleccionar_opcion();
+
+
+
+LATAbits.LATA0 = 0;
+LATAbits.LATA1 = 1;
+LATAbits.LATA2 = 0;
+LATAbits.LATA3 = 0;
+if (PORTCbits.RC2 == 1) {
+break;
+while (PORTCbits.RC2 == 1) {
+_delay((unsigned long)((98)*(8000000/4000.0)));
+}
+}
 }
 }
 
@@ -9575,6 +9606,7 @@ ingreso_numero();
 mostrar_presionar_a();
 if (verificar_contrasenia() == 1) {
 ir_a_pantalla_edicion();
+break;
 } else {
 resetear_pantalla_ingresar_contrasenia();
 }
@@ -9761,19 +9793,17 @@ void editar_hora_reloj_digital(void) {
 int posicion = 0;
 motivo_ingreso_de_numeros = 1;
 
-
 if (posicion == 0) {
 numeros_ingresados = 0;
 int hora_ingresada = 0;
-while(numeros_ingresados < 3){
+while (numeros_ingresados < 3) {
 ingreso_numero();
-if(numeros_ingresados == 2){
+if (numeros_ingresados == 2) {
 hora_ingresada = covertir_valores_de_array_a_escala_decimal();
-if((0 <= hora_ingresada) && (hora_ingresada <= 23)){
-hora=hora_ingresada;
+if ((0 <= hora_ingresada) && (hora_ingresada <= 23)) {
+hora = hora_ingresada;
 numeros_ingresados++;
-}
-else{
+} else {
 numeros_ingresados = 0;
 }
 }
@@ -9788,15 +9818,14 @@ _delay((unsigned long)((50)*(8000000/4000.0)));
 if (posicion == 1) {
 numeros_ingresados = 0;
 int minuto_ingresado = 0;
-while(numeros_ingresados < 3){
+while (numeros_ingresados < 3) {
 ingreso_numero();
-if(numeros_ingresados == 2){
+if (numeros_ingresados == 2) {
 minuto_ingresado = covertir_valores_de_array_a_escala_decimal();
-if((0 <= minuto_ingresado) && (minuto_ingresado <= 59)){
+if ((0 <= minuto_ingresado) && (minuto_ingresado <= 59)) {
 minuto = minuto_ingresado;
 numeros_ingresados++;
-}
-else{
+} else {
 numeros_ingresados = 0;
 }
 }
@@ -9811,15 +9840,14 @@ _delay((unsigned long)((50)*(8000000/4000.0)));
 if (posicion == 2) {
 numeros_ingresados = 0;
 int segundo_ingresado = 0;
-while(numeros_ingresados < 3){
+while (numeros_ingresados < 3) {
 ingreso_numero();
-if(numeros_ingresados == 2){
+if (numeros_ingresados == 2) {
 segundo_ingresado = covertir_valores_de_array_a_escala_decimal();
-if((0 <= segundo_ingresado) && (segundo_ingresado <= 59)){
-segundo=segundo_ingresado;
+if ((0 <= segundo_ingresado) && (segundo_ingresado <= 59)) {
+segundo = segundo_ingresado;
 numeros_ingresados++;
-}
-else{
+} else {
 numeros_ingresados = 0;
 }
 }
@@ -9842,6 +9870,8 @@ OSCCONbits.IRCF1 = 1;
 OSCCONbits.IRCF2 = 1;
 OSCCONbits.SCS0 = 0;
 OSCCONbits.SCS1 = 0;
+
+# 652
 TRISA = 0b11110000;
 TRISB = 0;
 TRISC = 0b00000111;

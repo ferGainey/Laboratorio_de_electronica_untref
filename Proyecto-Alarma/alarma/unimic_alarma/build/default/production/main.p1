@@ -138,8 +138,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S244 . . . . . . . . . . ]
 "5597
 [v _PORTCbits `VS244 ~T0 @X0 0 e@3970 ]
-"106 ../../headers\unmc_lcd_216.h
-[v _lcd_comand `(v ~T0 @X0 0 ef1`uc ]
+"48 main.c
+[v _verificar_contrasenia `(i ~T0 @X0 0 ef ]
 "6073 C:\Program Files (x86)\Microchip\xc8\v1.43\include\pic18f26j50.h
 [s S266 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S266 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
@@ -151,14 +151,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S265 . . . ]
 "6094
 [v _LATBbits `VS265 ~T0 @X0 0 e@3978 ]
-"55 main.c
+"106 ../../headers\unmc_lcd_216.h
+[v _lcd_comand `(v ~T0 @X0 0 ef1`uc ]
+"56 main.c
 [v _ir_a_pantalla_editar_contrasenia `(v ~T0 @X0 0 ef ]
-"49
-[v _editar_fecha_reloj_digital `(v ~T0 @X0 0 ef ]
 "50
+[v _editar_fecha_reloj_digital `(v ~T0 @X0 0 ef ]
+"51
 [v _editar_hora_reloj_digital `(v ~T0 @X0 0 ef ]
-"47
-[v _verificar_contrasenia `(i ~T0 @X0 0 ef ]
 "45 C:\Program Files (x86)\Microchip\xc8\v1.43\include\math.h
 [v _pow `(d ~T0 @X0 0 ef2`d`d ]
 "6899 C:\Program Files (x86)\Microchip\xc8\v1.43\include\pic18f26j50.h
@@ -7413,645 +7413,651 @@ Version 3.2 HI-TECH Software Intermediate Code
 "23
 [v _numeros_para_fecha `i ~T0 @X0 -> 2 `i e ]
 [; ;main.c: 23: int numeros_para_fecha[2];
-"34
+"24
+[v _alarma_activada `i ~T0 @X0 1 e ]
+[i _alarma_activada
+-> 0 `i
+]
+[; ;main.c: 24: int alarma_activada = 0;
+"35
 [v _boton_seleccionar `i ~T0 @X0 1 e ]
 [i _boton_seleccionar
 -> 0 `i
 ]
-[; ;main.c: 34: int boton_seleccionar = 0;
-"37
+[; ;main.c: 35: int boton_seleccionar = 0;
+"38
 [v _txt_insert_pass `i ~T0 @X0 1 e ]
 [i _txt_insert_pass
 -> 0 `i
 ]
-[; ;main.c: 37: int txt_insert_pass = 0;
-[; ;main.c: 40: void setDiaMesAnio(void);
-[; ;main.c: 41: void setHoraMinutoSegundo(void);
-[; ;main.c: 42: void set_reloj_digital(void);
-[; ;main.c: 43: void titila_texto_insert_password(void);
-[; ;main.c: 44: void guarda_numero_ingresado(int* num);
-[; ;main.c: 45: void ingreso_numero(void);
-[; ;main.c: 46: void mostrar_presionar_a(void);
-[; ;main.c: 47: int verificar_contrasenia();
-[; ;main.c: 48: int covertir_valores_de_array_a_escala_decimal();
-[; ;main.c: 49: void editar_fecha_reloj_digital(void);
-[; ;main.c: 50: void editar_hora_reloj_digital(void);
-[; ;main.c: 51: void resetear_pantalla_ingresar_contrasenia(void);
-[; ;main.c: 52: void ir_a_pantalla_ingresar_contrasenia(void);
-[; ;main.c: 53: void cambiar_opcion(void);
-[; ;main.c: 54: void seleccionar_opcion(void);
-[; ;main.c: 55: void ir_a_pantalla_editar_contrasenia(void);
-[; ;main.c: 56: void ir_a_pantalla_edicion(void);
-[; ;main.c: 57: void ir_a_pantalla_inicial(void);
-[; ;main.c: 58: void si_apreta_numero_va_a_pantalla_contrasenia(void);
-[; ;main.c: 59: void activar_alarma(void);
-[; ;main.c: 60: void setup(void);
-"62
+[; ;main.c: 38: int txt_insert_pass = 0;
+[; ;main.c: 41: void setDiaMesAnio(void);
+[; ;main.c: 42: void setHoraMinutoSegundo(void);
+[; ;main.c: 43: void set_reloj_digital(void);
+[; ;main.c: 44: void titila_texto_insert_password(void);
+[; ;main.c: 45: void guarda_numero_ingresado(int* num);
+[; ;main.c: 46: void ingreso_numero(void);
+[; ;main.c: 47: void mostrar_presionar_a(void);
+[; ;main.c: 48: int verificar_contrasenia();
+[; ;main.c: 49: int covertir_valores_de_array_a_escala_decimal();
+[; ;main.c: 50: void editar_fecha_reloj_digital(void);
+[; ;main.c: 51: void editar_hora_reloj_digital(void);
+[; ;main.c: 52: void resetear_pantalla_ingresar_contrasenia(void);
+[; ;main.c: 53: void ir_a_pantalla_ingresar_contrasenia(void);
+[; ;main.c: 54: void cambiar_opcion(void);
+[; ;main.c: 55: void seleccionar_opcion(void);
+[; ;main.c: 56: void ir_a_pantalla_editar_contrasenia(void);
+[; ;main.c: 57: void ir_a_pantalla_edicion(void);
+[; ;main.c: 58: void ir_a_pantalla_inicial(void);
+[; ;main.c: 59: void si_apreta_numero_va_a_pantalla_contrasenia(void);
+[; ;main.c: 60: void activar_alarma(void);
+[; ;main.c: 61: void setup(void);
+"63
 [v _setDiaMesAnio `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 62: void setDiaMesAnio(void) {
+[; ;main.c: 63: void setDiaMesAnio(void) {
 [e :U _setDiaMesAnio ]
 [f ]
-[; ;main.c: 63: if (dia > 31) {
-"63
+[; ;main.c: 64: if (dia > 31) {
+"64
 [e $ ! > _dia -> 31 `i 758  ]
 {
-[; ;main.c: 64: dia = 1;
-"64
-[e = _dia -> 1 `i ]
-[; ;main.c: 65: Write_RTC();
+[; ;main.c: 65: dia = 1;
 "65
-[e ( _Write_RTC ..  ]
+[e = _dia -> 1 `i ]
+[; ;main.c: 66: Write_RTC();
 "66
+[e ( _Write_RTC ..  ]
+"67
 }
 [e :U 758 ]
-[; ;main.c: 66: }
-[; ;main.c: 68: if (mes > 12) {
-"68
+[; ;main.c: 67: }
+[; ;main.c: 69: if (mes > 12) {
+"69
 [e $ ! > _mes -> 12 `i 759  ]
 {
-[; ;main.c: 69: mes = 1;
-"69
-[e = _mes -> 1 `i ]
-[; ;main.c: 70: Write_RTC();
+[; ;main.c: 70: mes = 1;
 "70
-[e ( _Write_RTC ..  ]
+[e = _mes -> 1 `i ]
+[; ;main.c: 71: Write_RTC();
 "71
+[e ( _Write_RTC ..  ]
+"72
 }
 [e :U 759 ]
-[; ;main.c: 71: }
-[; ;main.c: 73: sprintf(buffer2, "%02u/%02u/%02u", dia, mes, anio);
-"73
-[e ( _sprintf (1 , , , (. , &U _buffer2 :s 7C _dia _mes _anio ]
-[; ;main.c: 74: lcd_gotoxy(9, 1);
+[; ;main.c: 72: }
+[; ;main.c: 74: sprintf(buffer2, "%02u/%02u/%02u", dia, mes, anio);
 "74
-[e ( _lcd_gotoxy (2 , -> -> 9 `i `uc -> -> 1 `i `uc ]
-[; ;main.c: 75: lcd_putrs(buffer2);
+[e ( _sprintf (1 , , , (. , &U _buffer2 :s 7C _dia _mes _anio ]
+[; ;main.c: 75: lcd_gotoxy(9, 1);
 "75
-[e ( _lcd_putrs (1 -> &U _buffer2 `*Cuc ]
-[; ;main.c: 76: }
+[e ( _lcd_gotoxy (2 , -> -> 9 `i `uc -> -> 1 `i `uc ]
+[; ;main.c: 76: lcd_putrs(buffer2);
 "76
+[e ( _lcd_putrs (1 -> &U _buffer2 `*Cuc ]
+[; ;main.c: 77: }
+"77
 [e :UE 757 ]
 }
-"78
+"79
 [v _setHoraMinutoSegundo `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 78: void setHoraMinutoSegundo(void) {
+[; ;main.c: 79: void setHoraMinutoSegundo(void) {
 [e :U _setHoraMinutoSegundo ]
 [f ]
-[; ;main.c: 79: if (hora >= 24) {
-"79
+[; ;main.c: 80: if (hora >= 24) {
+"80
 [e $ ! >= _hora -> 24 `i 761  ]
 {
-[; ;main.c: 80: hora = 0;
-"80
-[e = _hora -> 0 `i ]
-[; ;main.c: 81: minuto = 0;
+[; ;main.c: 81: hora = 0;
 "81
-[e = _minuto -> 0 `i ]
-[; ;main.c: 82: segundo = 0;
+[e = _hora -> 0 `i ]
+[; ;main.c: 82: minuto = 0;
 "82
-[e = _segundo -> 0 `i ]
-[; ;main.c: 83: Write_RTC();
+[e = _minuto -> 0 `i ]
+[; ;main.c: 83: segundo = 0;
 "83
-[e ( _Write_RTC ..  ]
+[e = _segundo -> 0 `i ]
+[; ;main.c: 84: Write_RTC();
 "84
+[e ( _Write_RTC ..  ]
+"85
 }
 [e :U 761 ]
-[; ;main.c: 84: }
-[; ;main.c: 86: sprintf(buffer2, "%02u:%02u:%02u", hora, minuto, segundo);
-"86
-[e ( _sprintf (1 , , , (. , &U _buffer2 :s 8C _hora _minuto _segundo ]
-[; ;main.c: 87: lcd_gotoxy(9, 2);
+[; ;main.c: 85: }
+[; ;main.c: 87: sprintf(buffer2, "%02u:%02u:%02u", hora, minuto, segundo);
 "87
-[e ( _lcd_gotoxy (2 , -> -> 9 `i `uc -> -> 2 `i `uc ]
-[; ;main.c: 88: lcd_putrs(buffer2);
+[e ( _sprintf (1 , , , (. , &U _buffer2 :s 8C _hora _minuto _segundo ]
+[; ;main.c: 88: lcd_gotoxy(9, 2);
 "88
-[e ( _lcd_putrs (1 -> &U _buffer2 `*Cuc ]
-[; ;main.c: 89: }
+[e ( _lcd_gotoxy (2 , -> -> 9 `i `uc -> -> 2 `i `uc ]
+[; ;main.c: 89: lcd_putrs(buffer2);
 "89
+[e ( _lcd_putrs (1 -> &U _buffer2 `*Cuc ]
+[; ;main.c: 90: }
+"90
 [e :UE 760 ]
 }
-"91
+"92
 [v _set_reloj_digital `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 91: void set_reloj_digital(void) {
+[; ;main.c: 92: void set_reloj_digital(void) {
 [e :U _set_reloj_digital ]
 [f ]
-[; ;main.c: 92: setDiaMesAnio();
-"92
-[e ( _setDiaMesAnio ..  ]
-[; ;main.c: 93: setHoraMinutoSegundo();
+[; ;main.c: 93: setDiaMesAnio();
 "93
-[e ( _setHoraMinutoSegundo ..  ]
-[; ;main.c: 94: }
+[e ( _setDiaMesAnio ..  ]
+[; ;main.c: 94: setHoraMinutoSegundo();
 "94
+[e ( _setHoraMinutoSegundo ..  ]
+[; ;main.c: 95: }
+"95
 [e :UE 762 ]
 }
-"96
+"97
 [v _titila_texto_insert_password `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 96: void titila_texto_insert_password(void) {
+[; ;main.c: 97: void titila_texto_insert_password(void) {
 [e :U _titila_texto_insert_password ]
 [f ]
-[; ;main.c: 97: if (txt_insert_pass == 0) {
-"97
+[; ;main.c: 98: if (txt_insert_pass == 0) {
+"98
 [e $ ! == _txt_insert_pass -> 0 `i 764  ]
 {
-[; ;main.c: 98: txt_insert_pass = 1;
-"98
-[e = _txt_insert_pass -> 1 `i ]
-[; ;main.c: 99: lcd_gotoxy(1, 1);
+[; ;main.c: 99: txt_insert_pass = 1;
 "99
-[e ( _lcd_gotoxy (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
-[; ;main.c: 100: lcd_putrs("Insert");
+[e = _txt_insert_pass -> 1 `i ]
+[; ;main.c: 100: lcd_gotoxy(1, 1);
 "100
-[e ( _lcd_putrs (1 :s 9C ]
-[; ;main.c: 101: lcd_gotoxy(1, 2);
+[e ( _lcd_gotoxy (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+[; ;main.c: 101: lcd_putrs("Insert");
 "101
-[e ( _lcd_gotoxy (2 , -> -> 1 `i `uc -> -> 2 `i `uc ]
-[; ;main.c: 102: lcd_putrs("Password");
+[e ( _lcd_putrs (1 :s 9C ]
+[; ;main.c: 102: lcd_gotoxy(1, 2);
 "102
-[e ( _lcd_putrs (1 :s 10C ]
-[; ;main.c: 103: _delay((unsigned long)((80)*(8000000/4000.0)));
+[e ( _lcd_gotoxy (2 , -> -> 1 `i `uc -> -> 2 `i `uc ]
+[; ;main.c: 103: lcd_putrs("Password");
 "103
-[e ( __delay (1 -> * -> -> 80 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[e ( _lcd_putrs (1 :s 10C ]
+[; ;main.c: 104: _delay((unsigned long)((80)*(8000000/4000.0)));
 "104
+[e ( __delay (1 -> * -> -> 80 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"105
 }
 [e :U 764 ]
-[; ;main.c: 104: }
-[; ;main.c: 106: if (txt_insert_pass == 1) {
-"106
+[; ;main.c: 105: }
+[; ;main.c: 107: if (txt_insert_pass == 1) {
+"107
 [e $ ! == _txt_insert_pass -> 1 `i 765  ]
 {
-[; ;main.c: 107: txt_insert_pass = 0;
-"107
-[e = _txt_insert_pass -> 0 `i ]
-[; ;main.c: 108: lcd_gotoxy(1, 1);
+[; ;main.c: 108: txt_insert_pass = 0;
 "108
-[e ( _lcd_gotoxy (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
-[; ;main.c: 109: lcd_putrs("        ");
+[e = _txt_insert_pass -> 0 `i ]
+[; ;main.c: 109: lcd_gotoxy(1, 1);
 "109
-[e ( _lcd_putrs (1 :s 11C ]
-[; ;main.c: 110: lcd_gotoxy(1, 2);
+[e ( _lcd_gotoxy (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+[; ;main.c: 110: lcd_putrs("        ");
 "110
-[e ( _lcd_gotoxy (2 , -> -> 1 `i `uc -> -> 2 `i `uc ]
-[; ;main.c: 111: lcd_putrs("        ");
+[e ( _lcd_putrs (1 :s 11C ]
+[; ;main.c: 111: lcd_gotoxy(1, 2);
 "111
-[e ( _lcd_putrs (1 :s 12C ]
-[; ;main.c: 112: _delay((unsigned long)((60)*(8000000/4000.0)));
+[e ( _lcd_gotoxy (2 , -> -> 1 `i `uc -> -> 2 `i `uc ]
+[; ;main.c: 112: lcd_putrs("        ");
 "112
-[e ( __delay (1 -> * -> -> 60 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[e ( _lcd_putrs (1 :s 12C ]
+[; ;main.c: 113: _delay((unsigned long)((60)*(8000000/4000.0)));
 "113
+[e ( __delay (1 -> * -> -> 60 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"114
 }
 [e :U 765 ]
-[; ;main.c: 113: }
 [; ;main.c: 114: }
-"114
+[; ;main.c: 115: }
+"115
 [e :UE 763 ]
 }
-"116
+"117
 [v _guarda_numero_ingresado `(v ~T0 @X0 1 ef1`*i ]
 {
-[; ;main.c: 116: void guarda_numero_ingresado(int* num) {
+[; ;main.c: 117: void guarda_numero_ingresado(int* num) {
 [e :U _guarda_numero_ingresado ]
 [v _num `*i ~T0 @X0 1 r1 ]
 [f ]
-[; ;main.c: 117: if (motivo_ingreso_de_numeros == 0) {
-"117
+[; ;main.c: 118: if (motivo_ingreso_de_numeros == 0) {
+"118
 [e $ ! == _motivo_ingreso_de_numeros -> 0 `i 767  ]
 {
-[; ;main.c: 118: array_contrasenia_ingresada[numeros_ingresados] = num;
-"118
-[e = *U + &U _array_contrasenia_ingresada * -> -> _numeros_ingresados `ui `ux -> -> # *U &U _array_contrasenia_ingresada `ui `ux -> _num `i ]
-[; ;main.c: 119: lcd_gotoxy(numeros_ingresados + 1, 2);
+[; ;main.c: 119: array_contrasenia_ingresada[numeros_ingresados] = num;
 "119
-[e ( _lcd_gotoxy (2 , -> + _numeros_ingresados -> 1 `i `uc -> -> 2 `i `uc ]
-[; ;main.c: 120: sprintf(buffer2, "%01u", num);
+[e = *U + &U _array_contrasenia_ingresada * -> -> _numeros_ingresados `ui `ux -> -> # *U &U _array_contrasenia_ingresada `ui `ux -> _num `i ]
+[; ;main.c: 120: lcd_gotoxy(numeros_ingresados + 1, 2);
 "120
-[e ( _sprintf (1 , (. , &U _buffer2 :s 13C _num ]
-[; ;main.c: 121: lcd_putrs(buffer2);
+[e ( _lcd_gotoxy (2 , -> + _numeros_ingresados -> 1 `i `uc -> -> 2 `i `uc ]
+[; ;main.c: 121: sprintf(buffer2, "%01u", num);
 "121
-[e ( _lcd_putrs (1 -> &U _buffer2 `*Cuc ]
-[; ;main.c: 122: numeros_ingresados++;
+[e ( _sprintf (1 , (. , &U _buffer2 :s 13C _num ]
+[; ;main.c: 122: lcd_putrs(buffer2);
 "122
-[e ++ _numeros_ingresados -> 1 `i ]
+[e ( _lcd_putrs (1 -> &U _buffer2 `*Cuc ]
+[; ;main.c: 123: numeros_ingresados++;
 "123
+[e ++ _numeros_ingresados -> 1 `i ]
+"124
 }
-[; ;main.c: 123: } else {
+[; ;main.c: 124: } else {
 [e $U 768  ]
 [e :U 767 ]
 {
-[; ;main.c: 124: numeros_para_fecha[numeros_ingresados] = num;
-"124
-[e = *U + &U _numeros_para_fecha * -> -> _numeros_ingresados `ui `ux -> -> # *U &U _numeros_para_fecha `ui `ux -> _num `i ]
-[; ;main.c: 125: numeros_ingresados++;
+[; ;main.c: 125: numeros_para_fecha[numeros_ingresados] = num;
 "125
-[e ++ _numeros_ingresados -> 1 `i ]
+[e = *U + &U _numeros_para_fecha * -> -> _numeros_ingresados `ui `ux -> -> # *U &U _numeros_para_fecha `ui `ux -> _num `i ]
+[; ;main.c: 126: numeros_ingresados++;
 "126
+[e ++ _numeros_ingresados -> 1 `i ]
+"127
 }
 [e :U 768 ]
-[; ;main.c: 126: }
 [; ;main.c: 127: }
-"127
+[; ;main.c: 128: }
+"128
 [e :UE 766 ]
 }
-"129
+"130
 [v _ingreso_numero `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 129: void ingreso_numero(void) {
+[; ;main.c: 130: void ingreso_numero(void) {
 [e :U _ingreso_numero ]
 [f ]
-[; ;main.c: 130: LATAbits.LATA0 = 1;
-"130
-[e = . . _LATAbits 0 0 -> -> 1 `i `uc ]
-[; ;main.c: 131: LATAbits.LATA1 = 0;
+[; ;main.c: 131: LATAbits.LATA0 = 1;
 "131
-[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
-[; ;main.c: 132: LATAbits.LATA2 = 0;
+[e = . . _LATAbits 0 0 -> -> 1 `i `uc ]
+[; ;main.c: 132: LATAbits.LATA1 = 0;
 "132
-[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 133: LATAbits.LATA3 = 0;
+[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
+[; ;main.c: 133: LATAbits.LATA2 = 0;
 "133
-[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 134: {
+[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
+[; ;main.c: 134: LATAbits.LATA3 = 0;
 "134
-{
-[; ;main.c: 135: if (PORTAbits.RA5 == 1 && LATAbits.LATA0 == 1) {
+[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
+[; ;main.c: 135: {
 "135
+{
+[; ;main.c: 136: if (PORTAbits.RA5 == 1 && LATAbits.LATA0 == 1) {
+"136
 [e $ ! && == -> . . _PORTAbits 0 5 `i -> 1 `i == -> . . _LATAbits 0 0 `i -> 1 `i 770  ]
 {
-[; ;main.c: 136: key = 1;
-"136
-[e = _key -> -> 1 `i `uc ]
-[; ;main.c: 137: guarda_numero_ingresado(key);
+[; ;main.c: 137: key = 1;
 "137
-[e ( _guarda_numero_ingresado (1 -> _key `*i ]
-[; ;main.c: 138: while (PORTAbits.RA5 == 1 && LATAbits.LATA0 == 1) {
+[e = _key -> -> 1 `i `uc ]
+[; ;main.c: 138: guarda_numero_ingresado(key);
 "138
+[e ( _guarda_numero_ingresado (1 -> _key `*i ]
+[; ;main.c: 139: while (PORTAbits.RA5 == 1 && LATAbits.LATA0 == 1) {
+"139
 [e $U 771  ]
 [e :U 772 ]
 {
-[; ;main.c: 139: _delay((unsigned long)((40)*(8000000/4000.0)));
-"139
-[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;main.c: 140: _delay((unsigned long)((40)*(8000000/4000.0)));
 "140
-}
-[e :U 771 ]
-"138
-[e $ && == -> . . _PORTAbits 0 5 `i -> 1 `i == -> . . _LATAbits 0 0 `i -> 1 `i 772  ]
-[e :U 773 ]
+[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "141
 }
-[e :U 770 ]
-[; ;main.c: 140: }
-[; ;main.c: 141: }
-[; ;main.c: 142: if (PORTAbits.RA7 == 1 && LATAbits.LATA0 == 1) {
+[e :U 771 ]
+"139
+[e $ && == -> . . _PORTAbits 0 5 `i -> 1 `i == -> . . _LATAbits 0 0 `i -> 1 `i 772  ]
+[e :U 773 ]
 "142
+}
+[e :U 770 ]
+[; ;main.c: 141: }
+[; ;main.c: 142: }
+[; ;main.c: 143: if (PORTAbits.RA7 == 1 && LATAbits.LATA0 == 1) {
+"143
 [e $ ! && == -> . . _PORTAbits 0 7 `i -> 1 `i == -> . . _LATAbits 0 0 `i -> 1 `i 774  ]
 {
-[; ;main.c: 143: key = 2;
-"143
-[e = _key -> -> 2 `i `uc ]
-[; ;main.c: 144: guarda_numero_ingresado(key);
+[; ;main.c: 144: key = 2;
 "144
-[e ( _guarda_numero_ingresado (1 -> _key `*i ]
-[; ;main.c: 145: while (PORTAbits.RA7 == 1 && LATAbits.LATA0 == 1) {
+[e = _key -> -> 2 `i `uc ]
+[; ;main.c: 145: guarda_numero_ingresado(key);
 "145
+[e ( _guarda_numero_ingresado (1 -> _key `*i ]
+[; ;main.c: 146: while (PORTAbits.RA7 == 1 && LATAbits.LATA0 == 1) {
+"146
 [e $U 775  ]
 [e :U 776 ]
 {
-[; ;main.c: 146: _delay((unsigned long)((40)*(8000000/4000.0)));
-"146
-[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;main.c: 147: _delay((unsigned long)((40)*(8000000/4000.0)));
 "147
-}
-[e :U 775 ]
-"145
-[e $ && == -> . . _PORTAbits 0 7 `i -> 1 `i == -> . . _LATAbits 0 0 `i -> 1 `i 776  ]
-[e :U 777 ]
+[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "148
 }
-[e :U 774 ]
-[; ;main.c: 147: }
-[; ;main.c: 148: }
-[; ;main.c: 149: if (PORTAbits.RA6 == 1 && LATAbits.LATA0 == 1) {
+[e :U 775 ]
+"146
+[e $ && == -> . . _PORTAbits 0 7 `i -> 1 `i == -> . . _LATAbits 0 0 `i -> 1 `i 776  ]
+[e :U 777 ]
 "149
+}
+[e :U 774 ]
+[; ;main.c: 148: }
+[; ;main.c: 149: }
+[; ;main.c: 150: if (PORTAbits.RA6 == 1 && LATAbits.LATA0 == 1) {
+"150
 [e $ ! && == -> . . _PORTAbits 0 6 `i -> 1 `i == -> . . _LATAbits 0 0 `i -> 1 `i 778  ]
 {
-[; ;main.c: 150: key = 3;
-"150
-[e = _key -> -> 3 `i `uc ]
-[; ;main.c: 151: guarda_numero_ingresado(key);
+[; ;main.c: 151: key = 3;
 "151
-[e ( _guarda_numero_ingresado (1 -> _key `*i ]
-[; ;main.c: 152: while (PORTAbits.RA6 == 1 && LATAbits.LATA0 == 1) {
+[e = _key -> -> 3 `i `uc ]
+[; ;main.c: 152: guarda_numero_ingresado(key);
 "152
+[e ( _guarda_numero_ingresado (1 -> _key `*i ]
+[; ;main.c: 153: while (PORTAbits.RA6 == 1 && LATAbits.LATA0 == 1) {
+"153
 [e $U 779  ]
 [e :U 780 ]
 {
-[; ;main.c: 153: _delay((unsigned long)((40)*(8000000/4000.0)));
-"153
-[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;main.c: 154: _delay((unsigned long)((40)*(8000000/4000.0)));
 "154
-}
-[e :U 779 ]
-"152
-[e $ && == -> . . _PORTAbits 0 6 `i -> 1 `i == -> . . _LATAbits 0 0 `i -> 1 `i 780  ]
-[e :U 781 ]
+[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "155
 }
-[e :U 778 ]
+[e :U 779 ]
+"153
+[e $ && == -> . . _PORTAbits 0 6 `i -> 1 `i == -> . . _LATAbits 0 0 `i -> 1 `i 780  ]
+[e :U 781 ]
 "156
 }
-[; ;main.c: 154: }
+[e :U 778 ]
+"157
+}
 [; ;main.c: 155: }
 [; ;main.c: 156: }
-[; ;main.c: 157: LATAbits.LATA0 = 0;
-"157
-[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
-[; ;main.c: 158: LATAbits.LATA1 = 1;
+[; ;main.c: 157: }
+[; ;main.c: 158: LATAbits.LATA0 = 0;
 "158
-[e = . . _LATAbits 0 1 -> -> 1 `i `uc ]
-[; ;main.c: 159: LATAbits.LATA2 = 0;
+[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 159: LATAbits.LATA1 = 1;
 "159
-[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 160: LATAbits.LATA3 = 0;
+[e = . . _LATAbits 0 1 -> -> 1 `i `uc ]
+[; ;main.c: 160: LATAbits.LATA2 = 0;
 "160
-[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 161: {
+[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
+[; ;main.c: 161: LATAbits.LATA3 = 0;
 "161
-{
-[; ;main.c: 162: if (PORTAbits.RA5 == 1 && LATAbits.LATA1 == 1) {
+[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
+[; ;main.c: 162: {
 "162
+{
+[; ;main.c: 163: if (PORTAbits.RA5 == 1 && LATAbits.LATA1 == 1) {
+"163
 [e $ ! && == -> . . _PORTAbits 0 5 `i -> 1 `i == -> . . _LATAbits 0 1 `i -> 1 `i 782  ]
 {
-[; ;main.c: 163: key = 4;
-"163
-[e = _key -> -> 4 `i `uc ]
-[; ;main.c: 164: guarda_numero_ingresado(key);
+[; ;main.c: 164: key = 4;
 "164
-[e ( _guarda_numero_ingresado (1 -> _key `*i ]
-[; ;main.c: 165: while (PORTAbits.RA5 == 1 && LATAbits.LATA1 == 1) {
+[e = _key -> -> 4 `i `uc ]
+[; ;main.c: 165: guarda_numero_ingresado(key);
 "165
+[e ( _guarda_numero_ingresado (1 -> _key `*i ]
+[; ;main.c: 166: while (PORTAbits.RA5 == 1 && LATAbits.LATA1 == 1) {
+"166
 [e $U 783  ]
 [e :U 784 ]
 {
-[; ;main.c: 166: _delay((unsigned long)((40)*(8000000/4000.0)));
-"166
-[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;main.c: 167: _delay((unsigned long)((40)*(8000000/4000.0)));
 "167
-}
-[e :U 783 ]
-"165
-[e $ && == -> . . _PORTAbits 0 5 `i -> 1 `i == -> . . _LATAbits 0 1 `i -> 1 `i 784  ]
-[e :U 785 ]
+[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "168
 }
-[e :U 782 ]
-[; ;main.c: 167: }
-[; ;main.c: 168: }
-[; ;main.c: 169: if (PORTAbits.RA7 == 1 && LATAbits.LATA1 == 1) {
+[e :U 783 ]
+"166
+[e $ && == -> . . _PORTAbits 0 5 `i -> 1 `i == -> . . _LATAbits 0 1 `i -> 1 `i 784  ]
+[e :U 785 ]
 "169
+}
+[e :U 782 ]
+[; ;main.c: 168: }
+[; ;main.c: 169: }
+[; ;main.c: 170: if (PORTAbits.RA7 == 1 && LATAbits.LATA1 == 1) {
+"170
 [e $ ! && == -> . . _PORTAbits 0 7 `i -> 1 `i == -> . . _LATAbits 0 1 `i -> 1 `i 786  ]
 {
-[; ;main.c: 170: key = 5;
-"170
-[e = _key -> -> 5 `i `uc ]
-[; ;main.c: 171: guarda_numero_ingresado(key);
+[; ;main.c: 171: key = 5;
 "171
-[e ( _guarda_numero_ingresado (1 -> _key `*i ]
-[; ;main.c: 172: while (PORTAbits.RA7 == 1 && LATAbits.LATA1 == 1) {
+[e = _key -> -> 5 `i `uc ]
+[; ;main.c: 172: guarda_numero_ingresado(key);
 "172
+[e ( _guarda_numero_ingresado (1 -> _key `*i ]
+[; ;main.c: 173: while (PORTAbits.RA7 == 1 && LATAbits.LATA1 == 1) {
+"173
 [e $U 787  ]
 [e :U 788 ]
 {
-[; ;main.c: 173: _delay((unsigned long)((40)*(8000000/4000.0)));
-"173
-[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;main.c: 174: _delay((unsigned long)((40)*(8000000/4000.0)));
 "174
-}
-[e :U 787 ]
-"172
-[e $ && == -> . . _PORTAbits 0 7 `i -> 1 `i == -> . . _LATAbits 0 1 `i -> 1 `i 788  ]
-[e :U 789 ]
+[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "175
 }
-[e :U 786 ]
-[; ;main.c: 174: }
-[; ;main.c: 175: }
-[; ;main.c: 176: if (PORTAbits.RA6 == 1 && LATAbits.LATA1 == 1) {
+[e :U 787 ]
+"173
+[e $ && == -> . . _PORTAbits 0 7 `i -> 1 `i == -> . . _LATAbits 0 1 `i -> 1 `i 788  ]
+[e :U 789 ]
 "176
+}
+[e :U 786 ]
+[; ;main.c: 175: }
+[; ;main.c: 176: }
+[; ;main.c: 177: if (PORTAbits.RA6 == 1 && LATAbits.LATA1 == 1) {
+"177
 [e $ ! && == -> . . _PORTAbits 0 6 `i -> 1 `i == -> . . _LATAbits 0 1 `i -> 1 `i 790  ]
 {
-[; ;main.c: 177: key = 6;
-"177
-[e = _key -> -> 6 `i `uc ]
-[; ;main.c: 178: guarda_numero_ingresado(key);
+[; ;main.c: 178: key = 6;
 "178
-[e ( _guarda_numero_ingresado (1 -> _key `*i ]
-[; ;main.c: 179: while (PORTAbits.RA6 == 1 && LATAbits.LATA1 == 1) {
+[e = _key -> -> 6 `i `uc ]
+[; ;main.c: 179: guarda_numero_ingresado(key);
 "179
+[e ( _guarda_numero_ingresado (1 -> _key `*i ]
+[; ;main.c: 180: while (PORTAbits.RA6 == 1 && LATAbits.LATA1 == 1) {
+"180
 [e $U 791  ]
 [e :U 792 ]
 {
-[; ;main.c: 180: _delay((unsigned long)((40)*(8000000/4000.0)));
-"180
-[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;main.c: 181: _delay((unsigned long)((40)*(8000000/4000.0)));
 "181
-}
-[e :U 791 ]
-"179
-[e $ && == -> . . _PORTAbits 0 6 `i -> 1 `i == -> . . _LATAbits 0 1 `i -> 1 `i 792  ]
-[e :U 793 ]
+[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "182
 }
-[e :U 790 ]
+[e :U 791 ]
+"180
+[e $ && == -> . . _PORTAbits 0 6 `i -> 1 `i == -> . . _LATAbits 0 1 `i -> 1 `i 792  ]
+[e :U 793 ]
 "183
 }
-[; ;main.c: 181: }
+[e :U 790 ]
+"184
+}
 [; ;main.c: 182: }
 [; ;main.c: 183: }
-[; ;main.c: 184: LATAbits.LATA0 = 0;
-"184
-[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
-[; ;main.c: 185: LATAbits.LATA1 = 0;
+[; ;main.c: 184: }
+[; ;main.c: 185: LATAbits.LATA0 = 0;
 "185
-[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
-[; ;main.c: 186: LATAbits.LATA2 = 1;
+[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 186: LATAbits.LATA1 = 0;
 "186
-[e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
-[; ;main.c: 187: LATAbits.LATA3 = 0;
+[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
+[; ;main.c: 187: LATAbits.LATA2 = 1;
 "187
-[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 188: {
+[e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
+[; ;main.c: 188: LATAbits.LATA3 = 0;
 "188
-{
-[; ;main.c: 189: if (PORTAbits.RA5 == 1 && LATAbits.LATA2 == 1) {
+[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
+[; ;main.c: 189: {
 "189
+{
+[; ;main.c: 190: if (PORTAbits.RA5 == 1 && LATAbits.LATA2 == 1) {
+"190
 [e $ ! && == -> . . _PORTAbits 0 5 `i -> 1 `i == -> . . _LATAbits 0 2 `i -> 1 `i 794  ]
 {
-[; ;main.c: 190: key = 7;
-"190
-[e = _key -> -> 7 `i `uc ]
-[; ;main.c: 191: guarda_numero_ingresado(key);
+[; ;main.c: 191: key = 7;
 "191
-[e ( _guarda_numero_ingresado (1 -> _key `*i ]
-[; ;main.c: 192: while (PORTAbits.RA5 == 1 && LATAbits.LATA2 == 1) {
+[e = _key -> -> 7 `i `uc ]
+[; ;main.c: 192: guarda_numero_ingresado(key);
 "192
+[e ( _guarda_numero_ingresado (1 -> _key `*i ]
+[; ;main.c: 193: while (PORTAbits.RA5 == 1 && LATAbits.LATA2 == 1) {
+"193
 [e $U 795  ]
 [e :U 796 ]
 {
-[; ;main.c: 193: _delay((unsigned long)((40)*(8000000/4000.0)));
-"193
-[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;main.c: 194: _delay((unsigned long)((40)*(8000000/4000.0)));
 "194
-}
-[e :U 795 ]
-"192
-[e $ && == -> . . _PORTAbits 0 5 `i -> 1 `i == -> . . _LATAbits 0 2 `i -> 1 `i 796  ]
-[e :U 797 ]
+[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "195
 }
-[e :U 794 ]
-[; ;main.c: 194: }
-[; ;main.c: 195: }
-[; ;main.c: 196: if (PORTAbits.RA7 == 1 && LATAbits.LATA2 == 1) {
+[e :U 795 ]
+"193
+[e $ && == -> . . _PORTAbits 0 5 `i -> 1 `i == -> . . _LATAbits 0 2 `i -> 1 `i 796  ]
+[e :U 797 ]
 "196
+}
+[e :U 794 ]
+[; ;main.c: 195: }
+[; ;main.c: 196: }
+[; ;main.c: 197: if (PORTAbits.RA7 == 1 && LATAbits.LATA2 == 1) {
+"197
 [e $ ! && == -> . . _PORTAbits 0 7 `i -> 1 `i == -> . . _LATAbits 0 2 `i -> 1 `i 798  ]
 {
-[; ;main.c: 197: key = 8;
-"197
-[e = _key -> -> 8 `i `uc ]
-[; ;main.c: 198: guarda_numero_ingresado(key);
+[; ;main.c: 198: key = 8;
 "198
-[e ( _guarda_numero_ingresado (1 -> _key `*i ]
-[; ;main.c: 199: while (PORTAbits.RA7 == 1 && LATAbits.LATA2 == 1) {
+[e = _key -> -> 8 `i `uc ]
+[; ;main.c: 199: guarda_numero_ingresado(key);
 "199
+[e ( _guarda_numero_ingresado (1 -> _key `*i ]
+[; ;main.c: 200: while (PORTAbits.RA7 == 1 && LATAbits.LATA2 == 1) {
+"200
 [e $U 799  ]
 [e :U 800 ]
 {
-[; ;main.c: 200: _delay((unsigned long)((40)*(8000000/4000.0)));
-"200
-[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;main.c: 201: _delay((unsigned long)((40)*(8000000/4000.0)));
 "201
-}
-[e :U 799 ]
-"199
-[e $ && == -> . . _PORTAbits 0 7 `i -> 1 `i == -> . . _LATAbits 0 2 `i -> 1 `i 800  ]
-[e :U 801 ]
+[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "202
 }
-[e :U 798 ]
-[; ;main.c: 201: }
-[; ;main.c: 202: }
-[; ;main.c: 203: if (PORTAbits.RA6 == 1 && LATAbits.LATA2 == 1) {
+[e :U 799 ]
+"200
+[e $ && == -> . . _PORTAbits 0 7 `i -> 1 `i == -> . . _LATAbits 0 2 `i -> 1 `i 800  ]
+[e :U 801 ]
 "203
+}
+[e :U 798 ]
+[; ;main.c: 202: }
+[; ;main.c: 203: }
+[; ;main.c: 204: if (PORTAbits.RA6 == 1 && LATAbits.LATA2 == 1) {
+"204
 [e $ ! && == -> . . _PORTAbits 0 6 `i -> 1 `i == -> . . _LATAbits 0 2 `i -> 1 `i 802  ]
 {
-[; ;main.c: 204: key = 9;
-"204
-[e = _key -> -> 9 `i `uc ]
-[; ;main.c: 205: guarda_numero_ingresado(key);
+[; ;main.c: 205: key = 9;
 "205
-[e ( _guarda_numero_ingresado (1 -> _key `*i ]
-[; ;main.c: 206: while (PORTAbits.RA6 == 1 && LATAbits.LATA2 == 1) {
+[e = _key -> -> 9 `i `uc ]
+[; ;main.c: 206: guarda_numero_ingresado(key);
 "206
+[e ( _guarda_numero_ingresado (1 -> _key `*i ]
+[; ;main.c: 207: while (PORTAbits.RA6 == 1 && LATAbits.LATA2 == 1) {
+"207
 [e $U 803  ]
 [e :U 804 ]
 {
-[; ;main.c: 207: _delay((unsigned long)((40)*(8000000/4000.0)));
-"207
-[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;main.c: 208: _delay((unsigned long)((40)*(8000000/4000.0)));
 "208
-}
-[e :U 803 ]
-"206
-[e $ && == -> . . _PORTAbits 0 6 `i -> 1 `i == -> . . _LATAbits 0 2 `i -> 1 `i 804  ]
-[e :U 805 ]
+[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "209
 }
-[e :U 802 ]
+[e :U 803 ]
+"207
+[e $ && == -> . . _PORTAbits 0 6 `i -> 1 `i == -> . . _LATAbits 0 2 `i -> 1 `i 804  ]
+[e :U 805 ]
 "210
 }
-[; ;main.c: 208: }
+[e :U 802 ]
+"211
+}
 [; ;main.c: 209: }
 [; ;main.c: 210: }
-[; ;main.c: 211: LATAbits.LATA0 = 0;
-"211
-[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
-[; ;main.c: 212: LATAbits.LATA1 = 0;
+[; ;main.c: 211: }
+[; ;main.c: 212: LATAbits.LATA0 = 0;
 "212
-[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
-[; ;main.c: 213: LATAbits.LATA2 = 0;
+[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 213: LATAbits.LATA1 = 0;
 "213
-[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 214: LATAbits.LATA3 = 1;
+[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
+[; ;main.c: 214: LATAbits.LATA2 = 0;
 "214
+[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
+[; ;main.c: 215: LATAbits.LATA3 = 1;
+"215
 [e = . . _LATAbits 0 3 -> -> 1 `i `uc ]
-[; ;main.c: 216: if (PORTAbits.RA7 == 1 && LATAbits.LATA3 == 1) {
-"216
+[; ;main.c: 217: if (PORTAbits.RA7 == 1 && LATAbits.LATA3 == 1) {
+"217
 [e $ ! && == -> . . _PORTAbits 0 7 `i -> 1 `i == -> . . _LATAbits 0 3 `i -> 1 `i 806  ]
 {
-[; ;main.c: 217: key = 0;
-"217
-[e = _key -> -> 0 `i `uc ]
-[; ;main.c: 218: guarda_numero_ingresado(key);
+[; ;main.c: 218: key = 0;
 "218
-[e ( _guarda_numero_ingresado (1 -> _key `*i ]
-[; ;main.c: 219: while (PORTAbits.RA7 == 1 && LATAbits.LATA3 == 1) {
+[e = _key -> -> 0 `i `uc ]
+[; ;main.c: 219: guarda_numero_ingresado(key);
 "219
+[e ( _guarda_numero_ingresado (1 -> _key `*i ]
+[; ;main.c: 220: while (PORTAbits.RA7 == 1 && LATAbits.LATA3 == 1) {
+"220
 [e $U 807  ]
 [e :U 808 ]
 {
-[; ;main.c: 220: _delay((unsigned long)((40)*(8000000/4000.0)));
-"220
-[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;main.c: 221: _delay((unsigned long)((40)*(8000000/4000.0)));
 "221
-}
-[e :U 807 ]
-"219
-[e $ && == -> . . _PORTAbits 0 7 `i -> 1 `i == -> . . _LATAbits 0 3 `i -> 1 `i 808  ]
-[e :U 809 ]
+[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "222
 }
+[e :U 807 ]
+"220
+[e $ && == -> . . _PORTAbits 0 7 `i -> 1 `i == -> . . _LATAbits 0 3 `i -> 1 `i 808  ]
+[e :U 809 ]
+"223
+}
 [e :U 806 ]
-[; ;main.c: 221: }
 [; ;main.c: 222: }
 [; ;main.c: 223: }
-"223
+[; ;main.c: 224: }
+"224
 [e :UE 769 ]
 }
-"225
+"226
 [v _mostrar_presionar_a `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 225: void mostrar_presionar_a(void) {
+[; ;main.c: 226: void mostrar_presionar_a(void) {
 [e :U _mostrar_presionar_a ]
 [f ]
-[; ;main.c: 226: lcd_gotoxy(7, 2);
-"226
-[e ( _lcd_gotoxy (2 , -> -> 7 `i `uc -> -> 2 `i `uc ]
-[; ;main.c: 227: lcd_putrs("Press A");
+[; ;main.c: 227: lcd_gotoxy(7, 2);
 "227
-[e ( _lcd_putrs (1 :s 14C ]
-[; ;main.c: 228: }
+[e ( _lcd_gotoxy (2 , -> -> 7 `i `uc -> -> 2 `i `uc ]
+[; ;main.c: 228: lcd_putrs("Press A");
 "228
+[e ( _lcd_putrs (1 :s 14C ]
+[; ;main.c: 229: }
+"229
 [e :UE 810 ]
 }
-"230
+"231
 [v _resetear_pantalla_ingresar_contrasenia `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 230: void resetear_pantalla_ingresar_contrasenia(void) {
+[; ;main.c: 231: void resetear_pantalla_ingresar_contrasenia(void) {
 [e :U _resetear_pantalla_ingresar_contrasenia ]
 [f ]
-[; ;main.c: 231: lcd_gotoxy(1, 2);
-"231
-[e ( _lcd_gotoxy (2 , -> -> 1 `i `uc -> -> 2 `i `uc ]
-[; ;main.c: 232: lcd_putrs("              ");
+[; ;main.c: 232: lcd_gotoxy(1, 2);
 "232
+[e ( _lcd_gotoxy (2 , -> -> 1 `i `uc -> -> 2 `i `uc ]
+[; ;main.c: 233: lcd_putrs("              ");
+"233
 [e ( _lcd_putrs (1 :s 15C ]
-[; ;main.c: 234: for (int i = 0; i < 0; i++) {
-"234
+[; ;main.c: 235: for (int i = 0; i < 0; i++) {
+"235
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -8059,1354 +8065,1444 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 813  ]
 [e :U 812 ]
 {
-[; ;main.c: 235: array_contrasenia_ingresada[i] = 0;
-"235
-[e = *U + &U _array_contrasenia_ingresada * -> -> _i `ui `ux -> -> # *U &U _array_contrasenia_ingresada `ui `ux -> 0 `i ]
+[; ;main.c: 236: array_contrasenia_ingresada[i] = 0;
 "236
+[e = *U + &U _array_contrasenia_ingresada * -> -> _i `ui `ux -> -> # *U &U _array_contrasenia_ingresada `ui `ux -> 0 `i ]
+"237
 }
-"234
+"235
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 0 `i 812  ]
 [e :U 813 ]
-"236
+"237
 }
-[; ;main.c: 236: }
-[; ;main.c: 238: numeros_ingresados = 0;
-"238
-[e = _numeros_ingresados -> 0 `i ]
-[; ;main.c: 239: }
+[; ;main.c: 237: }
+[; ;main.c: 239: numeros_ingresados = 0;
 "239
+[e = _numeros_ingresados -> 0 `i ]
+[; ;main.c: 240: }
+"240
 [e :UE 811 ]
 }
-"241
+"242
 [v _cambiar_opcion `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 241: void cambiar_opcion(void) {
+[; ;main.c: 242: void cambiar_opcion(void) {
 [e :U _cambiar_opcion ]
 [f ]
-[; ;main.c: 242: LATAbits.LATA0 = 0;
-"242
-[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
-[; ;main.c: 243: LATAbits.LATA1 = 0;
+[; ;main.c: 243: LATAbits.LATA0 = 0;
 "243
-[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
-[; ;main.c: 244: LATAbits.LATA2 = 1;
+[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 244: LATAbits.LATA1 = 0;
 "244
-[e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
-[; ;main.c: 245: LATAbits.LATA3 = 0;
+[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
+[; ;main.c: 245: LATAbits.LATA2 = 1;
 "245
-[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 246: if (PORTCbits.RC2 == 1 && LATAbits.LATA2 == 1) {
+[e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
+[; ;main.c: 246: LATAbits.LATA3 = 0;
 "246
+[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
+[; ;main.c: 247: if (PORTCbits.RC2 == 1 && LATAbits.LATA2 == 1) {
+"247
 [e $ ! && == -> . . _PORTCbits 0 2 `i -> 1 `i == -> . . _LATAbits 0 2 `i -> 1 `i 816  ]
 {
-[; ;main.c: 247: if (boton_seleccionar == 3) {
-"247
+[; ;main.c: 248: if (boton_seleccionar == 3) {
+"248
 [e $ ! == _boton_seleccionar -> 3 `i 817  ]
 {
-[; ;main.c: 248: boton_seleccionar = 0;
-"248
-[e = _boton_seleccionar -> 0 `i ]
+[; ;main.c: 249: boton_seleccionar = 0;
 "249
+[e = _boton_seleccionar -> 0 `i ]
+"250
 }
-[; ;main.c: 249: } else {
+[; ;main.c: 250: } else {
 [e $U 818  ]
 [e :U 817 ]
 {
-[; ;main.c: 250: boton_seleccionar++;
-"250
-[e ++ _boton_seleccionar -> 1 `i ]
+[; ;main.c: 251: boton_seleccionar++;
 "251
+[e ++ _boton_seleccionar -> 1 `i ]
+"252
 }
 [e :U 818 ]
-[; ;main.c: 251: }
-[; ;main.c: 252: while (PORTCbits.RC2 == 1 && LATAbits.LATA2 == 1) {
-"252
+[; ;main.c: 252: }
+[; ;main.c: 253: while (PORTCbits.RC2 == 1 && LATAbits.LATA2 == 1) {
+"253
 [e $U 819  ]
 [e :U 820 ]
 {
-[; ;main.c: 253: _delay((unsigned long)((40)*(8000000/4000.0)));
-"253
-[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;main.c: 254: _delay((unsigned long)((40)*(8000000/4000.0)));
 "254
-}
-[e :U 819 ]
-"252
-[e $ && == -> . . _PORTCbits 0 2 `i -> 1 `i == -> . . _LATAbits 0 2 `i -> 1 `i 820  ]
-[e :U 821 ]
+[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "255
 }
+[e :U 819 ]
+"253
+[e $ && == -> . . _PORTCbits 0 2 `i -> 1 `i == -> . . _LATAbits 0 2 `i -> 1 `i 820  ]
+[e :U 821 ]
+"256
+}
 [e :U 816 ]
-[; ;main.c: 254: }
 [; ;main.c: 255: }
-[; ;main.c: 257: LATAbits.LATA0 = 0;
-"257
-[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
-[; ;main.c: 258: LATAbits.LATA1 = 0;
+[; ;main.c: 256: }
+[; ;main.c: 258: LATAbits.LATA0 = 0;
 "258
-[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
-[; ;main.c: 259: LATAbits.LATA2 = 0;
+[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 259: LATAbits.LATA1 = 0;
 "259
-[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 260: LATAbits.LATA3 = 1;
+[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
+[; ;main.c: 260: LATAbits.LATA2 = 0;
 "260
-[e = . . _LATAbits 0 3 -> -> 1 `i `uc ]
-[; ;main.c: 261: if (PORTCbits.RC2 == 1 && LATAbits.LATA3 == 1) {
+[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
+[; ;main.c: 261: LATAbits.LATA3 = 1;
 "261
+[e = . . _LATAbits 0 3 -> -> 1 `i `uc ]
+[; ;main.c: 262: if (PORTCbits.RC2 == 1 && LATAbits.LATA3 == 1) {
+"262
 [e $ ! && == -> . . _PORTCbits 0 2 `i -> 1 `i == -> . . _LATAbits 0 3 `i -> 1 `i 822  ]
 {
-[; ;main.c: 262: if (boton_seleccionar == 0) {
-"262
+[; ;main.c: 263: if (boton_seleccionar == 0) {
+"263
 [e $ ! == _boton_seleccionar -> 0 `i 823  ]
 {
-[; ;main.c: 263: boton_seleccionar = 3;
-"263
-[e = _boton_seleccionar -> 3 `i ]
+[; ;main.c: 264: boton_seleccionar = 3;
 "264
+[e = _boton_seleccionar -> 3 `i ]
+"265
 }
-[; ;main.c: 264: } else {
+[; ;main.c: 265: } else {
 [e $U 824  ]
 [e :U 823 ]
 {
-[; ;main.c: 265: boton_seleccionar--;
-"265
-[e -- _boton_seleccionar -> 1 `i ]
+[; ;main.c: 266: boton_seleccionar--;
 "266
+[e -- _boton_seleccionar -> 1 `i ]
+"267
 }
 [e :U 824 ]
-[; ;main.c: 266: }
-[; ;main.c: 267: while (PORTCbits.RC2 == 1 && LATAbits.LATA3 == 1) {
-"267
+[; ;main.c: 267: }
+[; ;main.c: 268: while (PORTCbits.RC2 == 1 && LATAbits.LATA3 == 1) {
+"268
 [e $U 825  ]
 [e :U 826 ]
 {
-[; ;main.c: 268: _delay((unsigned long)((40)*(8000000/4000.0)));
-"268
-[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;main.c: 269: _delay((unsigned long)((40)*(8000000/4000.0)));
 "269
-}
-[e :U 825 ]
-"267
-[e $ && == -> . . _PORTCbits 0 2 `i -> 1 `i == -> . . _LATAbits 0 3 `i -> 1 `i 826  ]
-[e :U 827 ]
+[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "270
 }
+[e :U 825 ]
+"268
+[e $ && == -> . . _PORTCbits 0 2 `i -> 1 `i == -> . . _LATAbits 0 3 `i -> 1 `i 826  ]
+[e :U 827 ]
+"271
+}
 [e :U 822 ]
-[; ;main.c: 269: }
 [; ;main.c: 270: }
-[; ;main.c: 272: sprintf(buffer2, "%01u", boton_seleccionar);
-"272
-[e ( _sprintf (1 , (. , &U _buffer2 :s 16C _boton_seleccionar ]
-[; ;main.c: 273: lcd_gotoxy(8, 1);
+[; ;main.c: 271: }
+[; ;main.c: 273: sprintf(buffer2, "%01u", boton_seleccionar);
 "273
-[e ( _lcd_gotoxy (2 , -> -> 8 `i `uc -> -> 1 `i `uc ]
-[; ;main.c: 274: lcd_putrs(buffer2);
+[e ( _sprintf (1 , (. , &U _buffer2 :s 16C _boton_seleccionar ]
+[; ;main.c: 274: lcd_gotoxy(8, 1);
 "274
-[e ( _lcd_putrs (1 -> &U _buffer2 `*Cuc ]
-[; ;main.c: 275: }
+[e ( _lcd_gotoxy (2 , -> -> 8 `i `uc -> -> 1 `i `uc ]
+[; ;main.c: 275: lcd_putrs(buffer2);
 "275
+[e ( _lcd_putrs (1 -> &U _buffer2 `*Cuc ]
+[; ;main.c: 276: }
+"276
 [e :UE 815 ]
 }
-"277
+"278
 [v _activar_alarma `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 277: void activar_alarma(void) {
+[; ;main.c: 278: void activar_alarma(void) {
 [e :U _activar_alarma ]
 [f ]
-[; ;main.c: 278: numeros_ingresados = 0;
-"278
-[e = _numeros_ingresados -> 0 `i ]
-[; ;main.c: 279: lcd_gotoxy(1, 1);
+[; ;main.c: 279: numeros_ingresados = 0;
 "279
-[e ( _lcd_gotoxy (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
-[; ;main.c: 280: lcd_putrs("Alarm activated ");
+[e = _numeros_ingresados -> 0 `i ]
+[; ;main.c: 280: lcd_gotoxy(1, 1);
 "280
-[e ( _lcd_putrs (1 :s 17C ]
-[; ;main.c: 281: lcd_gotoxy(1, 2);
+[e ( _lcd_gotoxy (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+[; ;main.c: 281: lcd_putrs("Alarm activated ");
 "281
-[e ( _lcd_gotoxy (2 , -> -> 1 `i `uc -> -> 2 `i `uc ]
-[; ;main.c: 282: lcd_putrs("                ");
+[e ( _lcd_putrs (1 :s 17C ]
+[; ;main.c: 282: lcd_gotoxy(1, 2);
 "282
+[e ( _lcd_gotoxy (2 , -> -> 1 `i `uc -> -> 2 `i `uc ]
+[; ;main.c: 283: lcd_putrs("                ");
+"283
 [e ( _lcd_putrs (1 :s 18C ]
-[; ;main.c: 284: while (1) {
-"284
+[; ;main.c: 285: alarma_activada = 1;
+"285
+[e = _alarma_activada -> 1 `i ]
+[; ;main.c: 286: while (alarma_activada) {
+"286
+[e $U 829  ]
 [e :U 830 ]
 {
-[; ;main.c: 286: break;
-"286
-[e $U 831  ]
-"287
-}
-[e :U 829 ]
-"284
-[e $U 830  ]
-[e :U 831 ]
-[; ;main.c: 287: }
-[; ;main.c: 290: if (1 != 1) {
+[; ;main.c: 288: if (numeros_ingresados < 4) {
+"288
+[e $ ! < _numeros_ingresados -> 4 `i 832  ]
+{
+[; ;main.c: 289: ingreso_numero();
+"289
+[e ( _ingreso_numero ..  ]
 "290
-[e $ ! != -> 1 `i -> 1 `i 832  ]
-{
-[; ;main.c: 292: lcd_comand(0b00000010);
-"292
-[e ( _lcd_comand (1 -> -> 2 `i `uc ]
-[; ;main.c: 293: LATBbits.LATB1 = !LATBbits.LATB1;;
-"293
-[e = . . _LATBbits 0 1 -> -> ! != -> . . _LATBbits 0 1 `i -> -> -> 0 `i `Vuc `i `i `uc ]
-[; ;main.c: 294: LATBbits.LATB0 = !LATBbits.LATB0;
-"294
-[e = . . _LATBbits 0 0 -> -> ! != -> . . _LATBbits 0 0 `i -> -> -> 0 `i `Vuc `i `i `uc ]
-[; ;main.c: 295: _delay((unsigned long)((98)*(8000000/4000.0)));
-"295
-[e ( __delay (1 -> * -> -> 98 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"296
 }
+[; ;main.c: 290: } else {
+[e $U 833  ]
 [e :U 832 ]
-[; ;main.c: 296: }
-[; ;main.c: 299: }
-"299
-[e :UE 828 ]
+{
+[; ;main.c: 291: if (verificar_contrasenia()) {
+"291
+[e $ ! != ( _verificar_contrasenia ..  -> 0 `i 834  ]
+{
+[; ;main.c: 292: alarma_activada = 0;
+"292
+[e = _alarma_activada -> 0 `i ]
+[; ;main.c: 293: LATBbits.LATB0 = 0;;
+"293
+[e = . . _LATBbits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 294: break;
+"294
+[e $U 831  ]
+"295
 }
-"301
-[v _seleccionar_opcion `(v ~T0 @X0 1 ef ]
+[; ;main.c: 295: } else {
+[e $U 835  ]
+[e :U 834 ]
 {
-[; ;main.c: 301: void seleccionar_opcion(void) {
-[e :U _seleccionar_opcion ]
-[f ]
-[; ;main.c: 302: LATAbits.LATA0 = 1;
-"302
-[e = . . _LATAbits 0 0 -> -> 1 `i `uc ]
-[; ;main.c: 303: LATAbits.LATA1 = 0;
-"303
-[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
-[; ;main.c: 304: LATAbits.LATA2 = 0;
-"304
-[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 305: LATAbits.LATA3 = 0;
-"305
-[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 306: if (PORTCbits.RC2 == 1 && LATAbits.LATA0 == 1) {
-"306
-[e $ ! && == -> . . _PORTCbits 0 2 `i -> 1 `i == -> . . _LATAbits 0 0 `i -> 1 `i 834  ]
-{
-[; ;main.c: 307: if (boton_seleccionar == 0) {
-"307
-[e $ ! == _boton_seleccionar -> 0 `i 835  ]
-{
-[; ;main.c: 308: activar_alarma();
-"308
-[e ( _activar_alarma ..  ]
-"309
+[; ;main.c: 296: numeros_ingresados = 0;
+"296
+[e = _numeros_ingresados -> 0 `i ]
+"297
 }
 [e :U 835 ]
-[; ;main.c: 309: }
-[; ;main.c: 310: if (boton_seleccionar == 1) {
-"310
-[e $ ! == _boton_seleccionar -> 1 `i 836  ]
+"298
+}
+[e :U 833 ]
+[; ;main.c: 297: }
+[; ;main.c: 298: }
+[; ;main.c: 300: if (PORTCbits.RC5 || PORTCbits.RC6 || PORTCbits.RC7) {
+"300
+[e $ ! || || != -> . . _PORTCbits 0 5 `i -> -> -> 0 `i `Vuc `i != -> . . _PORTCbits 0 6 `i -> -> -> 0 `i `Vuc `i != -> . . _PORTCbits 0 7 `i -> -> -> 0 `i `Vuc `i 836  ]
 {
-[; ;main.c: 311: ir_a_pantalla_editar_contrasenia();
-"311
-[e ( _ir_a_pantalla_editar_contrasenia ..  ]
-"312
+[; ;main.c: 301: LATBbits.LATB0 = !LATBbits.LATB0;;
+"301
+[e = . . _LATBbits 0 0 -> -> ! != -> . . _LATBbits 0 0 `i -> -> -> 0 `i `Vuc `i `i `uc ]
+"302
 }
 [e :U 836 ]
-[; ;main.c: 312: }
-[; ;main.c: 313: if (boton_seleccionar == 2) {
-"313
-[e $ ! == _boton_seleccionar -> 2 `i 837  ]
+"304
+}
+[e :U 829 ]
+"286
+[e $ != _alarma_activada -> 0 `i 830  ]
+[e :U 831 ]
+[; ;main.c: 302: }
+[; ;main.c: 304: }
+[; ;main.c: 308: if (1 != 1) {
+"308
+[e $ ! != -> 1 `i -> 1 `i 837  ]
 {
-[; ;main.c: 314: editar_fecha_reloj_digital();
+[; ;main.c: 310: lcd_comand(0b00000010);
+"310
+[e ( _lcd_comand (1 -> -> 2 `i `uc ]
+[; ;main.c: 311: LATBbits.LATB1 = !LATBbits.LATB1;;
+"311
+[e = . . _LATBbits 0 1 -> -> ! != -> . . _LATBbits 0 1 `i -> -> -> 0 `i `Vuc `i `i `uc ]
+[; ;main.c: 312: LATBbits.LATB0 = !LATBbits.LATB0;
+"312
+[e = . . _LATBbits 0 0 -> -> ! != -> . . _LATBbits 0 0 `i -> -> -> 0 `i `Vuc `i `i `uc ]
+[; ;main.c: 313: _delay((unsigned long)((98)*(8000000/4000.0)));
+"313
+[e ( __delay (1 -> * -> -> 98 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "314
-[e ( _editar_fecha_reloj_digital ..  ]
-"315
 }
 [e :U 837 ]
-[; ;main.c: 315: }
-[; ;main.c: 316: if (boton_seleccionar == 3) {
-"316
-[e $ ! == _boton_seleccionar -> 3 `i 838  ]
-{
-[; ;main.c: 317: editar_hora_reloj_digital();
+[; ;main.c: 314: }
+[; ;main.c: 317: }
 "317
-[e ( _editar_hora_reloj_digital ..  ]
-"318
+[e :UE 828 ]
 }
-[e :U 838 ]
 "319
-}
-[e :U 834 ]
-[; ;main.c: 318: }
-[; ;main.c: 319: }
-[; ;main.c: 320: }
-"320
-[e :UE 833 ]
-}
-"322
-[v _ir_a_pantalla_edicion `(v ~T0 @X0 1 ef ]
+[v _seleccionar_opcion `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 322: void ir_a_pantalla_edicion(void) {
-[e :U _ir_a_pantalla_edicion ]
+[; ;main.c: 319: void seleccionar_opcion(void) {
+[e :U _seleccionar_opcion ]
 [f ]
-[; ;main.c: 323: while (1) {
+[; ;main.c: 320: LATAbits.LATA0 = 1;
+"320
+[e = . . _LATAbits 0 0 -> -> 1 `i `uc ]
+[; ;main.c: 321: LATAbits.LATA1 = 0;
+"321
+[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
+[; ;main.c: 322: LATAbits.LATA2 = 0;
+"322
+[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
+[; ;main.c: 323: LATAbits.LATA3 = 0;
 "323
-[e :U 841 ]
-{
-[; ;main.c: 324: lcd_gotoxy(1, 1);
+[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
+[; ;main.c: 324: if (PORTCbits.RC2 == 1 && LATAbits.LATA0 == 1) {
 "324
-[e ( _lcd_gotoxy (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
-[; ;main.c: 325: lcd_putrs("Active ");
+[e $ ! && == -> . . _PORTCbits 0 2 `i -> 1 `i == -> . . _LATAbits 0 0 `i -> 1 `i 839  ]
+{
+[; ;main.c: 325: if (boton_seleccionar == 0) {
 "325
-[e ( _lcd_putrs (1 :s 19C ]
-[; ;main.c: 326: lcd_gotoxy(1, 2);
+[e $ ! == _boton_seleccionar -> 0 `i 840  ]
+{
+[; ;main.c: 326: activar_alarma();
 "326
-[e ( _lcd_gotoxy (2 , -> -> 1 `i `uc -> -> 2 `i `uc ]
-[; ;main.c: 327: lcd_putrs("Edt Pass");
+[e ( _activar_alarma ..  ]
 "327
-[e ( _lcd_putrs (1 :s 20C ]
-[; ;main.c: 329: Read_RTC();
-"329
-[e ( _Read_RTC ..  ]
-[; ;main.c: 331: set_reloj_digital();
-"331
-[e ( _set_reloj_digital ..  ]
-[; ;main.c: 332: cambiar_opcion();
-"332
-[e ( _cambiar_opcion ..  ]
-[; ;main.c: 333: seleccionar_opcion();
-"333
-[e ( _seleccionar_opcion ..  ]
-"334
 }
 [e :U 840 ]
-"323
-[e $U 841  ]
+[; ;main.c: 327: }
+[; ;main.c: 328: if (boton_seleccionar == 1) {
+"328
+[e $ ! == _boton_seleccionar -> 1 `i 841  ]
+{
+[; ;main.c: 329: ir_a_pantalla_editar_contrasenia();
+"329
+[e ( _ir_a_pantalla_editar_contrasenia ..  ]
+"330
+}
+[e :U 841 ]
+[; ;main.c: 330: }
+[; ;main.c: 331: if (boton_seleccionar == 2) {
+"331
+[e $ ! == _boton_seleccionar -> 2 `i 842  ]
+{
+[; ;main.c: 332: editar_fecha_reloj_digital();
+"332
+[e ( _editar_fecha_reloj_digital ..  ]
+"333
+}
 [e :U 842 ]
-[; ;main.c: 334: }
-[; ;main.c: 335: }
+[; ;main.c: 333: }
+[; ;main.c: 334: if (boton_seleccionar == 3) {
+"334
+[e $ ! == _boton_seleccionar -> 3 `i 843  ]
+{
+[; ;main.c: 335: editar_hora_reloj_digital();
 "335
-[e :UE 839 ]
+[e ( _editar_hora_reloj_digital ..  ]
+"336
 }
+[e :U 843 ]
 "337
-[v _ir_a_pantalla_ingresar_contrasenia `(v ~T0 @X0 1 ef ]
-{
-[; ;main.c: 337: void ir_a_pantalla_ingresar_contrasenia(void) {
-[e :U _ir_a_pantalla_ingresar_contrasenia ]
-[f ]
-[; ;main.c: 339: numeros_ingresados = 0;
-"339
-[e = _numeros_ingresados -> 0 `i ]
-[; ;main.c: 340: lcd_gotoxy(1, 1);
+}
+[e :U 839 ]
+[; ;main.c: 336: }
+[; ;main.c: 337: }
+[; ;main.c: 338: }
+"338
+[e :UE 838 ]
+}
 "340
-[e ( _lcd_gotoxy (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
-[; ;main.c: 341: lcd_putrs("Insert Password ");
+[v _ir_a_pantalla_edicion `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 340: void ir_a_pantalla_edicion(void) {
+[e :U _ir_a_pantalla_edicion ]
+[f ]
+[; ;main.c: 341: while (1) {
 "341
-[e ( _lcd_putrs (1 :s 21C ]
-[; ;main.c: 342: lcd_gotoxy(1, 2);
+[e :U 846 ]
+{
+[; ;main.c: 342: lcd_gotoxy(1, 1);
 "342
-[e ( _lcd_gotoxy (2 , -> -> 1 `i `uc -> -> 2 `i `uc ]
-[; ;main.c: 343: lcd_putrs("                ");
+[e ( _lcd_gotoxy (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+[; ;main.c: 343: lcd_putrs("Active ");
 "343
-[e ( _lcd_putrs (1 :s 22C ]
-[; ;main.c: 345: while (1) {
+[e ( _lcd_putrs (1 :s 19C ]
+[; ;main.c: 344: lcd_gotoxy(1, 2);
+"344
+[e ( _lcd_gotoxy (2 , -> -> 1 `i `uc -> -> 2 `i `uc ]
+[; ;main.c: 345: lcd_putrs("Edt Pass");
 "345
-[e :U 845 ]
-{
-[; ;main.c: 346: if (numeros_ingresados < 4) {
-"346
-[e $ ! < _numeros_ingresados -> 4 `i 847  ]
-{
-[; ;main.c: 347: ingreso_numero();
+[e ( _lcd_putrs (1 :s 20C ]
+[; ;main.c: 347: Read_RTC();
 "347
-[e ( _ingreso_numero ..  ]
-"348
-}
-[; ;main.c: 348: } else {
-[e $U 848  ]
-[e :U 847 ]
-{
-[; ;main.c: 349: mostrar_presionar_a();
+[e ( _Read_RTC ..  ]
+[; ;main.c: 349: set_reloj_digital();
 "349
-[e ( _mostrar_presionar_a ..  ]
-[; ;main.c: 350: if (verificar_contrasenia() == 1) {
+[e ( _set_reloj_digital ..  ]
+[; ;main.c: 350: cambiar_opcion();
 "350
-[e $ ! == ( _verificar_contrasenia ..  -> 1 `i 849  ]
-{
-[; ;main.c: 351: ir_a_pantalla_edicion();
+[e ( _cambiar_opcion ..  ]
+[; ;main.c: 351: seleccionar_opcion();
 "351
-[e ( _ir_a_pantalla_edicion ..  ]
-"352
-}
-[; ;main.c: 352: } else {
-[e $U 850  ]
-[e :U 849 ]
-{
-[; ;main.c: 353: resetear_pantalla_ingresar_contrasenia();
-"353
-[e ( _resetear_pantalla_ingresar_contrasenia ..  ]
-"354
-}
-[e :U 850 ]
+[e ( _seleccionar_opcion ..  ]
+[; ;main.c: 355: LATAbits.LATA0 = 0;
 "355
+[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 356: LATAbits.LATA1 = 1;
+"356
+[e = . . _LATAbits 0 1 -> -> 1 `i `uc ]
+[; ;main.c: 357: LATAbits.LATA2 = 0;
+"357
+[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
+[; ;main.c: 358: LATAbits.LATA3 = 0;
+"358
+[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
+[; ;main.c: 359: if (PORTCbits.RC2 == 1) {
+"359
+[e $ ! == -> . . _PORTCbits 0 2 `i -> 1 `i 848  ]
+{
+[; ;main.c: 360: break;
+"360
+[e $U 847  ]
+[; ;main.c: 361: while (PORTCbits.RC2 == 1) {
+"361
+[e $U 849  ]
+[e :U 850 ]
+{
+[; ;main.c: 362: _delay((unsigned long)((98)*(8000000/4000.0)));
+"362
+[e ( __delay (1 -> * -> -> 98 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"363
+}
+[e :U 849 ]
+"361
+[e $ == -> . . _PORTCbits 0 2 `i -> 1 `i 850  ]
+[e :U 851 ]
+"364
 }
 [e :U 848 ]
-"356
+"365
 }
-[e :U 844 ]
-"345
-[e $U 845  ]
-[e :U 846 ]
-[; ;main.c: 354: }
-[; ;main.c: 355: }
-[; ;main.c: 356: }
-[; ;main.c: 357: }
-"357
-[e :UE 843 ]
+[e :U 845 ]
+"341
+[e $U 846  ]
+[e :U 847 ]
+[; ;main.c: 363: }
+[; ;main.c: 364: }
+[; ;main.c: 365: }
+[; ;main.c: 366: }
+"366
+[e :UE 844 ]
 }
-"359
-[v _si_apreta_numero_va_a_pantalla_contrasenia `(v ~T0 @X0 1 ef ]
+"368
+[v _ir_a_pantalla_ingresar_contrasenia `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 359: void si_apreta_numero_va_a_pantalla_contrasenia(void) {
-[e :U _si_apreta_numero_va_a_pantalla_contrasenia ]
+[; ;main.c: 368: void ir_a_pantalla_ingresar_contrasenia(void) {
+[e :U _ir_a_pantalla_ingresar_contrasenia ]
 [f ]
-[; ;main.c: 360: LATAbits.LATA0 = 1;
-"360
-[e = . . _LATAbits 0 0 -> -> 1 `i `uc ]
-[; ;main.c: 361: LATAbits.LATA1 = 0;
-"361
-[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
-[; ;main.c: 362: LATAbits.LATA2 = 0;
-"362
-[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 363: LATAbits.LATA3 = 0;
-"363
-[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 364: {
-"364
-{
-[; ;main.c: 365: if ((PORTAbits.RA5 == 1 && LATAbits.LATA0 == 1) ||
-[; ;main.c: 366: (PORTAbits.RA7 == 1 && LATAbits.LATA0 == 1) ||
-[; ;main.c: 367: (PORTAbits.RA6 == 1 && LATAbits.LATA0 == 1)) {
-"367
-[e $ ! || || && == -> . . _PORTAbits 0 5 `i -> 1 `i == -> . . _LATAbits 0 0 `i -> 1 `i && == -> . . _PORTAbits 0 7 `i -> 1 `i == -> . . _LATAbits 0 0 `i -> 1 `i && == -> . . _PORTAbits 0 6 `i -> 1 `i == -> . . _LATAbits 0 0 `i -> 1 `i 852  ]
-{
-[; ;main.c: 369: ir_a_pantalla_ingresar_contrasenia();
-"369
-[e ( _ir_a_pantalla_ingresar_contrasenia ..  ]
+[; ;main.c: 370: numeros_ingresados = 0;
 "370
-}
-[e :U 852 ]
+[e = _numeros_ingresados -> 0 `i ]
+[; ;main.c: 371: lcd_gotoxy(1, 1);
 "371
-}
-[; ;main.c: 370: }
-[; ;main.c: 371: }
-[; ;main.c: 372: LATAbits.LATA0 = 0;
+[e ( _lcd_gotoxy (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+[; ;main.c: 372: lcd_putrs("Insert Password ");
 "372
-[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
-[; ;main.c: 373: LATAbits.LATA1 = 1;
+[e ( _lcd_putrs (1 :s 21C ]
+[; ;main.c: 373: lcd_gotoxy(1, 2);
 "373
-[e = . . _LATAbits 0 1 -> -> 1 `i `uc ]
-[; ;main.c: 374: LATAbits.LATA2 = 0;
+[e ( _lcd_gotoxy (2 , -> -> 1 `i `uc -> -> 2 `i `uc ]
+[; ;main.c: 374: lcd_putrs("                ");
 "374
-[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 375: LATAbits.LATA3 = 0;
-"375
-[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 376: {
+[e ( _lcd_putrs (1 :s 22C ]
+[; ;main.c: 376: while (1) {
 "376
+[e :U 854 ]
 {
-[; ;main.c: 377: if ((PORTAbits.RA5 == 1 && LATAbits.LATA1 == 1) ||
-[; ;main.c: 378: (PORTAbits.RA7 == 1 && LATAbits.LATA1 == 1) ||
-[; ;main.c: 379: (PORTAbits.RA6 == 1 && LATAbits.LATA1 == 1)) {
+[; ;main.c: 377: if (numeros_ingresados < 4) {
+"377
+[e $ ! < _numeros_ingresados -> 4 `i 856  ]
+{
+[; ;main.c: 378: ingreso_numero();
+"378
+[e ( _ingreso_numero ..  ]
 "379
-[e $ ! || || && == -> . . _PORTAbits 0 5 `i -> 1 `i == -> . . _LATAbits 0 1 `i -> 1 `i && == -> . . _PORTAbits 0 7 `i -> 1 `i == -> . . _LATAbits 0 1 `i -> 1 `i && == -> . . _PORTAbits 0 6 `i -> 1 `i == -> . . _LATAbits 0 1 `i -> 1 `i 853  ]
+}
+[; ;main.c: 379: } else {
+[e $U 857  ]
+[e :U 856 ]
 {
-[; ;main.c: 381: ir_a_pantalla_ingresar_contrasenia();
+[; ;main.c: 380: mostrar_presionar_a();
+"380
+[e ( _mostrar_presionar_a ..  ]
+[; ;main.c: 381: if (verificar_contrasenia() == 1) {
 "381
-[e ( _ir_a_pantalla_ingresar_contrasenia ..  ]
+[e $ ! == ( _verificar_contrasenia ..  -> 1 `i 858  ]
+{
+[; ;main.c: 382: ir_a_pantalla_edicion();
 "382
+[e ( _ir_a_pantalla_edicion ..  ]
+[; ;main.c: 383: break;
+"383
+[e $U 855  ]
+"384
+}
+[; ;main.c: 384: } else {
+[e $U 859  ]
+[e :U 858 ]
+{
+[; ;main.c: 385: resetear_pantalla_ingresar_contrasenia();
+"385
+[e ( _resetear_pantalla_ingresar_contrasenia ..  ]
+"386
+}
+[e :U 859 ]
+"387
+}
+[e :U 857 ]
+"388
 }
 [e :U 853 ]
-"383
-}
-[; ;main.c: 382: }
-[; ;main.c: 383: }
-[; ;main.c: 384: LATAbits.LATA0 = 0;
-"384
-[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
-[; ;main.c: 385: LATAbits.LATA1 = 0;
-"385
-[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
-[; ;main.c: 386: LATAbits.LATA2 = 1;
-"386
-[e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
-[; ;main.c: 387: LATAbits.LATA3 = 0;
-"387
-[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 388: {
-"388
-{
-[; ;main.c: 389: if ((PORTAbits.RA5 == 1 && LATAbits.LATA2 == 1) ||
-[; ;main.c: 390: (PORTAbits.RA7 == 1 && LATAbits.LATA2 == 1) ||
-[; ;main.c: 391: (PORTAbits.RA6 == 1 && LATAbits.LATA2 == 1)) {
-"391
-[e $ ! || || && == -> . . _PORTAbits 0 5 `i -> 1 `i == -> . . _LATAbits 0 2 `i -> 1 `i && == -> . . _PORTAbits 0 7 `i -> 1 `i == -> . . _LATAbits 0 2 `i -> 1 `i && == -> . . _PORTAbits 0 6 `i -> 1 `i == -> . . _LATAbits 0 2 `i -> 1 `i 854  ]
-{
-[; ;main.c: 393: ir_a_pantalla_ingresar_contrasenia();
-"393
-[e ( _ir_a_pantalla_ingresar_contrasenia ..  ]
-"394
-}
-[e :U 854 ]
-"395
-}
-[; ;main.c: 394: }
-[; ;main.c: 395: }
-[; ;main.c: 396: LATAbits.LATA0 = 0;
-"396
-[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
-[; ;main.c: 397: LATAbits.LATA1 = 0;
-"397
-[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
-[; ;main.c: 398: LATAbits.LATA2 = 0;
-"398
-[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 399: LATAbits.LATA3 = 1;
-"399
-[e = . . _LATAbits 0 3 -> -> 1 `i `uc ]
-[; ;main.c: 400: {
-"400
-{
-[; ;main.c: 401: if ((PORTAbits.RA5 == 1 && LATAbits.LATA3 == 1) ||
-[; ;main.c: 402: (PORTAbits.RA7 == 1 && LATAbits.LATA3 == 1) ||
-[; ;main.c: 403: (PORTAbits.RA6 == 1 && LATAbits.LATA3 == 1)) {
-"403
-[e $ ! || || && == -> . . _PORTAbits 0 5 `i -> 1 `i == -> . . _LATAbits 0 3 `i -> 1 `i && == -> . . _PORTAbits 0 7 `i -> 1 `i == -> . . _LATAbits 0 3 `i -> 1 `i && == -> . . _PORTAbits 0 6 `i -> 1 `i == -> . . _LATAbits 0 3 `i -> 1 `i 855  ]
-{
-[; ;main.c: 405: ir_a_pantalla_ingresar_contrasenia();
-"405
-[e ( _ir_a_pantalla_ingresar_contrasenia ..  ]
-"406
-}
+"376
+[e $U 854  ]
 [e :U 855 ]
-"407
+[; ;main.c: 386: }
+[; ;main.c: 387: }
+[; ;main.c: 388: }
+[; ;main.c: 389: }
+"389
+[e :UE 852 ]
 }
-[; ;main.c: 406: }
-[; ;main.c: 407: }
-[; ;main.c: 408: }
-"408
-[e :UE 851 ]
-}
-"410
-[v _ir_a_pantalla_inicial `(v ~T0 @X0 1 ef ]
+"391
+[v _si_apreta_numero_va_a_pantalla_contrasenia `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 410: void ir_a_pantalla_inicial() {
-[e :U _ir_a_pantalla_inicial ]
+[; ;main.c: 391: void si_apreta_numero_va_a_pantalla_contrasenia(void) {
+[e :U _si_apreta_numero_va_a_pantalla_contrasenia ]
 [f ]
-[; ;main.c: 411: set_reloj_digital();
-"411
-[e ( _set_reloj_digital ..  ]
-[; ;main.c: 412: titila_texto_insert_password();
-"412
-[e ( _titila_texto_insert_password ..  ]
-[; ;main.c: 413: si_apreta_numero_va_a_pantalla_contrasenia();
-"413
-[e ( _si_apreta_numero_va_a_pantalla_contrasenia ..  ]
-[; ;main.c: 414: }
-"414
-[e :UE 856 ]
+[; ;main.c: 392: LATAbits.LATA0 = 1;
+"392
+[e = . . _LATAbits 0 0 -> -> 1 `i `uc ]
+[; ;main.c: 393: LATAbits.LATA1 = 0;
+"393
+[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
+[; ;main.c: 394: LATAbits.LATA2 = 0;
+"394
+[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
+[; ;main.c: 395: LATAbits.LATA3 = 0;
+"395
+[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
+[; ;main.c: 396: {
+"396
+{
+[; ;main.c: 397: if ((PORTAbits.RA5 == 1 && LATAbits.LATA0 == 1) ||
+[; ;main.c: 398: (PORTAbits.RA7 == 1 && LATAbits.LATA0 == 1) ||
+[; ;main.c: 399: (PORTAbits.RA6 == 1 && LATAbits.LATA0 == 1)) {
+"399
+[e $ ! || || && == -> . . _PORTAbits 0 5 `i -> 1 `i == -> . . _LATAbits 0 0 `i -> 1 `i && == -> . . _PORTAbits 0 7 `i -> 1 `i == -> . . _LATAbits 0 0 `i -> 1 `i && == -> . . _PORTAbits 0 6 `i -> 1 `i == -> . . _LATAbits 0 0 `i -> 1 `i 861  ]
+{
+[; ;main.c: 401: ir_a_pantalla_ingresar_contrasenia();
+"401
+[e ( _ir_a_pantalla_ingresar_contrasenia ..  ]
+"402
 }
-"416
-[v _ir_a_pantalla_editar_contrasenia `(v ~T0 @X0 1 ef ]
-{
-[; ;main.c: 416: void ir_a_pantalla_editar_contrasenia(void) {
-[e :U _ir_a_pantalla_editar_contrasenia ]
-[f ]
-[; ;main.c: 417: numeros_ingresados = 0;
-"417
-[e = _numeros_ingresados -> 0 `i ]
-[; ;main.c: 418: lcd_gotoxy(1, 1);
-"418
-[e ( _lcd_gotoxy (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
-[; ;main.c: 419: lcd_putrs("Insert new Password ");
-"419
-[e ( _lcd_putrs (1 :s 23C ]
-[; ;main.c: 420: lcd_gotoxy(1, 2);
-"420
-[e ( _lcd_gotoxy (2 , -> -> 1 `i `uc -> -> 2 `i `uc ]
-[; ;main.c: 421: lcd_putrs("                ");
-"421
-[e ( _lcd_putrs (1 :s 24C ]
-[; ;main.c: 422: while (1) {
-"422
-[e :U 859 ]
-{
-[; ;main.c: 423: if (numeros_ingresados < 4) {
-"423
-[e $ ! < _numeros_ingresados -> 4 `i 861  ]
-{
-[; ;main.c: 424: ingreso_numero();
-"424
-[e ( _ingreso_numero ..  ]
-"425
-}
-[; ;main.c: 425: } else {
-[e $U 862  ]
 [e :U 861 ]
-{
-[; ;main.c: 426: for (int i = 0; i < 4; i++) {
-"426
-{
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-[e $ < _i -> 4 `i 863  ]
-[e $U 864  ]
-[e :U 863 ]
-{
-[; ;main.c: 427: array_contrasenia[i] = array_contrasenia_ingresada[i];
-"427
-[e = *U + &U _array_contrasenia * -> -> _i `ui `ux -> -> # *U &U _array_contrasenia `ui `ux *U + &U _array_contrasenia_ingresada * -> -> _i `ui `ux -> -> # *U &U _array_contrasenia_ingresada `ui `ux ]
-"428
+"403
 }
-"426
-[e ++ _i -> 1 `i ]
-[e $ < _i -> 4 `i 863  ]
-[e :U 864 ]
-"428
-}
-[; ;main.c: 428: }
-[; ;main.c: 429: break;
-"429
-[e $U 860  ]
-"430
+[; ;main.c: 402: }
+[; ;main.c: 403: }
+[; ;main.c: 404: LATAbits.LATA0 = 0;
+"404
+[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 405: LATAbits.LATA1 = 1;
+"405
+[e = . . _LATAbits 0 1 -> -> 1 `i `uc ]
+[; ;main.c: 406: LATAbits.LATA2 = 0;
+"406
+[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
+[; ;main.c: 407: LATAbits.LATA3 = 0;
+"407
+[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
+[; ;main.c: 408: {
+"408
+{
+[; ;main.c: 409: if ((PORTAbits.RA5 == 1 && LATAbits.LATA1 == 1) ||
+[; ;main.c: 410: (PORTAbits.RA7 == 1 && LATAbits.LATA1 == 1) ||
+[; ;main.c: 411: (PORTAbits.RA6 == 1 && LATAbits.LATA1 == 1)) {
+"411
+[e $ ! || || && == -> . . _PORTAbits 0 5 `i -> 1 `i == -> . . _LATAbits 0 1 `i -> 1 `i && == -> . . _PORTAbits 0 7 `i -> 1 `i == -> . . _LATAbits 0 1 `i -> 1 `i && == -> . . _PORTAbits 0 6 `i -> 1 `i == -> . . _LATAbits 0 1 `i -> 1 `i 862  ]
+{
+[; ;main.c: 413: ir_a_pantalla_ingresar_contrasenia();
+"413
+[e ( _ir_a_pantalla_ingresar_contrasenia ..  ]
+"414
 }
 [e :U 862 ]
+"415
+}
+[; ;main.c: 414: }
+[; ;main.c: 415: }
+[; ;main.c: 416: LATAbits.LATA0 = 0;
+"416
+[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 417: LATAbits.LATA1 = 0;
+"417
+[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
+[; ;main.c: 418: LATAbits.LATA2 = 1;
+"418
+[e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
+[; ;main.c: 419: LATAbits.LATA3 = 0;
+"419
+[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
+[; ;main.c: 420: {
+"420
+{
+[; ;main.c: 421: if ((PORTAbits.RA5 == 1 && LATAbits.LATA2 == 1) ||
+[; ;main.c: 422: (PORTAbits.RA7 == 1 && LATAbits.LATA2 == 1) ||
+[; ;main.c: 423: (PORTAbits.RA6 == 1 && LATAbits.LATA2 == 1)) {
+"423
+[e $ ! || || && == -> . . _PORTAbits 0 5 `i -> 1 `i == -> . . _LATAbits 0 2 `i -> 1 `i && == -> . . _PORTAbits 0 7 `i -> 1 `i == -> . . _LATAbits 0 2 `i -> 1 `i && == -> . . _PORTAbits 0 6 `i -> 1 `i == -> . . _LATAbits 0 2 `i -> 1 `i 863  ]
+{
+[; ;main.c: 425: ir_a_pantalla_ingresar_contrasenia();
+"425
+[e ( _ir_a_pantalla_ingresar_contrasenia ..  ]
+"426
+}
+[e :U 863 ]
+"427
+}
+[; ;main.c: 426: }
+[; ;main.c: 427: }
+[; ;main.c: 428: LATAbits.LATA0 = 0;
+"428
+[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 429: LATAbits.LATA1 = 0;
+"429
+[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
+[; ;main.c: 430: LATAbits.LATA2 = 0;
+"430
+[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
+[; ;main.c: 431: LATAbits.LATA3 = 1;
 "431
-}
-[e :U 858 ]
-"422
-[e $U 859  ]
-[e :U 860 ]
-[; ;main.c: 430: }
-[; ;main.c: 431: }
-[; ;main.c: 432: }
+[e = . . _LATAbits 0 3 -> -> 1 `i `uc ]
+[; ;main.c: 432: {
 "432
-[e :UE 857 ]
-}
-"434
-[v _verificar_contrasenia `(i ~T0 @X0 1 ef ]
 {
-[; ;main.c: 434: int verificar_contrasenia() {
-[e :U _verificar_contrasenia ]
-[f ]
+[; ;main.c: 433: if ((PORTAbits.RA5 == 1 && LATAbits.LATA3 == 1) ||
+[; ;main.c: 434: (PORTAbits.RA7 == 1 && LATAbits.LATA3 == 1) ||
+[; ;main.c: 435: (PORTAbits.RA6 == 1 && LATAbits.LATA3 == 1)) {
 "435
-[v _equals `i ~T0 @X0 1 a ]
-[; ;main.c: 435: int equals = 0;
-[e = _equals -> 0 `i ]
-[; ;main.c: 436: for (int i = 0; i < 4; i++) {
-"436
+[e $ ! || || && == -> . . _PORTAbits 0 5 `i -> 1 `i == -> . . _LATAbits 0 3 `i -> 1 `i && == -> . . _PORTAbits 0 7 `i -> 1 `i == -> . . _LATAbits 0 3 `i -> 1 `i && == -> . . _PORTAbits 0 6 `i -> 1 `i == -> . . _LATAbits 0 3 `i -> 1 `i 864  ]
 {
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-[e $ < _i -> 4 `i 867  ]
-[e $U 868  ]
-[e :U 867 ]
-{
-[; ;main.c: 437: if (array_contrasenia[i] == array_contrasenia_ingresada[i]) {
+[; ;main.c: 437: ir_a_pantalla_ingresar_contrasenia();
 "437
-[e $ ! == *U + &U _array_contrasenia * -> -> _i `ui `ux -> -> # *U &U _array_contrasenia `ui `ux *U + &U _array_contrasenia_ingresada * -> -> _i `ui `ux -> -> # *U &U _array_contrasenia_ingresada `ui `ux 870  ]
-{
-[; ;main.c: 438: equals = 1;
+[e ( _ir_a_pantalla_ingresar_contrasenia ..  ]
 "438
-[e = _equals -> 1 `i ]
+}
+[e :U 864 ]
 "439
 }
-[; ;main.c: 439: } else {
+[; ;main.c: 438: }
+[; ;main.c: 439: }
+[; ;main.c: 440: }
+"440
+[e :UE 860 ]
+}
+"442
+[v _ir_a_pantalla_inicial `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 442: void ir_a_pantalla_inicial() {
+[e :U _ir_a_pantalla_inicial ]
+[f ]
+[; ;main.c: 443: set_reloj_digital();
+"443
+[e ( _set_reloj_digital ..  ]
+[; ;main.c: 444: titila_texto_insert_password();
+"444
+[e ( _titila_texto_insert_password ..  ]
+[; ;main.c: 445: si_apreta_numero_va_a_pantalla_contrasenia();
+"445
+[e ( _si_apreta_numero_va_a_pantalla_contrasenia ..  ]
+[; ;main.c: 446: }
+"446
+[e :UE 865 ]
+}
+"448
+[v _ir_a_pantalla_editar_contrasenia `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 448: void ir_a_pantalla_editar_contrasenia(void) {
+[e :U _ir_a_pantalla_editar_contrasenia ]
+[f ]
+[; ;main.c: 449: numeros_ingresados = 0;
+"449
+[e = _numeros_ingresados -> 0 `i ]
+[; ;main.c: 450: lcd_gotoxy(1, 1);
+"450
+[e ( _lcd_gotoxy (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+[; ;main.c: 451: lcd_putrs("Insert new Password ");
+"451
+[e ( _lcd_putrs (1 :s 23C ]
+[; ;main.c: 452: lcd_gotoxy(1, 2);
+"452
+[e ( _lcd_gotoxy (2 , -> -> 1 `i `uc -> -> 2 `i `uc ]
+[; ;main.c: 453: lcd_putrs("                ");
+"453
+[e ( _lcd_putrs (1 :s 24C ]
+[; ;main.c: 454: while (1) {
+"454
+[e :U 868 ]
+{
+[; ;main.c: 455: if (numeros_ingresados < 4) {
+"455
+[e $ ! < _numeros_ingresados -> 4 `i 870  ]
+{
+[; ;main.c: 456: ingreso_numero();
+"456
+[e ( _ingreso_numero ..  ]
+"457
+}
+[; ;main.c: 457: } else {
 [e $U 871  ]
 [e :U 870 ]
 {
-[; ;main.c: 440: equals = 0;
-"440
-[e = _equals -> 0 `i ]
-"441
+[; ;main.c: 458: for (int i = 0; i < 4; i++) {
+"458
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < _i -> 4 `i 872  ]
+[e $U 873  ]
+[e :U 872 ]
+{
+[; ;main.c: 459: array_contrasenia[i] = array_contrasenia_ingresada[i];
+"459
+[e = *U + &U _array_contrasenia * -> -> _i `ui `ux -> -> # *U &U _array_contrasenia `ui `ux *U + &U _array_contrasenia_ingresada * -> -> _i `ui `ux -> -> # *U &U _array_contrasenia_ingresada `ui `ux ]
+"460
+}
+"458
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 4 `i 872  ]
+[e :U 873 ]
+"460
+}
+[; ;main.c: 460: }
+[; ;main.c: 461: break;
+"461
+[e $U 869  ]
+"462
 }
 [e :U 871 ]
-"442
+"463
 }
-"436
-[e ++ _i -> 1 `i ]
-[e $ < _i -> 4 `i 867  ]
-[e :U 868 ]
-"442
-}
-[; ;main.c: 441: }
-[; ;main.c: 442: }
-[; ;main.c: 443: return equals;
-"443
-[e ) _equals ]
-[e $UE 866  ]
-[; ;main.c: 444: }
-"444
+[e :U 867 ]
+"454
+[e $U 868  ]
+[e :U 869 ]
+[; ;main.c: 462: }
+[; ;main.c: 463: }
+[; ;main.c: 464: }
+"464
 [e :UE 866 ]
 }
-"446
+"466
+[v _verificar_contrasenia `(i ~T0 @X0 1 ef ]
+{
+[; ;main.c: 466: int verificar_contrasenia() {
+[e :U _verificar_contrasenia ]
+[f ]
+"467
+[v _equals `i ~T0 @X0 1 a ]
+[; ;main.c: 467: int equals = 0;
+[e = _equals -> 0 `i ]
+[; ;main.c: 468: for (int i = 0; i < 4; i++) {
+"468
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < _i -> 4 `i 876  ]
+[e $U 877  ]
+[e :U 876 ]
+{
+[; ;main.c: 469: if (array_contrasenia[i] == array_contrasenia_ingresada[i]) {
+"469
+[e $ ! == *U + &U _array_contrasenia * -> -> _i `ui `ux -> -> # *U &U _array_contrasenia `ui `ux *U + &U _array_contrasenia_ingresada * -> -> _i `ui `ux -> -> # *U &U _array_contrasenia_ingresada `ui `ux 879  ]
+{
+[; ;main.c: 470: equals = 1;
+"470
+[e = _equals -> 1 `i ]
+"471
+}
+[; ;main.c: 471: } else {
+[e $U 880  ]
+[e :U 879 ]
+{
+[; ;main.c: 472: equals = 0;
+"472
+[e = _equals -> 0 `i ]
+"473
+}
+[e :U 880 ]
+"474
+}
+"468
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 4 `i 876  ]
+[e :U 877 ]
+"474
+}
+[; ;main.c: 473: }
+[; ;main.c: 474: }
+[; ;main.c: 475: return equals;
+"475
+[e ) _equals ]
+[e $UE 875  ]
+[; ;main.c: 476: }
+"476
+[e :UE 875 ]
+}
+"478
 [v _covertir_valores_de_array_a_escala_decimal `(i ~T0 @X0 1 ef ]
 {
-[; ;main.c: 446: int covertir_valores_de_array_a_escala_decimal() {
+[; ;main.c: 478: int covertir_valores_de_array_a_escala_decimal() {
 [e :U _covertir_valores_de_array_a_escala_decimal ]
 [f ]
-"447
+"479
 [v _numero `i ~T0 @X0 1 a ]
-[; ;main.c: 447: int numero = 0;
+[; ;main.c: 479: int numero = 0;
 [e = _numero -> 0 `i ]
-[; ;main.c: 448: for (int i = 2 - 1; i >= 0; i--) {
-"448
+[; ;main.c: 480: for (int i = 2 - 1; i >= 0; i--) {
+"480
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i - -> 2 `i -> 1 `i ]
-[e $ >= _i -> 0 `i 873  ]
-[e $U 874  ]
-[e :U 873 ]
-{
-[; ;main.c: 449: numero = numero + numeros_para_fecha[i] * (int) pow(10, (2 - 1) - i);
-"449
-[e = _numero + _numero * *U + &U _numeros_para_fecha * -> -> _i `ui `ux -> -> # *U &U _numeros_para_fecha `ui `ux -> ( _pow (2 , -> -> 10 `i `d -> - - -> 2 `i -> 1 `i _i `d `i ]
-"450
-}
-"448
-[e -- _i -> 1 `i ]
-[e $ >= _i -> 0 `i 873  ]
-[e :U 874 ]
-"450
-}
-[; ;main.c: 450: };
-[; ;main.c: 451: sprintf(buffer2, "%02u", numero);
-"451
-[e ( _sprintf (1 , (. , &U _buffer2 :s 25C _numero ]
-[; ;main.c: 452: lcd_gotoxy(8, 2);
-"452
-[e ( _lcd_gotoxy (2 , -> -> 8 `i `uc -> -> 2 `i `uc ]
-[; ;main.c: 453: lcd_putrs(buffer2);
-"453
-[e ( _lcd_putrs (1 -> &U _buffer2 `*Cuc ]
-[; ;main.c: 454: return numero;
-"454
-[e ) _numero ]
-[e $UE 872  ]
-[; ;main.c: 455: }
-"455
-[e :UE 872 ]
-}
-"457
-[v _editar_fecha_reloj_digital `(v ~T0 @X0 1 ef ]
-{
-[; ;main.c: 457: void editar_fecha_reloj_digital(void) {
-[e :U _editar_fecha_reloj_digital ]
-[f ]
-"458
-[v _posicion `i ~T0 @X0 1 a ]
-[; ;main.c: 458: int posicion = 0;
-[e = _posicion -> 0 `i ]
-[; ;main.c: 460: motivo_ingreso_de_numeros = 1;
-"460
-[e = _motivo_ingreso_de_numeros -> 1 `i ]
-[; ;main.c: 463: if (posicion == 0) {
-"463
-[e $ ! == _posicion -> 0 `i 877  ]
-{
-[; ;main.c: 464: numeros_ingresados = 0;
-"464
-[e = _numeros_ingresados -> 0 `i ]
-"465
-[v _dia_ingresado `i ~T0 @X0 1 a ]
-[; ;main.c: 465: int dia_ingresado = 0;
-[e = _dia_ingresado -> 0 `i ]
-[; ;main.c: 466: while (numeros_ingresados < 3) {
-"466
-[e $U 878  ]
-[e :U 879 ]
-{
-[; ;main.c: 468: ingreso_numero();
-"468
-[e ( _ingreso_numero ..  ]
-[; ;main.c: 470: if (numeros_ingresados == 2) {
-"470
-[e $ ! == _numeros_ingresados -> 2 `i 881  ]
-{
-[; ;main.c: 471: dia_ingresado = covertir_valores_de_array_a_escala_decimal();
-"471
-[e = _dia_ingresado ( _covertir_valores_de_array_a_escala_decimal ..  ]
-[; ;main.c: 472: if ((0 < dia_ingresado) && (dia_ingresado <= 31)) {
-"472
-[e $ ! && < -> 0 `i _dia_ingresado <= _dia_ingresado -> 31 `i 882  ]
-{
-[; ;main.c: 473: dia = dia_ingresado;
-"473
-[e = _dia _dia_ingresado ]
-[; ;main.c: 474: numeros_ingresados++;
-"474
-[e ++ _numeros_ingresados -> 1 `i ]
-"475
-}
-[; ;main.c: 475: } else {
+[e $ >= _i -> 0 `i 882  ]
 [e $U 883  ]
 [e :U 882 ]
 {
-[; ;main.c: 476: numeros_ingresados = 0;
-"476
-[e = _numeros_ingresados -> 0 `i ]
-"477
-}
-[e :U 883 ]
-"478
-}
-[e :U 881 ]
-"479
-}
-[e :U 878 ]
-"466
-[e $ < _numeros_ingresados -> 3 `i 879  ]
-[e :U 880 ]
-[; ;main.c: 477: }
-[; ;main.c: 478: }
-[; ;main.c: 479: }
-[; ;main.c: 481: setDiaMesAnio();
+[; ;main.c: 481: numero = numero + numeros_para_fecha[i] * (int) pow(10, (2 - 1) - i);
 "481
-[e ( _setDiaMesAnio ..  ]
-[; ;main.c: 482: posicion++;
+[e = _numero + _numero * *U + &U _numeros_para_fecha * -> -> _i `ui `ux -> -> # *U &U _numeros_para_fecha `ui `ux -> ( _pow (2 , -> -> 10 `i `d -> - - -> 2 `i -> 1 `i _i `d `i ]
 "482
-[e ++ _posicion -> 1 `i ]
-[; ;main.c: 483: _delay((unsigned long)((50)*(8000000/4000.0)));
+}
+"480
+[e -- _i -> 1 `i ]
+[e $ >= _i -> 0 `i 882  ]
+[e :U 883 ]
+"482
+}
+[; ;main.c: 482: };
+[; ;main.c: 483: sprintf(buffer2, "%02u", numero);
 "483
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[e ( _sprintf (1 , (. , &U _buffer2 :s 25C _numero ]
+[; ;main.c: 484: lcd_gotoxy(8, 2);
 "484
-}
-[e :U 877 ]
-[; ;main.c: 484: }
-[; ;main.c: 487: if (posicion == 1) {
+[e ( _lcd_gotoxy (2 , -> -> 8 `i `uc -> -> 2 `i `uc ]
+[; ;main.c: 485: lcd_putrs(buffer2);
+"485
+[e ( _lcd_putrs (1 -> &U _buffer2 `*Cuc ]
+[; ;main.c: 486: return numero;
+"486
+[e ) _numero ]
+[e $UE 881  ]
+[; ;main.c: 487: }
 "487
-[e $ ! == _posicion -> 1 `i 884  ]
-{
-[; ;main.c: 488: numeros_ingresados = 0;
-"488
-[e = _numeros_ingresados -> 0 `i ]
-"489
-[v _mes_ingresado `i ~T0 @X0 1 a ]
-[; ;main.c: 489: int mes_ingresado = 0;
-[e = _mes_ingresado -> 0 `i ]
-[; ;main.c: 490: while (numeros_ingresados < 3) {
-"490
-[e $U 885  ]
-[e :U 886 ]
-{
-[; ;main.c: 491: ingreso_numero();
-"491
-[e ( _ingreso_numero ..  ]
-[; ;main.c: 492: if (numeros_ingresados == 2) {
-"492
-[e $ ! == _numeros_ingresados -> 2 `i 888  ]
-{
-[; ;main.c: 493: mes_ingresado = covertir_valores_de_array_a_escala_decimal();
-"493
-[e = _mes_ingresado ( _covertir_valores_de_array_a_escala_decimal ..  ]
-[; ;main.c: 494: if ((0 < mes_ingresado) && (mes_ingresado <= 12)) {
-"494
-[e $ ! && < -> 0 `i _mes_ingresado <= _mes_ingresado -> 12 `i 889  ]
-{
-[; ;main.c: 495: mes = mes_ingresado;
-"495
-[e = _mes _mes_ingresado ]
-[; ;main.c: 496: numeros_ingresados++;
-"496
-[e ++ _numeros_ingresados -> 1 `i ]
-"497
+[e :UE 881 ]
 }
-[; ;main.c: 497: } else {
-[e $U 890  ]
-[e :U 889 ]
+"489
+[v _editar_fecha_reloj_digital `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 498: numeros_ingresados = 0;
-"498
+[; ;main.c: 489: void editar_fecha_reloj_digital(void) {
+[e :U _editar_fecha_reloj_digital ]
+[f ]
+"490
+[v _posicion `i ~T0 @X0 1 a ]
+[; ;main.c: 490: int posicion = 0;
+[e = _posicion -> 0 `i ]
+[; ;main.c: 492: motivo_ingreso_de_numeros = 1;
+"492
+[e = _motivo_ingreso_de_numeros -> 1 `i ]
+[; ;main.c: 495: if (posicion == 0) {
+"495
+[e $ ! == _posicion -> 0 `i 886  ]
+{
+[; ;main.c: 496: numeros_ingresados = 0;
+"496
 [e = _numeros_ingresados -> 0 `i ]
-"499
+"497
+[v _dia_ingresado `i ~T0 @X0 1 a ]
+[; ;main.c: 497: int dia_ingresado = 0;
+[e = _dia_ingresado -> 0 `i ]
+[; ;main.c: 498: while (numeros_ingresados < 3) {
+"498
+[e $U 887  ]
+[e :U 888 ]
+{
+[; ;main.c: 500: ingreso_numero();
+"500
+[e ( _ingreso_numero ..  ]
+[; ;main.c: 502: if (numeros_ingresados == 2) {
+"502
+[e $ ! == _numeros_ingresados -> 2 `i 890  ]
+{
+[; ;main.c: 503: dia_ingresado = covertir_valores_de_array_a_escala_decimal();
+"503
+[e = _dia_ingresado ( _covertir_valores_de_array_a_escala_decimal ..  ]
+[; ;main.c: 504: if ((0 < dia_ingresado) && (dia_ingresado <= 31)) {
+"504
+[e $ ! && < -> 0 `i _dia_ingresado <= _dia_ingresado -> 31 `i 891  ]
+{
+[; ;main.c: 505: dia = dia_ingresado;
+"505
+[e = _dia _dia_ingresado ]
+[; ;main.c: 506: numeros_ingresados++;
+"506
+[e ++ _numeros_ingresados -> 1 `i ]
+"507
+}
+[; ;main.c: 507: } else {
+[e $U 892  ]
+[e :U 891 ]
+{
+[; ;main.c: 508: numeros_ingresados = 0;
+"508
+[e = _numeros_ingresados -> 0 `i ]
+"509
+}
+[e :U 892 ]
+"510
 }
 [e :U 890 ]
-"500
-}
-[e :U 888 ]
-"501
-}
-[e :U 885 ]
-"490
-[e $ < _numeros_ingresados -> 3 `i 886  ]
-[e :U 887 ]
-[; ;main.c: 499: }
-[; ;main.c: 500: }
-[; ;main.c: 501: }
-[; ;main.c: 503: setDiaMesAnio();
-"503
-[e ( _setDiaMesAnio ..  ]
-[; ;main.c: 504: posicion++;
-"504
-[e ++ _posicion -> 1 `i ]
-[; ;main.c: 505: _delay((unsigned long)((50)*(8000000/4000.0)));
-"505
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"506
-}
-[e :U 884 ]
-[; ;main.c: 506: }
-[; ;main.c: 509: if (posicion == 2) {
-"509
-[e $ ! == _posicion -> 2 `i 891  ]
-{
-[; ;main.c: 510: numeros_ingresados = 0;
-"510
-[e = _numeros_ingresados -> 0 `i ]
 "511
-[v _anio_ingresado `i ~T0 @X0 1 a ]
-[; ;main.c: 511: int anio_ingresado = 0;
-[e = _anio_ingresado -> 0 `i ]
-[; ;main.c: 512: while (numeros_ingresados < 3) {
-"512
-[e $U 892  ]
-[e :U 893 ]
-{
-[; ;main.c: 513: ingreso_numero();
-"513
-[e ( _ingreso_numero ..  ]
-[; ;main.c: 514: if (numeros_ingresados == 2) {
-"514
-[e $ ! == _numeros_ingresados -> 2 `i 895  ]
-{
-[; ;main.c: 515: anio_ingresado = covertir_valores_de_array_a_escala_decimal();
-"515
-[e = _anio_ingresado ( _covertir_valores_de_array_a_escala_decimal ..  ]
-[; ;main.c: 516: if ((0 <= anio_ingresado) && (anio_ingresado <= 99)) {
-"516
-[e $ ! && <= -> 0 `i _anio_ingresado <= _anio_ingresado -> 99 `i 896  ]
-{
-[; ;main.c: 517: anio = anio_ingresado;
-"517
-[e = _anio _anio_ingresado ]
-[; ;main.c: 518: numeros_ingresados++;
-"518
-[e ++ _numeros_ingresados -> 1 `i ]
-"519
 }
-[; ;main.c: 519: } else {
-[e $U 897  ]
-[e :U 896 ]
+[e :U 887 ]
+"498
+[e $ < _numeros_ingresados -> 3 `i 888  ]
+[e :U 889 ]
+[; ;main.c: 509: }
+[; ;main.c: 510: }
+[; ;main.c: 511: }
+[; ;main.c: 513: setDiaMesAnio();
+"513
+[e ( _setDiaMesAnio ..  ]
+[; ;main.c: 514: posicion++;
+"514
+[e ++ _posicion -> 1 `i ]
+[; ;main.c: 515: _delay((unsigned long)((50)*(8000000/4000.0)));
+"515
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"516
+}
+[e :U 886 ]
+[; ;main.c: 516: }
+[; ;main.c: 519: if (posicion == 1) {
+"519
+[e $ ! == _posicion -> 1 `i 893  ]
 {
 [; ;main.c: 520: numeros_ingresados = 0;
 "520
 [e = _numeros_ingresados -> 0 `i ]
 "521
-}
-[e :U 897 ]
+[v _mes_ingresado `i ~T0 @X0 1 a ]
+[; ;main.c: 521: int mes_ingresado = 0;
+[e = _mes_ingresado -> 0 `i ]
+[; ;main.c: 522: while (numeros_ingresados < 3) {
 "522
-}
+[e $U 894  ]
 [e :U 895 ]
+{
+[; ;main.c: 523: ingreso_numero();
 "523
-}
-[e :U 892 ]
-"512
-[e $ < _numeros_ingresados -> 3 `i 893  ]
-[e :U 894 ]
-[; ;main.c: 521: }
-[; ;main.c: 522: }
-[; ;main.c: 523: }
-[; ;main.c: 525: setDiaMesAnio();
-"525
-[e ( _setDiaMesAnio ..  ]
-[; ;main.c: 526: posicion++;
-"526
-[e ++ _posicion -> 1 `i ]
-[; ;main.c: 527: _delay((unsigned long)((50)*(8000000/4000.0)));
-"527
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"528
-}
-[e :U 891 ]
-[; ;main.c: 528: }
-[; ;main.c: 529: Write_RTC();
-"529
-[e ( _Write_RTC ..  ]
-[; ;main.c: 530: motivo_ingreso_de_numeros = 0;
-"530
-[e = _motivo_ingreso_de_numeros -> 0 `i ]
-[; ;main.c: 531: numeros_ingresados = 0;
-"531
-[e = _numeros_ingresados -> 0 `i ]
-[; ;main.c: 532: }
-"532
-[e :UE 876 ]
-}
-"534
-[v _editar_hora_reloj_digital `(v ~T0 @X0 1 ef ]
-{
-[; ;main.c: 534: void editar_hora_reloj_digital(void) {
-[e :U _editar_hora_reloj_digital ]
-[f ]
-"535
-[v _posicion `i ~T0 @X0 1 a ]
-[; ;main.c: 535: int posicion = 0;
-[e = _posicion -> 0 `i ]
-[; ;main.c: 536: motivo_ingreso_de_numeros = 1;
-"536
-[e = _motivo_ingreso_de_numeros -> 1 `i ]
-[; ;main.c: 539: if (posicion == 0) {
-"539
-[e $ ! == _posicion -> 0 `i 899  ]
-{
-[; ;main.c: 540: numeros_ingresados = 0;
-"540
-[e = _numeros_ingresados -> 0 `i ]
-"541
-[v _hora_ingresada `i ~T0 @X0 1 a ]
-[; ;main.c: 541: int hora_ingresada = 0;
-[e = _hora_ingresada -> 0 `i ]
-[; ;main.c: 542: while(numeros_ingresados < 3){
-"542
-[e $U 900  ]
-[e :U 901 ]
-{
-[; ;main.c: 543: ingreso_numero();
-"543
 [e ( _ingreso_numero ..  ]
-[; ;main.c: 544: if(numeros_ingresados == 2){
-"544
-[e $ ! == _numeros_ingresados -> 2 `i 903  ]
+[; ;main.c: 524: if (numeros_ingresados == 2) {
+"524
+[e $ ! == _numeros_ingresados -> 2 `i 897  ]
 {
-[; ;main.c: 545: hora_ingresada = covertir_valores_de_array_a_escala_decimal();
-"545
-[e = _hora_ingresada ( _covertir_valores_de_array_a_escala_decimal ..  ]
-[; ;main.c: 546: if((0 <= hora_ingresada) && (hora_ingresada <= 23)){
-"546
-[e $ ! && <= -> 0 `i _hora_ingresada <= _hora_ingresada -> 23 `i 904  ]
+[; ;main.c: 525: mes_ingresado = covertir_valores_de_array_a_escala_decimal();
+"525
+[e = _mes_ingresado ( _covertir_valores_de_array_a_escala_decimal ..  ]
+[; ;main.c: 526: if ((0 < mes_ingresado) && (mes_ingresado <= 12)) {
+"526
+[e $ ! && < -> 0 `i _mes_ingresado <= _mes_ingresado -> 12 `i 898  ]
 {
-[; ;main.c: 547: hora=hora_ingresada;
-"547
-[e = _hora _hora_ingresada ]
-[; ;main.c: 548: numeros_ingresados++;
-"548
+[; ;main.c: 527: mes = mes_ingresado;
+"527
+[e = _mes _mes_ingresado ]
+[; ;main.c: 528: numeros_ingresados++;
+"528
 [e ++ _numeros_ingresados -> 1 `i ]
-"549
+"529
 }
-[; ;main.c: 549: }
-[e $U 905  ]
-"550
-[e :U 904 ]
-[; ;main.c: 550: else{
+[; ;main.c: 529: } else {
+[e $U 899  ]
+[e :U 898 ]
 {
-[; ;main.c: 551: numeros_ingresados = 0;
-"551
+[; ;main.c: 530: numeros_ingresados = 0;
+"530
 [e = _numeros_ingresados -> 0 `i ]
-"552
-}
-[e :U 905 ]
-"553
-}
-[e :U 903 ]
-"554
-}
-[e :U 900 ]
-"542
-[e $ < _numeros_ingresados -> 3 `i 901  ]
-[e :U 902 ]
-[; ;main.c: 552: }
-[; ;main.c: 553: }
-[; ;main.c: 554: }
-[; ;main.c: 556: setHoraMinutoSegundo();
-"556
-[e ( _setHoraMinutoSegundo ..  ]
-[; ;main.c: 557: posicion++;
-"557
-[e ++ _posicion -> 1 `i ]
-[; ;main.c: 558: _delay((unsigned long)((50)*(8000000/4000.0)));
-"558
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"559
+"531
 }
 [e :U 899 ]
-[; ;main.c: 559: }
-[; ;main.c: 562: if (posicion == 1) {
-"562
-[e $ ! == _posicion -> 1 `i 906  ]
+"532
+}
+[e :U 897 ]
+"533
+}
+[e :U 894 ]
+"522
+[e $ < _numeros_ingresados -> 3 `i 895  ]
+[e :U 896 ]
+[; ;main.c: 531: }
+[; ;main.c: 532: }
+[; ;main.c: 533: }
+[; ;main.c: 535: setDiaMesAnio();
+"535
+[e ( _setDiaMesAnio ..  ]
+[; ;main.c: 536: posicion++;
+"536
+[e ++ _posicion -> 1 `i ]
+[; ;main.c: 537: _delay((unsigned long)((50)*(8000000/4000.0)));
+"537
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"538
+}
+[e :U 893 ]
+[; ;main.c: 538: }
+[; ;main.c: 541: if (posicion == 2) {
+"541
+[e $ ! == _posicion -> 2 `i 900  ]
 {
+[; ;main.c: 542: numeros_ingresados = 0;
+"542
+[e = _numeros_ingresados -> 0 `i ]
+"543
+[v _anio_ingresado `i ~T0 @X0 1 a ]
+[; ;main.c: 543: int anio_ingresado = 0;
+[e = _anio_ingresado -> 0 `i ]
+[; ;main.c: 544: while (numeros_ingresados < 3) {
+"544
+[e $U 901  ]
+[e :U 902 ]
+{
+[; ;main.c: 545: ingreso_numero();
+"545
+[e ( _ingreso_numero ..  ]
+[; ;main.c: 546: if (numeros_ingresados == 2) {
+"546
+[e $ ! == _numeros_ingresados -> 2 `i 904  ]
+{
+[; ;main.c: 547: anio_ingresado = covertir_valores_de_array_a_escala_decimal();
+"547
+[e = _anio_ingresado ( _covertir_valores_de_array_a_escala_decimal ..  ]
+[; ;main.c: 548: if ((0 <= anio_ingresado) && (anio_ingresado <= 99)) {
+"548
+[e $ ! && <= -> 0 `i _anio_ingresado <= _anio_ingresado -> 99 `i 905  ]
+{
+[; ;main.c: 549: anio = anio_ingresado;
+"549
+[e = _anio _anio_ingresado ]
+[; ;main.c: 550: numeros_ingresados++;
+"550
+[e ++ _numeros_ingresados -> 1 `i ]
+"551
+}
+[; ;main.c: 551: } else {
+[e $U 906  ]
+[e :U 905 ]
+{
+[; ;main.c: 552: numeros_ingresados = 0;
+"552
+[e = _numeros_ingresados -> 0 `i ]
+"553
+}
+[e :U 906 ]
+"554
+}
+[e :U 904 ]
+"555
+}
+[e :U 901 ]
+"544
+[e $ < _numeros_ingresados -> 3 `i 902  ]
+[e :U 903 ]
+[; ;main.c: 553: }
+[; ;main.c: 554: }
+[; ;main.c: 555: }
+[; ;main.c: 557: setDiaMesAnio();
+"557
+[e ( _setDiaMesAnio ..  ]
+[; ;main.c: 558: posicion++;
+"558
+[e ++ _posicion -> 1 `i ]
+[; ;main.c: 559: _delay((unsigned long)((50)*(8000000/4000.0)));
+"559
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"560
+}
+[e :U 900 ]
+[; ;main.c: 560: }
+[; ;main.c: 561: Write_RTC();
+"561
+[e ( _Write_RTC ..  ]
+[; ;main.c: 562: motivo_ingreso_de_numeros = 0;
+"562
+[e = _motivo_ingreso_de_numeros -> 0 `i ]
 [; ;main.c: 563: numeros_ingresados = 0;
 "563
 [e = _numeros_ingresados -> 0 `i ]
+[; ;main.c: 564: }
 "564
-[v _minuto_ingresado `i ~T0 @X0 1 a ]
-[; ;main.c: 564: int minuto_ingresado = 0;
-[e = _minuto_ingresado -> 0 `i ]
-[; ;main.c: 565: while(numeros_ingresados < 3){
-"565
-[e $U 907  ]
-[e :U 908 ]
-{
-[; ;main.c: 566: ingreso_numero();
+[e :UE 885 ]
+}
 "566
-[e ( _ingreso_numero ..  ]
-[; ;main.c: 567: if(numeros_ingresados == 2){
+[v _editar_hora_reloj_digital `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 566: void editar_hora_reloj_digital(void) {
+[e :U _editar_hora_reloj_digital ]
+[f ]
 "567
-[e $ ! == _numeros_ingresados -> 2 `i 910  ]
-{
-[; ;main.c: 568: minuto_ingresado = covertir_valores_de_array_a_escala_decimal();
+[v _posicion `i ~T0 @X0 1 a ]
+[; ;main.c: 567: int posicion = 0;
+[e = _posicion -> 0 `i ]
+[; ;main.c: 568: motivo_ingreso_de_numeros = 1;
 "568
-[e = _minuto_ingresado ( _covertir_valores_de_array_a_escala_decimal ..  ]
-[; ;main.c: 569: if((0 <= minuto_ingresado) && (minuto_ingresado <= 59)){
-"569
-[e $ ! && <= -> 0 `i _minuto_ingresado <= _minuto_ingresado -> 59 `i 911  ]
-{
-[; ;main.c: 570: minuto = minuto_ingresado;
+[e = _motivo_ingreso_de_numeros -> 1 `i ]
+[; ;main.c: 570: if (posicion == 0) {
 "570
-[e = _minuto _minuto_ingresado ]
-[; ;main.c: 571: numeros_ingresados++;
-"571
-[e ++ _numeros_ingresados -> 1 `i ]
-"572
-}
-[; ;main.c: 572: }
-[e $U 912  ]
-"573
-[e :U 911 ]
-[; ;main.c: 573: else{
+[e $ ! == _posicion -> 0 `i 908  ]
 {
-[; ;main.c: 574: numeros_ingresados = 0;
-"574
+[; ;main.c: 571: numeros_ingresados = 0;
+"571
 [e = _numeros_ingresados -> 0 `i ]
-"575
-}
-[e :U 912 ]
-"576
-}
+"572
+[v _hora_ingresada `i ~T0 @X0 1 a ]
+[; ;main.c: 572: int hora_ingresada = 0;
+[e = _hora_ingresada -> 0 `i ]
+[; ;main.c: 573: while (numeros_ingresados < 3) {
+"573
+[e $U 909  ]
 [e :U 910 ]
+{
+[; ;main.c: 574: ingreso_numero();
+"574
+[e ( _ingreso_numero ..  ]
+[; ;main.c: 575: if (numeros_ingresados == 2) {
+"575
+[e $ ! == _numeros_ingresados -> 2 `i 912  ]
+{
+[; ;main.c: 576: hora_ingresada = covertir_valores_de_array_a_escala_decimal();
+"576
+[e = _hora_ingresada ( _covertir_valores_de_array_a_escala_decimal ..  ]
+[; ;main.c: 577: if ((0 <= hora_ingresada) && (hora_ingresada <= 23)) {
 "577
-}
-[e :U 907 ]
-"565
-[e $ < _numeros_ingresados -> 3 `i 908  ]
-[e :U 909 ]
-[; ;main.c: 575: }
-[; ;main.c: 576: }
-[; ;main.c: 577: }
-[; ;main.c: 579: setHoraMinutoSegundo();
+[e $ ! && <= -> 0 `i _hora_ingresada <= _hora_ingresada -> 23 `i 913  ]
+{
+[; ;main.c: 578: hora = hora_ingresada;
+"578
+[e = _hora _hora_ingresada ]
+[; ;main.c: 579: numeros_ingresados++;
 "579
-[e ( _setHoraMinutoSegundo ..  ]
-[; ;main.c: 580: posicion++;
+[e ++ _numeros_ingresados -> 1 `i ]
 "580
-[e ++ _posicion -> 1 `i ]
-[; ;main.c: 581: _delay((unsigned long)((50)*(8000000/4000.0)));
+}
+[; ;main.c: 580: } else {
+[e $U 914  ]
+[e :U 913 ]
+{
+[; ;main.c: 581: numeros_ingresados = 0;
 "581
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[e = _numeros_ingresados -> 0 `i ]
 "582
 }
-[e :U 906 ]
-[; ;main.c: 582: }
-[; ;main.c: 585: if (posicion == 2) {
-"585
-[e $ ! == _posicion -> 2 `i 913  ]
-{
-[; ;main.c: 586: numeros_ingresados = 0;
-"586
-[e = _numeros_ingresados -> 0 `i ]
-"587
-[v _segundo_ingresado `i ~T0 @X0 1 a ]
-[; ;main.c: 587: int segundo_ingresado = 0;
-[e = _segundo_ingresado -> 0 `i ]
-[; ;main.c: 588: while(numeros_ingresados < 3){
-"588
-[e $U 914  ]
-[e :U 915 ]
-{
-[; ;main.c: 589: ingreso_numero();
-"589
-[e ( _ingreso_numero ..  ]
-[; ;main.c: 590: if(numeros_ingresados == 2){
-"590
-[e $ ! == _numeros_ingresados -> 2 `i 917  ]
-{
-[; ;main.c: 591: segundo_ingresado = covertir_valores_de_array_a_escala_decimal();
-"591
-[e = _segundo_ingresado ( _covertir_valores_de_array_a_escala_decimal ..  ]
-[; ;main.c: 592: if((0 <= segundo_ingresado) && (segundo_ingresado <= 59)){
-"592
-[e $ ! && <= -> 0 `i _segundo_ingresado <= _segundo_ingresado -> 59 `i 918  ]
-{
-[; ;main.c: 593: segundo=segundo_ingresado;
-"593
-[e = _segundo _segundo_ingresado ]
-[; ;main.c: 594: numeros_ingresados++;
-"594
-[e ++ _numeros_ingresados -> 1 `i ]
-"595
-}
-[; ;main.c: 595: }
-[e $U 919  ]
-"596
-[e :U 918 ]
-[; ;main.c: 596: else{
-{
-[; ;main.c: 597: numeros_ingresados = 0;
-"597
-[e = _numeros_ingresados -> 0 `i ]
-"598
-}
-[e :U 919 ]
-"599
-}
-[e :U 917 ]
-"600
-}
 [e :U 914 ]
-"588
-[e $ < _numeros_ingresados -> 3 `i 915  ]
-[e :U 916 ]
-[; ;main.c: 598: }
-[; ;main.c: 599: }
-[; ;main.c: 600: }
-[; ;main.c: 602: setHoraMinutoSegundo();
-"602
+"583
+}
+[e :U 912 ]
+"584
+}
+[e :U 909 ]
+"573
+[e $ < _numeros_ingresados -> 3 `i 910  ]
+[e :U 911 ]
+[; ;main.c: 582: }
+[; ;main.c: 583: }
+[; ;main.c: 584: }
+[; ;main.c: 586: setHoraMinutoSegundo();
+"586
 [e ( _setHoraMinutoSegundo ..  ]
-[; ;main.c: 603: posicion++;
-"603
+[; ;main.c: 587: posicion++;
+"587
 [e ++ _posicion -> 1 `i ]
-[; ;main.c: 604: _delay((unsigned long)((50)*(8000000/4000.0)));
-"604
+[; ;main.c: 588: _delay((unsigned long)((50)*(8000000/4000.0)));
+"588
 [e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"589
+}
+[e :U 908 ]
+[; ;main.c: 589: }
+[; ;main.c: 592: if (posicion == 1) {
+"592
+[e $ ! == _posicion -> 1 `i 915  ]
+{
+[; ;main.c: 593: numeros_ingresados = 0;
+"593
+[e = _numeros_ingresados -> 0 `i ]
+"594
+[v _minuto_ingresado `i ~T0 @X0 1 a ]
+[; ;main.c: 594: int minuto_ingresado = 0;
+[e = _minuto_ingresado -> 0 `i ]
+[; ;main.c: 595: while (numeros_ingresados < 3) {
+"595
+[e $U 916  ]
+[e :U 917 ]
+{
+[; ;main.c: 596: ingreso_numero();
+"596
+[e ( _ingreso_numero ..  ]
+[; ;main.c: 597: if (numeros_ingresados == 2) {
+"597
+[e $ ! == _numeros_ingresados -> 2 `i 919  ]
+{
+[; ;main.c: 598: minuto_ingresado = covertir_valores_de_array_a_escala_decimal();
+"598
+[e = _minuto_ingresado ( _covertir_valores_de_array_a_escala_decimal ..  ]
+[; ;main.c: 599: if ((0 <= minuto_ingresado) && (minuto_ingresado <= 59)) {
+"599
+[e $ ! && <= -> 0 `i _minuto_ingresado <= _minuto_ingresado -> 59 `i 920  ]
+{
+[; ;main.c: 600: minuto = minuto_ingresado;
+"600
+[e = _minuto _minuto_ingresado ]
+[; ;main.c: 601: numeros_ingresados++;
+"601
+[e ++ _numeros_ingresados -> 1 `i ]
+"602
+}
+[; ;main.c: 602: } else {
+[e $U 921  ]
+[e :U 920 ]
+{
+[; ;main.c: 603: numeros_ingresados = 0;
+"603
+[e = _numeros_ingresados -> 0 `i ]
+"604
+}
+[e :U 921 ]
 "605
 }
-[e :U 913 ]
-[; ;main.c: 605: }
-[; ;main.c: 606: Write_RTC();
+[e :U 919 ]
 "606
-[e ( _Write_RTC ..  ]
-[; ;main.c: 607: motivo_ingreso_de_numeros = 0;
-"607
-[e = _motivo_ingreso_de_numeros -> 0 `i ]
-[; ;main.c: 608: numeros_ingresados = 0;
+}
+[e :U 916 ]
+"595
+[e $ < _numeros_ingresados -> 3 `i 917  ]
+[e :U 918 ]
+[; ;main.c: 604: }
+[; ;main.c: 605: }
+[; ;main.c: 606: }
+[; ;main.c: 608: setHoraMinutoSegundo();
 "608
-[e = _numeros_ingresados -> 0 `i ]
-[; ;main.c: 609: }
+[e ( _setHoraMinutoSegundo ..  ]
+[; ;main.c: 609: posicion++;
 "609
-[e :UE 898 ]
-}
+[e ++ _posicion -> 1 `i ]
+[; ;main.c: 610: _delay((unsigned long)((50)*(8000000/4000.0)));
+"610
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "611
-[v _setup `(v ~T0 @X0 1 ef ]
-{
-[; ;main.c: 611: void setup(void) {
-[e :U _setup ]
-[f ]
-[; ;main.c: 612: OSCTUNEbits.INTSRC = 1;
-"612
-[e = . . _OSCTUNEbits 0 2 -> -> 1 `i `uc ]
-[; ;main.c: 613: OSCTUNEbits.PLLEN = 0;
-"613
-[e = . . _OSCTUNEbits 0 1 -> -> 0 `i `uc ]
-[; ;main.c: 614: OSCCONbits.IRCF0 = 1;
+}
+[e :U 915 ]
+[; ;main.c: 611: }
+[; ;main.c: 614: if (posicion == 2) {
 "614
-[e = . . _OSCCONbits 1 3 -> -> 1 `i `uc ]
-[; ;main.c: 615: OSCCONbits.IRCF1 = 1;
+[e $ ! == _posicion -> 2 `i 922  ]
+{
+[; ;main.c: 615: numeros_ingresados = 0;
 "615
-[e = . . _OSCCONbits 1 4 -> -> 1 `i `uc ]
-[; ;main.c: 616: OSCCONbits.IRCF2 = 1;
+[e = _numeros_ingresados -> 0 `i ]
 "616
-[e = . . _OSCCONbits 1 5 -> -> 1 `i `uc ]
-[; ;main.c: 617: OSCCONbits.SCS0 = 0;
+[v _segundo_ingresado `i ~T0 @X0 1 a ]
+[; ;main.c: 616: int segundo_ingresado = 0;
+[e = _segundo_ingresado -> 0 `i ]
+[; ;main.c: 617: while (numeros_ingresados < 3) {
 "617
-[e = . . _OSCCONbits 1 0 -> -> 0 `i `uc ]
-[; ;main.c: 618: OSCCONbits.SCS1 = 0;
-"618
-[e = . . _OSCCONbits 1 1 -> -> 0 `i `uc ]
-[; ;main.c: 619: TRISA = 0b11110000;
-"619
-[e = _TRISA -> -> 240 `i `uc ]
-[; ;main.c: 620: TRISB = 0;
-"620
-[e = _TRISB -> -> 0 `i `uc ]
-[; ;main.c: 621: TRISC = 0b00000111;
-"621
-[e = _TRISC -> -> 7 `i `uc ]
-[; ;main.c: 625: ANCON0 = 0b11111111;
-"625
-[e = _ANCON0 -> -> 255 `i `uc ]
-[; ;main.c: 627: ANCON1 = 0b11111111;
-"627
-[e = _ANCON1 -> -> 255 `i `uc ]
-[; ;main.c: 630: RTCCFGbits.RTCEN = 1;
-"630
-[e = . . _RTCCFGbits 0 7 -> -> 1 `i `uc ]
-[; ;main.c: 631: RTCCFGbits.RTCWREN = 1;
-"631
-[e = . . _RTCCFGbits 0 5 -> -> 1 `i `uc ]
-[; ;main.c: 632: T1CONbits.T1OSCEN = 1;
-"632
-[e = . . _T1CONbits 0 3 -> -> 1 `i `uc ]
-[; ;main.c: 633: Write_RTC();
-"633
-[e ( _Write_RTC ..  ]
-[; ;main.c: 634: lcd_init();
-"634
-[e ( _lcd_init ..  ]
-[; ;main.c: 635: lcd_comand(0b00001100);
-"635
-[e ( _lcd_comand (1 -> -> 12 `i `uc ]
-[; ;main.c: 636: LATBbits.LATB2 = 0;;
-"636
-[e = . . _LATBbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 637: LATBbits.LATB1 = 0;;
-"637
-[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
-[; ;main.c: 638: LATBbits.LATB0 = 0;;
-"638
-[e = . . _LATBbits 0 0 -> -> 0 `i `uc ]
-[; ;main.c: 640: set_reloj_digital();
-"640
-[e ( _set_reloj_digital ..  ]
-[; ;main.c: 641: Write_RTC();
-"641
-[e ( _Write_RTC ..  ]
-[; ;main.c: 642: }
-"642
-[e :UE 920 ]
-}
-[v $root$_main `(v ~T0 @X0 0 e ]
-"644
-[v _main `(i ~T0 @X0 1 ef ]
-{
-[; ;main.c: 644: int main(void) {
-[e :U _main ]
-[f ]
-[; ;main.c: 645: setup();
-"645
-[e ( _setup ..  ]
-[; ;main.c: 647: while (1) {
-"647
-[e :U 923 ]
-{
-[; ;main.c: 649: Read_RTC();
-"649
-[e ( _Read_RTC ..  ]
-[; ;main.c: 651: ir_a_pantalla_inicial();
-"651
-[e ( _ir_a_pantalla_inicial ..  ]
-"652
-}
-[e :U 922 ]
-"647
 [e $U 923  ]
 [e :U 924 ]
-[; ;main.c: 652: }
-[; ;main.c: 654: _delay((unsigned long)((98)*(8000000/4000.0)));
+{
+[; ;main.c: 618: ingreso_numero();
+"618
+[e ( _ingreso_numero ..  ]
+[; ;main.c: 619: if (numeros_ingresados == 2) {
+"619
+[e $ ! == _numeros_ingresados -> 2 `i 926  ]
+{
+[; ;main.c: 620: segundo_ingresado = covertir_valores_de_array_a_escala_decimal();
+"620
+[e = _segundo_ingresado ( _covertir_valores_de_array_a_escala_decimal ..  ]
+[; ;main.c: 621: if ((0 <= segundo_ingresado) && (segundo_ingresado <= 59)) {
+"621
+[e $ ! && <= -> 0 `i _segundo_ingresado <= _segundo_ingresado -> 59 `i 927  ]
+{
+[; ;main.c: 622: segundo = segundo_ingresado;
+"622
+[e = _segundo _segundo_ingresado ]
+[; ;main.c: 623: numeros_ingresados++;
+"623
+[e ++ _numeros_ingresados -> 1 `i ]
+"624
+}
+[; ;main.c: 624: } else {
+[e $U 928  ]
+[e :U 927 ]
+{
+[; ;main.c: 625: numeros_ingresados = 0;
+"625
+[e = _numeros_ingresados -> 0 `i ]
+"626
+}
+[e :U 928 ]
+"627
+}
+[e :U 926 ]
+"628
+}
+[e :U 923 ]
+"617
+[e $ < _numeros_ingresados -> 3 `i 924  ]
+[e :U 925 ]
+[; ;main.c: 626: }
+[; ;main.c: 627: }
+[; ;main.c: 628: }
+[; ;main.c: 630: setHoraMinutoSegundo();
+"630
+[e ( _setHoraMinutoSegundo ..  ]
+[; ;main.c: 631: posicion++;
+"631
+[e ++ _posicion -> 1 `i ]
+[; ;main.c: 632: _delay((unsigned long)((50)*(8000000/4000.0)));
+"632
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"633
+}
+[e :U 922 ]
+[; ;main.c: 633: }
+[; ;main.c: 634: Write_RTC();
+"634
+[e ( _Write_RTC ..  ]
+[; ;main.c: 635: motivo_ingreso_de_numeros = 0;
+"635
+[e = _motivo_ingreso_de_numeros -> 0 `i ]
+[; ;main.c: 636: numeros_ingresados = 0;
+"636
+[e = _numeros_ingresados -> 0 `i ]
+[; ;main.c: 637: }
+"637
+[e :UE 907 ]
+}
+"639
+[v _setup `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 639: void setup(void) {
+[e :U _setup ]
+[f ]
+[; ;main.c: 640: OSCTUNEbits.INTSRC = 1;
+"640
+[e = . . _OSCTUNEbits 0 2 -> -> 1 `i `uc ]
+[; ;main.c: 641: OSCTUNEbits.PLLEN = 0;
+"641
+[e = . . _OSCTUNEbits 0 1 -> -> 0 `i `uc ]
+[; ;main.c: 642: OSCCONbits.IRCF0 = 1;
+"642
+[e = . . _OSCCONbits 1 3 -> -> 1 `i `uc ]
+[; ;main.c: 643: OSCCONbits.IRCF1 = 1;
+"643
+[e = . . _OSCCONbits 1 4 -> -> 1 `i `uc ]
+[; ;main.c: 644: OSCCONbits.IRCF2 = 1;
+"644
+[e = . . _OSCCONbits 1 5 -> -> 1 `i `uc ]
+[; ;main.c: 645: OSCCONbits.SCS0 = 0;
+"645
+[e = . . _OSCCONbits 1 0 -> -> 0 `i `uc ]
+[; ;main.c: 646: OSCCONbits.SCS1 = 0;
+"646
+[e = . . _OSCCONbits 1 1 -> -> 0 `i `uc ]
+[; ;main.c: 652: TRISA = 0b11110000;
+"652
+[e = _TRISA -> -> 240 `i `uc ]
+[; ;main.c: 653: TRISB = 0;
+"653
+[e = _TRISB -> -> 0 `i `uc ]
+[; ;main.c: 654: TRISC = 0b00000111;
 "654
+[e = _TRISC -> -> 7 `i `uc ]
+[; ;main.c: 658: ANCON0 = 0b11111111;
+"658
+[e = _ANCON0 -> -> 255 `i `uc ]
+[; ;main.c: 660: ANCON1 = 0b11111111;
+"660
+[e = _ANCON1 -> -> 255 `i `uc ]
+[; ;main.c: 663: RTCCFGbits.RTCEN = 1;
+"663
+[e = . . _RTCCFGbits 0 7 -> -> 1 `i `uc ]
+[; ;main.c: 664: RTCCFGbits.RTCWREN = 1;
+"664
+[e = . . _RTCCFGbits 0 5 -> -> 1 `i `uc ]
+[; ;main.c: 665: T1CONbits.T1OSCEN = 1;
+"665
+[e = . . _T1CONbits 0 3 -> -> 1 `i `uc ]
+[; ;main.c: 666: Write_RTC();
+"666
+[e ( _Write_RTC ..  ]
+[; ;main.c: 667: lcd_init();
+"667
+[e ( _lcd_init ..  ]
+[; ;main.c: 668: lcd_comand(0b00001100);
+"668
+[e ( _lcd_comand (1 -> -> 12 `i `uc ]
+[; ;main.c: 669: LATBbits.LATB2 = 0;;
+"669
+[e = . . _LATBbits 0 2 -> -> 0 `i `uc ]
+[; ;main.c: 670: LATBbits.LATB1 = 0;;
+"670
+[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
+[; ;main.c: 671: LATBbits.LATB0 = 0;;
+"671
+[e = . . _LATBbits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 673: set_reloj_digital();
+"673
+[e ( _set_reloj_digital ..  ]
+[; ;main.c: 674: Write_RTC();
+"674
+[e ( _Write_RTC ..  ]
+[; ;main.c: 675: }
+"675
+[e :UE 929 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"677
+[v _main `(i ~T0 @X0 1 ef ]
+{
+[; ;main.c: 677: int main(void) {
+[e :U _main ]
+[f ]
+[; ;main.c: 678: setup();
+"678
+[e ( _setup ..  ]
+[; ;main.c: 680: while (1) {
+"680
+[e :U 932 ]
+{
+[; ;main.c: 682: Read_RTC();
+"682
+[e ( _Read_RTC ..  ]
+[; ;main.c: 684: ir_a_pantalla_inicial();
+"684
+[e ( _ir_a_pantalla_inicial ..  ]
+"685
+}
+[e :U 931 ]
+"680
+[e $U 932  ]
+[e :U 933 ]
+[; ;main.c: 685: }
+[; ;main.c: 687: _delay((unsigned long)((98)*(8000000/4000.0)));
+"687
 [e ( __delay (1 -> * -> -> 98 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;main.c: 655: return 0;
-"655
+[; ;main.c: 688: return 0;
+"688
 [e ) -> 0 `i ]
-[e $UE 921  ]
-[; ;main.c: 656: }
-"656
-[e :UE 921 ]
+[e $UE 930  ]
+[; ;main.c: 689: }
+"689
+[e :UE 930 ]
 }
 [p f _sprintf 8422404 ]
 [a 8C 37 48 50 117 58 37 48 50 117 58 37 48 50 117 0 ]
