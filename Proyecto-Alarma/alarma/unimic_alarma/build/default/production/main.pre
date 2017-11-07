@@ -9256,8 +9256,9 @@ int numeros_ingresados = 0;
 int motivo_ingreso_de_numeros = 0;
 int numeros_para_fecha[2];
 int alarma_activada = 0;
+int alarma_sonando = 0;
 
-# 35
+# 36
 int boton_seleccionar = 0;
 
 
@@ -9509,22 +9510,54 @@ lcd_gotoxy(1, 2);
 lcd_putrs("                ");
 
 alarma_activada = 1;
+
+int intentos_de_contrasenia = 0;
 while (alarma_activada) {
 
 if (numeros_ingresados < 4) {
+if (alarma_sonando == 1) {
+
+
+
+LATBbits.LATB1 = !LATBbits.LATB1;;
+LATBbits.LATB0 = !LATBbits.LATB0;
+_delay((unsigned long)((98)*(8000000/4000.0)));
+}
 ingreso_numero();
 } else {
 if (verificar_contrasenia()) {
 alarma_activada = 0;
+LATBbits.LATB1 = 0;;
 LATBbits.LATB0 = 0;;
+alarma_sonando = 0;
+intentos_de_contrasenia = 0;
+_delay((unsigned long)((98)*(8000000/4000.0)));
 break;
 } else {
 numeros_ingresados = 0;
+intentos_de_contrasenia++;
+lcd_gotoxy(1, 2);
+lcd_putrs("                ");
+if (intentos_de_contrasenia >= 3) {
+
+alarma_sonando = 1;
+
+
+
+LATBbits.LATB1 = !LATBbits.LATB1;;
+LATBbits.LATB0 = !LATBbits.LATB0;
+_delay((unsigned long)((98)*(8000000/4000.0)));
+}
+
 }
 }
 
-if (PORTCbits.RC5 || PORTCbits.RC6 || PORTCbits.RC7) {
-LATBbits.LATB0 = !LATBbits.LATB0;;
+if (PORTCbits.RC5 == 0|| PORTCbits.RC6 == 0 || PORTCbits.RC7 == 0) {
+
+# 335
+LATBbits.LATB1 = !LATBbits.LATB1;;
+LATBbits.LATB0 = !LATBbits.LATB0;
+_delay((unsigned long)((98)*(8000000/4000.0)));
 }
 
 }
@@ -9593,6 +9626,7 @@ _delay((unsigned long)((98)*(8000000/4000.0)));
 
 void ir_a_pantalla_ingresar_contrasenia(void) {
 
+int intentos_de_contrasenias = 0;
 numeros_ingresados = 0;
 lcd_gotoxy(1, 1);
 lcd_putrs("Insert Password ");
@@ -9608,8 +9642,13 @@ if (verificar_contrasenia() == 1) {
 ir_a_pantalla_edicion();
 break;
 } else {
+intentos_de_contrasenias++;
 resetear_pantalla_ingresar_contrasenia();
 }
+}
+if(intentos_de_contrasenias >= 3){
+alarma_sonando = 1;
+activar_alarma();
 }
 }
 }
@@ -9696,6 +9735,7 @@ if (array_contrasenia[i] == array_contrasenia_ingresada[i]) {
 equals = 1;
 } else {
 equals = 0;
+break;
 }
 }
 return equals;
@@ -9871,13 +9911,11 @@ OSCCONbits.IRCF2 = 1;
 OSCCONbits.SCS0 = 0;
 OSCCONbits.SCS1 = 0;
 
-# 652
 TRISA = 0b11110000;
 TRISB = 0;
-TRISC = 0b00000111;
+TRISC = 0b11100111;
 
-
-
+# 701
 ANCON0 = 0b11111111;
 
 ANCON1 = 0b11111111;

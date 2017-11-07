@@ -22,6 +22,7 @@ int numeros_ingresados = 0;
 int motivo_ingreso_de_numeros = 0; //0=contrasenia, 1=edicion hora o fecha. Por defecto va a ser 0
 int numeros_para_fecha[2];
 int alarma_activada = 0;
+int alarma_sonando = 0;
 
 /**
  * Boton Seleccionar
@@ -283,22 +284,57 @@ void activar_alarma(void) {
     lcd_putrs("                ");
 
     alarma_activada = 1;
+    //alarma_sonando = 0;
+    int intentos_de_contrasenia = 0;
     while (alarma_activada) {
         //se tiene que quedar escuchando los sensores y el ingreso de numero
         if (numeros_ingresados < 4) {
+            if (alarma_sonando == 1) {
+                //lcd_comand(0b00000010);
+                //LED_2_On;
+                //LED_3_On;
+                LED_2_Toggle;
+                LED_3_Toggle
+                __delay_ms(98);
+            }
             ingreso_numero();
         } else {
             if (verificar_contrasenia()) {
                 alarma_activada = 0;
+                LED_2_Off; //agregado por mi 7/11
                 LED_3_Off;
+                alarma_sonando = 0;
+                intentos_de_contrasenia = 0;
+                __delay_ms(98); //agregado por mi 7/11
                 break;
             } else {
                 numeros_ingresados = 0;
+                intentos_de_contrasenia++;
+                lcd_gotoxy(1, 2);
+                lcd_putrs("                ");
+                if (intentos_de_contrasenia >= 3) {
+                    //lo saque de los del profe
+                    alarma_sonando = 1;
+                    //lcd_comand(0b00000010);
+                    //LED_2_On;
+                    //LED_3_On;
+                    LED_2_Toggle;
+                    LED_3_Toggle
+                    __delay_ms(98);
+                }
+
             }
         }
 
-        if (sensor_1 || sensor_2 || sensor_3) {
-            LED_3_Toggle;
+        if (sensor_1 == 0|| sensor_2 == 0 || sensor_3 == 0) {
+            //LED_3_Toggle;
+            //lo saque de los del profe
+            //lcd_comand(0b00000010);
+            //LED_2_On;
+            //LED_3_On;
+            LED_2_Toggle;
+            LED_3_Toggle
+            __delay_ms(98);
         }
 
     }
@@ -351,7 +387,7 @@ void ir_a_pantalla_edicion(void) {
         seleccionar_opcion();
 
         //ir para atras si apreto B
-        
+
         row1 = 0;
         row2 = 1;
         row3 = 0;
@@ -367,6 +403,7 @@ void ir_a_pantalla_edicion(void) {
 
 void ir_a_pantalla_ingresar_contrasenia(void) {
 
+    int intentos_de_contrasenias = 0;
     numeros_ingresados = 0;
     lcd_gotoxy(1, 1);
     lcd_putrs("Insert Password ");
@@ -382,13 +419,18 @@ void ir_a_pantalla_ingresar_contrasenia(void) {
                 ir_a_pantalla_edicion();
                 break;
             } else {
+                intentos_de_contrasenias++;
                 resetear_pantalla_ingresar_contrasenia();
             }
+        }
+        if(intentos_de_contrasenias >= 3){
+            alarma_sonando = 1;
+            activar_alarma();
         }
     }
 }
 
-void si_apreta_numero_va_a_pantalla_contrasenia(void) {    
+void si_apreta_numero_va_a_pantalla_contrasenia(void) {
     row1 = 1;
     row2 = 0;
     row3 = 0;
@@ -470,6 +512,7 @@ int verificar_contrasenia() {
             equals = 1;
         } else {
             equals = 0;
+            break;
         }
     }
     return equals;
@@ -644,14 +687,14 @@ void setup(void) {
     OSCCONbits.IRCF2 = 1;
     OSCCONbits.SCS0 = 0; //oscilator INTRC
     OSCCONbits.SCS1 = 0;
-    /**
+    ///**
     TRISA = 0b11110000;
     TRISB = 0;
     TRISC = 0b11100111;
-     */
-    TRISA = 0b11110000;
-    TRISB = 0;
-    TRISC = 0b00000111;
+     //*/
+    //TRISA = 0b11110000;
+    //TRISB = 0;
+    //TRISC = 0b00000111;
     //TRISAbits.TRISA0=1;
     //TRISBbits.TRISB0=0;
     //TRISCbits.TRISC0=0;
