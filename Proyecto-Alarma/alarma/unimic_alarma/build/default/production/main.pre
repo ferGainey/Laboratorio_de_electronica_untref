@@ -9262,7 +9262,9 @@ int alarma_sonando = 0;
 int boton_seleccionar = 0;
 
 
-int txt_insert_pass = 0;
+int txt_insertar_contrasenia = 0;
+int txt_alarma_activada = 0;
+int txt_pantalla_edicion = 0;
 
 
 void setDiaMesAnio(void);
@@ -9322,8 +9324,8 @@ setHoraMinutoSegundo();
 }
 
 void titila_texto_insert_password(void) {
-if (txt_insert_pass == 0) {
-txt_insert_pass = 1;
+if (txt_insertar_contrasenia == 0) {
+txt_insertar_contrasenia = 1;
 lcd_gotoxy(1, 1);
 lcd_putrs("Insert");
 lcd_gotoxy(1, 2);
@@ -9331,8 +9333,8 @@ lcd_putrs("Password");
 _delay((unsigned long)((80)*(8000000/4000.0)));
 }
 
-if (txt_insert_pass == 1) {
-txt_insert_pass = 0;
+if (txt_insertar_contrasenia == 1) {
+txt_insertar_contrasenia = 0;
 lcd_gotoxy(1, 1);
 lcd_putrs("        ");
 lcd_gotoxy(1, 2);
@@ -9496,23 +9498,35 @@ while (PORTCbits.RC2 == 1 && LATAbits.LATA3 == 1) {
 _delay((unsigned long)((40)*(8000000/4000.0)));
 }
 }
+}
 
-sprintf(buffer2, "%01u", boton_seleccionar);
-lcd_gotoxy(8, 1);
-lcd_putrs(buffer2);
+void titila_alarma_activada(void) {
+if (txt_alarma_activada == 0) {
+txt_alarma_activada = 1;
+lcd_gotoxy(1, 1);
+lcd_putrs("Alarm activated ");
+_delay((unsigned long)((80)*(8000000/4000.0)));
+}
+
+if (txt_alarma_activada == 1) {
+txt_alarma_activada = 0;
+lcd_gotoxy(1, 1);
+lcd_putrs("                ");
+_delay((unsigned long)((60)*(8000000/4000.0)));
+}
 }
 
 void activar_alarma(void) {
-numeros_ingresados = 0;
 lcd_gotoxy(1, 1);
 lcd_putrs("Alarm activated ");
 lcd_gotoxy(1, 2);
 lcd_putrs("                ");
-
+numeros_ingresados = 0;
 alarma_activada = 1;
 
 int intentos_de_contrasenia = 0;
 while (alarma_activada) {
+titila_alarma_activada();
 
 if (numeros_ingresados < 4) {
 if (alarma_sonando == 1) {
@@ -9548,30 +9562,19 @@ LATBbits.LATB1 = !LATBbits.LATB1;;
 LATBbits.LATB0 = !LATBbits.LATB0;
 _delay((unsigned long)((98)*(8000000/4000.0)));
 }
-
 }
 }
 
-if (PORTCbits.RC5 == 0|| PORTCbits.RC6 == 0 || PORTCbits.RC7 == 0) {
+if (PORTCbits.RC5 == 0 || PORTCbits.RC6 == 0 || PORTCbits.RC7 == 0) {
 
-# 335
+# 348
+alarma_sonando = 1;
 LATBbits.LATB1 = !LATBbits.LATB1;;
-LATBbits.LATB0 = !LATBbits.LATB0;
+LATBbits.LATB0 = !LATBbits.LATB0;;
 _delay((unsigned long)((98)*(8000000/4000.0)));
 }
 
 }
-
-
-
-if (1 != 1) {
-
-lcd_comand(0b00000010);
-LATBbits.LATB1 = !LATBbits.LATB1;;
-LATBbits.LATB0 = !LATBbits.LATB0;
-_delay((unsigned long)((98)*(8000000/4000.0)));
-}
-
 
 }
 
@@ -9596,19 +9599,44 @@ editar_hora_reloj_digital();
 }
 }
 
+void titila_opcion(void) {
+if (txt_pantalla_edicion == 0) {
+txt_pantalla_edicion = 1;
+lcd_gotoxy(1, 1);
+lcd_putrs("Active  ");
+lcd_gotoxy(1, 2);
+lcd_putrs("Edt Pass");
+_delay((unsigned long)((80)*(8000000/4000.0)));
+}
+
+if (txt_pantalla_edicion == 1) {
+txt_pantalla_edicion = 0;
+
+if (boton_seleccionar == 0) {
+lcd_gotoxy(1, 1);
+lcd_putrs("       ");
+}
+if (boton_seleccionar == 1) {
+lcd_gotoxy(1, 2);
+lcd_putrs("        ");
+}
+_delay((unsigned long)((60)*(8000000/4000.0)));
+}
+}
+
 void ir_a_pantalla_edicion(void) {
-while (1) {
 lcd_gotoxy(1, 1);
 lcd_putrs("Active ");
 lcd_gotoxy(1, 2);
 lcd_putrs("Edt Pass");
 
+while (1) {
 Read_RTC();
 
 set_reloj_digital();
+titila_opcion();
 cambiar_opcion();
 seleccionar_opcion();
-
 
 
 LATAbits.LATA0 = 0;
@@ -9646,7 +9674,7 @@ intentos_de_contrasenias++;
 resetear_pantalla_ingresar_contrasenia();
 }
 }
-if(intentos_de_contrasenias >= 3){
+if (intentos_de_contrasenias >= 3) {
 alarma_sonando = 1;
 activar_alarma();
 }
@@ -9915,7 +9943,7 @@ TRISA = 0b11110000;
 TRISB = 0;
 TRISC = 0b11100111;
 
-# 701
+# 729
 ANCON0 = 0b11111111;
 
 ANCON1 = 0b11111111;

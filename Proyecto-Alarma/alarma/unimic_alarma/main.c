@@ -36,7 +36,9 @@ int alarma_sonando = 0;
 int boton_seleccionar = 0;
 //int boton_centro_estado = 0;
 
-int txt_insert_pass = 0;
+int txt_insertar_contrasenia = 0;
+int txt_alarma_activada = 0;
+int txt_pantalla_edicion = 0;
 
 //Pongo las firmas de los metodos
 void setDiaMesAnio(void);
@@ -96,8 +98,8 @@ void set_reloj_digital(void) {
 }
 
 void titila_texto_insert_password(void) {
-    if (txt_insert_pass == 0) {
-        txt_insert_pass = 1;
+    if (txt_insertar_contrasenia == 0) {
+        txt_insertar_contrasenia = 1;
         lcd_gotoxy(1, 1);
         lcd_putrs("Insert");
         lcd_gotoxy(1, 2);
@@ -105,8 +107,8 @@ void titila_texto_insert_password(void) {
         __delay_ms(80);
     }
 
-    if (txt_insert_pass == 1) {
-        txt_insert_pass = 0;
+    if (txt_insertar_contrasenia == 1) {
+        txt_insertar_contrasenia = 0;
         lcd_gotoxy(1, 1);
         lcd_putrs("        ");
         lcd_gotoxy(1, 2);
@@ -270,23 +272,35 @@ void cambiar_opcion(void) {
             __delay_ms(40);
         }
     }
+}
 
-    sprintf(buffer2, "%01u", boton_seleccionar);
-    lcd_gotoxy(8, 1);
-    lcd_putrs(buffer2);
+void titila_alarma_activada(void) {
+    if (txt_alarma_activada == 0) {
+        txt_alarma_activada = 1;
+        lcd_gotoxy(1, 1);
+        lcd_putrs("Alarm activated ");
+        __delay_ms(80);
+    }
+
+    if (txt_alarma_activada == 1) {
+        txt_alarma_activada = 0;
+        lcd_gotoxy(1, 1);
+        lcd_putrs("                ");
+        __delay_ms(60);
+    }
 }
 
 void activar_alarma(void) {
-    numeros_ingresados = 0;
     lcd_gotoxy(1, 1);
     lcd_putrs("Alarm activated ");
     lcd_gotoxy(1, 2);
     lcd_putrs("                ");
-
+    numeros_ingresados = 0;
     alarma_activada = 1;
     //alarma_sonando = 0;
     int intentos_de_contrasenia = 0;
     while (alarma_activada) {
+        titila_alarma_activada();
         //se tiene que quedar escuchando los sensores y el ingreso de numero
         if (numeros_ingresados < 4) {
             if (alarma_sonando == 1) {
@@ -322,34 +336,23 @@ void activar_alarma(void) {
                     LED_3_Toggle
                     __delay_ms(98);
                 }
-
             }
         }
 
-        if (sensor_1 == 0|| sensor_2 == 0 || sensor_3 == 0) {
+        if (sensor_1 == 0 || sensor_2 == 0 || sensor_3 == 0) {
             //LED_3_Toggle;
             //lo saque de los del profe
             //lcd_comand(0b00000010);
             //LED_2_On;
             //LED_3_On;
+            alarma_sonando = 1;
             LED_2_Toggle;
-            LED_3_Toggle
+            LED_3_Toggle;
             __delay_ms(98);
         }
 
     }
     //ir_a_pantalla_inicial();
-
-    //Si se activa un sensor, pasa esto
-    if (1 != 1) {
-        //lo saque de los del profe
-        lcd_comand(0b00000010);
-        LED_2_Toggle;
-        LED_3_Toggle
-        __delay_ms(98);
-    }
-
-
 }
 
 void seleccionar_opcion(void) {
@@ -373,21 +376,46 @@ void seleccionar_opcion(void) {
     }
 }
 
-void ir_a_pantalla_edicion(void) {
-    while (1) {
+void titila_opcion(void) {
+    if (txt_pantalla_edicion == 0) {
+        txt_pantalla_edicion = 1;
         lcd_gotoxy(1, 1);
-        lcd_putrs("Active ");
+        lcd_putrs("Active  ");
         lcd_gotoxy(1, 2);
         lcd_putrs("Edt Pass");
+        __delay_ms(80);
+    }
 
+    if (txt_pantalla_edicion == 1) {
+        txt_pantalla_edicion = 0;
+
+        if (boton_seleccionar == 0) {
+            lcd_gotoxy(1, 1);
+            lcd_putrs("       ");
+        }
+        if (boton_seleccionar == 1) {
+            lcd_gotoxy(1, 2);
+            lcd_putrs("        ");
+        }
+        __delay_ms(60);
+    }
+}
+
+void ir_a_pantalla_edicion(void) {
+    lcd_gotoxy(1, 1);
+    lcd_putrs("Active ");
+    lcd_gotoxy(1, 2);
+    lcd_putrs("Edt Pass");
+
+    while (1) {
         Read_RTC();
 
         set_reloj_digital();
+        titila_opcion();
         cambiar_opcion();
         seleccionar_opcion();
 
         //ir para atras si apreto B
-
         row1 = 0;
         row2 = 1;
         row3 = 0;
@@ -423,7 +451,7 @@ void ir_a_pantalla_ingresar_contrasenia(void) {
                 resetear_pantalla_ingresar_contrasenia();
             }
         }
-        if(intentos_de_contrasenias >= 3){
+        if (intentos_de_contrasenias >= 3) {
             alarma_sonando = 1;
             activar_alarma();
         }
@@ -691,7 +719,7 @@ void setup(void) {
     TRISA = 0b11110000;
     TRISB = 0;
     TRISC = 0b11100111;
-     //*/
+    //*/
     //TRISA = 0b11110000;
     //TRISB = 0;
     //TRISC = 0b00000111;
