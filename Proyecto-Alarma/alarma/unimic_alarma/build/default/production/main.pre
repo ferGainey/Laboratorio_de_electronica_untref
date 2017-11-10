@@ -9114,6 +9114,7 @@ rtccTime RtccTimeVal;
 rtccDate RtccDate;
 
 unsigned char buffer2[20];
+unsigned char buffer3[20];
 
 void DelayFor18TCY(void)
 {
@@ -9127,7 +9128,7 @@ Delay1KTCYx(20);
 
 }
 
-# 74
+# 75
 void Write_RTC(void)
 {
 RtccWrOn();
@@ -9158,7 +9159,7 @@ RtccWriteDate(&RtccDate,1);
 (RTCCFGbits.RTCEN=1);
 }
 
-# 111
+# 112
 void Read_RTC(void)
 
 {
@@ -9257,8 +9258,16 @@ int motivo_ingreso_de_numeros = 0;
 int numeros_para_fecha[2];
 int alarma_activada = 0;
 int alarma_sonando = 0;
+unsigned char* causa_reporte = "causa";
 
-# 36
+int dia_ultimo_reporte = 0;
+int mes_ultimo_reporte = 0;
+int anio_ultimo_reporte = 0;
+int hora_ultimo_reporte = 0;
+int minutos_ultimo_reporte = 0;
+int segundos_ultimo_reporte = 0;
+
+# 45
 int boton_seleccionar = 0;
 
 
@@ -9474,7 +9483,7 @@ LATAbits.LATA1 = 0;
 LATAbits.LATA2 = 1;
 LATAbits.LATA3 = 0;
 if (PORTCbits.RC2 == 1 && LATAbits.LATA2 == 1) {
-if (boton_seleccionar == 3) {
+if (boton_seleccionar == 4) {
 boton_seleccionar = 0;
 } else {
 boton_seleccionar++;
@@ -9490,7 +9499,7 @@ LATAbits.LATA2 = 0;
 LATAbits.LATA3 = 1;
 if (PORTCbits.RC2 == 1 && LATAbits.LATA3 == 1) {
 if (boton_seleccionar == 0) {
-boton_seleccionar = 3;
+boton_seleccionar = 4;
 } else {
 boton_seleccionar--;
 }
@@ -9516,6 +9525,15 @@ _delay((unsigned long)((60)*(8000000/4000.0)));
 }
 }
 
+void generar_reporte() {
+dia_ultimo_reporte = dia;
+mes_ultimo_reporte = mes;
+anio_ultimo_reporte = anio;
+hora_ultimo_reporte = hora;
+minutos_ultimo_reporte = minuto;
+segundos_ultimo_reporte = segundo;
+}
+
 void activar_alarma(void) {
 lcd_gotoxy(1, 1);
 lcd_putrs("Alarm activated ");
@@ -9533,6 +9551,7 @@ if (alarma_sonando == 1) {
 
 
 
+generar_reporte();
 titila_alarma_activada();
 LATBbits.LATB1 = !LATBbits.LATB1;;
 LATBbits.LATB0 = !LATBbits.LATB0;
@@ -9557,6 +9576,8 @@ if (intentos_de_contrasenia >= 3) {
 
 titila_alarma_activada();
 alarma_sonando = 1;
+causa_reporte = "3 tries";
+generar_reporte();
 
 
 
@@ -9569,9 +9590,19 @@ _delay((unsigned long)((98)*(8000000/4000.0)));
 
 if (PORTCbits.RC5 == 0 || PORTCbits.RC6 == 0 || PORTCbits.RC7 == 0) {
 
-# 350
+# 371
 titila_alarma_activada();
 alarma_sonando = 1;
+if (PORTCbits.RC5 == 0) {
+causa_reporte = "sensor1";
+}
+if (PORTCbits.RC6 == 0) {
+causa_reporte = "sensor2";
+}
+if (PORTCbits.RC7 == 0) {
+causa_reporte = "sensor3";
+}
+generar_reporte();
 LATBbits.LATB1 = !LATBbits.LATB1;;
 LATBbits.LATB0 = !LATBbits.LATB0;;
 _delay((unsigned long)((98)*(8000000/4000.0)));
@@ -9579,6 +9610,20 @@ _delay((unsigned long)((98)*(8000000/4000.0)));
 
 }
 
+}
+
+void imprimir_reporte(void){
+sprintf(buffer3, "Reporte %02i/%02i/%02i", dia_ultimo_reporte, mes_ultimo_reporte, anio_ultimo_reporte);
+lcd_gotoxy(1, 1);
+lcd_putrs(buffer3);
+
+sprintf(buffer3, "%s %02i:%02i:%02i", causa_reporte, hora_ultimo_reporte, minutos_ultimo_reporte, segundos_ultimo_reporte);
+lcd_gotoxy(1, 2);
+lcd_putrs(buffer3);
+
+while(boton_seleccionar==4){
+cambiar_opcion();
+}
 }
 
 void seleccionar_opcion(void) {
@@ -9635,13 +9680,13 @@ if (boton_seleccionar == 2) {
 lcd_gotoxy(1, 1);
 lcd_putrs("Edt Date");
 lcd_gotoxy(1, 2);
-lcd_putrs("Press A");
+lcd_putrs("Press A ");
 }
 if (boton_seleccionar == 3) {
 lcd_gotoxy(1, 1);
 lcd_putrs("Edt Hour");
 lcd_gotoxy(1, 2);
-lcd_putrs("Press A");
+lcd_putrs("Press A ");
 }
 _delay((unsigned long)((60)*(8000000/4000.0)));
 }
@@ -9661,6 +9706,9 @@ titila_opcion();
 }
 if (boton_seleccionar == 2 || boton_seleccionar == 3) {
 selecciona_opcion_fecha_hora();
+}
+if(boton_seleccionar == 4) {
+imprimir_reporte();
 }
 cambiar_opcion();
 seleccionar_opcion();
@@ -9703,6 +9751,7 @@ resetear_pantalla_ingresar_contrasenia();
 }
 if (intentos_de_contrasenias >= 3) {
 alarma_sonando = 1;
+causa_reporte = "3 tries";
 activar_alarma();
 }
 }
@@ -9970,7 +10019,7 @@ TRISA = 0b11110000;
 TRISB = 0;
 TRISC = 0b11100111;
 
-# 756
+# 805
 ANCON0 = 0b11111111;
 
 ANCON1 = 0b11111111;

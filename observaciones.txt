@@ -1,0 +1,12 @@
+la hora no se edita bien, me saca del metodo
+despues de poner la hora, cuando pasa los minutos
+
+imprimir la variable que se esta editando en donde esta el "press a" en fecha y hora
+
+reducir tiempo de titileo en insert password de pantalla inicial
+
+completar la ppt con la diapositiva de generar el reporte
+
+transformar ppt actual a manual de usuario
+
+hacer ppt tecnica

@@ -342,6 +342,43 @@ switch(c = *f++) {
 case 0:
 goto alldone;
 
+# 697
+case 'd':
+case 'i':
+break;
+
+# 728
+case 's':
+
+# 734
+cp = (*(const char * *)__va_arg((*(const char * **)ap), (const char *)0));
+
+# 740
+if(!cp)
+cp = "(null)";
+
+
+
+len = 0;
+while(cp[len])
+len++;
+
+# 757
+if(width > len)
+width -= len;
+else
+width = 0;
+
+# 764
+while(width--)
+((*sp++ = (' ')));
+
+while(len--)
+((*sp++ = (*cp++)));
+
+# 774
+continue;
+
 # 802
 default:
 
@@ -351,13 +388,32 @@ continue;
 
 
 case 'u':
-flag |= 0xC0;
+flag |= 0x40;
 break;
 
 
 }
 
-# 1273
+# 1251
+if((flag & 0x40) == 0x00)
+
+{
+
+# 1259
+val = (int)(*(int *)__va_arg((*(int **)ap), (int)0));
+
+if((int)val < 0) {
+flag |= 0x03;
+val = -val;
+}
+
+}
+
+else
+
+
+
+
 {
 
 # 1286
@@ -369,6 +425,10 @@ for(c = 1 ; c != sizeof dpowers/sizeof dpowers[0] ; c++)
 if(val < dpowers[c])
 break;
 
+# 1345
+if(width && flag & 0x03)
+width--;
+
 # 1381
 if(width > c)
 width -= c;
@@ -377,6 +437,12 @@ width = 0;
 
 
 if(flag & 0x04) {
+
+
+
+
+if(flag & 0x03)
+((*sp++ = ('-')));
 
 # 1415
 if(width)
@@ -395,6 +461,10 @@ if(width
 do
 ((*sp++ = (' ')));
 while(--width);
+
+# 1438
+if(flag & 0x03)
+((*sp++ = ('-')));
 
 # 1469
 }

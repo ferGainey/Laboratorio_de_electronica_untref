@@ -52,6 +52,7 @@ rtccTime RtccTimeVal;
 rtccDate RtccDate;//Inicializa la estructura de Fecha
 
 unsigned char buffer2[20];
+unsigned char buffer3[20];
 
 void DelayFor18TCY(void)
 {

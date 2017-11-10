@@ -23,6 +23,15 @@ int motivo_ingreso_de_numeros = 0; //0=contrasenia, 1=edicion hora o fecha. Por 
 int numeros_para_fecha[2];
 int alarma_activada = 0;
 int alarma_sonando = 0;
+unsigned char* causa_reporte = "causa";
+//fecha y hora de ultimo reporte
+int dia_ultimo_reporte = 0;
+int mes_ultimo_reporte = 0;
+int anio_ultimo_reporte = 0;
+int hora_ultimo_reporte = 0;
+int minutos_ultimo_reporte = 0;
+int segundos_ultimo_reporte = 0;
+//------
 
 /**
  * Boton Seleccionar
@@ -248,7 +257,7 @@ void cambiar_opcion(void) {
     row3 = 1;
     row4 = 0;
     if (column4 == 1 && row3 == 1) {
-        if (boton_seleccionar == 3) {
+        if (boton_seleccionar == 4) {
             boton_seleccionar = 0;
         } else {
             boton_seleccionar++;
@@ -264,7 +273,7 @@ void cambiar_opcion(void) {
     row4 = 1;
     if (column4 == 1 && row4 == 1) {
         if (boton_seleccionar == 0) {
-            boton_seleccionar = 3;
+            boton_seleccionar = 4;
         } else {
             boton_seleccionar--;
         }
@@ -290,6 +299,15 @@ void titila_alarma_activada(void) {
     }
 }
 
+void generar_reporte() {    
+    dia_ultimo_reporte = dia;
+    mes_ultimo_reporte = mes;
+    anio_ultimo_reporte = anio;
+    hora_ultimo_reporte = hora;
+    minutos_ultimo_reporte = minuto;
+    segundos_ultimo_reporte = segundo;
+}
+
 void activar_alarma(void) {
     lcd_gotoxy(1, 1);
     lcd_putrs("Alarm activated ");
@@ -307,6 +325,7 @@ void activar_alarma(void) {
                 //lcd_comand(0b00000010);
                 //LED_2_On;
                 //LED_3_On;
+                generar_reporte();
                 titila_alarma_activada();
                 LED_2_Toggle;
                 LED_3_Toggle
@@ -320,7 +339,7 @@ void activar_alarma(void) {
                 LED_3_Off;
                 alarma_sonando = 0;
                 intentos_de_contrasenia = 0;
-                __delay_ms(98); //agregado por mi 7/11
+                __delay_ms(98); //agregado por mi 7/11                
                 break;
             } else {
                 numeros_ingresados = 0;
@@ -331,6 +350,8 @@ void activar_alarma(void) {
                     //lo saque de los del profe
                     titila_alarma_activada();
                     alarma_sonando = 1;
+                    causa_reporte = "3 tries";
+                    generar_reporte();
                     //lcd_comand(0b00000010);
                     //LED_2_On;
                     //LED_3_On;
@@ -349,6 +370,16 @@ void activar_alarma(void) {
             //LED_3_On;
             titila_alarma_activada();
             alarma_sonando = 1;
+            if (sensor_1 == 0) {
+                causa_reporte = "sensor1";                
+            }
+            if (sensor_2 == 0) {
+                causa_reporte = "sensor2";
+            }
+            if (sensor_3 == 0) {
+                causa_reporte = "sensor3";
+            }
+            generar_reporte();
             LED_2_Toggle;
             LED_3_Toggle;
             __delay_ms(98);
@@ -356,6 +387,20 @@ void activar_alarma(void) {
 
     }
     //ir_a_pantalla_inicial();
+}
+
+void imprimir_reporte(void){
+    sprintf(buffer3, "Reporte %02i/%02i/%02i", dia_ultimo_reporte, mes_ultimo_reporte, anio_ultimo_reporte);
+    lcd_gotoxy(1, 1);
+    lcd_putrs(buffer3);
+
+    sprintf(buffer3, "%s %02i:%02i:%02i", causa_reporte, hora_ultimo_reporte, minutos_ultimo_reporte, segundos_ultimo_reporte);
+    lcd_gotoxy(1, 2);
+    lcd_putrs(buffer3);
+    
+    while(boton_seleccionar==4){
+        cambiar_opcion();
+    }
 }
 
 void seleccionar_opcion(void) {
@@ -412,13 +457,13 @@ void selecciona_opcion_fecha_hora(void) {
         lcd_gotoxy(1, 1);
         lcd_putrs("Edt Date");
         lcd_gotoxy(1, 2);
-        lcd_putrs("Press A");
+        lcd_putrs("Press A ");
     }
     if (boton_seleccionar == 3) {
         lcd_gotoxy(1, 1);
         lcd_putrs("Edt Hour");
         lcd_gotoxy(1, 2);
-        lcd_putrs("Press A");
+        lcd_putrs("Press A ");
     }
     __delay_ms(60);
 }
@@ -438,6 +483,9 @@ void ir_a_pantalla_edicion(void) {
         }
         if (boton_seleccionar == 2 || boton_seleccionar == 3) {
             selecciona_opcion_fecha_hora();
+        }
+        if(boton_seleccionar == 4) {
+            imprimir_reporte();
         }
         cambiar_opcion();
         seleccionar_opcion();
@@ -480,7 +528,8 @@ void ir_a_pantalla_ingresar_contrasenia(void) {
         }
         if (intentos_de_contrasenias >= 3) {
             alarma_sonando = 1;
-            activar_alarma();
+            causa_reporte = "3 tries";
+            activar_alarma();            
         }
     }
 }
