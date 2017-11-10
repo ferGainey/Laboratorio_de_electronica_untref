@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 18F26J50 ]
 [d frameptr 4065 ]
-"99 E:\Documentos\Juli\Facultad\Laboratorio de Electronica\Laboratorio_de_electronica_untref\Proyecto-Alarma/headers\unmc_rtcc_01.h
+"99 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Alarma/headers\unmc_rtcc_01.h
 [e E6550 _BOOL `uc
 FALSE 0
 TRUE 1
@@ -86,11 +86,11 @@ RTCCPTR_MASK_HRSWEEK 1
 RTCCPTR_MASK_DAYMON 2
 RTCCPTR_MASK_YEAR 3
 ]
-"74 E:\Documentos\Juli\Facultad\Laboratorio de Electronica\Laboratorio_de_electronica_untref\Proyecto-Alarma/headers\unmc_rtcc_01.h
+"74 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Alarma/headers\unmc_rtcc_01.h
 [v _Write_RTC Write_RTC `(v  1 e 1 0 ]
 "111
 [v _Read_RTC Read_RTC `(v  1 e 1 0 ]
-"25 E:\Documentos\Juli\Facultad\Laboratorio de Electronica\Laboratorio_de_electronica_untref\Proyecto-Alarma/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+"25 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Alarma/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
 [v _lcd_send_nibble lcd_send_nibble `(v  1 e 1 0 ]
 "86
 [v _lcd_send_byte lcd_send_byte `(v  1 e 1 0 ]
@@ -178,7 +178,7 @@ RTCCPTR_MASK_YEAR 3
 [v _RtccWriteTime RtccWriteTime `(E6550  1 e 1 0 ]
 "21 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic18\plib\rtcc\RtccWrOn.c
 [v _RtccWrOn RtccWrOn `(v  1 e 1 0 ]
-"66 E:\Documentos\Juli\Facultad\Laboratorio de Electronica\Laboratorio_de_electronica_untref\Proyecto-Alarma\alarma\unimic_alarma\main.c
+"66 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Alarma\alarma\unimic_alarma\main.c
 [v _setDiaMesAnio setDiaMesAnio `(v  1 e 1 0 ]
 "82
 [v _setHoraMinutoSegundo setHoraMinutoSegundo `(v  1 e 1 0 ]
@@ -200,35 +200,37 @@ RTCCPTR_MASK_YEAR 3
 [v _titila_alarma_activada titila_alarma_activada `(v  1 e 1 0 ]
 "293
 [v _activar_alarma activar_alarma `(v  1 e 1 0 ]
-"358
+"361
 [v _seleccionar_opcion seleccionar_opcion `(v  1 e 1 0 ]
-"379
+"382
 [v _titila_opcion titila_opcion `(v  1 e 1 0 ]
-"404
+"409
+[v _selecciona_opcion_fecha_hora selecciona_opcion_fecha_hora `(v  1 e 1 0 ]
+"426
 [v _ir_a_pantalla_edicion ir_a_pantalla_edicion `(v  1 e 1 0 ]
-"432
+"459
 [v _ir_a_pantalla_ingresar_contrasenia ir_a_pantalla_ingresar_contrasenia `(v  1 e 1 0 ]
-"461
+"488
 [v _si_apreta_numero_va_a_pantalla_contrasenia si_apreta_numero_va_a_pantalla_contrasenia `(v  1 e 1 0 ]
-"512
+"539
 [v _ir_a_pantalla_inicial ir_a_pantalla_inicial `(v  1 e 1 0 ]
-"518
+"545
 [v _ir_a_pantalla_editar_contrasenia ir_a_pantalla_editar_contrasenia `(v  1 e 1 0 ]
-"536
+"563
 [v _verificar_contrasenia verificar_contrasenia `(i  1 e 2 0 ]
-"549
+"576
 [v _covertir_valores_de_array_a_escala_decimal covertir_valores_de_array_a_escala_decimal `(i  1 e 2 0 ]
-"560
+"587
 [v _editar_fecha_reloj_digital editar_fecha_reloj_digital `(v  1 e 1 0 ]
-"637
+"664
 [v _editar_hora_reloj_digital editar_hora_reloj_digital `(v  1 e 1 0 ]
-"710
+"737
 [v _setup setup `(v  1 e 1 0 ]
-"748
+"775
 [v _main main `(i  1 e 2 0 ]
-"14 E:\Documentos\Juli\Facultad\Laboratorio de Electronica\Laboratorio_de_electronica_untref\Proyecto-Alarma/headers\unmc_inout_02.h
+"14 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Alarma/headers\unmc_inout_02.h
 [v _key key `uc  1 e 1 0 ]
-"18 E:\Documentos\Juli\Facultad\Laboratorio de Electronica\Laboratorio_de_electronica_untref\Proyecto-Alarma/headers\unmc_rtcc_01.h
+"18 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Alarma/headers\unmc_rtcc_01.h
 [v _segundo_u segundo_u `uc  1 e 1 0 ]
 "19
 [v _segundo_d segundo_d `uc  1 e 1 0 ]
@@ -278,7 +280,7 @@ RTCCPTR_MASK_YEAR 3
 [v _RtccDate RtccDate `S50  1 e 4 0 ]
 "54
 [v _buffer2 buffer2 `[20]uc  1 e 20 0 ]
-"16 E:\Documentos\Juli\Facultad\Laboratorio de Electronica\Laboratorio_de_electronica_untref\Proyecto-Alarma/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+"16 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Alarma/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
 [v _LCD_INIT_STRING LCD_INIT_STRING `C[4]uc  1 e 4 0 ]
 [s S129 . 1 `uc 1 RTCPTR0 1 0 :1:0 
 `uc 1 RTCPTR1 1 0 :1:1 
@@ -451,7 +453,7 @@ RTCCPTR_MASK_YEAR 3
 [v _TRISA TRISA `VEuc  1 e 1 @3986 ]
 "6524
 [v _TRISB TRISB `VEuc  1 e 1 @3987 ]
-[s S949 . 1 `uc 1 TRISB0 1 0 :1:0 
+[s S954 . 1 `uc 1 TRISB0 1 0 :1:0 
 `uc 1 TRISB1 1 0 :1:1 
 `uc 1 TRISB2 1 0 :1:2 
 `uc 1 TRISB3 1 0 :1:3 
@@ -461,25 +463,25 @@ RTCCPTR_MASK_YEAR 3
 `uc 1 TRISB7 1 0 :1:7 
 ]
 "6541
-[u S958 . 1 `S949 1 . 1 0 ]
-[v _TRISBbits TRISBbits `VES958  1 e 1 @3987 ]
+[u S963 . 1 `S954 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES963  1 e 1 @3987 ]
 "6586
 [v _TRISC TRISC `VEuc  1 e 1 @3988 ]
-[s S1406 . 1 `uc 1 ALRMPTR 1 0 :2:0 
+[s S1411 . 1 `uc 1 ALRMPTR 1 0 :2:0 
 `uc 1 AMASK 1 0 :4:2 
 `uc 1 CHIME 1 0 :1:6 
 `uc 1 ALRMEN 1 0 :1:7 
 ]
 "6740
-[s S1411 . 1 `uc 1 ALRMPTR0 1 0 :1:0 
+[s S1416 . 1 `uc 1 ALRMPTR0 1 0 :1:0 
 `uc 1 ALRMPTR1 1 0 :1:1 
 `uc 1 AMASK0 1 0 :1:2 
 `uc 1 AMASK1 1 0 :1:3 
 `uc 1 AMASK2 1 0 :1:4 
 `uc 1 AMASK3 1 0 :1:5 
 ]
-[u S1418 . 1 `S1406 1 . 1 0 `S1411 1 . 1 0 ]
-[v _ALRMCFGbits ALRMCFGbits `VES1418  1 e 1 @3985 ]
+[u S1423 . 1 `S1411 1 . 1 0 `S1416 1 . 1 0 ]
+[v _ALRMCFGbits ALRMCFGbits `VES1423  1 e 1 @3985 ]
 [s S508 . 1 `uc 1 TUN 1 0 :6:0 
 `uc 1 PLLEN 1 0 :1:6 
 `uc 1 INTSRC 1 0 :1:7 
@@ -569,7 +571,7 @@ RTCCPTR_MASK_YEAR 3
 ]
 [u S547 . 1 `S534 1 . 1 0 `S540 1 . 1 0 ]
 [v _OSCCONbits OSCCONbits `VES547  1 e 1 @4051 ]
-[s S1213 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S1218 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -579,7 +581,7 @@ RTCCPTR_MASK_YEAR 3
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
 "14949
-[s S1222 . 1 `uc 1 . 1 0 :1:0 
+[s S1227 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 INT0F 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -588,17 +590,17 @@ RTCCPTR_MASK_YEAR 3
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-[s S1231 . 1 `uc 1 . 1 0 :6:0 
+[s S1236 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
-[u S1248 . 1 `S1213 1 . 1 0 `S1222 1 . 1 0 `S1231 1 . 1 0 `S1222 1 . 1 0 `S1231 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES1248  1 e 1 @4082 ]
+[u S1253 . 1 `S1218 1 . 1 0 `S1227 1 . 1 0 `S1236 1 . 1 0 `S1227 1 . 1 0 `S1236 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES1253  1 e 1 @4082 ]
 "354 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
 [v _dpowers dpowers `C[5]ui  1 s 10 dpowers ]
 "3 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\errno.c
 [v _errno errno `i  1 e 2 0 ]
-"19 E:\Documentos\Juli\Facultad\Laboratorio de Electronica\Laboratorio_de_electronica_untref\Proyecto-Alarma\alarma\unimic_alarma\main.c
+"19 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Alarma\alarma\unimic_alarma\main.c
 [v _array_contrasenia_ingresada array_contrasenia_ingresada `[4]i  1 e 8 0 ]
 "20
 [v _array_contrasenia array_contrasenia `[4]i  1 e 8 0 ]
@@ -620,17 +622,17 @@ RTCCPTR_MASK_YEAR 3
 [v _txt_alarma_activada txt_alarma_activada `i  1 e 2 0 ]
 "41
 [v _txt_pantalla_edicion txt_pantalla_edicion `i  1 e 2 0 ]
-"748
+"775
 [v _main main `(i  1 e 2 0 ]
 {
-"760
+"787
 } 0
-"710
+"737
 [v _setup setup `(v  1 e 1 0 ]
 {
-"746
+"773
 } 0
-"119 E:\Documentos\Juli\Facultad\Laboratorio de Electronica\Laboratorio_de_electronica_untref\Proyecto-Alarma/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+"119 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Alarma/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
 [v _lcd_init lcd_init `(v  1 e 1 0 ]
 {
 "120
@@ -645,7 +647,7 @@ RTCCPTR_MASK_YEAR 3
 [v Delay1KTCYx@unit unit `uc  1 a 1 0 ]
 "13
 } 0
-"189 E:\Documentos\Juli\Facultad\Laboratorio de Electronica\Laboratorio_de_electronica_untref\Proyecto-Alarma/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+"189 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Alarma/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
 [v _lcd_comand lcd_comand `(v  1 e 1 0 ]
 {
 [v lcd_comand@d d `uc  1 a 1 wreg ]
@@ -653,27 +655,27 @@ RTCCPTR_MASK_YEAR 3
 [v lcd_comand@d d `uc  1 a 1 4 ]
 "191
 } 0
-"512 E:\Documentos\Juli\Facultad\Laboratorio de Electronica\Laboratorio_de_electronica_untref\Proyecto-Alarma\alarma\unimic_alarma\main.c
+"539 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Alarma\alarma\unimic_alarma\main.c
 [v _ir_a_pantalla_inicial ir_a_pantalla_inicial `(v  1 e 1 0 ]
 {
-"516
+"543
 } 0
 "100
 [v _titila_texto_insert_password titila_texto_insert_password `(v  1 e 1 0 ]
 {
 "118
 } 0
-"461
+"488
 [v _si_apreta_numero_va_a_pantalla_contrasenia si_apreta_numero_va_a_pantalla_contrasenia `(v  1 e 1 0 ]
 {
-"510
+"537
 } 0
-"432
+"459
 [v _ir_a_pantalla_ingresar_contrasenia ir_a_pantalla_ingresar_contrasenia `(v  1 e 1 0 ]
 {
-"434
+"461
 [v ir_a_pantalla_ingresar_contrasenia@intentos_de_contrasenias intentos_de_contrasenias `i  1 a 2 19 ]
-"459
+"486
 } 0
 "234
 [v _resetear_pantalla_ingresar_contrasenia resetear_pantalla_ingresar_contrasenia `(v  1 e 1 0 ]
@@ -687,70 +689,70 @@ RTCCPTR_MASK_YEAR 3
 {
 "232
 } 0
-"404
+"426
 [v _ir_a_pantalla_edicion ir_a_pantalla_edicion `(v  1 e 1 0 ]
 {
-"430
+"457
 } 0
-"379
+"382
 [v _titila_opcion titila_opcion `(v  1 e 1 0 ]
 {
-"402
+"407
 } 0
 "95
 [v _set_reloj_digital set_reloj_digital `(v  1 e 1 0 ]
 {
 "98
 } 0
-"358
+"361
 [v _seleccionar_opcion seleccionar_opcion `(v  1 e 1 0 ]
 {
-"377
+"380
 } 0
-"518
+"545
 [v _ir_a_pantalla_editar_contrasenia ir_a_pantalla_editar_contrasenia `(v  1 e 1 0 ]
 {
-"528
+"555
 [v ir_a_pantalla_editar_contrasenia@i i `i  1 a 2 60 ]
-"534
+"561
 } 0
-"637
+"664
 [v _editar_hora_reloj_digital editar_hora_reloj_digital `(v  1 e 1 0 ]
 {
-"687
+"714
 [v editar_hora_reloj_digital@segundo_ingresado segundo_ingresado `i  1 a 2 14 ]
-"665
+"692
 [v editar_hora_reloj_digital@minuto_ingresado minuto_ingresado `i  1 a 2 12 ]
-"643
+"670
 [v editar_hora_reloj_digital@hora_ingresada hora_ingresada `i  1 a 2 10 ]
-"638
+"665
 [v editar_hora_reloj_digital@posicion posicion `i  1 a 2 16 ]
-"708
+"735
 } 0
 "82
 [v _setHoraMinutoSegundo setHoraMinutoSegundo `(v  1 e 1 0 ]
 {
 "93
 } 0
-"560
+"587
 [v _editar_fecha_reloj_digital editar_fecha_reloj_digital `(v  1 e 1 0 ]
 {
-"614
+"641
 [v editar_fecha_reloj_digital@anio_ingresado anio_ingresado `i  1 a 2 14 ]
-"592
+"619
 [v editar_fecha_reloj_digital@mes_ingresado mes_ingresado `i  1 a 2 12 ]
-"568
+"595
 [v editar_fecha_reloj_digital@dia_ingresado dia_ingresado `i  1 a 2 10 ]
-"561
+"588
 [v editar_fecha_reloj_digital@posicion posicion `i  1 a 2 16 ]
-"635
+"662
 } 0
 "66
 [v _setDiaMesAnio setDiaMesAnio `(v  1 e 1 0 ]
 {
 "80
 } 0
-"74 E:\Documentos\Juli\Facultad\Laboratorio de Electronica\Laboratorio_de_electronica_untref\Proyecto-Alarma/headers\unmc_rtcc_01.h
+"74 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Alarma/headers\unmc_rtcc_01.h
 [v _Write_RTC Write_RTC `(v  1 e 1 0 ]
 {
 "102
@@ -771,9 +773,9 @@ RTCCPTR_MASK_YEAR 3
 "34 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic18\plib\rtcc\RtccWriteTime.c
 [v _RtccWriteTime RtccWriteTime `(E6550  1 e 1 0 ]
 {
-[s S1326 . 2 `uc 1 LB 1 0 `uc 1 HB 1 1 ]
+[s S1331 . 2 `uc 1 LB 1 0 `uc 1 HB 1 1 ]
 "36
-[s S1329 . 2 `uc 1 b0 1 0 :1:0 
+[s S1334 . 2 `uc 1 b0 1 0 :1:0 
 `uc 1 b1 1 0 :1:1 
 `uc 1 b2 1 0 :1:2 
 `uc 1 b3 1 0 :1:3 
@@ -790,10 +792,10 @@ RTCCPTR_MASK_YEAR 3
 `uc 1 b14 1 1 :1:6 
 `uc 1 b15 1 1 :1:7 
 ]
-[u S1346 . 2 `us 1 Val 2 0 `[2]uc 1 v 2 0 `S1326 1 byte 2 0 `S1329 1 bits 2 0 ]
-[v RtccWriteTime@tempHourWDay tempHourWDay `S1346  1 a 2 9 ]
+[u S1351 . 2 `us 1 Val 2 0 `[2]uc 1 v 2 0 `S1331 1 byte 2 0 `S1334 1 bits 2 0 ]
+[v RtccWriteTime@tempHourWDay tempHourWDay `S1351  1 a 2 9 ]
 "37
-[v RtccWriteTime@tempMinSec tempMinSec `S1346  1 a 2 7 ]
+[v RtccWriteTime@tempMinSec tempMinSec `S1351  1 a 2 7 ]
 "40
 [v RtccWriteTime@wasWrEn wasWrEn `E7121  1 a 1 6 ]
 "42
@@ -810,9 +812,9 @@ RTCCPTR_MASK_YEAR 3
 "35 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic18\plib\rtcc\RtccWriteDate.c
 [v _RtccWriteDate RtccWriteDate `(E6550  1 e 1 0 ]
 {
-[s S1326 . 2 `uc 1 LB 1 0 `uc 1 HB 1 1 ]
+[s S1331 . 2 `uc 1 LB 1 0 `uc 1 HB 1 1 ]
 "37
-[s S1329 . 2 `uc 1 b0 1 0 :1:0 
+[s S1334 . 2 `uc 1 b0 1 0 :1:0 
 `uc 1 b1 1 0 :1:1 
 `uc 1 b2 1 0 :1:2 
 `uc 1 b3 1 0 :1:3 
@@ -829,12 +831,12 @@ RTCCPTR_MASK_YEAR 3
 `uc 1 b14 1 1 :1:6 
 `uc 1 b15 1 1 :1:7 
 ]
-[u S1346 . 2 `us 1 Val 2 0 `[2]uc 1 v 2 0 `S1326 1 byte 2 0 `S1329 1 bits 2 0 ]
-[v RtccWriteDate@tempHourWDay tempHourWDay `S1346  1 a 2 11 ]
+[u S1351 . 2 `us 1 Val 2 0 `[2]uc 1 v 2 0 `S1331 1 byte 2 0 `S1334 1 bits 2 0 ]
+[v RtccWriteDate@tempHourWDay tempHourWDay `S1351  1 a 2 11 ]
 "38
-[v RtccWriteDate@tempDayMonth tempDayMonth `S1346  1 a 2 9 ]
+[v RtccWriteDate@tempDayMonth tempDayMonth `S1351  1 a 2 9 ]
 "39
-[v RtccWriteDate@tempYear tempYear `S1346  1 a 2 6 ]
+[v RtccWriteDate@tempYear tempYear `S1351  1 a 2 6 ]
 "41
 [v RtccWriteDate@wasWrEn wasWrEn `E7121  1 a 1 8 ]
 "43
@@ -853,14 +855,14 @@ RTCCPTR_MASK_YEAR 3
 {
 "46
 } 0
-"549 E:\Documentos\Juli\Facultad\Laboratorio de Electronica\Laboratorio_de_electronica_untref\Proyecto-Alarma\alarma\unimic_alarma\main.c
+"576 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Alarma\alarma\unimic_alarma\main.c
 [v _covertir_valores_de_array_a_escala_decimal covertir_valores_de_array_a_escala_decimal `(i  1 e 2 0 ]
 {
-"551
+"578
 [v covertir_valores_de_array_a_escala_decimal@i i `i  1 a 2 8 ]
-"550
+"577
 [v covertir_valores_de_array_a_escala_decimal@numero numero `i  1 a 2 6 ]
-"558
+"585
 } 0
 "5 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\pow.c
 [v _pow pow `(d  1 e 3 0 ]
@@ -1042,21 +1044,21 @@ RTCCPTR_MASK_YEAR 3
 [v ___ftpack@sign sign `uc  1 p 1 4 ]
 "86
 } 0
-"293 E:\Documentos\Juli\Facultad\Laboratorio de Electronica\Laboratorio_de_electronica_untref\Proyecto-Alarma\alarma\unimic_alarma\main.c
+"293 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Alarma\alarma\unimic_alarma\main.c
 [v _activar_alarma activar_alarma `(v  1 e 1 0 ]
 {
 "301
 [v activar_alarma@intentos_de_contrasenia intentos_de_contrasenia `i  1 a 2 61 ]
-"356
+"359
 } 0
-"536
+"563
 [v _verificar_contrasenia verificar_contrasenia `(i  1 e 2 0 ]
 {
-"538
+"565
 [v verificar_contrasenia@i i `i  1 a 2 8 ]
-"537
+"564
 [v verificar_contrasenia@equals equals `i  1 a 2 6 ]
-"547
+"574
 } 0
 "277
 [v _titila_alarma_activada titila_alarma_activada `(v  1 e 1 0 ]
@@ -1135,7 +1137,12 @@ RTCCPTR_MASK_YEAR 3
 [v ___lwdiv@divisor divisor `ui  1 p 2 2 ]
 "31
 } 0
-"221 E:\Documentos\Juli\Facultad\Laboratorio de Electronica\Laboratorio_de_electronica_untref\Proyecto-Alarma/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
+"409 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Alarma\alarma\unimic_alarma\main.c
+[v _selecciona_opcion_fecha_hora selecciona_opcion_fecha_hora `(v  1 e 1 0 ]
+{
+"424
+} 0
+"221 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Alarma/Librerias/Unimic/unmc_01/sources/unmc_lcd_216.c
 [v _lcd_putrs lcd_putrs `(v  1 e 1 0 ]
 {
 [v lcd_putrs@ptr ptr `*.35Cuc  1 p 2 8 ]
@@ -1189,12 +1196,12 @@ RTCCPTR_MASK_YEAR 3
 [v Delay100TCYx@unit unit `uc  1 a 1 0 ]
 "13
 } 0
-"245 E:\Documentos\Juli\Facultad\Laboratorio de Electronica\Laboratorio_de_electronica_untref\Proyecto-Alarma\alarma\unimic_alarma\main.c
+"245 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Alarma\alarma\unimic_alarma\main.c
 [v _cambiar_opcion cambiar_opcion `(v  1 e 1 0 ]
 {
 "275
 } 0
-"111 E:\Documentos\Juli\Facultad\Laboratorio de Electronica\Laboratorio_de_electronica_untref\Proyecto-Alarma/headers\unmc_rtcc_01.h
+"111 C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Alarma/headers\unmc_rtcc_01.h
 [v _Read_RTC Read_RTC `(v  1 e 1 0 ]
 {
 "137

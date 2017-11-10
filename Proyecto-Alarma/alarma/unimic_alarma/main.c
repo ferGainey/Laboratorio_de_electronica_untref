@@ -300,13 +300,14 @@ void activar_alarma(void) {
     //alarma_sonando = 0;
     int intentos_de_contrasenia = 0;
     while (alarma_activada) {
-        titila_alarma_activada();
+        //titila_alarma_activada(); que titile cuando este sonando
         //se tiene que quedar escuchando los sensores y el ingreso de numero
         if (numeros_ingresados < 4) {
             if (alarma_sonando == 1) {
                 //lcd_comand(0b00000010);
                 //LED_2_On;
                 //LED_3_On;
+                titila_alarma_activada();
                 LED_2_Toggle;
                 LED_3_Toggle
                 __delay_ms(98);
@@ -328,6 +329,7 @@ void activar_alarma(void) {
                 lcd_putrs("                ");
                 if (intentos_de_contrasenia >= 3) {
                     //lo saque de los del profe
+                    titila_alarma_activada();
                     alarma_sonando = 1;
                     //lcd_comand(0b00000010);
                     //LED_2_On;
@@ -345,6 +347,7 @@ void activar_alarma(void) {
             //lcd_comand(0b00000010);
             //LED_2_On;
             //LED_3_On;
+            titila_alarma_activada();
             alarma_sonando = 1;
             LED_2_Toggle;
             LED_3_Toggle;
@@ -384,6 +387,8 @@ void titila_opcion(void) {
         lcd_gotoxy(1, 2);
         lcd_putrs("Edt Pass");
         __delay_ms(80);
+        __delay_ms(80);
+        __delay_ms(80);
     }
 
     if (txt_pantalla_edicion == 1) {
@@ -401,6 +406,23 @@ void titila_opcion(void) {
     }
 }
 
+void selecciona_opcion_fecha_hora(void) {
+
+    if (boton_seleccionar == 2) {
+        lcd_gotoxy(1, 1);
+        lcd_putrs("Edt Date");
+        lcd_gotoxy(1, 2);
+        lcd_putrs("Press A");
+    }
+    if (boton_seleccionar == 3) {
+        lcd_gotoxy(1, 1);
+        lcd_putrs("Edt Hour");
+        lcd_gotoxy(1, 2);
+        lcd_putrs("Press A");
+    }
+    __delay_ms(60);
+}
+
 void ir_a_pantalla_edicion(void) {
     lcd_gotoxy(1, 1);
     lcd_putrs("Active ");
@@ -411,7 +433,12 @@ void ir_a_pantalla_edicion(void) {
         Read_RTC();
 
         set_reloj_digital();
-        titila_opcion();
+        if (boton_seleccionar == 0 || boton_seleccionar == 1) {
+            titila_opcion();
+        }
+        if (boton_seleccionar == 2 || boton_seleccionar == 3) {
+            selecciona_opcion_fecha_hora();
+        }
         cambiar_opcion();
         seleccionar_opcion();
 
@@ -551,9 +578,9 @@ int covertir_valores_de_array_a_escala_decimal() {
     for (int i = 2 - 1; i >= 0; i--) {
         numero = numero + numeros_para_fecha[i] * (int) pow(10, (2 - 1) - i);
     };
-    sprintf(buffer2, "%02u", numero);
-    lcd_gotoxy(8, 2);
-    lcd_putrs(buffer2);
+    //sprintf(buffer2, "%02u", numero);
+    //lcd_gotoxy(8, 2);
+    //lcd_putrs(buffer2);
     return numero;
 }
 

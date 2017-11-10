@@ -9526,13 +9526,14 @@ alarma_activada = 1;
 
 int intentos_de_contrasenia = 0;
 while (alarma_activada) {
-titila_alarma_activada();
+
 
 if (numeros_ingresados < 4) {
 if (alarma_sonando == 1) {
 
 
 
+titila_alarma_activada();
 LATBbits.LATB1 = !LATBbits.LATB1;;
 LATBbits.LATB0 = !LATBbits.LATB0;
 _delay((unsigned long)((98)*(8000000/4000.0)));
@@ -9554,6 +9555,7 @@ lcd_gotoxy(1, 2);
 lcd_putrs("                ");
 if (intentos_de_contrasenia >= 3) {
 
+titila_alarma_activada();
 alarma_sonando = 1;
 
 
@@ -9567,7 +9569,8 @@ _delay((unsigned long)((98)*(8000000/4000.0)));
 
 if (PORTCbits.RC5 == 0 || PORTCbits.RC6 == 0 || PORTCbits.RC7 == 0) {
 
-# 348
+# 350
+titila_alarma_activada();
 alarma_sonando = 1;
 LATBbits.LATB1 = !LATBbits.LATB1;;
 LATBbits.LATB0 = !LATBbits.LATB0;;
@@ -9607,6 +9610,8 @@ lcd_putrs("Active  ");
 lcd_gotoxy(1, 2);
 lcd_putrs("Edt Pass");
 _delay((unsigned long)((80)*(8000000/4000.0)));
+_delay((unsigned long)((80)*(8000000/4000.0)));
+_delay((unsigned long)((80)*(8000000/4000.0)));
 }
 
 if (txt_pantalla_edicion == 1) {
@@ -9624,6 +9629,23 @@ _delay((unsigned long)((60)*(8000000/4000.0)));
 }
 }
 
+void selecciona_opcion_fecha_hora(void) {
+
+if (boton_seleccionar == 2) {
+lcd_gotoxy(1, 1);
+lcd_putrs("Edt Date");
+lcd_gotoxy(1, 2);
+lcd_putrs("Press A");
+}
+if (boton_seleccionar == 3) {
+lcd_gotoxy(1, 1);
+lcd_putrs("Edt Hour");
+lcd_gotoxy(1, 2);
+lcd_putrs("Press A");
+}
+_delay((unsigned long)((60)*(8000000/4000.0)));
+}
+
 void ir_a_pantalla_edicion(void) {
 lcd_gotoxy(1, 1);
 lcd_putrs("Active ");
@@ -9634,7 +9656,12 @@ while (1) {
 Read_RTC();
 
 set_reloj_digital();
+if (boton_seleccionar == 0 || boton_seleccionar == 1) {
 titila_opcion();
+}
+if (boton_seleccionar == 2 || boton_seleccionar == 3) {
+selecciona_opcion_fecha_hora();
+}
 cambiar_opcion();
 seleccionar_opcion();
 
@@ -9774,9 +9801,9 @@ int numero = 0;
 for (int i = 2 - 1; i >= 0; i--) {
 numero = numero + numeros_para_fecha[i] * (int) pow(10, (2 - 1) - i);
 };
-sprintf(buffer2, "%02u", numero);
-lcd_gotoxy(8, 2);
-lcd_putrs(buffer2);
+
+
+
 return numero;
 }
 
@@ -9943,7 +9970,7 @@ TRISA = 0b11110000;
 TRISB = 0;
 TRISC = 0b11100111;
 
-# 729
+# 756
 ANCON0 = 0b11111111;
 
 ANCON1 = 0b11111111;
