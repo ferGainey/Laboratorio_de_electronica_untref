@@ -23,7 +23,7 @@ int motivo_ingreso_de_numeros = 0; //0=contrasenia, 1=edicion hora o fecha. Por 
 int numeros_para_fecha[2];
 int alarma_activada = 0;
 int alarma_sonando = 0;
-unsigned char* causa_reporte = "causa";
+unsigned char* causa_reporte = "cause";
 //fecha y hora de ultimo reporte
 int dia_ultimo_reporte = 0;
 int mes_ultimo_reporte = 0;
@@ -113,7 +113,8 @@ void titila_texto_insert_password(void) {
         lcd_putrs("Insert");
         lcd_gotoxy(1, 2);
         lcd_putrs("Password");
-        __delay_ms(80);
+        __delay_ms(98);
+        __delay_ms(98);
     }
 
     if (txt_insertar_contrasenia == 1) {
@@ -390,7 +391,7 @@ void activar_alarma(void) {
 }
 
 void imprimir_reporte(void){
-    sprintf(buffer3, "Reporte %02i/%02i/%02i", dia_ultimo_reporte, mes_ultimo_reporte, anio_ultimo_reporte);
+    sprintf(buffer3, "Report  %02i/%02i/%02i", dia_ultimo_reporte, mes_ultimo_reporte, anio_ultimo_reporte);
     lcd_gotoxy(1, 1);
     lcd_putrs(buffer3);
 
@@ -640,6 +641,8 @@ void editar_fecha_reloj_digital(void) {
 
     //Modificar dia, se puede limpiar la posicion
     if (posicion == 0) {
+        lcd_gotoxy(1, 2);
+        lcd_putrs("Set Day ");
         numeros_ingresados = 0;
         int dia_ingresado = 0;
         while (numeros_ingresados < 3) {
@@ -657,13 +660,17 @@ void editar_fecha_reloj_digital(void) {
             }
         }
         //Write_RTC();
+        __delay_ms(50);//delay agregado 17/11
         setDiaMesAnio();
-        posicion++;
+        __delay_ms(50);//delay agregado 17/11
+        posicion++;//se puede probar si poniendo posicion=1 o =2 o =3, segun el caso anda, tal vez suma mas de una vez
         __delay_ms(50);
     }
 
     //Modificar mes
     if (posicion == 1) {
+        lcd_gotoxy(1, 2);
+        lcd_putrs("Set Mth ");
         numeros_ingresados = 0;
         int mes_ingresado = 0;
         while (numeros_ingresados < 3) {
@@ -679,13 +686,17 @@ void editar_fecha_reloj_digital(void) {
             }
         }
         //Write_RTC();
+        __delay_ms(50);//delay agregado 17/11
         setDiaMesAnio();
+        __delay_ms(50);//delay agregado 17/11
         posicion++;
         __delay_ms(50);
     }
 
     //Modificar anio
     if (posicion == 2) {
+        lcd_gotoxy(1, 2);
+        lcd_putrs("Set Year");
         numeros_ingresados = 0;
         int anio_ingresado = 0;
         while (numeros_ingresados < 3) {
@@ -701,7 +712,9 @@ void editar_fecha_reloj_digital(void) {
             }
         }
         //Write_RTC();
+        __delay_ms(50);//delay agregado 17/11
         setDiaMesAnio();
+        __delay_ms(50);//delay agregado 17/11
         posicion++;
         __delay_ms(50);
     }
@@ -715,6 +728,8 @@ void editar_hora_reloj_digital(void) {
     motivo_ingreso_de_numeros = 1;
     //Modificar hora
     if (posicion == 0) {
+        lcd_gotoxy(1, 2);
+        lcd_putrs("Set Hour");
         numeros_ingresados = 0;
         int hora_ingresada = 0;
         while (numeros_ingresados < 3) {
@@ -730,13 +745,17 @@ void editar_hora_reloj_digital(void) {
             }
         }
         //Write_RTC();
+        __delay_ms(50);//delay agregado 17/11
         setHoraMinutoSegundo();
+        __delay_ms(50);//delay agregado 17/11
         posicion++;
         __delay_ms(50);
     }
 
     //Modificar minuto
     if (posicion == 1) {
+        lcd_gotoxy(1, 2);
+        lcd_putrs("Set Mins");
         numeros_ingresados = 0;
         int minuto_ingresado = 0;
         while (numeros_ingresados < 3) {
@@ -752,13 +771,17 @@ void editar_hora_reloj_digital(void) {
             }
         }
         //Write_RTC();
+        __delay_ms(50);//delay agregado 17/11
         setHoraMinutoSegundo();
+        __delay_ms(50);//delay agregado 17/11
         posicion++;
         __delay_ms(50);
     }
 
     //Modificar segundo
     if (posicion == 2) {
+        lcd_gotoxy(1, 2);
+        lcd_putrs("Set Secs");
         numeros_ingresados = 0;
         int segundo_ingresado = 0;
         while (numeros_ingresados < 3) {
@@ -774,7 +797,9 @@ void editar_hora_reloj_digital(void) {
             }
         }
         //Write_RTC();
+        __delay_ms(50);//delay agregado 17/11
         setHoraMinutoSegundo();
+        __delay_ms(50);//delay agregado 17/11
         posicion++;
         __delay_ms(50);
     }

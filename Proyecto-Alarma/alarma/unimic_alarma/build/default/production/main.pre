@@ -9258,7 +9258,7 @@ int motivo_ingreso_de_numeros = 0;
 int numeros_para_fecha[2];
 int alarma_activada = 0;
 int alarma_sonando = 0;
-unsigned char* causa_reporte = "causa";
+unsigned char* causa_reporte = "cause";
 
 int dia_ultimo_reporte = 0;
 int mes_ultimo_reporte = 0;
@@ -9339,7 +9339,8 @@ lcd_gotoxy(1, 1);
 lcd_putrs("Insert");
 lcd_gotoxy(1, 2);
 lcd_putrs("Password");
-_delay((unsigned long)((80)*(8000000/4000.0)));
+_delay((unsigned long)((98)*(8000000/4000.0)));
+_delay((unsigned long)((98)*(8000000/4000.0)));
 }
 
 if (txt_insertar_contrasenia == 1) {
@@ -9590,7 +9591,7 @@ _delay((unsigned long)((98)*(8000000/4000.0)));
 
 if (PORTCbits.RC5 == 0 || PORTCbits.RC6 == 0 || PORTCbits.RC7 == 0) {
 
-# 371
+# 372
 titila_alarma_activada();
 alarma_sonando = 1;
 if (PORTCbits.RC5 == 0) {
@@ -9613,7 +9614,7 @@ _delay((unsigned long)((98)*(8000000/4000.0)));
 }
 
 void imprimir_reporte(void){
-sprintf(buffer3, "Reporte %02i/%02i/%02i", dia_ultimo_reporte, mes_ultimo_reporte, anio_ultimo_reporte);
+sprintf(buffer3, "Report  %02i/%02i/%02i", dia_ultimo_reporte, mes_ultimo_reporte, anio_ultimo_reporte);
 lcd_gotoxy(1, 1);
 lcd_putrs(buffer3);
 
@@ -9863,6 +9864,8 @@ motivo_ingreso_de_numeros = 1;
 
 
 if (posicion == 0) {
+lcd_gotoxy(1, 2);
+lcd_putrs("Set Day ");
 numeros_ingresados = 0;
 int dia_ingresado = 0;
 while (numeros_ingresados < 3) {
@@ -9880,13 +9883,17 @@ numeros_ingresados = 0;
 }
 }
 
+_delay((unsigned long)((50)*(8000000/4000.0)));
 setDiaMesAnio();
+_delay((unsigned long)((50)*(8000000/4000.0)));
 posicion++;
 _delay((unsigned long)((50)*(8000000/4000.0)));
 }
 
 
 if (posicion == 1) {
+lcd_gotoxy(1, 2);
+lcd_putrs("Set Mth ");
 numeros_ingresados = 0;
 int mes_ingresado = 0;
 while (numeros_ingresados < 3) {
@@ -9902,13 +9909,17 @@ numeros_ingresados = 0;
 }
 }
 
+_delay((unsigned long)((50)*(8000000/4000.0)));
 setDiaMesAnio();
+_delay((unsigned long)((50)*(8000000/4000.0)));
 posicion++;
 _delay((unsigned long)((50)*(8000000/4000.0)));
 }
 
 
 if (posicion == 2) {
+lcd_gotoxy(1, 2);
+lcd_putrs("Set Year");
 numeros_ingresados = 0;
 int anio_ingresado = 0;
 while (numeros_ingresados < 3) {
@@ -9924,7 +9935,9 @@ numeros_ingresados = 0;
 }
 }
 
+_delay((unsigned long)((50)*(8000000/4000.0)));
 setDiaMesAnio();
+_delay((unsigned long)((50)*(8000000/4000.0)));
 posicion++;
 _delay((unsigned long)((50)*(8000000/4000.0)));
 }
@@ -9938,6 +9951,8 @@ int posicion = 0;
 motivo_ingreso_de_numeros = 1;
 
 if (posicion == 0) {
+lcd_gotoxy(1, 2);
+lcd_putrs("Set Hour");
 numeros_ingresados = 0;
 int hora_ingresada = 0;
 while (numeros_ingresados < 3) {
@@ -9953,13 +9968,17 @@ numeros_ingresados = 0;
 }
 }
 
+_delay((unsigned long)((50)*(8000000/4000.0)));
 setHoraMinutoSegundo();
+_delay((unsigned long)((50)*(8000000/4000.0)));
 posicion++;
 _delay((unsigned long)((50)*(8000000/4000.0)));
 }
 
 
 if (posicion == 1) {
+lcd_gotoxy(1, 2);
+lcd_putrs("Set Mins");
 numeros_ingresados = 0;
 int minuto_ingresado = 0;
 while (numeros_ingresados < 3) {
@@ -9975,13 +9994,17 @@ numeros_ingresados = 0;
 }
 }
 
+_delay((unsigned long)((50)*(8000000/4000.0)));
 setHoraMinutoSegundo();
+_delay((unsigned long)((50)*(8000000/4000.0)));
 posicion++;
 _delay((unsigned long)((50)*(8000000/4000.0)));
 }
 
 
 if (posicion == 2) {
+lcd_gotoxy(1, 2);
+lcd_putrs("Set Secs");
 numeros_ingresados = 0;
 int segundo_ingresado = 0;
 while (numeros_ingresados < 3) {
@@ -9997,7 +10020,9 @@ numeros_ingresados = 0;
 }
 }
 
+_delay((unsigned long)((50)*(8000000/4000.0)));
 setHoraMinutoSegundo();
+_delay((unsigned long)((50)*(8000000/4000.0)));
 posicion++;
 _delay((unsigned long)((50)*(8000000/4000.0)));
 }
@@ -10019,7 +10044,7 @@ TRISA = 0b11110000;
 TRISB = 0;
 TRISC = 0b11100111;
 
-# 805
+# 830
 ANCON0 = 0b11111111;
 
 ANCON1 = 0b11111111;
