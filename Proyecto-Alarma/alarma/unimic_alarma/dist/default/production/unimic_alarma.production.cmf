@@ -91,7 +91,7 @@ idataBANK1 CODE 0 CD4C CD4C C 1
 dataBANK0 BANK0 1 BD BD 16 1
 dataBANK1 BANK1 1 128 128 C 1
 mediumconst MEDIUMCONST 0 FE4C FE4C 1AC 1
-$C:\Users\Fernando\AppData\Local\Temp\sa58.obj
+$C:\Users\Fernando\AppData\Local\Temp\spqc.obj
 init CODE 0 0 0 4 1
 config CONFIG 0 FFF8 FFF8 8 1
 # %UNUSED Section
@@ -1475,56 +1475,56 @@ CE40 text0 CODE >856:C:\Users\Fernando\Documents\Universidad\Laboratorio de elec
 CE44 text0 CODE >852:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Alarma\alarma\unimic_alarma\main.c
 CE46 text0 CODE >859:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Alarma\alarma\unimic_alarma\main.c
 CE58 text0 CODE >861:C:\Users\Fernando\Documents\Universidad\Laboratorio de electrónica\Laboratorio_de_electronica_untref\Proyecto-Alarma\alarma\unimic_alarma\main.c
-D1D2 cinit CODE >2031:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D1D2 cinit CODE >2033:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D1D2 cinit CODE >2036:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D1D2 cinit CODE >2224:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D1D4 cinit CODE >2225:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D1D6 cinit CODE >2226:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D1D8 cinit CODE >2227:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D1DA cinit CODE >2228:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D1DC cinit CODE >2229:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D1DE cinit CODE >2230:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D1E2 cinit CODE >2231:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D1E6 cinit CODE >2232:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D1E6 cinit CODE >2233:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D1E8 cinit CODE >2234:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D1EC cinit CODE >2235:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D1EE cinit CODE >2236:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D1F0 cinit CODE >2237:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D1F2 cinit CODE >2241:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D1F4 cinit CODE >2242:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D1F6 cinit CODE >2243:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D1F8 cinit CODE >2244:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D1FA cinit CODE >2245:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D1FC cinit CODE >2246:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D1FE cinit CODE >2247:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D202 cinit CODE >2248:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D206 cinit CODE >2249:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D206 cinit CODE >2250:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D208 cinit CODE >2251:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D20C cinit CODE >2252:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D20E cinit CODE >2253:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D210 cinit CODE >2254:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D212 cinit CODE >2258:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D216 cinit CODE >2259:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D218 cinit CODE >2260:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D218 cinit CODE >2261:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D21A cinit CODE >2262:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D21C cinit CODE >2263:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D21E cinit CODE >2266:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D220 cinit CODE >2267:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D222 cinit CODE >2270:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D226 cinit CODE >2271:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D228 cinit CODE >2272:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D228 cinit CODE >2273:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D22A cinit CODE >2274:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D22C cinit CODE >2275:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D22E cinit CODE >2281:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D22E cinit CODE >2284:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D230 cinit CODE >2285:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D232 cinit CODE >2286:C:\Users\Fernando\AppData\Local\Temp\sa58.
-D234 cinit CODE >2287:C:\Users\Fernando\AppData\Local\Temp\sa58.
+D1D2 cinit CODE >2031:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D1D2 cinit CODE >2033:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D1D2 cinit CODE >2036:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D1D2 cinit CODE >2224:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D1D4 cinit CODE >2225:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D1D6 cinit CODE >2226:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D1D8 cinit CODE >2227:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D1DA cinit CODE >2228:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D1DC cinit CODE >2229:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D1DE cinit CODE >2230:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D1E2 cinit CODE >2231:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D1E6 cinit CODE >2232:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D1E6 cinit CODE >2233:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D1E8 cinit CODE >2234:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D1EC cinit CODE >2235:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D1EE cinit CODE >2236:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D1F0 cinit CODE >2237:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D1F2 cinit CODE >2241:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D1F4 cinit CODE >2242:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D1F6 cinit CODE >2243:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D1F8 cinit CODE >2244:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D1FA cinit CODE >2245:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D1FC cinit CODE >2246:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D1FE cinit CODE >2247:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D202 cinit CODE >2248:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D206 cinit CODE >2249:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D206 cinit CODE >2250:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D208 cinit CODE >2251:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D20C cinit CODE >2252:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D20E cinit CODE >2253:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D210 cinit CODE >2254:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D212 cinit CODE >2258:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D216 cinit CODE >2259:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D218 cinit CODE >2260:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D218 cinit CODE >2261:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D21A cinit CODE >2262:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D21C cinit CODE >2263:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D21E cinit CODE >2266:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D220 cinit CODE >2267:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D222 cinit CODE >2270:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D226 cinit CODE >2271:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D228 cinit CODE >2272:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D228 cinit CODE >2273:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D22A cinit CODE >2274:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D22C cinit CODE >2275:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D22E cinit CODE >2281:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D22E cinit CODE >2284:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D230 cinit CODE >2285:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D232 cinit CODE >2286:C:\Users\Fernando\AppData\Local\Temp\spqc.
+D234 cinit CODE >2287:C:\Users\Fernando\AppData\Local\Temp\spqc.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -1566,7 +1566,7 @@ __end_of_resetear_pantalla_ingresar_contrasenia D082 0 CODE 0 text9 dist/default
 frexp@eptr 4 0 COMRAM 1 cstackCOMRAM dist/default/production\unimic_alarma.production.obj
 ___ftdiv@exp 16 0 COMRAM 1 cstackCOMRAM dist/default/production\unimic_alarma.production.obj
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\unimic_alarma.production.obj
-__mediumconst FE4C 0 MEDIUMCONST 0 mediumconst C:\Users\Fernando\AppData\Local\Temp\sa58.obj
+__mediumconst FE4C 0 MEDIUMCONST 0 mediumconst C:\Users\Fernando\AppData\Local\Temp\spqc.obj
 ___awtoft@sign C 0 COMRAM 1 cstackCOMRAM dist/default/production\unimic_alarma.production.obj
 RtccWriteTime@tempHourWDay A 0 COMRAM 1 cstackCOMRAM dist/default/production\unimic_alarma.production.obj
 __size_of_ir_a_pantalla_edicion 0 0 ABS 0 - dist/default/production\unimic_alarma.production.obj
@@ -1578,7 +1578,7 @@ __CFG_WPCFG$OFF 0 0 ABS 0 - dist/default/production\unimic_alarma.production.obj
 ?_pow 4A 0 COMRAM 1 cstackCOMRAM dist/default/production\unimic_alarma.production.obj
 _imprimir_reporte DB0A 0 CODE 0 text51 dist/default/production\unimic_alarma.production.obj
 __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\unimic_alarma.production.obj
-___sp 0 0 STACK 2 stack C:\Users\Fernando\AppData\Local\Temp\sa58.obj
+___sp 0 0 STACK 2 stack C:\Users\Fernando\AppData\Local\Temp\spqc.obj
 _anio D1 0 BANK0 1 dataBANK0 dist/default/production\unimic_alarma.production.obj
 _flag 7B0 -6BA BANK0 1 bitbssBANK0 dist/default/production\unimic_alarma.production.obj
 _hora C9 0 BANK0 1 dataBANK0 dist/default/production\unimic_alarma.production.obj
@@ -1589,7 +1589,7 @@ ___ftadd@f1 22 0 COMRAM 1 cstackCOMRAM dist/default/production\unimic_alarma.pro
 ___ftadd@f2 25 0 COMRAM 1 cstackCOMRAM dist/default/production\unimic_alarma.production.obj
 pow@x 4A 0 COMRAM 1 cstackCOMRAM dist/default/production\unimic_alarma.production.obj
 pow@y 4D 0 COMRAM 1 cstackCOMRAM dist/default/production\unimic_alarma.production.obj
-start 0 0 CODE 0 init C:\Users\Fernando\AppData\Local\Temp\sa58.obj
+start 0 0 CODE 0 init C:\Users\Fernando\AppData\Local\Temp\spqc.obj
 RtccWriteDate@tempDayMonth A 0 COMRAM 1 cstackCOMRAM dist/default/production\unimic_alarma.production.obj
 __size_of___awdiv 0 0 ABS 0 - dist/default/production\unimic_alarma.production.obj
 __size_of___ftadd 0 0 ABS 0 - dist/default/production\unimic_alarma.production.obj
@@ -1627,11 +1627,11 @@ __end_of_lcd_gotoxy CE14 0 CODE 0 text59 dist/default/production\unimic_alarma.p
 __end_of_lcd_putrs D124 0 CODE 0 text57 dist/default/production\unimic_alarma.production.obj
 guarda_numero_ingresado@num 3F 0 COMRAM 1 cstackCOMRAM dist/default/production\unimic_alarma.production.obj
 _Read_RTC E8AC 0 CODE 0 text64 dist/default/production\unimic_alarma.production.obj
-__accesstop 60 0 ABS 0 - C:\Users\Fernando\AppData\Local\Temp\sa58.obj
-intlevel0 0 0 CODE 0 text C:\Users\Fernando\AppData\Local\Temp\sa58.obj
-intlevel1 0 0 CODE 0 text C:\Users\Fernando\AppData\Local\Temp\sa58.obj
-intlevel2 0 0 CODE 0 text C:\Users\Fernando\AppData\Local\Temp\sa58.obj
-intlevel3 0 0 CODE 0 text C:\Users\Fernando\AppData\Local\Temp\sa58.obj
+__accesstop 60 0 ABS 0 - C:\Users\Fernando\AppData\Local\Temp\spqc.obj
+intlevel0 0 0 CODE 0 text C:\Users\Fernando\AppData\Local\Temp\spqc.obj
+intlevel1 0 0 CODE 0 text C:\Users\Fernando\AppData\Local\Temp\spqc.obj
+intlevel2 0 0 CODE 0 text C:\Users\Fernando\AppData\Local\Temp\spqc.obj
+intlevel3 0 0 CODE 0 text C:\Users\Fernando\AppData\Local\Temp\spqc.obj
 __size_of_lcd_putrs 0 0 ABS 0 - dist/default/production\unimic_alarma.production.obj
 __end_oflog@coeff FE94 0 MEDIUMCONST 0 mediumconst dist/default/production\unimic_alarma.production.obj
 lcd_comand@d 5 0 COMRAM 1 cstackCOMRAM dist/default/production\unimic_alarma.production.obj
@@ -1665,8 +1665,8 @@ _ANCON1 F49 0 ABS 0 - dist/default/production\unimic_alarma.production.obj
 _array_seleccionar 128 0 BANK1 1 dataBANK1 dist/default/production\unimic_alarma.production.obj
 ___awdiv@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production\unimic_alarma.production.obj
 Delay100TCYx@unit 1 0 COMRAM 1 cstackCOMRAM dist/default/production\unimic_alarma.production.obj
-___inthi_sp 0 0 STACK 2 stack C:\Users\Fernando\AppData\Local\Temp\sa58.obj
-___intlo_sp 0 0 STACK 2 stack C:\Users\Fernando\AppData\Local\Temp\sa58.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\Fernando\AppData\Local\Temp\spqc.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\Fernando\AppData\Local\Temp\spqc.obj
 __size_of___altoft 0 0 ABS 0 - dist/default/production\unimic_alarma.production.obj
 __size_of___awtoft 0 0 ABS 0 - dist/default/production\unimic_alarma.production.obj
 _alarma_sonando 9E 0 BANK0 1 bssBANK0 dist/default/production\unimic_alarma.production.obj
@@ -1807,7 +1807,7 @@ __Hbank13 0 0 ABS 0 bank13 dist/default/production\unimic_alarma.production.obj
 __Hbank14 0 0 ABS 0 bank14 dist/default/production\unimic_alarma.production.obj
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\unimic_alarma.production.obj
 __Hbigram 0 0 ABS 0 bigram dist/default/production\unimic_alarma.production.obj
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\Fernando\AppData\Local\Temp\sa58.obj
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\Fernando\AppData\Local\Temp\spqc.obj
 _verificar_contrasenia D4FE 0 CODE 0 text45 dist/default/production\unimic_alarma.production.obj
 __end_of_sprintf FE4C 0 CODE 0 text52 dist/default/production\unimic_alarma.production.obj
 ___lltoft D176 0 CODE 0 text42 dist/default/production\unimic_alarma.production.obj
@@ -2123,8 +2123,8 @@ _RtccWrOn CD94 0 CODE 0 text24 dist/default/production\unimic_alarma.production.
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\unimic_alarma.production.obj
 _RtccAlrmTimeDate 70 0 BANK0 1 bssBANK0 dist/default/production\unimic_alarma.production.obj
 _hora_ultimo_reporte 96 0 BANK0 1 bssBANK0 dist/default/production\unimic_alarma.production.obj
-stackhi EBF 0 ABS 0 - C:\Users\Fernando\AppData\Local\Temp\sa58.obj
-stacklo 134 0 ABS 0 - C:\Users\Fernando\AppData\Local\Temp\sa58.obj
+stackhi EBF 0 ABS 0 - C:\Users\Fernando\AppData\Local\Temp\spqc.obj
+stacklo 134 0 ABS 0 - C:\Users\Fernando\AppData\Local\Temp\spqc.obj
 _lcd_send_nibble D2A6 0 CODE 0 text61 dist/default/production\unimic_alarma.production.obj
 __size_of_selecciona_opcion_fecha_hora 0 0 ABS 0 - dist/default/production\unimic_alarma.production.obj
 __Lintcode 0 0 CODE 0 intcode dist/default/production\unimic_alarma.production.obj
@@ -2264,7 +2264,7 @@ __Ltext63 0 0 ABS 0 text63 dist/default/production\unimic_alarma.production.obj
 __Ltext64 0 0 ABS 0 text64 dist/default/production\unimic_alarma.production.obj
 __Ltext65 0 0 ABS 0 text65 dist/default/production\unimic_alarma.production.obj
 __Ltext66 0 0 ABS 0 text66 dist/default/production\unimic_alarma.production.obj
-__ramtop F00 0 RAM 0 ramtop C:\Users\Fernando\AppData\Local\Temp\sa58.obj
+__ramtop F00 0 RAM 0 ramtop C:\Users\Fernando\AppData\Local\Temp\spqc.obj
 _sprintf FA9E 0 CODE 0 text52 dist/default/production\unimic_alarma.production.obj
 _mes_ultimo_reporte 9A 0 BANK0 1 bssBANK0 dist/default/production\unimic_alarma.production.obj
 __size_of_lcd_send_byte 0 0 ABS 0 - dist/default/production\unimic_alarma.production.obj
